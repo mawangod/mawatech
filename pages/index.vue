@@ -15,7 +15,7 @@
           Documentation
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/mawangod/mawatech"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
