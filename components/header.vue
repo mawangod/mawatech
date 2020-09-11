@@ -12,24 +12,46 @@
 								<div class="header-info-left">
 									<ul>
 										<li>
-											<i class="far fa-clock"></i> Mon - SAT: 6.00 am - 10.00 pm
+											<FontAwesomeIcon
+												class="far"
+												:icon="['far', 'clock']"
+											></FontAwesomeIcon>
+											{{ date }}
 										</li>
-										<li>Sun: Closed</li>
+										<li>{{ state }}</li>
 									</ul>
 								</div>
 								<div class="header-info-right">
 									<ul class="header-social">
 										<li>
-											<a href="#"><i class="fab fa-facebook-f"></i></a>
+											<a href="#">
+												<FontAwesomeIcon
+													class="fab"
+													:icon="['fab', 'facebook-f']"
+												>
+												</FontAwesomeIcon>
+											</a>
 										</li>
 										<li>
-											<a href="#"><i class="fab fa-twitter"></i></a>
+											<a href="#">
+												<FontAwesomeIcon class="fab" :icon="['fab', 'twitter']">
+												</FontAwesomeIcon>
+											</a>
 										</li>
 										<li>
-											<a href="#"><i class="fab fa-linkedin-in"></i></a>
+											<a href="#">
+												<FontAwesomeIcon
+													class="fab"
+													:icon="['fab', 'linkedin-in']"
+												>
+												</FontAwesomeIcon>
+											</a>
 										</li>
 										<li>
-											<a href="#"><i class="fab fa-google-plus-g"></i></a>
+											<a href="#">
+												<FontAwesomeIcon class="fab" :icon="['fab', 'github']">
+												</FontAwesomeIcon>
+											</a>
 										</li>
 									</ul>
 								</div>
@@ -43,9 +65,9 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.html"
-										><img src="assets/img/logo/logo.png" alt=""
-									/></a>
+									<a href="index.html">
+										<img src="@/assets/img/logo/mawatech-logo.png" alt="" />
+									</a>
 								</div>
 							</div>
 							<div class="col-xl-10 col-lg-10">
@@ -89,5 +111,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+	name: 'Header',
+	data() {
+		return {
+			date: ' Mon - SAT: 6.00 am - 10.00 pm',
+			state: 'Sun: Closed'
+		}
+	}
+}
 </script>
+
+<style scoped>
+.far {
+	margin-right: 8px;
+	color: #e94d65;
+}
+</style>

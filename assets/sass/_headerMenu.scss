@@ -59,7 +59,7 @@
 					}
 				}
 				a {
-					i {
+					svg {
 						@include transition(0.4s);
 
 						transform: rotateY(0deg);
@@ -69,7 +69,7 @@
 						-o-transform: rotateY(0deg);
 					}
 					// Hover
-					&:hover i {
+					&:hover svg {
 						color: #ff2143;
 						transform: rotateY(180deg);
 						-webkit-transform: rotateY(180deg);

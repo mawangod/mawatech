@@ -3,14 +3,14 @@ $primary: #7d61c8;
 $secondary: #fff;
 $light: #f1f1f1;
 $dark: #000;
+
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
 @import './variables.scss';
 @import './mixins.scss';
 @import './overlay.scss';
 @import './common.scss';
 @import './color.scss';
 
-@import './herited-style.scss';
 @import './headerMenu.scss';
-
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue/src/index.scss';

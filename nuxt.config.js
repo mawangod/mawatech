@@ -47,7 +47,8 @@ export default {
 		// Doc: https://github.com/nuxt-community/eslint-module
 		'@nuxtjs/eslint-module',
 		// Doc: https://github.com/nuxt-community/stylelint-module
-		'@nuxtjs/stylelint-module'
+		'@nuxtjs/stylelint-module',
+		'@nuxtjs/fontawesome'
 	],
 	/*
 	 ** Nuxt.js modules
@@ -61,6 +62,12 @@ export default {
 	bootstrapVue: {
 		bootstrapCSS: false,
 		bootstrapVueCSS: false
+	},
+	fontawesome: {
+		icons: {
+			brands: ['faFacebookF', 'faTwitter', 'faLinkedinIn', 'faGithub'],
+			regular: ['faClock']
+		}
 	},
 	module: {
 		rules: [

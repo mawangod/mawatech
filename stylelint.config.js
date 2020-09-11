@@ -5,6 +5,5 @@ module.exports = {
 	rules: {
 		'at-rule-no-unknown': null,
 		'no-descending-specificity': null
-	},
-	ignoreFiles: ['./assets/sass/herited-style.scss']
+	}
 }
