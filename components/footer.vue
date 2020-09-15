@@ -10,11 +10,12 @@
 						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-logo">
-									<a href="index.html"
-										><img
+									<a href="index.html">
+										<img
 											src="@/assets/img/logo/mawatech-logo-footer.png"
 											alt=""
-									/></a>
+										/>
+									</a>
 								</div>
 								<div class="footer-tittle">
 									<div class="footer-pera">
