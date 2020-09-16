@@ -4,7 +4,7 @@
 			class="slider-area"
 			:style="{backgroundImage: `url(${sliderBackGround})`}"
 		>
-			<div class="slider-active">
+			<VueSlickCarousel v-bind="settingSlider" class="slider-active">
 				<div class="single-slider slider-height d-flex align-items-center">
 					<div class="container">
 						<div class="row">
@@ -66,7 +66,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</VueSlickCarousel>
 		</div>
 		<div class="categories-area section-padding30">
 			<div class="container">
@@ -243,7 +243,10 @@
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<div class="col-xl-10 col-lg-10 col-md-9">
-						<div class="h1-testimonial-active">
+						<VueSlickCarousel
+							v-bind="settingSlider"
+							class="h1-testimonial-active"
+						>
 							<!-- Single Testimonial -->
 							<div class="single-testimonial text-center">
 								<!-- Testimonial Content -->
@@ -327,7 +330,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</VueSlickCarousel>
 					</div>
 				</div>
 			</div>
@@ -516,14 +519,21 @@ import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
 import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
+import VueSlickCarousel from 'vue-slick-carousel'
 
 export default {
+	components: {VueSlickCarousel},
 	data() {
 		return {
 			workBackGround,
 			testimonialBackGround,
 			sliderBackGround,
-			supportBackgroundUrl
+			supportBackgroundUrl,
+			settingSlider: {
+				lazyLoad: 'ondemand',
+				arrows: true,
+				dots: true
+			}
 		}
 	}
 }
