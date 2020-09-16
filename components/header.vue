@@ -63,9 +63,9 @@
 						<div class="row align-items-center">
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.html">
+									<nuxt-link to="/">
 										<img src="@/assets/img/logo/mawatech-logo.png" alt="" />
-									</a>
+									</nuxt-link>
 								</div>
 							</div>
 							<div class="col-xl-10 col-lg-10">
