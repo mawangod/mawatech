@@ -67,7 +67,7 @@ export default {
 		icons: {
 			brands: ['faFacebookF', 'faTwitter', 'faLinkedinIn', 'faGithub'],
 			regular: ['faClock'],
-			solid: ['faLevelUpAlt']
+			solid: ['faLevelUpAlt', 'faUsersCog', 'faFileCode', 'faPoll']
 		}
 	},
 	module: {

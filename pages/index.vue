@@ -22,7 +22,6 @@
 										indd re voluptate<br />
 										velit esscillumlore eu quife nrulla parihatur.
 									</p>
-									<!-- Hero-btn -->
 									<div class="hero__btn">
 										<a href="industries.html" class="btn hero-btn">
 											Our Services
@@ -65,7 +64,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<!-- Section Tittle -->
 						<div class="section-tittle mb-70">
 							<span>Our Top Services</span>
 							<h2>Our Best Services</h2>
@@ -158,7 +156,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="cl-xl-7 col-lg-8 col-md-10">
-						<!-- Section Tittle -->
 						<div class="section-tittle mb-70">
 							<span>Our Portfolios of cases</span>
 							<h2>Featured Case Study</h2>
@@ -240,9 +237,7 @@
 							v-bind="settingSlider"
 							class="h1-testimonial-active"
 						>
-							<!-- Single Testimonial -->
 							<div class="single-testimonial text-center">
-								<!-- Testimonial Content -->
 								<div class="testimonial-caption">
 									<div class="testimonial-top-cap">
 										<svg
@@ -281,9 +276,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- Single Testimonial -->
 							<div class="single-testimonial text-center">
-								<!-- Testimonial Content -->
 								<div class="testimonial-caption">
 									<div class="testimonial-top-cap">
 										<svg
@@ -306,7 +299,6 @@
 											labore et dolore mas.
 										</p>
 									</div>
-									<!-- founder -->
 									<div
 										class="testimonial-founder d-flex align-items-center justify-content-center"
 									>
@@ -328,34 +320,28 @@
 				</div>
 			</div>
 		</div>
-		<!-- Testimonial End -->
-		<!-- Coun Down Start -->
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-3 col-md-6 col-sm-6">
-						<!-- Counter Up -->
 						<div class="single-counter text-center">
 							<span class="counter">8705</span>
 							<p>Projects Completed</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
-						<!-- Counter Up -->
 						<div class="single-counter active text-center">
 							<span class="counter">480</span>
 							<p>Active Clients</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
-						<!-- Counter Up -->
 						<div class="single-counter text-center">
 							<span class="counter">626</span>
 							<p>Cups of Coffee</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
-						<!-- Counter Up -->
 						<div class="single-counter text-center">
 							<span class="counter">9774</span>
 							<p>Happy Clients</p>
@@ -364,13 +350,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- Coun Down End -->
-		<!-- Team Start -->
 		<div class="team-area section-padding30">
 			<div class="container">
 				<div class="row">
 					<div class="cl-xl-7 col-lg-8 col-md-10">
-						<!-- Section Tittle -->
 						<div class="section-tittle mb-70">
 							<span>Our Professional members </span>
 							<h2>Our Team Mambers</h2>
@@ -378,7 +361,6 @@
 					</div>
 				</div>
 				<div class="row">
-					<!-- single Tem -->
 					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
 						<div class="single-team mb-30">
 							<div class="team-img">
@@ -415,8 +397,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- Team End -->
-		<!-- Want To work -->
 		<section
 			class="wantToWork-area w-padding2 section-bg"
 			:style="{backgroundImage: `url(${workBackGround})`}"
@@ -437,11 +417,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- Want To work End -->
-		<!-- Blog Area Start -->
 		<div class="home-blog-area section-padding30">
 			<div class="container">
-				<!-- Section Tittle -->
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-tittle mb-100">
