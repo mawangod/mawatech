@@ -78,20 +78,26 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">
-												<li><a href="index.html">Home</a></li>
-												<li><a href="about.html">About</a></li>
-												<li><a href="services.html">Services</a></li>
+												<li><nuxt-link to="/">Home</nuxt-link></li>
+												<li><nuxt-link to="/about">About</nuxt-link></li>
+												<li><nuxt-link to="/services">Services</nuxt-link></li>
 												<li>
-													<a href="blog.html">Blog</a>
+													<nuxt-link to="/blog">Blog</nuxt-link>
 													<ul class="submenu">
-														<li><a href="blog.html">Blog</a></li>
+														<li><nuxt-link to="/blog">Blog</nuxt-link></li>
 														<li>
-															<a href="blog_details.html">Blog Details</a>
+															<nuxt-link to="/blog_details">
+																Blog Details
+															</nuxt-link>
 														</li>
-														<li><a href="elements.html">Element</a></li>
+														<li>
+															<nuxt-link to="/elements">
+																Element
+															</nuxt-link>
+														</li>
 													</ul>
 												</li>
-												<li><a href="contact.html">Contact</a></li>
+												<li><nuxt-link to="/contact">Contact</nuxt-link></li>
 											</ul>
 										</nav>
 									</div>

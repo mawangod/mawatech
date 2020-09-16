@@ -107,9 +107,12 @@
 							padding: 39px 14px;
 						}
 					}
+					& a.nuxt-link-exact-active {
+						color: #e94d65;
+					}
 					&:hover {
 						& > a {
-							color: $theme-color;
+							color: #e94d65;
 						}
 					}
 					&:last-child {
