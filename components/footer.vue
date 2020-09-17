@@ -27,7 +27,7 @@
 								</div>
 								<div class="footer-number">
 									<h4><span>+32 </span>475/70.45.73</h4>
-									<p>mawatech@gmail.com</p>
+									<p>mawatechnologie@gmail.com</p>
 								</div>
 							</div>
 						</div>
