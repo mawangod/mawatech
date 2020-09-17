@@ -49,9 +49,9 @@
 										velit esscillumlore eu quife nrulla parihatur.
 									</p>
 									<div class="hero__btn">
-										<a href="industries.html" class="btn hero-btn">
+										<nuxt-link to="/services" class="btn hero-btn">
 											Our Services
-										</a>
+										</nuxt-link>
 									</div>
 								</div>
 							</div>
@@ -74,7 +74,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
-								<span class="flaticon-development"></span>
+								<FontAwesomeIcon :icon="['fas', 'users-cog']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5><a href="services.html">Strategy Planning </a></h5>
@@ -88,7 +88,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
-								<span class="flaticon-result"></span>
+								<FontAwesomeIcon :icon="['fas', 'file-code']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5><a href="services.html">Insurance Service</a></h5>
@@ -102,7 +102,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
-								<span class="flaticon-team"></span>
+								<FontAwesomeIcon :icon="['fas', 'poll']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5><a href="services.html">Audit & Evaluation</a></h5>
