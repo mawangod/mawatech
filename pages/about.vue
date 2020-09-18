@@ -84,7 +84,9 @@
 									Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
 									dhjinulpadeserunt moll.
 								</p>
-								<a href="about.html" class="btn post-btn">More About Us</a>
+								<nuxt-link to="/about" class="btn post-btn">
+									More About Us
+								</nuxt-link>
 							</div>
 						</div>
 					</div>

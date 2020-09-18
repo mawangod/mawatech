@@ -23,9 +23,9 @@
 										velit esscillumlore eu quife nrulla parihatur.
 									</p>
 									<div class="hero__btn">
-										<a href="industries.html" class="btn hero-btn">
+										<nuxt-link to="/services" class="btn hero-btn">
 											Our Services
-										</a>
+										</nuxt-link>
 									</div>
 								</div>
 							</div>
@@ -77,7 +77,11 @@
 								<FontAwesomeIcon :icon="['fas', 'users-cog']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
-								<h5><a href="services.html">Strategy Planning </a></h5>
+								<h5>
+									<nuxt-link to="/services">
+										Strategy Planning
+									</nuxt-link>
+								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
 									but the new majority have suffered.
@@ -91,7 +95,11 @@
 								<FontAwesomeIcon :icon="['fas', 'file-code']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
-								<h5><a href="services.html">Insurance Service</a></h5>
+								<h5>
+									<nuxt-link to="/services">
+										Insurance Service
+									</nuxt-link>
+								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
 									but the new majority have suffered.
@@ -105,7 +113,11 @@
 								<FontAwesomeIcon :icon="['fas', 'poll']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
-								<h5><a href="services.html">Audit & Evaluation</a></h5>
+								<h5>
+									<nuxt-link to="/services">
+										Audit & Evaluation
+									</nuxt-link>
+								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
 									but the new majority have suffered.
@@ -145,7 +157,9 @@
 									Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
 									dhjinulpadeserunt moll.
 								</p>
-								<a href="about.html" class="btn post-btn">More About Us</a>
+								<nuxt-link to="/about" class="btn post-btn">
+									More About Us
+								</nuxt-link>
 							</div>
 						</div>
 					</div>
@@ -171,9 +185,9 @@
 							<div class="services-caption">
 								<span>Strategy planing</span>
 								<p>
-									<a href="#"
-										>Within the construction industry as their overdraft</a
-									>
+									<a href="#">
+										Within the construction industry as their overdraft
+									</a>
 								</p>
 							</div>
 						</div>
@@ -186,9 +200,9 @@
 							<div class="services-caption">
 								<span>Strategy planing</span>
 								<p>
-									<a href="#"
-										>Within the construction industry as their overdraft</a
-									>
+									<a href="#">
+										Within the construction industry as their overdraft
+									</a>
 								</p>
 							</div>
 						</div>
@@ -201,9 +215,9 @@
 							<div class="services-caption">
 								<span>Strategy planing</span>
 								<p>
-									<a href="#"
-										>Within the construction industry as their overdraft</a
-									>
+									<a href="#">
+										Within the construction industry as their overdraft
+									</a>
 								</p>
 							</div>
 						</div>
@@ -216,9 +230,9 @@
 							<div class="services-caption">
 								<span>Strategy planing</span>
 								<p>
-									<a href="#"
-										>Within the construction industry as their overdraft</a
-									>
+									<a href="#">
+										Within the construction industry as their overdraft
+									</a>
 								</p>
 							</div>
 						</div>
@@ -439,16 +453,18 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<a href="blog_details.html"
-											>16 Easy Ideas to Use in Everyday</a
-										>
+										<nuxt-link to="/blog_details">
+											16 Easy Ideas to Use in Everyday
+										</nuxt-link>
 									</h3>
 									<p>
 										Amet, consectetur adipiscing elit, sed do eiusmod tempor
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<a href="blog_details.html" class="more-btn">Read more</a>
+									<nuxt-link to="/blog_details" class="more-btn">
+										Read more
+									</nuxt-link>
 								</div>
 							</div>
 						</div>
@@ -464,16 +480,18 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<a href="blog_details.html"
-											>16 Easy Ideas to Use in Everyday</a
-										>
+										<nuxt-link to="/blog_details">
+											16 Easy Ideas to Use in Everyday
+										</nuxt-link>
 									</h3>
 									<p>
 										Amet, consectetur adipiscing elit, sed do eiusmod tempor
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<a href="blog_details.html" class="more-btn">Read more</a>
+									<nuxt-link to="/blog_details" class="more-btn">
+										Read more
+									</nuxt-link>
 								</div>
 							</div>
 						</div>

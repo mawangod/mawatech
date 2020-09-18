@@ -10,12 +10,12 @@
 						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-logo">
-									<a href="index.html">
+									<nuxt-link to="/index">
 										<img
 											src="@/assets/img/logo/mawatech-logo-footer.png"
 											alt=""
 										/>
-									</a>
+									</nuxt-link>
 								</div>
 								<div class="footer-tittle">
 									<div class="footer-pera">
@@ -53,7 +53,7 @@
 										<li><a href="#">Cookies</a></li>
 										<li><a href="#">About</a></li>
 										<li><a href="#">Privacy Policy</a></li>
-										<li><a href="#">Proparties</a></li>
+										<li><a href="#">Properties</a></li>
 										<li><a href="#">Licenses</a></li>
 									</ul>
 								</div>
