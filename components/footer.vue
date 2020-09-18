@@ -10,7 +10,7 @@
 						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-logo">
-									<nuxt-link to="/index">
+									<nuxt-link to="/">
 										<img
 											src="@/assets/img/logo/mawatech-logo-footer.png"
 											alt=""

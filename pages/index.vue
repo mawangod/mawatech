@@ -453,7 +453,7 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<nuxt-link to="/blog_details">
+										<nuxt-link to="/blog/blog-details">
 											16 Easy Ideas to Use in Everyday
 										</nuxt-link>
 									</h3>
@@ -462,7 +462,7 @@
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<nuxt-link to="/blog_details" class="more-btn">
+									<nuxt-link to="/blog/blog-details" class="more-btn">
 										Read more
 									</nuxt-link>
 								</div>
@@ -480,7 +480,7 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<nuxt-link to="/blog_details">
+										<nuxt-link to="/blog/blog-details">
 											16 Easy Ideas to Use in Everyday
 										</nuxt-link>
 									</h3>
@@ -489,7 +489,7 @@
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<nuxt-link to="/blog_details" class="more-btn">
+									<nuxt-link to="/blog/blog-details" class="more-btn">
 										Read more
 									</nuxt-link>
 								</div>

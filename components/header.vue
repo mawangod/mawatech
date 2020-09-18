@@ -83,7 +83,7 @@
 													<ul class="submenu">
 														<li><nuxt-link to="/blog">Blog</nuxt-link></li>
 														<li>
-															<nuxt-link to="/blog_details">
+															<nuxt-link to="/blog/blog-details">
 																Blog Details
 															</nuxt-link>
 														</li>

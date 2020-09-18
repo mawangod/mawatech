@@ -1,21 +1,6 @@
 <template>
 	<main>
-		<div
-			class="slider-area2"
-			:style="{backgroundImage: `url(${sliderBackGround})`}"
-		>
-			<div class="slider-height2 hero-overly2 d-flex align-items-center">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-12">
-							<div class="hero-cap hero-cap2 text-center">
-								<h2>Our Services</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<ImageTitle title="Our Services" :url="sliderBackGround"></ImageTitle>
 		<div class="categories-area section-padding30">
 			<div class="container">
 				<div class="row">
@@ -123,8 +108,10 @@
 
 <script>
 import sliderBackGround from '@/assets/img/hero/hero2.jpg'
+import ImageTitle from '@/components/image-title.vue'
 
 export default {
+	components: {ImageTitle},
 	data() {
 		return {
 			sliderBackGround

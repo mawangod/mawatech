@@ -1,21 +1,6 @@
 <template>
 	<main>
-		<div
-			class="slider-area2"
-			:style="{backgroundImage: `url(${sliderBackGround})`}"
-		>
-			<div class="slider-height2 hero-overly2 d-flex align-items-center">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-12">
-							<div class="hero-cap hero-cap2 text-center">
-								<h2>About Us</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<ImageTitle title="About Us" :url="sliderBackGround"></ImageTitle>
 		<div class="about-details section-padding30">
 			<div class="container">
 				<div class="row">
@@ -269,12 +254,13 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
+import ImageTitle from '@/components/image-title.vue'
 import sliderBackGround from '@/assets/img/hero/hero2.jpg'
 import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 
 export default {
-	components: {VueSlickCarousel},
+	components: {VueSlickCarousel, ImageTitle},
 	data() {
 		return {
 			sliderBackGround,
