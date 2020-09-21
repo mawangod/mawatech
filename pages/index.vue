@@ -337,30 +337,10 @@
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">8705</span>
-							<p>Projects Completed</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter active text-center">
-							<span class="counter">480</span>
-							<p>Active Clients</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">626</span>
-							<p>Cups of Coffee</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">9774</span>
-							<p>Happy Clients</p>
-						</div>
-					</div>
+					<Counter :value="8705" title="Projects Completed"></Counter>
+					<Counter is-active :value="480" title="Active Clients"></Counter>
+					<Counter :value="626" title="Cups of Coffee"></Counter>
+					<Counter :value="9774" title="Happy Clients"></Counter>
 				</div>
 			</div>
 		</div>
@@ -508,9 +488,10 @@ import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
+import Counter from '@/components/counter.vue'
 
 export default {
-	components: {VueSlickCarousel},
+	components: {VueSlickCarousel, Counter},
 	data() {
 		return {
 			workBackGround,
