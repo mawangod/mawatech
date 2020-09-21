@@ -65,13 +65,7 @@ export default {
 	},
 	fontawesome: {
 		icons: {
-			brands: [
-				'faFacebookF',
-				'faTwitter',
-				'faLinkedinIn',
-				'faGithub',
-				'faInstagram'
-			],
+			brands: ['faFacebookF', 'faTwitter', 'faLinkedinIn', 'faInstagram'],
 			regular: ['faClock', 'faAddressCard', 'faEnvelope'],
 			solid: [
 				'faLevelUpAlt',

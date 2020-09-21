@@ -48,7 +48,10 @@
 										</li>
 										<li>
 											<a href="#">
-												<FontAwesomeIcon class="fab" :icon="['fab', 'github']">
+												<FontAwesomeIcon
+													class="fab"
+													:icon="['fab', 'instagram']"
+												>
 												</FontAwesomeIcon>
 											</a>
 										</li>
@@ -85,11 +88,6 @@
 														<li>
 															<nuxt-link to="/blog/blog-details">
 																Blog Details
-															</nuxt-link>
-														</li>
-														<li>
-															<nuxt-link to="/elements">
-																Element
 															</nuxt-link>
 														</li>
 													</ul>
