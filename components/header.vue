@@ -61,7 +61,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="header-bottom header-sticky">
+				<div
+					:class="[
+						'header-bottom header-sticky',
+						{
+							'sticky-bar': sticky
+						}
+					]"
+				>
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-xl-2 col-lg-2">
@@ -112,6 +119,12 @@
 <script>
 export default {
 	name: 'Header',
+	props: {
+		sticky: {
+			type: Boolean,
+			default: false
+		}
+	},
 	data() {
 		return {
 			date: ' Mon - SAT: 6.00 am - 10.00 pm',
