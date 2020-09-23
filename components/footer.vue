@@ -77,6 +77,34 @@
 								</p>
 							</div>
 						</div>
+						<div class="col-xl-3 col-lg-4">
+							<div class="footer-social f-right">
+								<LinkedIcon
+									url="https://fr-fr.facebook.com/"
+									icon-class="fab"
+									:icon="['fab', 'facebook-f']"
+								>
+								</LinkedIcon>
+								<LinkedIcon
+									url="https://twitter.com/"
+									icon-class="fab"
+									:icon="['fab', 'twitter']"
+								>
+								</LinkedIcon>
+								<LinkedIcon
+									url="https://fr.linkedin.com/"
+									icon-class="fab"
+									:icon="['fab', 'linkedin-in']"
+								>
+								</LinkedIcon>
+								<LinkedIcon
+									url="https://www.instagram.com/?hl=fr"
+									icon-class="fab"
+									:icon="['fab', 'instagram']"
+								>
+								</LinkedIcon>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -86,8 +114,10 @@
 
 <script>
 import backgroundUrl from '@/assets/img/gallery/footer_bg.jpg'
+import LinkedIcon from './linkedIcon.vue'
 
 export default {
+	components: {LinkedIcon},
 	data() {
 		return {
 			backgroundUrl

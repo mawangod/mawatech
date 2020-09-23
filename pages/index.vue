@@ -71,16 +71,16 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-6">
+					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
 								<FontAwesomeIcon :icon="['fas', 'users-cog']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5>
-									<nuxt-link to="/services">
+									<a>
 										Strategy Planning
-									</nuxt-link>
+									</a>
 								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
@@ -88,17 +88,17 @@
 								</p>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
+					</nuxt-link>
+					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
 								<FontAwesomeIcon :icon="['fas', 'file-code']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5>
-									<nuxt-link to="/services">
+									<a>
 										Insurance Service
-									</nuxt-link>
+									</a>
 								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
@@ -106,17 +106,17 @@
 								</p>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
+					</nuxt-link>
+					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
 						<div class="single-cat text-center mb-50">
 							<div class="cat-icon">
 								<FontAwesomeIcon :icon="['fas', 'poll']"></FontAwesomeIcon>
 							</div>
 							<div class="cat-cap">
 								<h5>
-									<nuxt-link to="/services">
+									<a>
 										Audit & Evaluation
-									</nuxt-link>
+									</a>
 								</h5>
 								<p>
 									There are many variations of passages of lorem Ipsum available
@@ -124,7 +124,7 @@
 								</p>
 							</div>
 						</div>
-					</div>
+					</nuxt-link>
 				</div>
 			</div>
 		</div>

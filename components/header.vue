@@ -17,43 +17,41 @@
 											></FontAwesomeIcon>
 											{{ date }}
 										</li>
-										<li>{{ state }}</li>
 									</ul>
 								</div>
 								<div class="header-info-right">
 									<ul class="header-social">
 										<li>
-											<a href="#">
-												<FontAwesomeIcon
-													class="fab"
-													:icon="['fab', 'facebook-f']"
-												>
-												</FontAwesomeIcon>
-											</a>
+											<LinkedIcon
+												url="https://fr-fr.facebook.com/"
+												icon-class="fab"
+												:icon="['fab', 'facebook-f']"
+											>
+											</LinkedIcon>
 										</li>
 										<li>
-											<a href="#">
-												<FontAwesomeIcon class="fab" :icon="['fab', 'twitter']">
-												</FontAwesomeIcon>
-											</a>
+											<LinkedIcon
+												url="https://twitter.com/"
+												icon-class="fab"
+												:icon="['fab', 'twitter']"
+											>
+											</LinkedIcon>
 										</li>
 										<li>
-											<a href="#">
-												<FontAwesomeIcon
-													class="fab"
-													:icon="['fab', 'linkedin-in']"
-												>
-												</FontAwesomeIcon>
-											</a>
+											<LinkedIcon
+												url="https://fr.linkedin.com/"
+												icon-class="fab"
+												:icon="['fab', 'linkedin-in']"
+											>
+											</LinkedIcon>
 										</li>
 										<li>
-											<a href="#">
-												<FontAwesomeIcon
-													class="fab"
-													:icon="['fab', 'instagram']"
-												>
-												</FontAwesomeIcon>
-											</a>
+											<LinkedIcon
+												url="https://www.instagram.com/?hl=fr"
+												icon-class="fab"
+												:icon="['fab', 'instagram']"
+											>
+											</LinkedIcon>
 										</li>
 									</ul>
 								</div>
@@ -117,8 +115,11 @@
 </template>
 
 <script>
+import LinkedIcon from './linkedIcon.vue'
+
 export default {
 	name: 'Header',
+	components: {LinkedIcon},
 	props: {
 		sticky: {
 			type: Boolean,
@@ -127,8 +128,7 @@ export default {
 	},
 	data() {
 		return {
-			date: ' Mon - SAT: 6.00 am - 10.00 pm',
-			state: 'Sun: Closed'
+			date: ' Mon - Sat: 8.00 am - 8.00 pm'
 		}
 	}
 }
