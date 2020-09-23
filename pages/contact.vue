@@ -3,7 +3,41 @@
 		<ImageTitle title="Contact US" :url="sliderBackGround"></ImageTitle>
 		<section class="contact-section">
 			<div class="container">
-				<div class="d-none d-sm-block mb-5 pb-4"></div>
+				<div class="d-none d-sm-block mb-5 pb-4">
+					<vl-map
+						:load-tiles-while-animating="true"
+						:load-tiles-while-interacting="true"
+						data-projection="EPSG:4326"
+						style="height: 400px;"
+					>
+						<vl-view
+							max-zoom="20"
+							min-zoom="7"
+							:zoom.sync="zoom"
+							:center.sync="center"
+							:rotation.sync="rotation"
+						></vl-view>
+
+						<vl-layer-tile>
+							<vl-source-osm></vl-source-osm>
+						</vl-layer-tile>
+
+						<vl-layer-vector>
+							<vl-source-vector :features="features"></vl-source-vector>
+
+							<vl-style-box>
+								<vl-style-fill color="white"></vl-style-fill>
+								<vl-style-stroke color="red"></vl-style-stroke>
+								<vl-style-icon
+									:src="markerPng"
+									:anchor="[0.5, 1]"
+									:scale="0.1"
+								></vl-style-icon>
+							</vl-style-box>
+						</vl-layer-vector>
+					</vl-map>
+				</div>
+
 				<div class="row">
 					<div class="col-12">
 						<h2 class="contact-title">Get in Touch</h2>
@@ -123,12 +157,29 @@
 <script>
 import sliderBackGround from '@/assets/img/hero/hero2.jpg'
 import ImageTitle from '@/components/image-title.vue'
+import markerPng from '@/assets/img/media/marker.png'
 
 export default {
 	components: {ImageTitle},
 	data() {
+		const x = 3.990595028455405
+		const y = 50.43797498955024
 		return {
-			sliderBackGround
+			markerPng,
+			sliderBackGround,
+			zoom: 14,
+			center: [x, y],
+			rotation: 0,
+			features: [
+				{
+					type: 'Feature',
+					geometry: {
+						type: 'Point',
+						coordinates: [x, y]
+					},
+					properties: {}
+				}
+			]
 		}
 	}
 }
