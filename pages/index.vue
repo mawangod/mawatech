@@ -350,7 +350,7 @@
 					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
 							<span>Our Professional members </span>
-							<h2>Our Team Mambers</h2>
+							<h2>Our Team Members</h2>
 						</div>
 					</div>
 				</div>
@@ -406,7 +406,9 @@
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4">
-						<a href="#" class="btn btn-black f-right">More About Us</a>
+						<nuxt-link to="/about" class="btn btn-black f-right">
+							More About Us
+						</nuxt-link>
 					</div>
 				</div>
 			</div>
