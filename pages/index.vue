@@ -71,60 +71,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
-						<div class="single-cat text-center mb-50">
-							<div class="cat-icon">
-								<FontAwesomeIcon :icon="['fas', 'users-cog']"></FontAwesomeIcon>
-							</div>
-							<div class="cat-cap">
-								<h5>
-									<a>
-										Strategy Planning
-									</a>
-								</h5>
-								<p>
-									There are many variations of passages of lorem Ipsum available
-									but the new majority have suffered.
-								</p>
-							</div>
-						</div>
-					</nuxt-link>
-					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
-						<div class="single-cat text-center mb-50">
-							<div class="cat-icon">
-								<FontAwesomeIcon :icon="['fas', 'file-code']"></FontAwesomeIcon>
-							</div>
-							<div class="cat-cap">
-								<h5>
-									<a>
-										Insurance Service
-									</a>
-								</h5>
-								<p>
-									There are many variations of passages of lorem Ipsum available
-									but the new majority have suffered.
-								</p>
-							</div>
-						</div>
-					</nuxt-link>
-					<nuxt-link to="/services" class="col-lg-4 col-md-6 col-sm-6">
-						<div class="single-cat text-center mb-50">
-							<div class="cat-icon">
-								<FontAwesomeIcon :icon="['fas', 'poll']"></FontAwesomeIcon>
-							</div>
-							<div class="cat-cap">
-								<h5>
-									<a>
-										Audit & Evaluation
-									</a>
-								</h5>
-								<p>
-									There are many variations of passages of lorem Ipsum available
-									but the new majority have suffered.
-								</p>
-							</div>
-						</div>
-					</nuxt-link>
+					<Service
+						v-for="service in services"
+						:key="service.id"
+						v-bind="service"
+					></Service>
 				</div>
 			</div>
 		</div>
@@ -485,6 +436,9 @@ export default {
 	computed: {
 		profiles() {
 			return this.$store.state.profiles
+		},
+		services() {
+			return this.$store.state.services
 		}
 	}
 }
@@ -496,9 +450,5 @@ export default {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-}
-
-.single-cat {
-	cursor: pointer;
 }
 </style>

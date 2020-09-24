@@ -56,4 +56,8 @@ export default {
 .fade-leave-to {
 	opacity: 0;
 }
+
+.__nuxt-error-page {
+	position: relative;
+}
 </style>

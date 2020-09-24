@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Strategy Planning",
+    "icon": [
+      "fas",
+      "users-cog"
+    ],
+    "photo1": "strategy",
+    "photo2": "planning",
+    "subtitle": "A strategic plan is a document used to communicate with the organization the organizations goals.",
+    "bio1": "Strategic planning is an organizational management activity that is used to set priorities, focus energy and resources, strengthen operations, ensure that employees and other stakeholders are working toward common goals, establish agreement around intended outcomes/results, and assess and adjust the organization’s direction in response to a changing environment. It is a disciplined effort that produces fundamental decisions and actions that shape and guide what an organization is, who it serves, what it does, and why it does it, with a focus on the future. Effective strategic planning articulates not only where an organization is going and the actions needed to make progress, but also how it will know if it is successful.",
+    "bio2": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+  },
+  {
+    "id": 2,
+    "title": "Audit & Evaluation",
+    "icon": [
+      "fas",
+      "poll"
+    ],
+    "photo1": "audit",
+    "photo2": "evaluation",
+    "subtitle": "An Audit is the evaluation of a thing for the purpose of determining its validity and authenticity.",
+    "bio1": "an evaluation is the determination of merit using a set of standards. Though they are both a kind of assessment, audits are mainly done for financial institutions to make sure they are free from misstatements and errors, whereas evaluations can be done for different spheres such as healthcare, arts, government agencies to judge the efficiency of a working system. Earlier, audits were an important way to assess financial systems only. Now they are also done to assess security risks, environmental and other systems performance as well.",
+    "bio2": "Audits are mainly of two types, quality and integrated. Quality audits assess the efficiency of management systems, and perform the following functions under a certification: efficiency of system, ability to reach target levels, effectiveness of being able to eliminate or address problems/hurdles and aims towards the improvement of a system. Integrated audits are audits of publicly-traded companies and done under the PCAOB (Public Accounting Company Oversight Board). According to this, along with financial reporting, the company’s internal control is also assessed."
+  },
+  {
+    "id": 3,
+    "title": "Insurance Service",
+    "icon": [
+      "fas",
+      "file-code"
+    ],
+    "photo1": "insurance",
+    "photo2": "service",
+    "subtitle": "Insurance is a means of protection from financial loss. It is a form of risk management",
+    "bio1": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship.",
+    "bio2": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry."
+  }
+]
