@@ -356,14 +356,13 @@
 				</div>
 				<div class="row">
 					<ImageProfile
-						photo="team2"
-						name="Isaï Coulomb"
-						job="Software Engineer"
+						v-for="profile in profiles"
+						:id="profile.id"
+						:key="profile.id"
+						:photo="profile.photo"
+						:name="profile.name"
+						:job="profile.job"
 					>
-					</ImageProfile>
-					<ImageProfile photo="team3" name="ethan Welch" job="UX Designer">
-					</ImageProfile>
-					<ImageProfile photo="team1" name="Francis Lejeune" job="Manager">
 					</ImageProfile>
 				</div>
 			</div>
@@ -481,6 +480,11 @@ export default {
 				arrows: true,
 				dots: true
 			}
+		}
+	},
+	computed: {
+		profiles() {
+			return this.$store.state.profiles
 		}
 	}
 }

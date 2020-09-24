@@ -2,11 +2,13 @@
 	<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
 		<div class="single-team mb-30">
 			<div class="team-img">
-				<img :src="`/_nuxt/assets/img/gallery/${photo}.png`" alt="" />
+				<img :src="require(`@/assets/img/gallery/${photo}.png`)" alt="" />
 			</div>
 			<div class="team-caption">
 				<h3>
-					<a href="#">{{ name | capitalize }}</a>
+					<nuxt-link :to="{name: 'profiles-id', params: {id}}">
+						{{ name | capitalize }}
+					</nuxt-link>
 				</h3>
 				<span>{{ job | capitalize }}</span>
 			</div>
@@ -24,6 +26,10 @@ export default {
 		}
 	},
 	props: {
+		id: {
+			type: Number,
+			required: true
+		},
 		photo: {
 			type: String,
 			required: true
