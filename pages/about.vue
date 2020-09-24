@@ -84,44 +84,21 @@
 					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
 							<span>Our Professional members </span>
-							<h2>Our Team Mambers</h2>
+							<h2>Our Team Members</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team2.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team3.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team1.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
+					<ImageProfile
+						photo="team2"
+						name="Isaï Coulomb"
+						job="Software Engineer"
+					>
+					</ImageProfile>
+					<ImageProfile photo="team3" name="Ethan Welch" job="UX Designer">
+					</ImageProfile>
+					<ImageProfile photo="team1" name="Francis Lejeune" job="Manager">
+					</ImageProfile>
 				</div>
 			</div>
 		</div>
@@ -222,30 +199,10 @@
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">8705</span>
-							<p>Projects Completed</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter active text-center">
-							<span class="counter">480</span>
-							<p>Active Clients</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">626</span>
-							<p>Cups of Coffee</p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-counter text-center">
-							<span class="counter">9774</span>
-							<p>Happy Clients</p>
-						</div>
-					</div>
+					<Counter :value="8705" title="Projects Completed"></Counter>
+					<Counter is-active :value="480" title="Active Clients"></Counter>
+					<Counter :value="626" title="Cups of Coffee"></Counter>
+					<Counter :value="9774" title="Happy Clients"></Counter>
 				</div>
 			</div>
 		</div>

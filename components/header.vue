@@ -115,7 +115,7 @@
 </template>
 
 <script>
-import LinkedIcon from './linkedIcon.vue'
+import LinkedIcon from './linked-icon.vue'
 
 export default {
 	name: 'Header',

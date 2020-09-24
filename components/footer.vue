@@ -63,6 +63,29 @@
 							<div class="single-footer-caption mb-50">
 								<div class="footer-tittle">
 									<h4>Location</h4>
+									<div class="footer-pera">
+										<p class="info1">Subscribe now to get daily updates</p>
+									</div>
+								</div>
+								<div class="footer-form">
+									<div>
+										<form class="subscribe_form relative mail_part">
+											<input
+												type="email"
+												placeholder=" Email Address "
+												class="placeholder hide-on-focus"
+											/>
+											<div class="form-icon">
+												<button
+													class="email_icon newsletter-submit button-contactForm"
+													@click.prevent="addMailtoNewsletter"
+												>
+													SIGN UP
+												</button>
+											</div>
+											<div class="mt-10 info"></div>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -114,7 +137,7 @@
 
 <script>
 import backgroundUrl from '@/assets/img/gallery/footer_bg.jpg'
-import LinkedIcon from './linkedIcon.vue'
+import LinkedIcon from './linked-icon.vue'
 
 export default {
 	components: {LinkedIcon},
@@ -122,6 +145,9 @@ export default {
 		return {
 			backgroundUrl
 		}
+	},
+	methods: {
+		addMailtoNewsletter() {}
 	}
 }
 </script>

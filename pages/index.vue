@@ -355,39 +355,16 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team2.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team3.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-						<div class="single-team mb-30">
-							<div class="team-img">
-								<img src="@/assets/img/gallery/team1.png" alt="" />
-							</div>
-							<div class="team-caption">
-								<h3><a href="#">Ethan Welch</a></h3>
-								<span>UX Designer</span>
-							</div>
-						</div>
-					</div>
+					<ImageProfile
+						photo="team2"
+						name="Isaï Coulomb"
+						job="Software Engineer"
+					>
+					</ImageProfile>
+					<ImageProfile photo="team3" name="ethan Welch" job="UX Designer">
+					</ImageProfile>
+					<ImageProfile photo="team1" name="Francis Lejeune" job="Manager">
+					</ImageProfile>
 				</div>
 			</div>
 		</div>
@@ -490,10 +467,9 @@ import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
-import Counter from '@/components/counter.vue'
 
 export default {
-	components: {VueSlickCarousel, Counter},
+	components: {VueSlickCarousel},
 	data() {
 		return {
 			workBackGround,
