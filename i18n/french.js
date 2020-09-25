@@ -29,5 +29,17 @@ export default {
 	header: {
 		worktime: 'Lun - Sam: 8.00 am - 8.00 pm'
 	},
-	footer: {}
+	footer: {
+		slogan: 'Mon site Web de consultance moderne, professionnel et sophistiqué',
+		general: 'Général',
+		about: 'A propos',
+		jobs: 'Jobs',
+		information: 'Information',
+		management: 'Management',
+		cookies: 'Cookies',
+		privacy: 'Confidentialité',
+		disclaimer: 'Responsabilité',
+		copyright: 'Droit d’auteur',
+		underCopyright: '© 2020 Mawatech Belgium Tout droit réserver'
+	}
 }

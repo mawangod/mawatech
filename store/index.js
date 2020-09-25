@@ -1,11 +1,11 @@
 import profiles from '../static/profiles.json'
 import services from '../static/services.json'
-import works from '../static/works.json'
+import cases from '../static/cases.json'
 
 export const state = () => ({
 	profiles,
 	services,
-	works
+	cases
 })
 
 export const mutations = {}

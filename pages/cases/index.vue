@@ -1,22 +1,19 @@
 <template>
 	<main>
-		<ImageTitle title="Our Services" :url="sliderBackGround"></ImageTitle>
-		<div class="categories-area section-padding30">
+		<ImageTitle title="Our Previous Cases" :url="sliderBackGround"></ImageTitle>
+		<div class="services-area section-padding3">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
-							<span>Our Top Services</span>
-							<h2>Our Best Services</h2>
+							<span>Our Portfolios of cases</span>
+							<h2>Featured Case Study</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<Service
-						v-for="service in services"
-						:key="service.id"
-						v-bind="service"
-					></Service>
+					<ImageCase v-for="cas in cases" :key="cas.id" v-bind="cas">
+					</ImageCase>
 				</div>
 			</div>
 		</div>
@@ -33,8 +30,8 @@ export default {
 		}
 	},
 	computed: {
-		services() {
-			return this.$store.state.services
+		cases() {
+			return this.$store.state.cases
 		}
 	}
 }

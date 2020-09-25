@@ -20,72 +20,46 @@
 								<div class="footer-tittle">
 									<div class="footer-pera">
 										<p class="info1">
-											My modern, professional and sophisticated consultancy
-											website
+											{{ $t('footer.slogan') }}
 										</p>
 									</div>
 								</div>
 								<div class="footer-number">
-									<h4><span>+32 </span>475/70.45.73</h4>
-									<p>mawatechnologie@gmail.com</p>
+									<h4>
+										<span>
+											{{ gsm.prefixe }}
+										</span>
+										{{ gsm.num }}
+									</h4>
+									<p>{{ mail }}</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-tittle">
-									<h4>General</h4>
+									<h4>{{ $t('footer.general') }}</h4>
 									<ul>
-										<li><a href="#">Advanced</a></li>
-										<li><a href="#">Management</a></li>
-										<li><a href="#">Corporate</a></li>
-										<li><a href="#">Customer</a></li>
-										<li><a href="#">Information</a></li>
+										<li v-for="(tab, index) in generalTabs" :key="index">
+											<a href="#">
+												{{ $t(`footer.${tab}`) }}
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-tittle">
-									<h4>Explore</h4>
+									<h4>{{ $t('footer.about') }}</h4>
 									<ul>
-										<li><a href="#">Cookies</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Privacy Policy</a></li>
-										<li><a href="#">Properties</a></li>
-										<li><a href="#">Licenses</a></li>
+										<li v-for="(tab, index) in aboutTabs" :key="index">
+											<a href="#">
+												{{ $t(`footer.${tab}`) }}
+											</a>
+										</li>
 									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-							<div class="single-footer-caption mb-50">
-								<div class="footer-tittle">
-									<h4>Location</h4>
-									<div class="footer-pera">
-										<p class="info1">Subscribe now to get daily updates</p>
-									</div>
-								</div>
-								<div class="footer-form">
-									<div>
-										<form class="subscribe_form relative mail_part">
-											<input
-												type="email"
-												placeholder=" Email Address "
-												class="placeholder hide-on-focus"
-											/>
-											<div class="form-icon">
-												<button
-													class="email_icon newsletter-submit button-contactForm"
-													@click.prevent="addMailtoNewsletter"
-												>
-													SIGN UP
-												</button>
-											</div>
-											<div class="mt-10 info"></div>
-										</form>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -96,7 +70,7 @@
 						<div class="col-xl-9 col-lg-8">
 							<div class="footer-copy-right">
 								<p>
-									Copyright &copy; All rights reserved
+									{{ $t('footer.underCopyright') }}
 								</p>
 							</div>
 						</div>
@@ -143,7 +117,14 @@ export default {
 	components: {LinkedIcon},
 	data() {
 		return {
-			backgroundUrl
+			backgroundUrl,
+			mail: 'mawatechnologie@gmail.com',
+			gsm: {
+				prefixe: '+32',
+				num: '475/70.45.73'
+			},
+			generalTabs: ['jobs', 'information', 'management'],
+			aboutTabs: ['cookies', 'privacy', 'disclaimer', 'copyright']
 		}
 	},
 	methods: {

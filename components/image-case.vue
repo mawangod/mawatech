@@ -1,11 +1,11 @@
 <template>
 	<nuxt-link
-		:to="{name: 'services-work-id', params: {id}}"
+		:to="{name: 'cases-id', params: {id}}"
 		class="col-lg-6 col-md-6 col-sm-10"
 	>
 		<div class="single-services mb-100">
 			<div class="services-img">
-				<img :src="require(`@/assets/img/work/${photo1}.jpg`)" alt="" />
+				<img :src="require(`@/assets/img/cases/${photo1}.jpg`)" alt="" />
 			</div>
 			<div class="services-caption">
 				<h3>

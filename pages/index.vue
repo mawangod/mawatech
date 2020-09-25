@@ -128,8 +128,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<ImageWorkcase v-for="work in works" :key="work.id" v-bind="work">
-					</ImageWorkcase>
+					<ImageCase v-for="cas in cases" :key="cas.id" v-bind="cas">
+					</ImageCase>
 				</div>
 			</div>
 		</div>
@@ -379,8 +379,8 @@ export default {
 		services() {
 			return this.$store.state.services
 		},
-		works() {
-			return this.$store.state.works
+		cases() {
+			return this.$store.state.cases
 		}
 	}
 }
