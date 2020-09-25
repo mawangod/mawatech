@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import sliderBackGround from '@/assets/img/hero/hero2.jpg'
+import sliderBackGround from '@/assets/img/cover/our_services.jpg'
 
 export default {
 	validate({params, store}) {

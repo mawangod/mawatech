@@ -41,67 +41,6 @@
 			</div>
 		</div>
 		<div
-			class="support-company-area pt-100 pb-100 section-bg fix"
-			:style="{backgroundImage: `url(${supportBackgroundUrl})`}"
-		>
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-xl-6 col-lg-6">
-						<div class="support-location-img">
-							<img src="@/assets/img/gallery/about.png" alt="" />
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-6">
-						<div class="right-caption">
-							<div class="section-tittle section-tittle2 mb-50">
-								<span>Our Top Services</span>
-								<h2>Our Best Services</h2>
-							</div>
-							<div class="support-caption">
-								<p class="pera-top">
-									Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess
-									cillum dolore egru lofrre dsu quality mollit anim laborumuis
-									au dolor in voluptate velit cillu.
-								</p>
-								<p class="mb-65">
-									Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd
-									re voluptate velit esscillumlore eu quife nrulla parihatur.
-									Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
-									dhjinulpadeserunt moll.
-								</p>
-								<nuxt-link to="/about" class="btn post-btn">
-									More About Us
-								</nuxt-link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="team-area section-padding30">
-			<div class="container">
-				<div class="row">
-					<div class="cl-xl-7 col-lg-8 col-md-10">
-						<div class="section-tittle mb-70">
-							<span>Our Professional members </span>
-							<h2>Our Team Members</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<ImageProfile
-						v-for="profile in profiles"
-						:id="profile.id"
-						:key="profile.id"
-						:photo="profile.photo"
-						:name="profile.name"
-						:job="profile.job"
-					>
-					</ImageProfile>
-				</div>
-			</div>
-		</div>
-		<div
 			class="testimonial-area testimonial-padding"
 			:style="{backgroundImage: `url(${testimonialBackGround})`}"
 		>
@@ -210,28 +149,20 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
-import ImageTitle from '@/components/image-title.vue'
-import sliderBackGround from '@/assets/img/hero/hero2.jpg'
-import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
+import sliderBackGround from '@/assets/img/cover/about_us.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 
 export default {
-	components: {VueSlickCarousel, ImageTitle},
+	components: {VueSlickCarousel},
 	data() {
 		return {
 			sliderBackGround,
-			supportBackgroundUrl,
 			testimonialBackGround,
 			settingSlider: {
 				lazyLoad: 'ondemand',
 				arrows: true,
 				dots: true
 			}
-		}
-	},
-	computed: {
-		profiles() {
-			return this.$store.state.profiles
 		}
 	}
 }

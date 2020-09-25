@@ -1,19 +1,22 @@
 <template>
-	<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+	<nuxt-link
+		:to="{name: 'profiles-id', params: {id}}"
+		class="col-xl-4 col-lg-4 col-md-6 col-sm-"
+	>
 		<div class="single-team mb-30">
 			<div class="team-img">
 				<img :src="require(`@/assets/img/gallery/${photo}.png`)" alt="" />
 			</div>
 			<div class="team-caption">
 				<h3>
-					<nuxt-link :to="{name: 'profiles-id', params: {id}}">
+					<a>
 						{{ name | capitalize }}
-					</nuxt-link>
+					</a>
 				</h3>
 				<span>{{ job | capitalize }}</span>
 			</div>
 		</div>
-	</div>
+	</nuxt-link>
 </template>
 
 <script>

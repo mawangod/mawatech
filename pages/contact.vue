@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import sliderBackGround from '@/assets/img/hero/hero2.jpg'
+import sliderBackGround from '@/assets/img/cover/contact_us.jpg'
 import ImageTitle from '@/components/image-title.vue'
 import markerPng from '@/assets/img/media/marker.png'
 

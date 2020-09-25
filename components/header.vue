@@ -86,6 +86,7 @@
 												<li><nuxt-link to="/">Home</nuxt-link></li>
 												<li><nuxt-link to="/about">About</nuxt-link></li>
 												<li><nuxt-link to="/services">Services</nuxt-link></li>
+												<li><nuxt-link to="/profiles">Team</nuxt-link></li>
 												<li>
 													<nuxt-link to="/blog">Blog</nuxt-link>
 													<ul class="submenu">

@@ -348,7 +348,7 @@
 <script>
 import BlogSidebar from '@/components/blog-sidebar.vue'
 import ImageTitle from '@/components/image-title.vue'
-import backgroundUrl from '@/assets/img/hero/hero2.jpg'
+import backgroundUrl from '@/assets/img/cover/blog.jpg'
 
 export default {
 	components: {BlogSidebar, ImageTitle},

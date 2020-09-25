@@ -242,7 +242,7 @@
 </template>
 
 <script>
-import sliderBackGround from '@/assets/img/hero/hero2.jpg'
+import sliderBackGround from '@/assets/img/cover/blog.jpg'
 import BlogSidebar from '@/components/blog-sidebar.vue'
 import ImageTitle from '@/components/image-title.vue'
 
