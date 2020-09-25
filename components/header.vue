@@ -15,7 +15,7 @@
 												class="far"
 												:icon="['far', 'clock']"
 											></FontAwesomeIcon>
-											{{ $t('worktime') }}
+											{{ $t('header.worktime') }}
 										</li>
 									</ul>
 								</div>
