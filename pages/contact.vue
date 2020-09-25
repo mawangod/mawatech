@@ -11,8 +11,8 @@
 						style="height: 400px;"
 					>
 						<vl-view
-							max-zoom="20"
-							min-zoom="7"
+							:max-zoom="20"
+							:min-zoom="7"
 							:zoom.sync="zoom"
 							:center.sync="center"
 							:rotation.sync="rotation"
