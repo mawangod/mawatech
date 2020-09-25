@@ -63,7 +63,8 @@ export default {
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa',
-		'bootstrap-vue/nuxt'
+		'bootstrap-vue/nuxt',
+		'nuxt-i18n'
 	],
 	bootstrapVue: {
 		bootstrapCSS: false,
@@ -103,5 +104,24 @@ export default {
 	 ** Build configuration
 	 ** See https://nuxtjs.org/api/configuration-build/
 	 */
-	build: {}
+	build: {},
+	i18n: {
+		locales: [
+			{
+				code: 'en',
+				file: 'english.js'
+			},
+			{
+				code: 'fr',
+				file: 'french.js'
+			}
+		],
+		defaultLocale: 'en',
+		strategy: 'no_prefix',
+		lazy: true,
+		langDir: 'i18n/',
+		vueI18n: {
+			fallbackLocale: 'en'
+		}
+	}
 }

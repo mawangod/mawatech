@@ -15,7 +15,7 @@
 												class="far"
 												:icon="['far', 'clock']"
 											></FontAwesomeIcon>
-											{{ date }}
+											{{ $t('worktime') }}
 										</li>
 									</ul>
 								</div>
@@ -52,6 +52,25 @@
 												:icon="['fab', 'instagram']"
 											>
 											</LinkedIcon>
+										</li>
+										<li>
+											<select
+												class="switch"
+												:value="selectedLocale"
+												@change="
+													setLocale(
+														availableLocales[$event.target.selectedIndex]
+													)
+												"
+											>
+												<option
+													v-for="locale in availableLocales"
+													:key="locale.code"
+													:value="locale.code"
+												>
+													{{ locale.code | capitalize }}
+												</option>
+											</select>
 										</li>
 									</ul>
 								</div>
@@ -116,10 +135,16 @@
 </template>
 
 <script>
+import capitalizeName from '../utilities/capitalize-name'
 import LinkedIcon from './linked-icon.vue'
 
 export default {
 	name: 'Header',
+	filters: {
+		capitalize(name) {
+			return capitalizeName(name)
+		}
+	},
 	components: {LinkedIcon},
 	props: {
 		sticky: {
@@ -127,9 +152,17 @@ export default {
 			default: false
 		}
 	},
-	data() {
-		return {
-			date: ' Mon - Sat: 8.00 am - 8.00 pm'
+	computed: {
+		selectedLocale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		availableLocales() {
+			return this.$i18n.locales
+		}
+	},
+	methods: {
+		setLocale(locale) {
+			this.$i18n.setLocale(locale.code)
 		}
 	}
 }
