@@ -27,7 +27,15 @@ export default {
 	about: {},
 	home: {},
 	header: {
-		worktime: 'Mon - Sat: 8.00 am - 8.00 pm'
+		worktime: 'Mon - Sat: 8.00 am - 8.00 pm',
+		home: 'Home',
+		about: 'About',
+		services: 'Services',
+		team: 'Team',
+		cases: 'Cases',
+		blog: 'Blog',
+		post: 'Post',
+		contact: 'Contact'
 	},
 	footer: {
 		slogan: 'My modern, professional and sophisticated consultancy website',

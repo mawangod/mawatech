@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<ImageTitle title="Blog Details" :url="backgroundUrl"></ImageTitle>
+		<ImageTitle title="Post" :url="backgroundUrl"></ImageTitle>
 		<section class="blog_area single-post-area section-padding">
 			<div class="container">
 				<div class="row">

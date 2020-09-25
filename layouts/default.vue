@@ -1,5 +1,5 @@
 <template>
-	<div class="body-bg body-t" style="overflow: visible;">
+	<div class="body-bg body-t">
 		<Header id="header-t" :sticky="stickyHeader" />
 		<Nuxt />
 		<Footer />
@@ -46,6 +46,7 @@ export default {
 	font-family: 'Poppins', sans-serif;
 	font-weight: normal;
 	font-style: normal;
+	overflow: visible;
 }
 
 .fade-enter-active,

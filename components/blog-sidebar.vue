@@ -52,7 +52,7 @@
 						alt="post"
 					/>
 					<div class="media-body">
-						<nuxt-link to="/blog/blog-details">
+						<nuxt-link to="/blog/post">
 							<h3>{{ post.title }}</h3>
 						</nuxt-link>
 						<p>{{ post.date }}</p>

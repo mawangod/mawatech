@@ -21,7 +21,7 @@
 								</div>
 
 								<div class="blog_details">
-									<nuxt-link to="/blog/blog-details" class="d-inline-block">
+									<nuxt-link to="/blog/post" class="d-inline-block">
 										<h2>Google inks pact for new 35-storey office</h2>
 									</nuxt-link>
 									<p>
@@ -62,7 +62,7 @@
 								</div>
 
 								<div class="blog_details">
-									<nuxt-link to="/blog/blog-details" class="d-inline-block">
+									<nuxt-link to="/blog/post" class="d-inline-block">
 										<h2>Google inks pact for new 35-storey office</h2>
 									</nuxt-link>
 									<p>
@@ -103,7 +103,7 @@
 								</div>
 
 								<div class="blog_details">
-									<nuxt-link to="/blog/blog-details" class="d-inline-block">
+									<nuxt-link to="/blog/post" class="d-inline-block">
 										<h2>Google inks pact for new 35-storey office</h2>
 									</nuxt-link>
 									<p>
@@ -144,7 +144,7 @@
 								</div>
 
 								<div class="blog_details">
-									<nuxt-link to="/blog/blog-details" class="d-inline-block">
+									<nuxt-link to="/blog/post" class="d-inline-block">
 										<h2>Google inks pact for new 35-storey office</h2>
 									</nuxt-link>
 									<p>
@@ -185,7 +185,7 @@
 								</div>
 
 								<div class="blog_details">
-									<nuxt-link to="/blog/blog-details" class="d-inline-block">
+									<nuxt-link to="/blog/post" class="d-inline-block">
 										<h2>Google inks pact for new 35-storey office</h2>
 									</nuxt-link>
 									<p>

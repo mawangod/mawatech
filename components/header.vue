@@ -102,23 +102,51 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">
-												<li><nuxt-link to="/">Home</nuxt-link></li>
-												<li><nuxt-link to="/about">About</nuxt-link></li>
-												<li><nuxt-link to="/services">Services</nuxt-link></li>
-												<li><nuxt-link to="/profiles">Team</nuxt-link></li>
-												<li><nuxt-link to="/cases">Cases</nuxt-link></li>
 												<li>
-													<nuxt-link to="/blog">Blog</nuxt-link>
+													<nuxt-link to="/">{{ $t('header.home') }}</nuxt-link>
+												</li>
+												<li>
+													<nuxt-link to="/about">
+														{{ $t('header.about') }}
+													</nuxt-link>
+												</li>
+												<li>
+													<nuxt-link to="/services">
+														{{ $t('header.services') }}
+													</nuxt-link>
+												</li>
+												<li>
+													<nuxt-link to="/profiles">
+														{{ $t('header.team') }}
+													</nuxt-link>
+												</li>
+												<li>
+													<nuxt-link to="/cases">
+														{{ $t('header.cases') }}
+													</nuxt-link>
+												</li>
+												<li>
+													<nuxt-link to="/blog">
+														{{ $t('header.blog') }}
+													</nuxt-link>
 													<ul class="submenu">
-														<li><nuxt-link to="/blog">Blog</nuxt-link></li>
 														<li>
-															<nuxt-link to="/blog/blog-details">
-																Blog Details
+															<nuxt-link to="/blog">
+																{{ $t('header.blog') }}
+															</nuxt-link>
+														</li>
+														<li>
+															<nuxt-link to="/blog/post">
+																{{ $t('header.post') }}
 															</nuxt-link>
 														</li>
 													</ul>
 												</li>
-												<li><nuxt-link to="/contact">Contact</nuxt-link></li>
+												<li>
+													<nuxt-link to="/contact">
+														{{ $t('header.contact') }}
+													</nuxt-link>
+												</li>
 											</ul>
 										</nav>
 									</div>

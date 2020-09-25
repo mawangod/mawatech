@@ -10,13 +10,8 @@
 						<div class="row">
 							<div class="col-xl-8 col-lg-7 col-md-8">
 								<div class="hero__caption">
-									<span>
-										Committed to success
-									</span>
-
-									<h1>
-										We help to grow your business
-									</h1>
+									<span> Committed to success </span>
+									<h1>We help to grow your business</h1>
 									<p>
 										Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr
 										indd re voluptate<br />
@@ -37,12 +32,8 @@
 						<div class="row">
 							<div class="col-xl-8 col-lg-7 col-md-8">
 								<div class="hero__caption">
-									<span>
-										Committed to success
-									</span>
-									<h1>
-										We help to grow your business
-									</h1>
+									<span> Committed to success </span>
+									<h1>We help to grow your business</h1>
 									<p>
 										Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr
 										indd re voluptate<br />
@@ -301,7 +292,7 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<nuxt-link to="/blog/blog-details">
+										<nuxt-link to="/blog/post">
 											16 Easy Ideas to Use in Everyday
 										</nuxt-link>
 									</h3>
@@ -310,7 +301,7 @@
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<nuxt-link to="/blog/blog-details" class="more-btn">
+									<nuxt-link to="/blog/post" class="more-btn">
 										Read more
 									</nuxt-link>
 								</div>
@@ -328,7 +319,7 @@
 								</div>
 								<div class="blog-cap">
 									<h3>
-										<nuxt-link to="/blog/blog-details">
+										<nuxt-link to="/blog/post">
 											16 Easy Ideas to Use in Everyday
 										</nuxt-link>
 									</h3>
@@ -337,7 +328,7 @@
 										incididunt ut labore et dolore magnua Quis ipsum suspendisse
 										ultrices gra.
 									</p>
-									<nuxt-link to="/blog/blog-details" class="more-btn">
+									<nuxt-link to="/blog/post" class="more-btn">
 										Read more
 									</nuxt-link>
 								</div>

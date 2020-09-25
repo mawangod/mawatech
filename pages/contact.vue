@@ -5,10 +5,10 @@
 			<div class="container">
 				<div class="d-none d-sm-block mb-5 pb-4">
 					<vl-map
+						class="map"
 						:load-tiles-while-animating="true"
 						:load-tiles-while-interacting="true"
 						data-projection="EPSG:4326"
-						style="height: 400px;"
 					>
 						<vl-view
 							:max-zoom="20"
@@ -184,3 +184,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.map {
+	height: 400px;
+}
+</style>
