@@ -1,19 +1,19 @@
 <template>
 	<nuxt-link
-		:to="{name: 'profiles-id', params: {id}}"
-		class="col-xl-4 col-lg-4 col-md-6"
+		:to="{name: 'services-work-id', params: {id}}"
+		class="col-lg-6 col-md-6 col-sm-10"
 	>
-		<div class="single-team mb-30">
-			<div class="team-img">
-				<img :src="require(`@/assets/img/gallery/${photo}.png`)" alt="" />
+		<div class="single-services mb-100">
+			<div class="services-img">
+				<img :src="require(`@/assets/img/work/${photo1}.jpg`)" alt="" />
 			</div>
-			<div class="team-caption">
+			<div class="services-caption">
 				<h3>
 					<a>
-						{{ name | capitalize }}
+						{{ title | capitalize }}
 					</a>
 				</h3>
-				<span>{{ job | capitalize }}</span>
+				<span>{{ subtitle | capitalize }}</span>
 			</div>
 		</div>
 	</nuxt-link>
@@ -33,15 +33,15 @@ export default {
 			type: Number,
 			required: true
 		},
-		photo: {
+		photo1: {
 			type: String,
 			required: true
 		},
-		name: {
+		title: {
 			type: String,
 			required: true
 		},
-		job: {
+		subtitle: {
 			type: String,
 			required: true
 		}

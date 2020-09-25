@@ -128,66 +128,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="single-services mb-100">
-							<div class="services-img">
-								<img src="@/assets/img/gallery/services1.png" alt="" />
-							</div>
-							<div class="services-caption">
-								<span>Strategy planing</span>
-								<p>
-									<a href="#">
-										Within the construction industry as their overdraft
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="single-services mb-100">
-							<div class="services-img">
-								<img src="@/assets/img/gallery/services2.png" alt="" />
-							</div>
-							<div class="services-caption">
-								<span>Strategy planing</span>
-								<p>
-									<a href="#">
-										Within the construction industry as their overdraft
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="single-services mb-100">
-							<div class="services-img">
-								<img src="@/assets/img/gallery/services3.png" alt="" />
-							</div>
-							<div class="services-caption">
-								<span>Strategy planing</span>
-								<p>
-									<a href="#">
-										Within the construction industry as their overdraft
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="single-services mb-100">
-							<div class="services-img">
-								<img src="@/assets/img/gallery/services4.png" alt="" />
-							</div>
-							<div class="services-caption">
-								<span>Strategy planing</span>
-								<p>
-									<a href="#">
-										Within the construction industry as their overdraft
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
+					<ImageWorkcase v-for="work in works" :key="work.id" v-bind="work">
+					</ImageWorkcase>
 				</div>
 			</div>
 		</div>
@@ -308,11 +250,8 @@
 				<div class="row">
 					<ImageProfile
 						v-for="profile in profiles"
-						:id="profile.id"
 						:key="profile.id"
-						:photo="profile.photo"
-						:name="profile.name"
-						:job="profile.job"
+						v-bind="profile"
 					>
 					</ImageProfile>
 				</div>
@@ -439,6 +378,9 @@ export default {
 		},
 		services() {
 			return this.$store.state.services
+		},
+		works() {
+			return this.$store.state.works
 		}
 	}
 }
