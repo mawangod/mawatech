@@ -1,23 +1,17 @@
 <template>
 	<main>
-		<ImageTitle title="Our Team" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle :title="$t('team.title')" :url="sliderBackGround"></ImageTitle>
 		<div class="about-details section-padding30">
 			<div class="container">
 				<div class="row">
 					<div class="offset-xl-1 col-lg-8">
 						<div class="about-details-cap mb-50">
-							<h4>Our Team</h4>
+							<h4>{{ $t('team.title') }}</h4>
 							<p>
-								Consectetur adipiscing elit, sued do eiusmod tempor ididunt
-								udfgt labore et dolore magna aliqua. Quis ipsum suspendisces
-								gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor
-								maecenas accumsan lacus.
+								{{ $t('team.teamPart1') }}
 							</p>
 							<p>
-								Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan
-								lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan.
+								{{ $t('team.teamPart2') }}
 							</p>
 						</div>
 					</div>
@@ -33,14 +27,14 @@
 					<div class="col-xl-7 col-lg-9 col-md-8">
 						<div class="wantToWork-caption wantToWork-caption2">
 							<h2>
-								Are you Searching<br />
-								For a First-Class Consultant?
+								{{ $t('team.searching') }}<br />
+								{{ $t('team.consultant') }}
 							</h2>
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4">
 						<nuxt-link to="/about" class="btn btn-black f-right">
-							More About Us
+							{{ $t('team.moreAboutUs') }}
 						</nuxt-link>
 					</div>
 				</div>
@@ -51,8 +45,8 @@
 				<div class="row">
 					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
-							<span>Our Professional members </span>
-							<h2>Our Team Members</h2>
+							<span>{{ $t('team.highlight') }}</span>
+							<h2>{{ $t('team.bestTeam') | capitalize }}</h2>
 						</div>
 					</div>
 				</div>
@@ -75,8 +69,14 @@
 <script>
 import sliderBackGround from '@/assets/img/cover/our_team.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
+import capitalizeName from '../../utilities/capitalize-name'
 
 export default {
+	filters: {
+		capitalize(name) {
+			return capitalizeName(name)
+		}
+	},
 	data() {
 		return {
 			sliderBackGround,

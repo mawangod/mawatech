@@ -30,9 +30,28 @@ export default {
 		submitButton: 'Send',
 		sendUsMessage: 'Send us your query anytime!'
 	},
-	team: {},
-	services: {},
-	cases: {},
+	team: {
+		title: 'Our Team',
+		teamPart1:
+			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+		teamPart2:
+			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+		searching: 'Are you Searching',
+		consultant: 'For a First-Class Consultant?',
+		moreAboutUs: 'More About Us',
+		highlight: 'We Present To You',
+		bestTeam: 'Our team of professionals'
+	},
+	services: {
+		title: 'Our Services',
+		highlight: 'We offer you',
+		bestService: 'Our Best Services'
+	},
+	cases: {
+		title: 'Our Previous Cases',
+		highlight: 'take a look at',
+		featuredCase: 'Our Featured Case'
+	},
 	about: {
 		title: 'About Us',
 		mission: 'Our Mission',

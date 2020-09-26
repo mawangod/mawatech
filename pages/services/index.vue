@@ -1,13 +1,16 @@
 <template>
 	<main>
-		<ImageTitle title="Our Services" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle
+			:title="$t('services.title')"
+			:url="sliderBackGround"
+		></ImageTitle>
 		<div class="categories-area section-padding30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-tittle mb-70">
-							<span>Our Top Services</span>
-							<h2>Our Best Services</h2>
+							<span>{{ $t('services.highlight') }}</span>
+							<h2>{{ $t('services.bestService') }}</h2>
 						</div>
 					</div>
 				</div>

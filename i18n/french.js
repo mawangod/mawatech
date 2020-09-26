@@ -30,9 +30,28 @@ export default {
 		submitButton: 'Envoyez',
 		sendUsMessage: 'Envoyez nous vos questions!'
 	},
-	team: {},
-	services: {},
-	cases: {},
+	team: {
+		title: 'Notre équipe',
+		teamPart1:
+			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+		teamPart2:
+			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+		searching: 'Recherchez-vous',
+		consultant: 'Un consultant de première catégorie ?',
+		moreAboutUs: 'En savoir plus',
+		highlight: 'Nous Vous Présentons',
+		bestTeam: 'Notre équipe de professionels'
+	},
+	services: {
+		title: 'Nos Services',
+		highlight: 'Nous vous proposons',
+		bestService: 'Nos Meilleurs Services'
+	},
+	cases: {
+		title: 'Nos précédents cas',
+		highlight: 'Jeter un oeil à',
+		featuredCase: 'Nos Cas en Vedette'
+	},
 	about: {
 		title: 'A propos de nous',
 		mission: 'Notre Mission',
