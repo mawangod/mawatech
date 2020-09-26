@@ -1,6 +1,9 @@
 <template>
 	<main>
-		<ImageTitle title="Contact US" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle
+			:title="$t('contact.title')"
+			:url="sliderBackGround"
+		></ImageTitle>
 		<section class="contact-section">
 			<div class="container">
 				<div class="d-none d-sm-block mb-5 pb-4">
@@ -40,67 +43,53 @@
 
 				<div class="row">
 					<div class="col-12">
-						<h2 class="contact-title">Get in Touch</h2>
+						<h2 class="contact-title">{{ $t('contact.formTitle') }}</h2>
 					</div>
 					<div class="col-lg-8">
 						<form
 							id="contactForm"
 							class="form-contact contact_form"
-							action="contact_process.php"
-							method="post"
 							novalidate="novalidate"
 						>
 							<div class="row">
 								<div class="col-12">
 									<div class="form-group">
 										<textarea
-											id="message"
 											class="form-control w-100"
 											name="message"
 											cols="30"
 											rows="9"
-											onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter Message'"
-											placeholder=" Enter Message"
+											:placeholder="$t('contact.placeholderMessage')"
 										></textarea>
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<input
-											id="name"
 											class="form-control valid"
 											name="name"
 											type="text"
-											onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter your name'"
-											placeholder="Enter your name"
+											:placeholder="$t('contact.placeholderName')"
 										/>
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<input
-											id="email"
 											class="form-control valid"
 											name="email"
 											type="email"
-											onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter email address'"
-											placeholder="Email"
+											:placeholder="$t('contact.placeholderMail')"
 										/>
 									</div>
 								</div>
 								<div class="col-12">
 									<div class="form-group">
 										<input
-											id="subject"
 											class="form-control"
 											name="subject"
 											type="text"
-											onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter Subject'"
-											placeholder="Enter Subject"
+											:placeholder="$t('contact.placeholderSubject')"
 										/>
 									</div>
 								</div>
@@ -110,7 +99,7 @@
 									type="submit"
 									class="button button-contactForm boxed-btn"
 								>
-									Send
+									{{ $t('contact.submitButton') }}
 								</button>
 							</div>
 						</form>
@@ -123,8 +112,8 @@
 								></FontAwesomeIcon>
 							</span>
 							<div class="media-body">
-								<h3>Chaussée de beaumont 187</h3>
-								<p>Mons, 7000</p>
+								<h3>{{ street }}</h3>
+								<p>{{ town }}</p>
 							</div>
 						</div>
 						<div class="media contact-info">
@@ -134,8 +123,11 @@
 								></FontAwesomeIcon>
 							</span>
 							<div class="media-body">
-								<h3><span>+32 </span>475/70.45.73</h3>
-								<p>Mon to Fri 9am to 6pm</p>
+								<h3>
+									<span>{{ gsm.prefixe }}</span>
+									{{ gsm.num }}
+								</h3>
+								<p>{{ $t('header.worktime') }}</p>
 							</div>
 						</div>
 						<div class="media contact-info">
@@ -143,8 +135,8 @@
 								<FontAwesomeIcon :icon="['far', 'envelope']"></FontAwesomeIcon>
 							</span>
 							<div class="media-body">
-								<h3>mawatechnologie@gmail.com</h3>
-								<p>Send us your query anytime!</p>
+								<h3>{{ mail }}</h3>
+								<p>{{ $t('contact.sendUsMessage') }}</p>
 							</div>
 						</div>
 					</div>
@@ -158,6 +150,7 @@
 import sliderBackGround from '@/assets/img/cover/contact_us.jpg'
 import ImageTitle from '@/components/image-title.vue'
 import markerPng from '@/assets/img/media/marker.png'
+import {gsm, mail, street, town} from '../utilities/usefull-data'
 
 export default {
 	components: {ImageTitle},
@@ -165,8 +158,12 @@ export default {
 		const x = 3.990595028455405
 		const y = 50.43797498955024
 		return {
+			mail,
+			gsm,
 			markerPng,
 			sliderBackGround,
+			street,
+			town,
 			zoom: 14,
 			center: [x, y],
 			rotation: 0,

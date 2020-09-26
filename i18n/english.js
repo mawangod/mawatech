@@ -1,5 +1,4 @@
 export default {
-	hello: 'Welcome',
 	blog: {
 		search: 'Search',
 		category: 'Category',
@@ -21,10 +20,36 @@ export default {
 		enterMail: 'Enter email',
 		subscribe: 'Subscribe'
 	},
-	contact: {},
+	contact: {
+		title: 'Contact US',
+		formTitle: 'Get in Touch',
+		placeholderMessage: 'Enter Message',
+		placeholderName: 'Enter your name',
+		placeholderMail: 'Enter your mail',
+		placeholderSubject: 'Enter Subject',
+		submitButton: 'Send',
+		sendUsMessage: 'Send us your query anytime!'
+	},
 	team: {},
 	services: {},
-	about: {},
+	cases: {},
+	about: {
+		title: 'About Us',
+		mission: 'Our Mission',
+		missionPart1:
+			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+		missionPart2:
+			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+		vision: 'Our Vision',
+		visionPart1:
+			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+		visionPart2:
+			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+		projects: 'Projetcs Completed',
+		activeClients: 'Active Clients',
+		coffes: 'Cups of Coffee',
+		happyClients: 'Happy Clients'
+	},
 	home: {},
 	header: {
 		worktime: 'Mon - Sat: 8.00 am - 8.00 pm',

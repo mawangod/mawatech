@@ -1,39 +1,27 @@
 <template>
 	<main>
-		<ImageTitle title="About Us" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle :title="$t('about.title')" :url="sliderBackGround"></ImageTitle>
 		<div class="about-details section-padding30">
 			<div class="container">
 				<div class="row">
 					<div class="offset-xl-1 col-lg-8">
 						<div class="about-details-cap mb-50">
-							<h4>Our Mission</h4>
+							<h4>{{ $t('about.mission') }}</h4>
 							<p>
-								Consectetur adipiscing elit, sued do eiusmod tempor ididunt
-								udfgt labore et dolore magna aliqua. Quis ipsum suspendisces
-								gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor
-								maecenas accumsan lacus.
+								{{ $t('about.missionPart1') }}
 							</p>
 							<p>
-								Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan
-								lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan.
+								{{ $t('about.missionPart2') }}
 							</p>
 						</div>
 
 						<div class="about-details-cap mb-50">
-							<h4>Our Vision</h4>
+							<h4>{{ $t('about.vision') }}</h4>
 							<p>
-								Consectetur adipiscing elit, sued do eiusmod tempor ididunt
-								udfgt labore et dolore magna aliqua. Quis ipsum suspendisces
-								gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor
-								maecenas accumsan lacus.
+								{{ $t('about.visionPart1') }}
 							</p>
 							<p>
-								Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan
-								lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas
-								accumsan.
+								{{ $t('about.visionPart2') }}
 							</p>
 						</div>
 					</div>
@@ -51,27 +39,20 @@
 							v-bind="settingSlider"
 							class="h1-testimonial-active"
 						>
-							<div class="single-testimonial text-center">
+							<div
+								v-for="(founder, index) in founders"
+								:key="index"
+								class="single-testimonial text-center"
+							>
 								<div class="testimonial-caption">
 									<div class="testimonial-top-cap">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink"
-											width="67px"
-											height="49px"
+										<FontAwesomeIcon
+											class="quote"
+											:icon="['fas', 'quote-right']"
 										>
-											<path
-												fill-rule="evenodd"
-												fill="rgb(240, 78, 60)"
-												d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"
-											/>
-										</svg>
+										</FontAwesomeIcon>
 										<p>
-											Consectetur adipiscing elit, sed do eiusmod tempor
-											incididunt ut labore et dolore magna aliqua. Quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
-											maecenas accumsan lacus vel facilisis por incididunt ut
-											labore et dolore mas.
+											{{ founder.message }}
 										</p>
 									</div>
 									<div
@@ -79,52 +60,15 @@
 									>
 										<div class="founder-img">
 											<img
-												src="@/assets/img/gallery/Homepage_testi.png"
+												:src="
+													require(`@/assets/img/gallery/${founder.photo}.png`)
+												"
 												alt=""
 											/>
 										</div>
 										<div class="founder-text">
-											<span>Jessya Inn</span>
-											<p>Chif Photographer</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="single-testimonial text-center">
-								<div class="testimonial-caption">
-									<div class="testimonial-top-cap">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink"
-											width="67px"
-											height="49px"
-										>
-											<path
-												fill-rule="evenodd"
-												fill="rgb(240, 78, 60)"
-												d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"
-											/>
-										</svg>
-										<p>
-											Consectetur adipiscing elit, sed do eiusmod tempor
-											incididunt ut labore et dolore magna aliqua. Quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
-											maecenas accumsan lacus vel facilisis por incididunt ut
-											labore et dolore mas.
-										</p>
-									</div>
-									<div
-										class="testimonial-founder d-flex align-items-center justify-content-center"
-									>
-										<div class="founder-img">
-											<img
-												src="@/assets/img/gallery/Homepage_testi.png"
-												alt=""
-											/>
-										</div>
-										<div class="founder-text">
-											<span>Jessya Inn</span>
-											<p>Chif Photographer</p>
+											<span>{{ founder.name }}</span>
+											<p>{{ founder.job }}</p>
 										</div>
 									</div>
 								</div>
@@ -137,10 +81,13 @@
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
-					<Counter :value="8705" title="Projects Completed"></Counter>
-					<Counter is-active :value="480" title="Active Clients"></Counter>
-					<Counter :value="626" title="Cups of Coffee"></Counter>
-					<Counter :value="9774" title="Happy Clients"></Counter>
+					<Counter
+						v-for="(counter, index) in counters"
+						:key="index"
+						:value="counter.value"
+						:title="$t(`about.${counter.title}`)"
+						:is-active="counter.active"
+					></Counter>
 				</div>
 			</div>
 		</div>
@@ -162,8 +109,37 @@ export default {
 				lazyLoad: 'ondemand',
 				arrows: true,
 				dots: true
-			}
+			},
+			counters: [
+				{value: 8705, title: 'projects'},
+				{value: 480, title: 'activeClients', active: true},
+				{value: 626, title: 'coffes'},
+				{value: 9774, title: 'happyClients'}
+			],
+			founders: [
+				{
+					name: 'David Maw',
+					job: 'CEO',
+					message:
+						'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.',
+					photo: 'ceo'
+				},
+				{
+					name: 'Arthur Londers',
+					job: 'Chif Photographer',
+					message:
+						'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.',
+					photo: 'Homepage_testi'
+				}
+			]
 		}
 	}
 }
 </script>
+
+<style scoped>
+.quote {
+	font-size: 3rem;
+	color: #f04e3c;
+}
+</style>

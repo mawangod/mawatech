@@ -111,6 +111,7 @@
 
 <script>
 import backgroundUrl from '@/assets/img/gallery/footer_bg.jpg'
+import {gsm, mail} from '../utilities/usefull-data'
 import LinkedIcon from './linked-icon.vue'
 
 export default {
@@ -118,11 +119,8 @@ export default {
 	data() {
 		return {
 			backgroundUrl,
-			mail: 'mawatechnologie@gmail.com',
-			gsm: {
-				prefixe: '+32',
-				num: '475/70.45.73'
-			},
+			mail,
+			gsm,
 			generalTabs: ['jobs', 'information', 'management'],
 			aboutTabs: ['cookies', 'privacy', 'disclaimer', 'copyright']
 		}

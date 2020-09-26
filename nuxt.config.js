@@ -83,7 +83,8 @@ export default {
 				'faPoll',
 				'faMobileAlt',
 				'faSearch',
-				'faHeart'
+				'faHeart',
+				'faQuoteRight'
 			]
 		}
 	},
