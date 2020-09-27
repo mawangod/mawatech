@@ -1,6 +1,15 @@
 export default {
-	blog: {
+	button: {
 		search: 'Rechercher',
+		subscribe: 'Inscription',
+		submitButton: 'Envoyez',
+		moreAboutUs: 'En savoir plus',
+		ourServices: 'Nos Services',
+		ourCases: 'Nos cas'
+	},
+	blog: {
+		title: 'Nos derniers posts',
+		highlight: "N'hésitez pas a regarder",
 		category: 'Catégories',
 		restaurant: 'Restaurant',
 		travel: 'Voyage',
@@ -18,7 +27,7 @@ export default {
 		instagramFeeds: 'Dernières publications Instagram',
 		newsletter: 'Newsletter',
 		enterMail: 'Entrez votre email',
-		subscribe: 'Inscription'
+		comments: 'Commentaires'
 	},
 	contact: {
 		title: 'Contactez nous',
@@ -27,7 +36,6 @@ export default {
 		placeholderName: 'Entrer votre nom',
 		placeholderMail: 'Entrer votre email',
 		placeholderSubject: 'Entrer le sujet',
-		submitButton: 'Envoyez',
 		sendUsMessage: 'Envoyez nous vos questions!'
 	},
 	team: {
@@ -38,7 +46,6 @@ export default {
 			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
 		searching: 'Recherchez-vous',
 		consultant: 'Un consultant de première catégorie ?',
-		moreAboutUs: 'En savoir plus',
 		highlight: 'Nous Vous Présentons',
 		bestTeam: 'Notre équipe de professionels'
 	},
@@ -54,12 +61,13 @@ export default {
 	},
 	about: {
 		title: 'A propos de nous',
+		subtitle: 'Notre Mission & Vision',
 		mission: 'Notre Mission',
 		missionPart1:
 			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
 		missionPart2:
 			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
-		vision: 'Notre vision',
+		vision: 'Notre Vision',
 		visionPart1:
 			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
 		visionPart2:
@@ -69,7 +77,16 @@ export default {
 		coffes: 'Tasses de café',
 		happyClients: 'Clients satisfaits'
 	},
-	home: {},
+	home: {
+		slide1Title: 'Engagé au succès',
+		slide1Highlight: 'Nous vous aidons à développer votre entreprise',
+		slide1Message:
+			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate',
+		slide2Title: 'Merveilleuses expériences',
+		slide2Highlight: 'les Succès storys avec nos clients',
+		slide2Message:
+			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate'
+	},
 	header: {
 		worktime: 'Lun - Sam: 8.00 am - 8.00 pm',
 		home: 'Accueil',
@@ -93,5 +110,19 @@ export default {
 		disclaimer: 'Responsabilité',
 		copyright: 'Droit d’auteur',
 		underCopyright: '© 2020 Mawatech Belgium Tout droit réserver'
+	},
+	month: {
+		0: 'Jan',
+		1: 'Fev',
+		2: 'Mar',
+		3: 'Avr',
+		4: 'Mai',
+		5: 'Juin',
+		6: 'Juil',
+		7: 'Aout',
+		8: 'Sep',
+		9: 'Oct',
+		10: 'Nov',
+		11: 'Dec'
 	}
 }

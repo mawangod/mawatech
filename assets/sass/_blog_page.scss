@@ -5,7 +5,7 @@
 		@include transition(0.4s);
 		.blog-img-cap {
 			.blog-img {
-				overflow: hidden;
+				overflow: visible;
 				position: relative;
 				img {
 					width: 100%;

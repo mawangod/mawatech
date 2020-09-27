@@ -1,0 +1,19 @@
+[
+  {
+    "value": 8705,
+    "title": "projects"
+  },
+  {
+    "value": 480,
+    "title": "activeClients",
+    "active": true
+  },
+  {
+    "value": 626,
+    "title": "coffes"
+  },
+  {
+    "value": 9774,
+    "title": "happyClients"
+  }
+]

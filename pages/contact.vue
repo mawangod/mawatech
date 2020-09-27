@@ -99,7 +99,7 @@
 									type="submit"
 									class="button button-contactForm boxed-btn"
 								>
-									{{ $t('contact.submitButton') }}
+									{{ $t('button.submitButton') }}
 								</button>
 							</div>
 						</form>

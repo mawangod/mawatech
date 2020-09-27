@@ -34,7 +34,7 @@
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4">
 						<nuxt-link to="/about" class="btn btn-black f-right">
-							{{ $t('team.moreAboutUs') }}
+							{{ $t('button.moreAboutUs') }}
 						</nuxt-link>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<ImageProfile
+					<Profile
 						v-for="profile in profiles"
 						:id="profile.id"
 						:key="profile.id"
@@ -59,7 +59,7 @@
 						:name="profile.name"
 						:job="profile.job"
 					>
-					</ImageProfile>
+					</Profile>
 				</div>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 <script>
 import sliderBackGround from '@/assets/img/cover/our_team.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
-import capitalizeName from '../../utilities/capitalize-name'
+import capitalizeName from '@/utilities/capitalize-name'
 
 export default {
 	filters: {

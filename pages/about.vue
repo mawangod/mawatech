@@ -110,36 +110,9 @@ export default {
 				arrows: true,
 				dots: true
 			},
-			counters: [
-				{value: 8705, title: 'projects'},
-				{value: 480, title: 'activeClients', active: true},
-				{value: 626, title: 'coffes'},
-				{value: 9774, title: 'happyClients'}
-			],
-			founders: [
-				{
-					name: 'David Maw',
-					job: 'CEO',
-					message:
-						'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.',
-					photo: 'ceo'
-				},
-				{
-					name: 'Arthur Londers',
-					job: 'Chif Photographer',
-					message:
-						'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.',
-					photo: 'Homepage_testi'
-				}
-			]
+			counters: this.$store.state.counters,
+			founders: this.$store.state.founders
 		}
 	}
 }
 </script>
-
-<style scoped>
-.quote {
-	font-size: 3rem;
-	color: #f04e3c;
-}
-</style>

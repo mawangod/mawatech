@@ -12,8 +12,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<ImageCase v-for="cas in cases" :key="cas.id" v-bind="cas">
-					</ImageCase>
+					<Case v-for="cas in cases" :key="cas.id" v-bind="cas"> </Case>
 				</div>
 			</div>
 		</div>

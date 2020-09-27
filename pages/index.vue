@@ -5,43 +5,25 @@
 			:style="{backgroundImage: `url(${sliderBackGround})`}"
 		>
 			<VueSlickCarousel v-bind="settingSlider" class="slider-active">
-				<div class="single-slider slider-height d-flex align-items-center">
+				<div
+					v-for="(slide, index) in slides"
+					:key="index"
+					class="single-slider slider-height d-flex align-items-center"
+				>
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-8 col-lg-7 col-md-8">
 								<div class="hero__caption">
-									<span> Committed to success </span>
-									<h1>We help to grow your business</h1>
+									<span>
+										{{ $t(`home.${slide.highlight}`) }}
+									</span>
+									<h1>{{ $t(`home.${slide.title}`) }}</h1>
 									<p>
-										Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr
-										indd re voluptate<br />
-										velit esscillumlore eu quife nrulla parihatur.
+										{{ $t(`home.${slide.message}`) }}
 									</p>
 									<div class="hero__btn">
-										<nuxt-link to="/services" class="btn hero-btn">
-											Our Services
-										</nuxt-link>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-slider slider-height d-flex align-items-center">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-8 col-lg-7 col-md-8">
-								<div class="hero__caption">
-									<span> Committed to success </span>
-									<h1>We help to grow your business</h1>
-									<p>
-										Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr
-										indd re voluptate<br />
-										velit esscillumlore eu quife nrulla parihatur.
-									</p>
-									<div class="hero__btn">
-										<nuxt-link to="/services" class="btn hero-btn">
-											Our Services
+										<nuxt-link :to="slide.link" class="btn hero-btn">
+											{{ $t(`button.${slide.button}`) }}
 										</nuxt-link>
 									</div>
 								</div>
@@ -56,8 +38,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-tittle mb-70">
-							<span>Our Top Services</span>
-							<h2>Our Best Services</h2>
+							<span>{{ $t('services.highlight') }}</span>
+							<h2>{{ $t('services.bestService') }}</h2>
 						</div>
 					</div>
 				</div>
@@ -84,23 +66,18 @@
 					<div class="col-xl-6 col-lg-6">
 						<div class="right-caption">
 							<div class="section-tittle section-tittle2 mb-50">
-								<span>Our Top Services</span>
-								<h2>Our Best Services</h2>
+								<span>{{ $t('about.title') }}</span>
+								<h2>{{ $t('about.subtitle') }}</h2>
 							</div>
 							<div class="support-caption">
 								<p class="pera-top">
-									Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess
-									cillum dolore egru lofrre dsu quality mollit anim laborumuis
-									au dolor in voluptate velit cillu.
+									{{ $t('about.missionPart1') }}
 								</p>
 								<p class="mb-65">
-									Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd
-									re voluptate velit esscillumlore eu quife nrulla parihatur.
-									Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
-									dhjinulpadeserunt moll.
+									{{ $t('about.visionPart1') }}
 								</p>
 								<nuxt-link to="/about" class="btn post-btn">
-									More About Us
+									{{ $t('button.moreAboutUs') }}
 								</nuxt-link>
 							</div>
 						</div>
@@ -113,14 +90,13 @@
 				<div class="row">
 					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
-							<span>Our Portfolios of cases</span>
-							<h2>Featured Case Study</h2>
+							<span>{{ $t('cases.highlight') }}</span>
+							<h2>{{ $t('cases.featuredCase') }}</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<ImageCase v-for="cas in cases" :key="cas.id" v-bind="cas">
-					</ImageCase>
+					<Case v-for="cas in cases" :key="cas.id" v-bind="cas"> </Case>
 				</div>
 			</div>
 		</div>
@@ -135,27 +111,20 @@
 							v-bind="settingSlider"
 							class="h1-testimonial-active"
 						>
-							<div class="single-testimonial text-center">
+							<div
+								v-for="(founder, index) in founders"
+								:key="index"
+								class="single-testimonial text-center"
+							>
 								<div class="testimonial-caption">
 									<div class="testimonial-top-cap">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink"
-											width="67px"
-											height="49px"
+										<FontAwesomeIcon
+											class="quote"
+											:icon="['fas', 'quote-right']"
 										>
-											<path
-												fill-rule="evenodd"
-												fill="rgb(240, 78, 60)"
-												d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"
-											/>
-										</svg>
+										</FontAwesomeIcon>
 										<p>
-											Consectetur adipiscing elit, sed do eiusmod tempor
-											incididunt ut labore et dolore magna aliqua. Quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
-											maecenas accumsan lacus vel facilisis por incididunt ut
-											labore et dolore mas.
+											{{ founder.message }}
 										</p>
 									</div>
 									<div
@@ -163,52 +132,15 @@
 									>
 										<div class="founder-img">
 											<img
-												src="@/assets/img/gallery/Homepage_testi.png"
+												:src="
+													require(`@/assets/img/gallery/${founder.photo}.png`)
+												"
 												alt=""
 											/>
 										</div>
 										<div class="founder-text">
-											<span>Jessya Inn</span>
-											<p>Chif Photographer</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="single-testimonial text-center">
-								<div class="testimonial-caption">
-									<div class="testimonial-top-cap">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink"
-											width="67px"
-											height="49px"
-										>
-											<path
-												fill-rule="evenodd"
-												fill="rgb(240, 78, 60)"
-												d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"
-											/>
-										</svg>
-										<p>
-											Consectetur adipiscing elit, sed do eiusmod tempor
-											incididunt ut labore et dolore magna aliqua. Quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
-											maecenas accumsan lacus vel facilisis por incididunt ut
-											labore et dolore mas.
-										</p>
-									</div>
-									<div
-										class="testimonial-founder d-flex align-items-center justify-content-center"
-									>
-										<div class="founder-img">
-											<img
-												src="@/assets/img/gallery/Homepage_testi.png"
-												alt=""
-											/>
-										</div>
-										<div class="founder-text">
-											<span>Jessya Inn</span>
-											<p>Chif Photographer</p>
+											<span>{{ founder.name }}</span>
+											<p>{{ founder.job }}</p>
 										</div>
 									</div>
 								</div>
@@ -221,10 +153,13 @@
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
-					<Counter :value="8705" title="Projects Completed"></Counter>
-					<Counter is-active :value="480" title="Active Clients"></Counter>
-					<Counter :value="626" title="Cups of Coffee"></Counter>
-					<Counter :value="9774" title="Happy Clients"></Counter>
+					<Counter
+						v-for="(counter, index) in counters"
+						:key="index"
+						:value="counter.value"
+						:title="$t(`about.${counter.title}`)"
+						:is-active="counter.active"
+					></Counter>
 				</div>
 			</div>
 		</div>
@@ -233,18 +168,18 @@
 				<div class="row">
 					<div class="cl-xl-7 col-lg-8 col-md-10">
 						<div class="section-tittle mb-70">
-							<span>Our Professional members </span>
-							<h2>Our Team Members</h2>
+							<span>{{ $t('team.highlight') }}</span>
+							<h2>{{ $t('team.bestTeam') | capitalize }}</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<ImageProfile
+					<Profile
 						v-for="profile in profiles"
 						:key="profile.id"
 						v-bind="profile"
 					>
-					</ImageProfile>
+					</Profile>
 				</div>
 			</div>
 		</div>
@@ -257,14 +192,14 @@
 					<div class="col-xl-7 col-lg-9 col-md-8">
 						<div class="wantToWork-caption wantToWork-caption2">
 							<h2>
-								Are you Searching<br />
-								For a First-Class Consultant?
+								{{ $t('team.searching') }}<br />
+								{{ $t('team.consultant') }}
 							</h2>
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4">
 						<nuxt-link to="/about" class="btn btn-black f-right">
-							More About Us
+							{{ $t('button.moreAboutUs') }}
 						</nuxt-link>
 					</div>
 				</div>
@@ -275,66 +210,13 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-tittle mb-100">
-							<span>Recent News of us</span>
-							<h2>Our Recent Blog</h2>
+							<span>{{ $t('blog.highlight') }}</span>
+							<h2>{{ $t('blog.title') | capitalize }}</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-6 col-lg-6 col-md-6">
-						<div class="home-blog-single mb-30">
-							<div class="blog-img-cap">
-								<div class="blog-img">
-									<img src="@/assets/img/gallery/home_blog1.png" alt="" />
-									<ul>
-										<li>By Admin - October 27, 2020</li>
-									</ul>
-								</div>
-								<div class="blog-cap">
-									<h3>
-										<nuxt-link to="/blog/post">
-											16 Easy Ideas to Use in Everyday
-										</nuxt-link>
-									</h3>
-									<p>
-										Amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magnua Quis ipsum suspendisse
-										ultrices gra.
-									</p>
-									<nuxt-link to="/blog/post" class="more-btn">
-										Read more
-									</nuxt-link>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-6 col-md-6">
-						<div class="home-blog-single mb-30">
-							<div class="blog-img-cap">
-								<div class="blog-img">
-									<img src="@/assets/img/gallery/home_blog2.png" alt="" />
-									<ul>
-										<li>By Admin - October 27, 2020</li>
-									</ul>
-								</div>
-								<div class="blog-cap">
-									<h3>
-										<nuxt-link to="/blog/post">
-											16 Easy Ideas to Use in Everyday
-										</nuxt-link>
-									</h3>
-									<p>
-										Amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magnua Quis ipsum suspendisse
-										ultrices gra.
-									</p>
-									<nuxt-link to="/blog/post" class="more-btn">
-										Read more
-									</nuxt-link>
-								</div>
-							</div>
-						</div>
-					</div>
+					<Post v-for="post in posts" :key="post.id" v-bind="post"></Post>
 				</div>
 			</div>
 		</div>
@@ -347,9 +229,15 @@ import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
+import capitalizeName from '@/utilities/capitalize-name'
 
 export default {
 	components: {VueSlickCarousel},
+	filters: {
+		capitalize(name) {
+			return capitalizeName(name)
+		}
+	},
 	data() {
 		return {
 			workBackGround,
@@ -360,7 +248,26 @@ export default {
 				lazyLoad: 'ondemand',
 				arrows: true,
 				dots: true
-			}
+			},
+			counters: this.$store.state.counters,
+			founders: this.$store.state.founders,
+			posts: this.$store.state.posts,
+			slides: [
+				{
+					title: 'slide1Title',
+					highlight: 'slide1Highlight',
+					button: 'ourServices',
+					message: 'slide1Message',
+					link: '/services'
+				},
+				{
+					title: 'slide2Title',
+					highlight: 'slide2Highlight',
+					button: 'ourCases',
+					message: 'slide2Message',
+					link: '/cases'
+				}
+			]
 		}
 	},
 	computed: {

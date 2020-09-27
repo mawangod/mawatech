@@ -23,7 +23,7 @@
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
 						type="submit"
 					>
-						{{ $t('blog.search') }}
+						{{ $t('button.search') }}
 					</button>
 				</form>
 			</aside>
@@ -99,7 +99,7 @@
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
 						type="submit"
 					>
-						{{ $t('blog.subscribe') }}
+						{{ $t('button.subscribe') }}
 					</button>
 				</form>
 			</aside>
