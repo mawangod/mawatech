@@ -1,7 +1,6 @@
 <template>
 	<main>
 		<ImageTitle title="Blog" :url="sliderBackGround"></ImageTitle>
-
 		<section class="home-blog-area section-padding">
 			<div class="container">
 				<div class="row">

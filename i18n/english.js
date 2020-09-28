@@ -23,7 +23,6 @@ export default {
 		inspiration: 'Inspiration',
 		healt: 'Healt',
 		yolo: 'Yolo',
-		recent: 'Recent',
 		popularTags: 'Popular tags',
 		instagramFeeds: 'Instagram feeds',
 		newsletter: 'Newsletter',

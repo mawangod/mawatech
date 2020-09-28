@@ -136,7 +136,9 @@
 															</nuxt-link>
 														</li>
 														<li>
-															<nuxt-link to="/blog/post">
+															<nuxt-link
+																:to="{name: 'blog-id', params: {id: 1}}"
+															>
 																{{ $t('header.post') }}
 															</nuxt-link>
 														</li>

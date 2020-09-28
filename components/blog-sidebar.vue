@@ -40,25 +40,6 @@
 				</ul>
 			</aside>
 
-			<aside class="single_sidebar_widget popular_post_widget">
-				<h3 class="widget_title">{{ $t('blog.recent') }}</h3>
-				<div
-					v-for="(post, index) in posts"
-					:key="index"
-					class="media post_item"
-				>
-					<img
-						:src="require(`@/assets/img/post/${post.photo}.png`)"
-						alt="post"
-					/>
-					<div class="media-body">
-						<nuxt-link to="/blog/post">
-							<h3>{{ post.title }}</h3>
-						</nuxt-link>
-						<p>{{ post.date }}</p>
-					</div>
-				</div>
-			</aside>
 			<aside class="single_sidebar_widget tag_cloud_widget">
 				<h4 class="widget_title">{{ $t('blog.popularTags') }}</h4>
 				<ul class="list">
@@ -119,16 +100,6 @@ export default {
 				{name: 'inspiration', amount: 21},
 				{name: 'healt', amount: 13},
 				{name: 'yolo', amount: 12}
-			],
-			posts: [
-				{
-					title: 'From life was you fish...',
-					date: 'January 12, 2019',
-					photo: 'post_1'
-				},
-				{title: 'The Amazing Hubble', date: '2 Hours ago', photo: 'post_2'},
-				{title: 'Astronomy Or Astrology', date: '3 Hours ago', photo: 'post_3'},
-				{title: 'Asteroids telescope', date: '1 Hours ago', photo: 'post_4'}
 			],
 			tags: [
 				'project',

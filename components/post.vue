@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link :to="{name: route, params: {id}}">
+	<nuxt-link :to="{name: 'blog-id', params: {id}}">
 		<div class="home-blog-single mb-30">
 			<div class="blog-img-cap">
 				<div class="blog-img">
@@ -16,23 +16,7 @@
 					<p>
 						{{ preview }}
 					</p>
-					<ul class="blog-info-link">
-						<li>
-							<a href="#">
-								<FontAwesomeIcon class="fa" :icon="['fas', 'user']">
-								</FontAwesomeIcon>
-								<span>{{ $t(`blog.${tags[0]}`) }},</span
-								><span>{{ $t(`blog.${tags[1]}`) }}</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<FontAwesomeIcon class="fa" :icon="['fas', 'comments']">
-								</FontAwesomeIcon>
-								{{ comments.length }} {{ $t('blog.comments') }}
-							</a>
-						</li>
-					</ul>
+					<PostInfo :comments="comments" :tags="tags"></PostInfo>
 				</div>
 			</div>
 		</div>
@@ -41,8 +25,10 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import PostInfo from './post-info'
 
 export default {
+	components: {PostInfo},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
@@ -84,8 +70,7 @@ export default {
 	},
 	data() {
 		return {
-			options: {year: 'numeric', month: 'long', day: 'numeric'},
-			route: 'blog-post'
+			options: {year: 'numeric', month: 'long', day: 'numeric'}
 		}
 	},
 	computed: {
