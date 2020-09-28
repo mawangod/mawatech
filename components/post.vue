@@ -1,23 +1,17 @@
 <template>
-	<nuxt-link
-		:to="{name: route, params: {id}}"
-		class="col-xl-6 col-lg-6 col-md-6"
-	>
+	<nuxt-link :to="{name: route, params: {id}}">
 		<div class="home-blog-single mb-30">
 			<div class="blog-img-cap">
-				<div class="blog-img blog_item_img">
-					<img :src="require(`@/assets/img/gallery/${photo}.png`)" alt="" />
-					<a href="#" class="blog_item_date">
-						<h3>{{ day }}</h3>
-						<p>{{ $t(`month.${month}`) }}</p>
-					</a>
+				<div class="blog-img">
+					<img :src="require(`@/assets/img/blog/${photo}.png`)" alt="" />
+					<ul>
+						<li>{{ $t('blog.by') }} {{ author }} - {{ formattedDate }}</li>
+					</ul>
 				</div>
 
 				<div class="blog-cap">
 					<h3>
-						<a>
-							{{ title }}
-						</a>
+						{{ title }}
 					</h3>
 					<p>
 						{{ preview }}
@@ -82,14 +76,35 @@ export default {
 		comments: {
 			type: Array,
 			required: true
+		},
+		author: {
+			type: String,
+			required: true
 		}
 	},
 	data() {
 		return {
-			day: new Date(this.date).getDay(),
-			month: new Date(this.date).getMonth(),
+			options: {year: 'numeric', month: 'long', day: 'numeric'},
 			route: 'blog-post'
+		}
+	},
+	computed: {
+		selectedLocale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		formattedDate() {
+			return new Date(this.date).toLocaleDateString(
+				this.selectedLocale,
+				this.options
+			)
 		}
 	}
 }
 </script>
+
+<style scoped>
+h3 {
+	text-decoration: none;
+	background-color: transparent;
+}
+</style>

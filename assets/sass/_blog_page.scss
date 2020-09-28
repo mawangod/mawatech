@@ -56,25 +56,23 @@
 					padding: 30px 8px 31px 26px;
 				}
 				h3 {
-					a {
-						color: #191d34;
-						font-size: 30px;
-						font-weight: 700;
-						line-height: 1.4;
-						margin-bottom: 20px;
-						display: block;
-						&:hover {
-							color: $theme-color;
-						}
-						@media #{$md} {
-							font-size: 23px;
-						}
-						@media #{$sm} {
-							font-size: 19px;
-						}
-						@media #{$xs} {
-							font-size: 19px;
-						}
+					color: #191d34;
+					font-size: 30px;
+					font-weight: 700;
+					line-height: 1.4;
+					margin-bottom: 20px;
+					display: block;
+					&:hover {
+						color: $theme-color;
+					}
+					@media #{$md} {
+						font-size: 23px;
+					}
+					@media #{$sm} {
+						font-size: 19px;
+					}
+					@media #{$xs} {
+						font-size: 19px;
 					}
 				}
 				p {
@@ -111,25 +109,6 @@
 .latest-blog-area {
 	.area-heading {
 		margin-bottom: 70px;
-	}
-}
-.blog_area {
-	a {
-		color: $font_1 !important;
-		text-decoration: none;
-		transition: 0.4s;
-		&:hover,
-		:hover {
-			background: -webkit-linear-gradient(
-				131deg,
-				$theme-color 0%,
-				$theme-color 99%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			text-decoration: none;
-			transition: 0.4s;
-		}
 	}
 }
 
@@ -883,6 +862,10 @@
 	span {
 		font-size: 13px;
 	}
+}
+
+.page-item {
+	cursor: pointer;
 }
 
 .blog-pagination .page-item.active {

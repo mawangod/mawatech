@@ -216,7 +216,12 @@
 					</div>
 				</div>
 				<div class="row">
-					<Post v-for="post in posts" :key="post.id" v-bind="post"></Post>
+					<Post
+						v-for="post in posts"
+						:key="post.id"
+						class="col-xl-6 col-lg-6 col-md-6"
+						v-bind="post"
+					></Post>
 				</div>
 			</div>
 		</div>
@@ -251,7 +256,7 @@ export default {
 			},
 			counters: this.$store.state.counters,
 			founders: this.$store.state.founders,
-			posts: this.$store.state.posts,
+			posts: this.$store.state.posts.slice(0, 2),
 			slides: [
 				{
 					title: 'slide1Title',

@@ -8,6 +8,7 @@ export default {
 		ourCases: 'Our cases'
 	},
 	blog: {
+		by: 'By',
 		title: 'Our latest posts',
 		highlight: 'Do not hesitate to watch',
 		category: 'Category',

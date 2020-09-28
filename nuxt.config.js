@@ -84,7 +84,9 @@ export default {
 				'faMobileAlt',
 				'faSearch',
 				'faHeart',
-				'faQuoteRight'
+				'faQuoteRight',
+				'faAngleLeft',
+				'faAngleRight'
 			]
 		}
 	},
@@ -109,20 +111,20 @@ export default {
 	i18n: {
 		locales: [
 			{
-				code: 'en',
+				code: 'en-EN',
 				file: 'english.js'
 			},
 			{
-				code: 'fr',
+				code: 'fr-FR',
 				file: 'french.js'
 			}
 		],
-		defaultLocale: 'en',
+		defaultLocale: 'en-EN',
 		strategy: 'no_prefix',
 		lazy: true,
 		langDir: 'i18n/',
 		vueI18n: {
-			fallbackLocale: 'en'
+			fallbackLocale: 'en-EN'
 		}
 	}
 }

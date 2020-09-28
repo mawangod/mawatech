@@ -66,9 +66,9 @@
 												<option
 													v-for="locale in availableLocales"
 													:key="locale.code"
-													:value="locale.code"
+													:value="getLocaleFormatted(locale.code)"
 												>
-													{{ locale.code | capitalize }}
+													{{ getLocaleFormatted(locale.code) | capitalize }}
 												</option>
 											</select>
 										</li>
@@ -183,7 +183,10 @@ export default {
 	},
 	computed: {
 		selectedLocale() {
-			return this.$i18n.locale || this.$i18n.defaultLocale
+			return (
+				this.getLocaleFormatted(this.$i18n.locale) ||
+				this.getLocaleFormatted(this.$i18n.defaultLocale)
+			)
 		},
 		availableLocales() {
 			return this.$i18n.locales
@@ -192,6 +195,9 @@ export default {
 	methods: {
 		setLocale(locale) {
 			this.$i18n.setLocale(locale.code)
+		},
+		getLocaleFormatted(locale) {
+			return locale.split('-')[0]
 		}
 	}
 }

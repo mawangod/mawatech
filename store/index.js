@@ -1,9 +1,10 @@
-import profiles from '../static/profiles.json'
-import services from '../static/services.json'
-import cases from '../static/cases.json'
-import founders from '../static/founders.json'
-import counters from '../static/counters.json'
-import posts from '../static/posts.json'
+import sortByDate from '@/utilities/sort-by-date'
+import profiles from '@/static/profiles.json'
+import services from '@/static/services.json'
+import cases from '@/static/cases.json'
+import founders from '@/static/founders.json'
+import counters from '@/static/counters.json'
+import posts from '@/static/posts.json'
 
 export const state = () => ({
 	profiles,
@@ -11,7 +12,7 @@ export const state = () => ({
 	cases,
 	founders,
 	counters,
-	posts
+	posts: posts.sort(sortByDate)
 })
 
 export const mutations = {}
