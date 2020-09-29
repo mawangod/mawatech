@@ -40,7 +40,7 @@
 							class="h1-testimonial-active"
 						>
 							<div
-								v-for="(founder, index) in founders"
+								v-for="(profile, index) in profiles"
 								:key="index"
 								class="single-testimonial text-center"
 							>
@@ -52,7 +52,7 @@
 										>
 										</FontAwesomeIcon>
 										<p>
-											{{ founder.message }}
+											{{ profile.slogan }}
 										</p>
 									</div>
 									<div
@@ -61,14 +61,14 @@
 										<div class="founder-img">
 											<img
 												:src="
-													require(`@/assets/img/gallery/${founder.photo}.png`)
+													require(`@/assets/img/gallery/${profile.icon}.png`)
 												"
 												alt=""
 											/>
 										</div>
 										<div class="founder-text">
-											<span>{{ founder.name }}</span>
-											<p>{{ founder.job }}</p>
+											<span>{{ profile.name }}</span>
+											<p>{{ profile.job }}</p>
 										</div>
 									</div>
 								</div>
@@ -111,7 +111,7 @@ export default {
 				dots: true
 			},
 			counters: this.$store.state.counters,
-			founders: this.$store.state.founders
+			profiles: this.$store.state.profiles
 		}
 	}
 }

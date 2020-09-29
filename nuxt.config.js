@@ -64,7 +64,8 @@ export default {
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa',
 		'bootstrap-vue/nuxt',
-		'nuxt-i18n'
+		'nuxt-i18n',
+		'@nuxt/content'
 	],
 	bootstrapVue: {
 		bootstrapCSS: false,
