@@ -9,25 +9,25 @@
 							<div class="feature-img">
 								<img
 									class="img-fluid"
-									:src="require(`@/assets/img/blog/${article.img}.png`)"
+									:src="require(`@/assets/img/blog/${post.img}.png`)"
 									alt=""
 								/>
 							</div>
 							<div class="blog_details">
 								<h2>
-									{{ article.title }}
+									{{ post.title }}
 								</h2>
 								<PostInfo
-									:comments="article.comments"
+									:comments="post.comments"
 									class="mt-3 mb-4"
-									:tags="article.tags"
+									:tags="post.tags"
 								/>
-								<nuxt-content :document="article" />
+								<nuxt-content :document="post" />
 							</div>
 						</div>
 						<PostNavbar />
-						<PostAuthor :author="article.author" />
-						<PostComments :comments="article.comments" />
+						<PostAuthor :author="post.author" />
+						<PostComments :comments="post.comments" />
 						<PostReply />
 					</div>
 					<BlogSidebar />
@@ -42,9 +42,9 @@ import backgroundUrl from '@/assets/img/cover/blog.jpg'
 
 export default {
 	async asyncData({$content, params}) {
-		const article = await $content('articles', params.slug).fetch()
+		const post = await $content('posts', params.slug).fetch()
 
-		return {article}
+		return {post}
 	},
 	data() {
 		return {

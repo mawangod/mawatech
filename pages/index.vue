@@ -235,12 +235,31 @@ import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
 import capitalizeName from '@/utilities/capitalize-name'
+import sortByDate from '@/utilities/sort-by-date'
 
 export default {
 	components: {VueSlickCarousel},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
+		}
+	},
+	async asyncData({$content, params}) {
+		const posts = await $content('posts', params.slug)
+			.only([
+				'title',
+				'description',
+				'img',
+				'slug',
+				'author',
+				'comments',
+				'tags',
+				'date'
+			])
+			.fetch()
+
+		return {
+			posts: posts.sort(sortByDate).slice(0, 2)
 		}
 	},
 	data() {
@@ -255,7 +274,6 @@ export default {
 				dots: true
 			},
 			counters: this.$store.state.counters,
-			posts: this.$store.state.posts.slice(0, 2),
 			slides: [
 				{
 					title: 'slide1Title',

@@ -137,7 +137,10 @@
 														</li>
 														<li>
 															<nuxt-link
-																:to="{name: 'blog-id', params: {id: 1}}"
+																:to="{
+																	name: 'blog-slug',
+																	params: {slug: 'post-1'}
+																}"
 															>
 																{{ $t('header.post') }}
 															</nuxt-link>
