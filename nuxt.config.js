@@ -87,7 +87,9 @@ export default {
 				'faHeart',
 				'faQuoteRight',
 				'faAngleLeft',
-				'faAngleRight'
+				'faAngleRight',
+				'faArrowRight',
+				'faArrowLeft'
 			]
 		}
 	},

@@ -25,7 +25,7 @@
 								<nuxt-content :document="post" />
 							</div>
 						</div>
-						<PostNavbar />
+						<PostNavbar :prev="prev" :next="next" />
 						<PostAuthor :author="post.author" />
 						<PostComments :comments="post.comments" />
 						<PostReply />
@@ -45,11 +45,36 @@ export default {
 		const {slug} = params
 		const post = await $content('posts', app.i18n.locale, slug).fetch()
 
-		return {post}
+		const [prev, next] = await $content('posts', app.i18n.locale)
+			.only(['title', 'slug', 'img'])
+			.surround(slug)
+			.sortBy('date', 'desc')
+			.fetch()
+		return {post, prev, next}
 	},
 	data() {
 		return {
 			backgroundUrl
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale
+		}
+	},
+	watch: {
+		async locale(newValue, oldValue) {
+			if (newValue !== oldValue) {
+				const {slug} = this.$route.params
+				this.post = await this.$content('posts', newValue, slug).fetch()
+				const [prev, next] = await this.$content('posts', newValue)
+					.only(['title', 'slug', 'img'])
+					.surround(slug)
+					.sortBy('date', 'desc')
+					.fetch()
+				this.next = next
+				this.prev = prev
+			}
 		}
 	}
 }

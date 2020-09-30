@@ -19,7 +19,6 @@
 
 <script>
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
-import sortByDate from '@/utilities/sort-by-date'
 
 export default {
 	async asyncData({app, $content}) {
@@ -34,10 +33,11 @@ export default {
 				'tags',
 				'date'
 			])
+			.sortBy('date', 'desc')
 			.fetch()
 
 		return {
-			posts: posts.sort(sortByDate)
+			posts
 		}
 	},
 	data() {
@@ -64,8 +64,8 @@ export default {
 						'tags',
 						'date'
 					])
+					.sortBy('date', 'desc')
 					.fetch()
-				this.posts = this.posts.sort(sortByDate)
 			}
 		}
 	}

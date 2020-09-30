@@ -27,7 +27,9 @@ export default {
 		instagramFeeds: 'Dernières publications Instagram',
 		newsletter: 'Newsletter',
 		enterMail: 'Entrez votre email',
-		comments: 'Commentaires'
+		comments: 'Commentaires',
+		prevPost: 'Post préc',
+		nextPost: 'Post suiv'
 	},
 	contact: {
 		title: 'Contactez nous',

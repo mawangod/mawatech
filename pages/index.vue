@@ -235,7 +235,6 @@ import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
 import capitalizeName from '@/utilities/capitalize-name'
-import sortByDate from '@/utilities/sort-by-date'
 
 export default {
 	components: {VueSlickCarousel},
@@ -256,10 +255,11 @@ export default {
 				'tags',
 				'date'
 			])
+			.sortBy('date', 'desc')
 			.fetch()
 
 		return {
-			posts: posts.sort(sortByDate).slice(0, 2)
+			posts: posts.slice(0, 2)
 		}
 	},
 	data() {
@@ -320,8 +320,9 @@ export default {
 						'tags',
 						'date'
 					])
+					.sortBy('date', 'desc')
 					.fetch()
-				this.posts = this.posts.sort(sortByDate).slice(0, 2)
+				this.posts = this.posts.slice(0, 2)
 			}
 		}
 	}

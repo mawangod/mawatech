@@ -37,55 +37,84 @@
 		</div>
 		<div class="navigation-area">
 			<div class="row">
-				<div
+				<NuxtLink
+					v-if="prev"
+					:to="{name: 'blog-slug', params: {slug: prev.slug}}"
 					class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
 				>
 					<div class="thumb">
-						<a href="#">
-							<img
-								class="img-fluid"
-								src="@/assets/img/post/preview.png"
-								alt=""
-							/>
-						</a>
+						<img
+							class="img-fluid"
+							:src="require(`@/assets/img/blog/preview/${prev.img}.png`)"
+							alt=""
+						/>
 					</div>
 					<div class="arrow">
-						<a href="#">
-							<span class="lnr text-white ti-arrow-left"></span>
-						</a>
+						<FontAwesomeIcon
+							class="fas lnr text-white"
+							:icon="['fas', 'arrow-left']"
+						>
+						</FontAwesomeIcon>
 					</div>
 					<div class="detials">
-						<p>Prev Post</p>
-						<a href="#">
-							<h4>Space The Final Frontier</h4>
-						</a>
+						<p>{{ $t('blog.prevPost') }}</p>
+						<h4 class="trunc">{{ prev.title }}</h4>
 					</div>
-				</div>
-				<div
+				</NuxtLink>
+				<NuxtLink
+					v-if="next"
+					:to="{name: 'blog-slug', params: {slug: next.slug}}"
 					class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center"
 				>
 					<div class="detials">
-						<p>Next Post</p>
-						<a href="#">
-							<h4>Telescopes 101</h4>
-						</a>
+						<p>{{ $t('blog.nextPost') }}</p>
+						<h4 class="trunc">{{ next.title }}</h4>
 					</div>
 					<div class="arrow">
-						<a href="#">
-							<span class="lnr text-white ti-arrow-right"></span>
-						</a>
+						<FontAwesomeIcon
+							class="fas lnr text-white"
+							:icon="['fas', 'arrow-right']"
+						>
+						</FontAwesomeIcon>
 					</div>
 					<div class="thumb">
-						<a href="#">
-							<img class="img-fluid" src="@/assets/img/post/next.png" alt="" />
-						</a>
+						<img
+							class="img-fluid"
+							:src="require(`@/assets/img/blog/preview/${next.img}.png`)"
+							alt=""
+						/>
 					</div>
-				</div>
+				</NuxtLink>
+				<span v-else>&nbsp;</span>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {}
+export default {
+	props: {
+		prev: {
+			type: Object,
+			default: () => null
+		},
+		next: {
+			type: Object,
+			default: () => null
+		}
+	}
+}
 </script>
+
+<style scoped>
+.trunc {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.nav-right {
+	margin-left: auto;
+}
+</style>
