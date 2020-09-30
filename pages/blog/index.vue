@@ -53,7 +53,6 @@ export default {
 	watch: {
 		async locale(newValue, oldValue) {
 			if (newValue !== oldValue) {
-				console.log('pass')
 				this.posts = await this.$content('posts', newValue)
 					.only([
 						'title',
