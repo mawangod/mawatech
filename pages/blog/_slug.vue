@@ -41,8 +41,9 @@
 import backgroundUrl from '@/assets/img/cover/blog.jpg'
 
 export default {
-	async asyncData({$content, params}) {
-		const post = await $content('posts', params.slug).fetch()
+	async asyncData({app, $content, params}) {
+		const {slug} = params
+		const post = await $content('posts', app.i18n.locale, slug).fetch()
 
 		return {post}
 	},

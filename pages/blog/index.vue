@@ -22,8 +22,8 @@ import sliderBackGround from '@/assets/img/cover/blog.jpg'
 import sortByDate from '@/utilities/sort-by-date'
 
 export default {
-	async asyncData({$content, params}) {
-		const posts = await $content('posts', params.slug)
+	async asyncData({app, $content}) {
+		const posts = await $content('posts', app.i18n.locale)
 			.only([
 				'title',
 				'description',
@@ -43,6 +43,30 @@ export default {
 	data() {
 		return {
 			sliderBackGround
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale
+		}
+	},
+	watch: {
+		async locale(newValue, oldValue) {
+			if (newValue !== oldValue) {
+				this.posts = await this.$content('posts', newValue)
+					.only([
+						'title',
+						'description',
+						'img',
+						'slug',
+						'author',
+						'comments',
+						'tags',
+						'date'
+					])
+					.fetch()
+				this.posts = this.posts.sort(sortByDate)
+			}
 		}
 	}
 }
