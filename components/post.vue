@@ -1,9 +1,9 @@
 <template>
-	<nuxt-link :to="{name: 'blog-id', params: {id}}">
+	<nuxt-link :to="{name: 'blog-slug', params: {slug}}">
 		<div class="home-blog-single mb-30">
 			<div class="blog-img-cap">
 				<div class="blog-img">
-					<img :src="require(`@/assets/img/blog/${photo}.png`)" alt="" />
+					<img :src="require(`@/assets/img/blog/${img}.png`)" alt="" />
 					<ul>
 						<li>{{ $t('blog.by') }} {{ author }} - {{ formattedDate }}</li>
 					</ul>
@@ -14,7 +14,7 @@
 						{{ title }}
 					</h3>
 					<p>
-						{{ preview }}
+						{{ description }}
 					</p>
 					<PostInfo :comments="comments" :tags="tags"></PostInfo>
 				</div>
@@ -35,11 +35,11 @@ export default {
 		}
 	},
 	props: {
-		id: {
-			type: Number,
+		slug: {
+			type: String,
 			required: true
 		},
-		photo: {
+		img: {
 			type: String,
 			required: true
 		},
@@ -47,7 +47,7 @@ export default {
 			type: String,
 			required: true
 		},
-		preview: {
+		description: {
 			type: String,
 			required: true
 		},

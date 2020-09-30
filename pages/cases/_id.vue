@@ -13,7 +13,7 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
-							<p>{{ cas.subtitle }}</p>
+							<h4>{{ cas.subtitle }}</h4>
 							<p>
 								{{ cas.bio1 }}
 							</p>

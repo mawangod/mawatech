@@ -112,7 +112,7 @@
 							class="h1-testimonial-active"
 						>
 							<div
-								v-for="(founder, index) in founders"
+								v-for="(profile, index) in profiles"
 								:key="index"
 								class="single-testimonial text-center"
 							>
@@ -124,7 +124,7 @@
 										>
 										</FontAwesomeIcon>
 										<p>
-											{{ founder.message }}
+											{{ profile.slogan }}
 										</p>
 									</div>
 									<div
@@ -133,14 +133,14 @@
 										<div class="founder-img">
 											<img
 												:src="
-													require(`@/assets/img/gallery/${founder.photo}.png`)
+													require(`@/assets/img/gallery/${profile.icon}.png`)
 												"
 												alt=""
 											/>
 										</div>
 										<div class="founder-text">
-											<span>{{ founder.name }}</span>
-											<p>{{ founder.job }}</p>
+											<span>{{ profile.name }}</span>
+											<p>{{ profile.job }}</p>
 										</div>
 									</div>
 								</div>
@@ -243,6 +243,25 @@ export default {
 			return capitalizeName(name)
 		}
 	},
+	async asyncData({app, $content}) {
+		const posts = await $content('posts', app.i18n.locale)
+			.only([
+				'title',
+				'description',
+				'img',
+				'slug',
+				'author',
+				'comments',
+				'tags',
+				'date'
+			])
+			.sortBy('date', 'desc')
+			.fetch()
+
+		return {
+			posts: posts.slice(0, 2)
+		}
+	},
 	data() {
 		return {
 			workBackGround,
@@ -255,8 +274,6 @@ export default {
 				dots: true
 			},
 			counters: this.$store.state.counters,
-			founders: this.$store.state.founders,
-			posts: this.$store.state.posts.slice(0, 2),
 			slides: [
 				{
 					title: 'slide1Title',
@@ -284,6 +301,29 @@ export default {
 		},
 		cases() {
 			return this.$store.state.cases
+		},
+		locale() {
+			return this.$i18n.locale
+		}
+	},
+	watch: {
+		async locale(newValue, oldValue) {
+			if (newValue !== oldValue) {
+				this.posts = await this.$content('posts', newValue)
+					.only([
+						'title',
+						'description',
+						'img',
+						'slug',
+						'author',
+						'comments',
+						'tags',
+						'date'
+					])
+					.sortBy('date', 'desc')
+					.fetch()
+				this.posts = this.posts.slice(0, 2)
+			}
 		}
 	}
 }

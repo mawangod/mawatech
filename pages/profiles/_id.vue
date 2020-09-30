@@ -14,6 +14,7 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
+							<h4>{{ profile.slogan }}</h4>
 							<p>
 								{{ profile.bio }}
 							</p>

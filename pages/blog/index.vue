@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div class="blog_left_sidebar">
-							<Post v-for="post in posts" :key="post.id" v-bind="post"></Post>
+							<Post v-for="post in posts" :key="post.slug" v-bind="post"></Post>
 							<BlogNavbar />
 						</div>
 					</div>
@@ -21,10 +21,52 @@
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
 
 export default {
+	async asyncData({app, $content}) {
+		const posts = await $content('posts', app.i18n.locale)
+			.only([
+				'title',
+				'description',
+				'img',
+				'slug',
+				'author',
+				'comments',
+				'tags',
+				'date'
+			])
+			.sortBy('date', 'desc')
+			.fetch()
+
+		return {
+			posts
+		}
+	},
 	data() {
 		return {
-			sliderBackGround,
-			posts: this.$store.state.posts
+			sliderBackGround
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale
+		}
+	},
+	watch: {
+		async locale(newValue, oldValue) {
+			if (newValue !== oldValue) {
+				this.posts = await this.$content('posts', newValue)
+					.only([
+						'title',
+						'description',
+						'img',
+						'slug',
+						'author',
+						'comments',
+						'tags',
+						'date'
+					])
+					.sortBy('date', 'desc')
+					.fetch()
+			}
 		}
 	}
 }
