@@ -1,5 +1,5 @@
 ---
-author: Susan boyle
+author: Barbara welch
 title: N'oubliez pas de boire une tisane relaxante
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: single_blog_4

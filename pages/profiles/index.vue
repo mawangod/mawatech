@@ -55,7 +55,7 @@
 						v-for="profile in profiles"
 						:id="profile.id"
 						:key="profile.id"
-						:photo="profile.photo"
+						:img="profile.img"
 						:name="profile.name"
 						:job="profile.job"
 					>

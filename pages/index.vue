@@ -133,7 +133,7 @@
 										<div class="founder-img">
 											<img
 												:src="
-													require(`@/assets/img/gallery/${profile.icon}.png`)
+													require(`@/assets/img/profiles/preview/${profile.img}.png`)
 												"
 												alt=""
 											/>
@@ -218,7 +218,7 @@
 				<div class="row">
 					<Post
 						v-for="post in posts"
-						:key="post.id"
+						:key="post.slug"
 						class="col-xl-6 col-lg-6 col-md-6"
 						v-bind="post"
 					></Post>
@@ -303,7 +303,7 @@ export default {
 			return this.$store.state.cases
 		},
 		locale() {
-			return this.$i18n.locale
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	},
 	watch: {

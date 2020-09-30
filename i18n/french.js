@@ -29,7 +29,8 @@ export default {
 		enterMail: 'Entrez votre email',
 		comments: 'Commentaires',
 		prevPost: 'Post préc',
-		nextPost: 'Post suiv'
+		nextPost: 'Post suiv',
+		writtenBy: 'Ecrit par'
 	},
 	contact: {
 		title: 'Contactez nous',

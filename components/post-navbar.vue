@@ -1,13 +1,6 @@
 <template>
 	<div class="navigation-top">
 		<div class="d-sm-flex justify-content-between text-center">
-			<p class="like-info">
-				<span class="align-middle">
-					<FontAwesomeIcon class="fa" :icon="['fas', 'heart']">
-					</FontAwesomeIcon>
-				</span>
-				Lily and 4 people like this
-			</p>
 			<ul class="social-icons">
 				<li>
 					<a href="#">
@@ -114,7 +107,8 @@ export default {
 	text-overflow: ellipsis;
 }
 
-.nav-right {
+.nav-right,
+.social-icons {
 	margin-left: auto;
 }
 </style>

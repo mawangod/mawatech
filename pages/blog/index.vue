@@ -47,12 +47,13 @@ export default {
 	},
 	computed: {
 		locale() {
-			return this.$i18n.locale
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	},
 	watch: {
 		async locale(newValue, oldValue) {
 			if (newValue !== oldValue) {
+				console.log('pass')
 				this.posts = await this.$content('posts', newValue)
 					.only([
 						'title',

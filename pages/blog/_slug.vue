@@ -26,7 +26,7 @@
 							</div>
 						</div>
 						<PostNavbar :prev="prev" :next="next" />
-						<PostAuthor :author="post.author" />
+						<PostAuthor :author="post.author" :date="post.date" />
 						<PostComments :comments="post.comments" />
 						<PostReply />
 					</div>
@@ -43,8 +43,8 @@ import backgroundUrl from '@/assets/img/cover/blog.jpg'
 export default {
 	async asyncData({app, $content, params}) {
 		const {slug} = params
-		const post = await $content('posts', app.i18n.locale, slug).fetch()
 
+		const post = await $content('posts', app.i18n.locale, slug).fetch()
 		const [prev, next] = await $content('posts', app.i18n.locale)
 			.only(['title', 'slug', 'img'])
 			.surround(slug)
@@ -59,7 +59,7 @@ export default {
 	},
 	computed: {
 		locale() {
-			return this.$i18n.locale
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	},
 	watch: {

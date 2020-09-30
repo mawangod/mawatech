@@ -1,5 +1,5 @@
 ---
-author: Isaï Coulomb
+author: Ethan Welch
 title: 16 idées faciles à utiliser au quotidien
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: home_blog1

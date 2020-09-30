@@ -7,7 +7,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<img
-								:src="require(`@/assets/img/service/${service.photo1}.png`)"
+								:src="require(`@/assets/img/services/${service.photo1}.png`)"
 								alt=""
 								class="img-fluid"
 							/>
@@ -27,7 +27,7 @@
 						</div>
 						<div class="col-md-3">
 							<img
-								:src="require(`@/assets/img/service/${service.photo2}.png`)"
+								:src="require(`@/assets/img/services/${service.photo2}.png`)"
 								alt=""
 								class="img-fluid"
 							/>

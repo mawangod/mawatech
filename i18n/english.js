@@ -29,7 +29,8 @@ export default {
 		enterMail: 'Enter email',
 		comments: 'Comments',
 		prevPost: 'Prev Post',
-		nextPost: 'Next Post'
+		nextPost: 'Next Post',
+		writtenBy: 'Written By'
 	},
 	contact: {
 		title: 'Contact US',

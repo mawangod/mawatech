@@ -5,7 +5,7 @@
 	>
 		<div class="single-team mb-30">
 			<div class="team-img">
-				<img :src="require(`@/assets/img/gallery/${photo}.png`)" alt="" />
+				<img :src="require(`@/assets/img/profiles/${img}.png`)" alt="" />
 			</div>
 			<div class="team-caption">
 				<h3>
@@ -33,7 +33,7 @@ export default {
 			type: Number,
 			required: true
 		},
-		photo: {
+		img: {
 			type: String,
 			required: true
 		},

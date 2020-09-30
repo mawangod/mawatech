@@ -61,7 +61,7 @@
 										<div class="founder-img">
 											<img
 												:src="
-													require(`@/assets/img/gallery/${profile.icon}.png`)
+													require(`@/assets/img/profiles/preview/${profile.img}.png`)
 												"
 												alt=""
 											/>
