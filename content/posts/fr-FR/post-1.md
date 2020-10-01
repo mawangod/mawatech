@@ -5,7 +5,7 @@ description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 img: home_blog1
 date: 2020-06-17
 tags: [travel, lifeStyle]
-comments: ['', '', '']
+comments: [1, 2, 3]
 ---
 
 Les camps d'entraînement MCSE ont ses partisans et ses détracteurs. Certains

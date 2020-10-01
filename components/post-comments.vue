@@ -1,81 +1,28 @@
 <template>
 	<div class="comments-area">
-		<h4>{{ comments.length }} {{ $t('blog.comments') }}</h4>
+		<h4>{{ commentIds.length }} {{ $t('blog.comments') }}</h4>
 		<div class="comment-list">
-			<div class="single-comment justify-content-between d-flex">
+			<div
+				v-for="comment in comments"
+				:key="comment.id"
+				class="single-comment justify-content-between d-flex"
+			>
 				<div class="user justify-content-between d-flex">
-					<div class="thumb">
-						<img src="@/assets/img/comment/comment_1.png" alt="" />
-					</div>
 					<div class="desc">
 						<p class="comment">
-							Multiply sea night grass fourth day sea lesser rule open subdue
-							female fill which them Blessed, give fill lesser bearing multiply
-							sea night grass fourth day sea lesser
+							{{ comment.content }}
 						</p>
 						<div class="d-flex justify-content-between">
 							<div class="d-flex align-items-center">
 								<h5>
-									<a href="#">Emilly Blunt</a>
+									<a href="#">{{ comment.author }}</a>
 								</h5>
-								<p class="date">December 4, 2017 at 3:12 pm</p>
+								<p class="date">{{ formatDate(comment.date) }}</p>
 							</div>
 							<div class="reply-btn">
-								<a href="#" class="btn-reply text-uppercase">reply</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment-list">
-			<div class="single-comment justify-content-between d-flex">
-				<div class="user justify-content-between d-flex">
-					<div class="thumb">
-						<img src="@/assets/img/comment/comment_2.png" alt="" />
-					</div>
-					<div class="desc">
-						<p class="comment">
-							Multiply sea night grass fourth day sea lesser rule open subdue
-							female fill which them Blessed, give fill lesser bearing multiply
-							sea night grass fourth day sea lesser
-						</p>
-						<div class="d-flex justify-content-between">
-							<div class="d-flex align-items-center">
-								<h5>
-									<a href="#">Emilly Blunt</a>
-								</h5>
-								<p class="date">December 4, 2017 at 3:12 pm</p>
-							</div>
-							<div class="reply-btn">
-								<a href="#" class="btn-reply text-uppercase">reply</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment-list">
-			<div class="single-comment justify-content-between d-flex">
-				<div class="user justify-content-between d-flex">
-					<div class="thumb">
-						<img src="@/assets/img/comment/comment_3.png" alt="" />
-					</div>
-					<div class="desc">
-						<p class="comment">
-							Multiply sea night grass fourth day sea lesser rule open subdue
-							female fill which them Blessed, give fill lesser bearing multiply
-							sea night grass fourth day sea lesser
-						</p>
-						<div class="d-flex justify-content-between">
-							<div class="d-flex align-items-center">
-								<h5>
-									<a href="#">Emilly Blunt</a>
-								</h5>
-								<p class="date">December 4, 2017 at 3:12 pm</p>
-							</div>
-							<div class="reply-btn">
-								<a href="#" class="btn-reply text-uppercase">reply</a>
+								<a href="#" class="btn-reply text-uppercase">
+									{{ $t('button.reply') }}
+								</a>
 							</div>
 						</div>
 					</div>
@@ -88,10 +35,34 @@
 <script>
 export default {
 	props: {
-		comments: {
+		commentIds: {
 			type: Array,
 			required: true
+		}
+	},
+	data() {
+		return {
+			comments: this.$store.state.comments.filter(comment =>
+				this.commentIds.includes(comment.id)
+			),
+			options: {year: 'numeric', month: 'long', day: 'numeric'}
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
+		}
+	},
+	methods: {
+		formatDate(date) {
+			return new Date(date).toLocaleDateString(this.locale, this.options)
 		}
 	}
 }
 </script>
+
+<style scoped>
+.single-comment {
+	padding-bottom: 48px;
+}
+</style>

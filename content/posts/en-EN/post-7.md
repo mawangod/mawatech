@@ -5,7 +5,7 @@ description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 img: single_blog_5
 date: 2020-01-03
 tags: [lifeStyle, inspiration]
-comments: ['', '']
+comments: [14, 15]
 ---
 
 MCSE boot camps have its supporters and its detractors. Some

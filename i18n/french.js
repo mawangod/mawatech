@@ -5,7 +5,9 @@ export default {
 		submitButton: 'Envoyez',
 		moreAboutUs: 'En savoir plus',
 		ourServices: 'Nos Services',
-		ourCases: 'Nos cas'
+		ourCases: 'Nos cas',
+		write: 'Ecrire',
+		reply: 'Répondre'
 	},
 	blog: {
 		by: 'Par',
@@ -30,7 +32,9 @@ export default {
 		comments: 'Commentaires',
 		prevPost: 'Post préc',
 		nextPost: 'Post suiv',
-		writtenBy: 'Ecrit par'
+		writtenBy: 'Ecrit par',
+		leaveReply: 'Laisser une réponse',
+		writeComment: 'Ecrivez un commentaire'
 	},
 	contact: {
 		title: 'Contactez nous',

@@ -27,7 +27,7 @@
 						</div>
 						<PostNavbar :prev="prev" :next="next" />
 						<PostAuthor :author="post.author" :date="post.date" />
-						<PostComments :comments="post.comments" />
+						<PostComments :comment-ids="post.comments" />
 						<PostReply />
 					</div>
 					<BlogSidebar />
