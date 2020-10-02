@@ -10,11 +10,11 @@
 			<div class="cat-cap">
 				<h5>
 					<a>
-						{{ title }}
+						{{ title[locale] }}
 					</a>
 				</h5>
 				<p>
-					{{ subtitle }}
+					{{ subtitle[locale] }}
 				</p>
 			</div>
 		</div>
@@ -33,12 +33,17 @@ export default {
 			required: true
 		},
 		title: {
-			type: String,
+			type: Object,
 			required: true
 		},
 		subtitle: {
-			type: String,
+			type: Object,
 			required: true
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }

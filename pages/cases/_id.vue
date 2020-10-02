@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<ImageTitle :title="cas.title" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle :title="cas.title[locale]" :url="sliderBackGround"></ImageTitle>
 		<div class="whole-wrap section-padding30">
 			<div class="container box_1170">
 				<div class="section-top-border">
@@ -13,9 +13,9 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
-							<h4>{{ cas.subtitle }}</h4>
+							<h4>{{ cas.subtitle[locale] }}</h4>
 							<p>
-								{{ cas.bio1 }}
+								{{ cas.bio1[locale] }}
 							</p>
 						</div>
 					</div>
@@ -23,7 +23,7 @@
 				<div class="section-top-border text-right">
 					<div class="row">
 						<div class="col-md-9">
-							<p class="text-right">{{ cas.bio2 }}</p>
+							<p class="text-right">{{ cas.bio2[locale] }}</p>
 						</div>
 						<div class="col-md-3">
 							<img
@@ -45,7 +45,7 @@
 						</div>
 						<div class="col-md-9 mt-sm-20">
 							<p>
-								{{ cas.bio3 }}
+								{{ cas.bio3[locale] }}
 							</p>
 						</div>
 					</div>
@@ -76,6 +76,9 @@ export default {
 			return this.$store.state.cases.find(
 				cas => Number(cas.id) === Number(this.id)
 			)
+		},
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }

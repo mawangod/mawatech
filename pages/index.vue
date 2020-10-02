@@ -124,7 +124,7 @@
 										>
 										</FontAwesomeIcon>
 										<p>
-											{{ profile.slogan }}
+											{{ profile.slogan[locale] }}
 										</p>
 									</div>
 									<div

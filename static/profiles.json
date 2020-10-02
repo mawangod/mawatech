@@ -4,23 +4,41 @@
 		"name": "Ethan Welch",
 		"img": "profile_1",
 		"job": "Software Engineer",
-		"slogan": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.",
-		"bio": "Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos."
+		"slogan": {
+			"fr-FR": "Ceux qui ne peuvent se souvenir du passé sont condamnés à le répéter.",
+			"en-EN": "Those who cannot remember the past are doomed to repeat it."
+		},
+		"bio": {
+			"fr-FR": "Ethan est le pasteur de The Bridge Church à Wilmington, Caroline du Nord. Ethan est marié à l'amour de sa vie, Ashley. Ensemble, ils ont trois filles, Nora, Harper et Claire. Les ressources trouvées sur ce site sont écrites par le pasteur Ethan et son équipe dans l'espoir de s'équiper et d'encourager. Cliquez pour plus d'informations sur le pasteur Ethan.",
+			"en-EN": "Ethan is the pastor of The Bridge Church in Wilmington, NC. Ethan is married to the love of his life, Ashley. Together they have three daughters, Nora, Harper, and Claire. The resources found on this site are written by Pastor Ethan and his team in hopes of equipping and encouraging. Click for more info about Pastor Ethan."
+		}
 	},
 	{
 		"id": 2,
 		"name": "Barbara welch",
 		"img": "profile_3",
 		"job": "UX Designer",
-		"slogan": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas.",
-		"bio": "Over time, even the most sophisticated, memory packed computer can begin to run slow if we don’t do something to prevent it. The reason why has less to do with how computers are made and how they age and more to do with the way we use them. You see, all of the daily tasks that we do on our PC from running programs to downloading and deleting software can make our computer sluggish. To keep this from happening, you need to understand the reasons why your PC is getting slower and do something to keep your PC running at its best. You can do this through regular maintenance and PC performance optimization programs Before we discuss all of the things that could be affecting your PC’s performance, let’s talk a little about what symptoms"
+		"slogan": {
+			"fr-FR": "Je suis jeune, il est vrai; mais aux âmes bien nées la valeur n'attend pas le nombre des années.",
+			"en-EN": "I am young, it is true; but to well-born souls the value does not await the number of years."
+		},
+		"bio": {
+			"fr-FR": "À l'université, Barbara était parrainée par la RAF et la Royal Academy of Engineering et, grâce à un prix de leadership à l'académie, a connu des projets intéressants à travers le monde. Après avoir obtenu son diplôme, Barbara a rejoint Mace et près de deux décennies plus tard, elle a une carrière incroyable qui lui permet de déployer ses compétences et son expérience pour offrir des programmes complexes et stimulants à des clients au Royaume-Uni et à l'étranger.",
+			"en-EN": "At university Barbara was sponsored by the RAF and the Royal Academy of Engineering and, through a leadership award at the academy, experienced some interesting projects around the world. After graduating, Barbara joined Mace and nearly two decades later has an amazing career that enables her to deploy her breadth of skills and experience to deliver complex and challenging programmes for clients in the UK and overseas."
+		}
 	},
 	{
 		"id": 3,
 		"name": "David Maw",
 		"img": "profile_2",
 		"job": "CEO",
-		"slogan": "\"Quelque chose de complexe n'est pas utile et tout ce qui est utile est simple.\" - M. Kalachnikov",
-		"bio": "Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos."
+		"slogan": {
+			"fr-FR": "\"Quelque chose de complexe n'est pas utile et tout ce qui est utile est simple.\" - M. Kalachnikov",
+			"en-EN": "\"Something complex is not useful and all that is useful is simple. \"- Mr. Kalashnikov"
+		},
+		"bio": {
+			"fr-FR": "David Maw est associé professionnellement à la Faculté de musique depuis 1995, date à laquelle il a été nommé chargé de cours au Queen’s College. Il a enseigné et continue d'enseigner dans plusieurs collèges, étant actuellement chercheur et tuteur principal en musique au Collège Oriel, parallèlement à des cours dans d'autres collèges.",
+			"en-EN": "David Maw has been professionally associated with the Faculty of Music since 1995, when he was appointed to a Lectureship at The Queen’s College. He has taught, and continues to teach, for several colleges, being currently a Research Fellow and principal College Tutor in Music at Oriel College in conjunction with Lectureships at other colleges."
+		}
 	}
 ]

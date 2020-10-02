@@ -10,10 +10,10 @@
 			<div class="services-caption">
 				<h3>
 					<a>
-						{{ title | capitalize }}
+						{{ title[locale] | capitalize }}
 					</a>
 				</h3>
-				<span>{{ subtitle | capitalize }}</span>
+				<span>{{ subtitle[locale] | capitalize }}</span>
 			</div>
 		</div>
 	</nuxt-link>
@@ -38,12 +38,17 @@ export default {
 			required: true
 		},
 		title: {
-			type: String,
+			type: Object,
 			required: true
 		},
 		subtitle: {
-			type: String,
+			type: Object,
 			required: true
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }

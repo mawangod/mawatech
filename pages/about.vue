@@ -52,7 +52,7 @@
 										>
 										</FontAwesomeIcon>
 										<p>
-											{{ profile.slogan }}
+											{{ profile.slogan[locale] }}
 										</p>
 									</div>
 									<div
@@ -112,6 +112,11 @@ export default {
 			},
 			counters: this.$store.state.counters,
 			profiles: this.$store.state.profiles
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }

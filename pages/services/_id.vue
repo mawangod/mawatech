@@ -1,6 +1,9 @@
 <template>
 	<main>
-		<ImageTitle :title="service.title" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle
+			:title="service.title[locale]"
+			:url="sliderBackGround"
+		></ImageTitle>
 		<div class="whole-wrap section-padding30">
 			<div class="container box_1170">
 				<div class="section-top-border">
@@ -13,9 +16,9 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
-							<p>{{ service.subtitle }}</p>
+							<p>{{ service.subtitle[locale] }}</p>
 							<p>
-								{{ service.bio1 }}
+								{{ service.bio1[locale] }}
 							</p>
 						</div>
 					</div>
@@ -23,7 +26,7 @@
 				<div class="section-top-border text-right">
 					<div class="row">
 						<div class="col-md-9">
-							<p class="text-right">{{ service.bio2 }}</p>
+							<p class="text-right">{{ service.bio2[locale] }}</p>
 						</div>
 						<div class="col-md-3">
 							<img
@@ -62,6 +65,9 @@ export default {
 			return this.$store.state.services.find(
 				service => Number(service.id) === Number(this.id)
 			)
+		},
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }

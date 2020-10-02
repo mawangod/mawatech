@@ -23,7 +23,7 @@
 									<ul class="header-social">
 										<li>
 											<LinkedIcon
-												url="https://fr-fr.facebook.com/"
+												:url="facebook"
 												icon-class="fab"
 												:icon="['fab', 'facebook-f']"
 											>
@@ -31,7 +31,7 @@
 										</li>
 										<li>
 											<LinkedIcon
-												url="https://twitter.com/"
+												:url="twitter"
 												icon-class="fab"
 												:icon="['fab', 'twitter']"
 											>
@@ -39,7 +39,7 @@
 										</li>
 										<li>
 											<LinkedIcon
-												url="https://fr.linkedin.com/"
+												:url="linkedin"
 												icon-class="fab"
 												:icon="['fab', 'linkedin-in']"
 											>
@@ -47,7 +47,7 @@
 										</li>
 										<li>
 											<LinkedIcon
-												url="https://www.instagram.com/?hl=fr"
+												:url="instagram"
 												icon-class="fab"
 												:icon="['fab', 'instagram']"
 											>
@@ -170,6 +170,7 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import {facebook, linkedin, twitter, instagram} from '../utilities/usefull-data'
 import LinkedIcon from './linked-icon.vue'
 
 export default {
@@ -184,6 +185,14 @@ export default {
 		sticky: {
 			type: Boolean,
 			default: false
+		}
+	},
+	data() {
+		return {
+			facebook,
+			linkedin,
+			twitter,
+			instagram
 		}
 	},
 	computed: {

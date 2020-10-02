@@ -1,46 +1,106 @@
 [
   {
     "id": 1,
-    "title": "Strategy Planning",
+    "title": {
+      "fr-FR": "Planification de la stratégie",
+      "en-EN": "Strategy Planning"
+    },
     "photo1": "case11",
     "photo2": "case12",
     "photo3": "case13",
-    "subtitle": "With TRAMPS SPRL we planned the future",
-    "bio1": "Strategic planning is an organizational management activity that is used to set priorities, focus energy and resources, strengthen operations, ensure that employees and other stakeholders are working toward common goals, establish agreement around intended outcomes/results, and assess and adjust the organization’s direction in response to a changing environment. It is a disciplined effort that produces fundamental decisions and actions that shape and guide what an organization is, who it serves, what it does, and why it does it, with a focus on the future. Effective strategic planning articulates not only where an organization is going and the actions needed to make progress, but also how it will know if it is successful.",
-    "bio2": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy.",
-    "bio3": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    "subtitle": {
+      "fr-FR": "Avec TRAMPS SPRL, nous avons planifié l'avenir",
+      "en-EN": "With TRAMPS SPRL we planned the future"
+    },
+    "bio1": {
+      "fr-FR": "La planification stratégique est une activité de gestion organisationnelle qui est utilisée pour établir des priorités, concentrer l'énergie et les ressources, renforcer les opérations, s'assurer que les employés et autres parties prenantes travaillent vers des objectifs communs, établir un accord sur les résultats / résultats attendus, et évaluer et ajuster l'orientation de l'organisation en réponse à un environnement changeant. C'est un effort discipliné qui produit des décisions et des actions fondamentales qui façonnent et guident ce qu'est une organisation, qui elle sert, ce qu'elle fait et pourquoi elle le fait, en se concentrant sur l'avenir. Une planification stratégique efficace indique non seulement où va une organisation et les actions nécessaires pour progresser, mais aussi comment elle saura si elle réussit.",
+      "en-EN": "Strategic planning is an organizational management activity that is used to set priorities, focus energy and resources, strengthen operations, ensure that employees and other stakeholders are working toward common goals, establish agreement around intended outcomes/results, and assess and adjust the organization’s direction in response to a changing environment. It is a disciplined effort that produces fundamental decisions and actions that shape and guide what an organization is, who it serves, what it does, and why it does it, with a focus on the future. Effective strategic planning articulates not only where an organization is going and the actions needed to make progress, but also how it will know if it is successful."
+    },
+    "bio2": {
+      "fr-FR": "La gestion stratégique est l'ensemble complet des activités et processus en cours que les organisations utilisent pour coordonner et aligner systématiquement les ressources et les actions avec la mission, la vision et la stratégie dans toute l'organisation. Les activités de gestion stratégique transforment le plan statique en un système qui fournit une rétroaction stratégique sur les performances à la prise de décision et permet au plan d'évoluer et de croître à mesure que les exigences et d'autres circonstances changent. L'exécution de stratégie est fondamentalement synonyme de gestion de stratégie et équivaut à la mise en œuvre systématique d'une stratégie.",
+      "en-EN": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    },
+    "bio3": {
+      "fr-FR": "La gestion stratégique est l'ensemble complet des activités et processus en cours que les organisations utilisent pour coordonner et aligner systématiquement les ressources et les actions avec la mission, la vision et la stratégie dans toute l'organisation. Les activités de gestion stratégique transforment le plan statique en un système qui fournit une rétroaction stratégique sur les performances à la prise de décision et permet au plan d'évoluer et de croître à mesure que les exigences et d'autres circonstances changent. L'exécution de stratégie est fondamentalement synonyme de gestion de stratégie et équivaut à la mise en œuvre systématique d'une stratégie.",
+      "en-EN": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    }
   },
   {
     "id": 2,
-    "title": "Audit & Evaluation",
+    "title": {
+      "fr-FR": "Audit & évaluation",
+      "en-EN": "Audit & Evaluation"
+    },
     "photo1": "case21",
     "photo2": "case22",
     "photo3": "case23",
-    "subtitle": "We had done a beautiful audit to PROCO SA.",
-    "bio1": "an evaluation is the determination of merit using a set of standards. Though they are both a kind of assessment, audits are mainly done for financial institutions to make sure they are free from misstatements and errors, whereas evaluations can be done for different spheres such as healthcare, arts, government agencies to judge the efficiency of a working system. Earlier, audits were an important way to assess financial systems only. Now they are also done to assess security risks, environmental and other systems performance as well.",
-    "bio2": "Audits are mainly of two types, quality and integrated. Quality audits assess the efficiency of management systems, and perform the following functions under a certification: efficiency of system, ability to reach target levels, effectiveness of being able to eliminate or address problems/hurdles and aims towards the improvement of a system. Integrated audits are audits of publicly-traded companies and done under the PCAOB (Public Accounting Company Oversight Board). According to this, along with financial reporting, the company’s internal control is also assessed.",
-    "bio3": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    "subtitle": {
+      "fr-FR": "Nous avons fait un bel audit à PROCO SA.",
+      "en-EN": "We have done a beautiful audit to PROCO SA."
+    },
+    "bio1": {
+      "fr-FR": "une évaluation est la détermination du mérite à l'aide d'un ensemble de normes. Bien qu'ils soient tous deux une sorte d'évaluation, les audits sont principalement effectués pour les institutions financières afin de s'assurer qu'elles sont exemptes d'anomalies et d'erreurs, tandis que les évaluations peuvent être effectuées pour différents domaines tels que la santé, les arts, les agences gouvernementales pour juger de l'efficacité d'un travail. système. Auparavant, les audits étaient un moyen important d'évaluer uniquement les systèmes financiers. Maintenant, ils sont également faits pour évaluer les risques de sécurité, l'environnement et les autres performances des systèmes.",
+      "en-EN": "an evaluation is the determination of merit using a set of standards. Though they are both a kind of assessment, audits are mainly done for financial institutions to make sure they are free from misstatements and errors, whereas evaluations can be done for different spheres such as healthcare, arts, government agencies to judge the efficiency of a working system. Earlier, audits were an important way to assess financial systems only. Now they are also done to assess security risks, environmental and other systems performance as well."
+    },
+    "bio2": {
+      "fr-FR": "Les audits sont principalement de deux types, de qualité et intégrés. Les audits de qualité évaluent l'efficacité des systèmes de gestion et remplissent les fonctions suivantes dans le cadre d'une certification: efficacité du système, capacité à atteindre les niveaux cibles, efficacité de pouvoir éliminer ou résoudre les problèmes / obstacles et vise l'amélioration d'un système. Les audits intégrés sont des audits d'entreprises cotées en bourse et réalisés sous l'égide du PCAOB (Public Accounting Company Oversight Board). Selon ce dernier, parallèlement au reporting financier, le contrôle interne de l’entreprise est également évalué.",
+      "en-EN": "Audits are mainly of two types, quality and integrated. Quality audits assess the efficiency of management systems, and perform the following functions under a certification: efficiency of system, ability to reach target levels, effectiveness of being able to eliminate or address problems/hurdles and aims towards the improvement of a system. Integrated audits are audits of publicly-traded companies and done under the PCAOB (Public Accounting Company Oversight Board). According to this, along with financial reporting, the company’s internal control is also assessed."
+    },
+    "bio3": {
+      "fr-FR": "La gestion stratégique est l'ensemble complet des activités et processus en cours que les organisations utilisent pour coordonner et aligner systématiquement les ressources et les actions avec la mission, la vision et la stratégie dans toute l'organisation. Les activités de gestion stratégique transforment le plan statique en un système qui fournit une rétroaction stratégique sur les performances à la prise de décision et permet au plan d'évoluer et de croître à mesure que les exigences et d'autres circonstances changent. L'exécution de stratégie est fondamentalement synonyme de gestion de stratégie et équivaut à la mise en œuvre systématique d'une stratégie.",
+      "en-EN": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    }
   },
   {
     "id": 3,
-    "title": "Insurance Service",
+    "title": {
+      "fr-FR": "Service d'assurance",
+      "en-EN": "Insurance Service"
+    },
     "photo1": "case31",
     "photo2": "case32",
     "photo3": "case33",
-    "subtitle": "We offer strongs guarantee to BROTHER-INC",
-    "bio1": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship.",
-    "bio2": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry.",
-    "bio3": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    "subtitle": {
+      "fr-FR": "Nous offrons une garantie forte à BROTHER-INC",
+      "en-EN": "We offer strongs guarantee to BROTHER-INC"
+    },
+    "bio1": {
+      "fr-FR": "Une entité qui fournit une assurance est connue comme un assureur, une compagnie d'assurance, une compagnie d'assurance ou un souscripteur. Une personne ou une entité qui souscrit une assurance est connue comme un assuré ou comme un preneur d'assurance. La transaction d'assurance implique que l'assuré assume une perte garantie et connue relativement faible sous forme de paiement à l'assureur en échange de la promesse de l'assureur d'indemniser l'assuré en cas de sinistre couvert. La perte peut être financière ou non, mais elle doit être réductible à des conditions financières et implique généralement quelque chose dans lequel l'assuré a un intérêt assurable établi par la propriété, la possession ou une relation préexistante.",
+      "en-EN": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship."
+    },
+    "bio2": {
+      "fr-FR": "L'assuré reçoit un contrat, appelé police d'assurance, qui détaille les conditions et les circonstances dans lesquelles l'assureur indemnisera l'assuré. Le montant facturé par l'assureur au preneur d'assurance pour la couverture énoncée dans la police d'assurance est appelé la prime. Si l'assuré subit un sinistre potentiellement couvert par la police d'assurance, l'assuré soumet une réclamation à l'assureur pour traitement par un expert en sinistre. L'assureur peut couvrir son propre risque en souscrivant à une réassurance, par laquelle une autre compagnie d'assurance accepte d'assumer certains des risques, surtout si l'assureur principal juge le risque trop important pour qu'il puisse le supporter.",
+      "en-EN": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry."
+    },
+    "bio3": {
+      "fr-FR": "L'assuré reçoit un contrat, appelé police d'assurance, qui détaille les conditions et les circonstances dans lesquelles l'assureur indemnisera l'assuré. Le montant facturé par l'assureur au preneur d'assurance pour la couverture énoncée dans la police d'assurance est appelé la prime. Si l'assuré subit un sinistre potentiellement couvert par la police d'assurance, l'assuré soumet une réclamation à l'assureur pour traitement par un expert en sinistre. L'assureur peut couvrir son propre risque en souscrivant à une réassurance, par laquelle une autre compagnie d'assurance accepte d'assumer certains des risques, surtout si l'assureur principal juge le risque trop important pour qu'il puisse le supporter.",
+      "en-EN": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry."
+    }
   },
   {
     "id": 4,
-    "title": "Decision Making",
+    "title": {
+      "fr-FR": "Aide à la prise de décision",
+      "en-EN": "Decision Making Help"
+    },
     "photo1": "case41",
     "photo2": "case42",
     "photo3": "case43",
-    "subtitle": "We Help PRODUCT-INC to get betters decisions",
-    "bio1": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship.",
-    "bio2": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry.",
-    "bio3": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    "subtitle": {
+      "fr-FR": "Nous avons aidé PRODUCT-INC à prendre de meilleures décisions",
+      "en-EN": "We have Helped PRODUCT-INC to get betters decisions"
+    },
+    "bio1": {
+      "fr-FR": "La vie est pleine de choix. Certains sont faciles, comme ce qu'il faut manger pour le dîner (merci cheeseburger), et d'autres, plus sérieux, comme, par exemple, choisir une carrière. Quelle que soit l'importance d'une décision, de bonnes compétences décisionnelles sont utiles dans la vie, surtout si vous vous sentez indécis à propos de quelque chose et que cela vous déprime. Obtenez des conseils sur la façon de prendre de bonnes décisions et découvrez ce qu'il faut faire lorsque vous ne parvenez pas à élaborer un plan.",
+      "en-EN": "Life is full of choices. Some are easy, such as what to have for dinner (cheeseburger thank you), and others, more serious, like, for instance, choosing a career. Regardless of how important a decision is, good decision skills are useful in life, especially if you feel indecisive about something and it’s getting you down. Get tips on how to make good decisions, and find out what to do when you can’t figure out a plan."
+    },
+    "bio2": {
+      "fr-FR": "ne laissez pas le stress prendre le dessus sur vous. Il est facile de se sentir stressé et anxieux face à un choix difficile. Vous pourriez avoir tendance à précipiter vos décisions sans y réfléchir, ou vous éviter du tout de prendre une décision parce que le stress vous a mis hors de jeu. Si vous vous sentez anxieux face à une décision, essayez de gérer votre stress de manière à ne pas brouiller votre réflexion. Allez vous promener sur la plage. Suivez un cours de yoga ou passez du temps avec des amis.",
+      "en-EN": "Don’t let stress get the better of you. It’s easy to feel stressed out and anxious when you’re facing a tough choice. You might tend to rush your decisions without thinking them through, or you avoid making a decision at all because the stress has put you off your game. If you’re feeling anxious about a decision, try to manage your stress so that it doesn’t cloud your thinking. Go for a walk on the beach. Hit up a yoga class or hang out with friends."
+    },
+    "bio3": {
+      "fr-FR": "Si vous vous sentez submergé par des sentiments négatifs parce que vous êtes confronté à une décision difficile, il est important de prendre soin de vous. Prenez le temps de vous détendre ou de faire quelque chose que vous aimez. Si vous constatez que votre indécision face à une situation affecte votre façon de vivre au quotidien, c'est une bonne idée de parler à quelqu'un en qui vous avez confiance ou de consulter un conseiller. Ils seront en mesure de vous aider à traverser le processus de prise de décision et de vous guider à travers différentes stratégies.",
+      "en-EN": "If you’re feeling overwhelmed with negative feelings because you’re facing a tough decision, it’s important to look after yourself. Take some time out to relax or do something you enjoy. If you’re finding your indecision over a situation is affecting how you get on day to day, it’s a good idea to talk to someone you trust, or visit a counsellor. They’ll be able to help you work through the process of decision making, and guide you through different strategies."
+    }
   }
 ]

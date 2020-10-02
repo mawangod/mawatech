@@ -1,41 +1,77 @@
 [
   {
     "id": 1,
-    "title": "Strategy Planning",
+    "title": {
+      "fr-FR": "Planification de la stratégie",
+      "en-EN": "Strategy Planning"
+    },
     "icon": [
       "fas",
       "users-cog"
     ],
     "photo1": "strategy",
     "photo2": "planning",
-    "subtitle": "A strategic plan is a document used to communicate with the organization the organizations goals.",
-    "bio1": "Strategic planning is an organizational management activity that is used to set priorities, focus energy and resources, strengthen operations, ensure that employees and other stakeholders are working toward common goals, establish agreement around intended outcomes/results, and assess and adjust the organization’s direction in response to a changing environment. It is a disciplined effort that produces fundamental decisions and actions that shape and guide what an organization is, who it serves, what it does, and why it does it, with a focus on the future. Effective strategic planning articulates not only where an organization is going and the actions needed to make progress, but also how it will know if it is successful.",
-    "bio2": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    "subtitle": {
+      "fr-FR": "Un plan stratégique est un document utilisé pour communiquer avec l'organisation les objectifs de l'organisation.",
+      "en-EN": "A strategic plan is a document used to communicate with the organization the organizations goals."
+    },
+    "bio1": {
+      "fr-FR": "La planification stratégique est une activité de gestion organisationnelle qui est utilisée pour établir des priorités, concentrer l'énergie et les ressources, renforcer les opérations, s'assurer que les employés et autres parties prenantes travaillent vers des objectifs communs, établir un accord sur les résultats / résultats attendus, et évaluer et ajuster l'orientation de l'organisation en réponse à un environnement changeant. C'est un effort discipliné qui produit des décisions et des actions fondamentales qui façonnent et guident ce qu'est une organisation, qui elle sert, ce qu'elle fait et pourquoi elle le fait, en se concentrant sur l'avenir. Une planification stratégique efficace indique non seulement où va une organisation et les actions nécessaires pour progresser, mais aussi comment elle saura si elle réussit.",
+      "en-EN": "Strategic planning is an organizational management activity that is used to set priorities, focus energy and resources, strengthen operations, ensure that employees and other stakeholders are working toward common goals, establish agreement around intended outcomes/results, and assess and adjust the organization’s direction in response to a changing environment. It is a disciplined effort that produces fundamental decisions and actions that shape and guide what an organization is, who it serves, what it does, and why it does it, with a focus on the future. Effective strategic planning articulates not only where an organization is going and the actions needed to make progress, but also how it will know if it is successful."
+    },
+    "bio2": {
+      "fr-FR": "La gestion stratégique est l'ensemble complet des activités et processus en cours que les organisations utilisent pour coordonner et aligner systématiquement les ressources et les actions avec la mission, la vision et la stratégie dans toute l'organisation. Les activités de gestion stratégique transforment le plan statique en un système qui fournit une rétroaction stratégique sur les performances à la prise de décision et permet au plan d'évoluer et de croître à mesure que les exigences et d'autres circonstances changent. L'exécution de stratégie est fondamentalement synonyme de gestion de stratégie et équivaut à la mise en œuvre systématique d'une stratégie.",
+      "en-EN": "Strategic management is the comprehensive collection of ongoing activities and processes that organizations use to systematically coordinate and align resources and actions with mission, vision and strategy throughout an organization. Strategic management activities transform the static plan into a system that provides strategic performance feedback to decision making and enables the plan to evolve and grow as requirements and other circumstances change.  Strategy Execution is basically synonymous with Strategy Management and amounts to the systematic implementation of a strategy."
+    }
   },
   {
     "id": 2,
-    "title": "Audit & Evaluation",
+    "title": {
+      "fr-FR": "Audit & évaluation",
+      "en-EN": "Audit & Evaluation"
+    },
     "icon": [
       "fas",
       "poll"
     ],
     "photo1": "audit",
     "photo2": "evaluation",
-    "subtitle": "An Audit is the evaluation of a thing for the purpose of determining its validity and authenticity.",
-    "bio1": "an evaluation is the determination of merit using a set of standards. Though they are both a kind of assessment, audits are mainly done for financial institutions to make sure they are free from misstatements and errors, whereas evaluations can be done for different spheres such as healthcare, arts, government agencies to judge the efficiency of a working system. Earlier, audits were an important way to assess financial systems only. Now they are also done to assess security risks, environmental and other systems performance as well.",
-    "bio2": "Audits are mainly of two types, quality and integrated. Quality audits assess the efficiency of management systems, and perform the following functions under a certification: efficiency of system, ability to reach target levels, effectiveness of being able to eliminate or address problems/hurdles and aims towards the improvement of a system. Integrated audits are audits of publicly-traded companies and done under the PCAOB (Public Accounting Company Oversight Board). According to this, along with financial reporting, the company’s internal control is also assessed."
+    "subtitle": {
+      "fr-FR": "Un audit est l'évaluation d'une chose dans le but de déterminer sa validité et son authenticité.",
+      "en-EN": "An Audit is the evaluation of a thing for the purpose of determining its validity and authenticity."
+    },
+    "bio1": {
+      "fr-FR": "une évaluation est la détermination du mérite à l'aide d'un ensemble de normes. Bien qu'ils soient tous deux une sorte d'évaluation, les audits sont principalement effectués pour les institutions financières afin de s'assurer qu'elles sont exemptes d'anomalies et d'erreurs, tandis que les évaluations peuvent être effectuées pour différents domaines tels que la santé, les arts, les agences gouvernementales pour juger de l'efficacité d'un travail. système. Auparavant, les audits étaient un moyen important d'évaluer uniquement les systèmes financiers. Maintenant, ils sont également faits pour évaluer les risques de sécurité, l'environnement et les autres performances des systèmes.",
+      "en-EN": "an evaluation is the determination of merit using a set of standards. Though they are both a kind of assessment, audits are mainly done for financial institutions to make sure they are free from misstatements and errors, whereas evaluations can be done for different spheres such as healthcare, arts, government agencies to judge the efficiency of a working system. Earlier, audits were an important way to assess financial systems only. Now they are also done to assess security risks, environmental and other systems performance as well."
+    },
+    "bio2": {
+      "fr-FR": "Les audits sont principalement de deux types, de qualité et intégrés. Les audits de qualité évaluent l'efficacité des systèmes de gestion et remplissent les fonctions suivantes dans le cadre d'une certification: efficacité du système, capacité à atteindre les niveaux cibles, efficacité de pouvoir éliminer ou résoudre les problèmes / obstacles et vise l'amélioration d'un système. Les audits intégrés sont des audits d'entreprises cotées en bourse et réalisés sous l'égide du PCAOB (Public Accounting Company Oversight Board). Selon ce dernier, parallèlement au reporting financier, le contrôle interne de l’entreprise est également évalué.",
+      "en-EN": "Audits are mainly of two types, quality and integrated. Quality audits assess the efficiency of management systems, and perform the following functions under a certification: efficiency of system, ability to reach target levels, effectiveness of being able to eliminate or address problems/hurdles and aims towards the improvement of a system. Integrated audits are audits of publicly-traded companies and done under the PCAOB (Public Accounting Company Oversight Board). According to this, along with financial reporting, the company’s internal control is also assessed."
+    }
   },
   {
     "id": 3,
-    "title": "Insurance Service",
+    "title": {
+      "fr-FR": "Service d'assurance",
+      "en-EN": "Insurance Service"
+    },
     "icon": [
       "fas",
       "file-code"
     ],
     "photo1": "insurance",
     "photo2": "service",
-    "subtitle": "Insurance is a means of protection from financial loss. It is a form of risk management",
-    "bio1": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship.",
-    "bio2": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry."
+    "subtitle": {
+      "fr-FR": "L'assurance est un moyen de protection contre les pertes financières. C'est une forme de gestion des risques",
+      "en-EN": "Insurance is a means of protection from financial loss. It is a form of risk management"
+    },
+    "bio1": {
+      "fr-FR": "Une entité qui fournit une assurance est connue comme un assureur, une compagnie d'assurance, une compagnie d'assurance ou un souscripteur. Une personne ou une entité qui souscrit une assurance est connue comme un assuré ou comme un preneur d'assurance. La transaction d'assurance implique que l'assuré assume une perte garantie et connue relativement faible sous forme de paiement à l'assureur en échange de la promesse de l'assureur d'indemniser l'assuré en cas de sinistre couvert. La perte peut être financière ou non, mais elle doit être réductible à des conditions financières et implique généralement quelque chose dans lequel l'assuré a un intérêt assurable établi par la propriété, la possession ou une relation préexistante.",
+      "en-EN": "An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship."
+    },
+    "bio2": {
+      "fr-FR": "L'assuré reçoit un contrat, appelé police d'assurance, qui détaille les conditions et les circonstances dans lesquelles l'assureur indemnisera l'assuré. Le montant facturé par l'assureur au preneur d'assurance pour la couverture énoncée dans la police d'assurance est appelé la prime. Si l'assuré subit un sinistre potentiellement couvert par la police d'assurance, l'assuré soumet une réclamation à l'assureur pour traitement par un expert en sinistre. L'assureur peut couvrir son propre risque en souscrivant à une réassurance, par laquelle une autre compagnie d'assurance accepte d'assumer certains des risques, surtout si l'assureur principal juge le risque trop important pour qu'il puisse le supporter.",
+      "en-EN": "The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry."
+    }
   }
 ]

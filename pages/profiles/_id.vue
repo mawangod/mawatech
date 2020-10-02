@@ -14,9 +14,9 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
-							<h4>{{ profile.slogan }}</h4>
+							<h4>{{ profile.slogan[locale] }}</h4>
 							<p>
-								{{ profile.bio }}
+								{{ profile.bio[locale] }}
 							</p>
 						</div>
 					</div>
@@ -51,6 +51,9 @@ export default {
 			return this.$store.state.profiles.find(
 				profile => Number(profile.id) === Number(this.id)
 			)
+		},
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	}
 }
