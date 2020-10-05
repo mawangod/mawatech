@@ -11,6 +11,9 @@
 				</a>
 			</div>
 		</transition>
+		<client-only>
+			<CookieAlert />
+		</client-only>
 	</div>
 </template>
 

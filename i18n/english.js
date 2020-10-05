@@ -7,7 +7,9 @@ export default {
 		ourServices: 'Our Services',
 		ourCases: 'Our cases',
 		write: 'Write',
-		reply: 'Reply'
+		reply: 'Reply',
+		accept: 'Accept',
+		deny: 'Deny'
 	},
 	blog: {
 		by: 'By',
@@ -142,7 +144,11 @@ export default {
 		title: 'Our copyright'
 	},
 	cookies: {
-		title: 'Our cookies settings'
+		title: 'Our cookies settings',
+		reason:
+			'We use cookies to provide our services and for analytics and marketing.To find out more about our use of cookies, please see our',
+		policy: 'Privacy Policy',
+		accept: '. Click accept for the best user experience on our app.'
 	},
 	privacy: {
 		title: 'We make every effort to respect your confidentiality'

@@ -7,7 +7,9 @@ export default {
 		ourServices: 'Nos Services',
 		ourCases: 'Nos cas',
 		write: 'Ecrire',
-		reply: 'Répondre'
+		reply: 'Répondre',
+		accept: 'Accepter',
+		deny: 'Refuser'
 	},
 	blog: {
 		by: 'Par',
@@ -141,7 +143,12 @@ export default {
 		title: "Nos droits d'auteurs"
 	},
 	cookies: {
-		title: 'Nos paramètres de cookies'
+		title: 'Nos paramètres de cookies',
+		reason:
+			"Nous utilisons des cookies pour fournir nos services et à des fins d'analyse et de marketing.Pour en savoir plus sur notre utilisation des cookies, veuillez consulter notre",
+		policy: 'Politique de confidentialité',
+		accept:
+			'.Cliquez sur accepter pour la meilleure expérience utilisateur sur notre application.'
 	},
 	privacy: {
 		title: 'Nous mettons tout en oeuvre pour respecter votre confidentialité'
