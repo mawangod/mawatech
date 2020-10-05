@@ -41,9 +41,9 @@
 									<h4>{{ $t('footer.general') }}</h4>
 									<ul>
 										<li v-for="(tab, index) in generalTabs" :key="index">
-											<a href="#">
+											<nuxt-link :to="`/${tab}`">
 												{{ $t(`footer.${tab}`) }}
-											</a>
+											</nuxt-link>
 										</li>
 									</ul>
 								</div>
@@ -55,9 +55,9 @@
 									<h4>{{ $t('footer.about') }}</h4>
 									<ul>
 										<li v-for="(tab, index) in aboutTabs" :key="index">
-											<a href="#">
+											<nuxt-link :to="`/${tab}`">
 												{{ $t(`footer.${tab}`) }}
-											</a>
+											</nuxt-link>
 										</li>
 									</ul>
 								</div>
@@ -132,8 +132,8 @@ export default {
 			linkedin,
 			twitter,
 			instagram,
-			generalTabs: ['jobs', 'information', 'management'],
-			aboutTabs: ['cookies', 'privacy', 'disclaimer', 'copyright']
+			generalTabs: ['jobs', 'information', 'copyright'],
+			aboutTabs: ['cookies', 'privacy', 'disclaimer']
 		}
 	},
 	methods: {

@@ -112,7 +112,6 @@ export default {
 		about: 'About',
 		jobs: 'Jobs',
 		information: 'Information',
-		management: 'Management',
 		cookies: 'Cookies',
 		privacy: 'Privacy',
 		disclaimer: 'Disclaimer',
@@ -132,5 +131,23 @@ export default {
 		9: 'Oct',
 		10: 'Nov',
 		11: 'Dec'
+	},
+	jobs: {
+		title: 'Do you have your place with us?'
+	},
+	information: {
+		title: 'some information about us ?'
+	},
+	copyright: {
+		title: 'Our copyright'
+	},
+	cookies: {
+		title: 'Our cookies settings'
+	},
+	privacy: {
+		title: 'We make every effort to respect your confidentiality'
+	},
+	disclaimer: {
+		title: 'We accept and guarantee our responsibility'
 	}
 }

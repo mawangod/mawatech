@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import sliderBackGround from '@/assets/img/cover/our_services.jpg'
+import sliderBackGround from '@/assets/img/cover/our_cases.jpg'
 
 export default {
 	data() {
