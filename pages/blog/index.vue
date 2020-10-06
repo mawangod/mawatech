@@ -6,6 +6,9 @@
 				<div class="row">
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div class="blog_left_sidebar">
+							<b-btn v-if="devMode" class="ma-2 margin-30" @click="addPost">
+								add a new Post
+							</b-btn>
 							<Post v-for="post in posts" :key="post.slug" v-bind="post"></Post>
 							<BlogNavbar />
 						</div>
@@ -48,6 +51,9 @@ export default {
 	computed: {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		devMode() {
+			return process.env.NODE_ENV === 'development'
 		}
 	},
 	watch: {
@@ -71,3 +77,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.margin-30 {
+	margin-bottom: 30px;
+}
+</style>
