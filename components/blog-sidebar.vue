@@ -28,23 +28,11 @@
 				</form>
 			</aside>
 
-			<aside class="single_sidebar_widget post_category_widget">
-				<h4 class="widget_title">{{ $t('blog.category') }}</h4>
-				<ul class="list cat-list">
-					<li v-for="(category, index) in categories" :key="index">
-						<a href="#" class="d-flex">
-							<p>{{ $t(`blog.${category.name}`) }}</p>
-							<p>{{ `(${category.amount})` }}</p>
-						</a>
-					</li>
-				</ul>
-			</aside>
-
 			<aside class="single_sidebar_widget tag_cloud_widget">
 				<h4 class="widget_title">{{ $t('blog.popularTags') }}</h4>
 				<ul class="list">
-					<li v-for="(tag, index) in tags" :key="index">
-						<a href="#">{{ $t(`blog.${tag}`) }}</a>
+					<li v-for="(category, index) in categories" :key="index">
+						<a href="#">{{ $t(`blog.${category}`) }}</a>
 					</li>
 				</ul>
 			</aside>
@@ -93,15 +81,6 @@ export default {
 	data() {
 		return {
 			categories: [
-				{name: 'restaurant', amount: 37},
-				{name: 'travel', amount: 8},
-				{name: 'technology', amount: 7},
-				{name: 'product', amount: 4},
-				{name: 'inspiration', amount: 21},
-				{name: 'healt', amount: 13},
-				{name: 'yolo', amount: 12}
-			],
-			tags: [
 				'project',
 				'love',
 				'technology',

@@ -12,7 +12,7 @@
 				<h4>{{ $t('blog.writtenBy').toUpperCase() }} {{ profile.name }}</h4>
 				<p class="date">{{ formattedDate }}</p>
 				<p>
-					{{ profile.slogan }}
+					{{ profile.slogan[locale] }}
 				</p>
 			</div>
 		</div>

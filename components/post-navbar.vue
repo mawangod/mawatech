@@ -1,33 +1,5 @@
 <template>
 	<div class="navigation-top">
-		<div class="d-sm-flex justify-content-between text-center">
-			<ul class="social-icons">
-				<li>
-					<a href="#">
-						<FontAwesomeIcon class="fab" :icon="['fab', 'facebook-f']">
-						</FontAwesomeIcon>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<FontAwesomeIcon class="fab" :icon="['fab', 'twitter']">
-						</FontAwesomeIcon>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<FontAwesomeIcon class="fab" :icon="['fab', 'linkedin-in']">
-						</FontAwesomeIcon>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<FontAwesomeIcon class="fab" :icon="['fab', 'instagram']">
-						</FontAwesomeIcon>
-					</a>
-				</li>
-			</ul>
-		</div>
 		<div class="navigation-area">
 			<div class="row">
 				<NuxtLink
