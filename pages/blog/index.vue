@@ -74,6 +74,14 @@ export default {
 					.fetch()
 			}
 		}
+	},
+	methods: {
+		addPost() {
+			const nums = this.posts.map(post => Number(post.slug.split('-')[1]))
+			const maxNum = nums.reduce((p, v) => (p > v ? p : v))
+			const newNum = maxNum + 1
+			console.log(newNum)
+		}
 	}
 }
 </script>
