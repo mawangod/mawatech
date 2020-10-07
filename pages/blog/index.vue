@@ -9,8 +9,22 @@
 							<b-btn v-if="devMode" class="ma-2 margin-30" @click="addPost">
 								add a new Post
 							</b-btn>
-							<Post v-for="post in posts" :key="post.slug" v-bind="post"></Post>
-							<BlogNavbar />
+							<Post
+								v-for="post in displayedPosts"
+								id="posts"
+								:key="post.slug"
+								v-bind="post"
+							></Post>
+
+							<nav class="blog-pagination justify-content-center d-flex">
+								<b-pagination
+									v-model="currentPage"
+									class="pagination"
+									:total-rows="totalPost"
+									:per-page="perPage"
+								>
+								</b-pagination>
+							</nav>
 						</div>
 					</div>
 					<BlogSidebar />
@@ -45,6 +59,8 @@ export default {
 	},
 	data() {
 		return {
+			currentPage: 1,
+			perPage: 4,
 			sliderBackGround
 		}
 	},
@@ -54,6 +70,14 @@ export default {
 		},
 		devMode() {
 			return process.env.NODE_ENV === 'development'
+		},
+		totalPost() {
+			return this.posts && this.posts.length
+		},
+		displayedPosts() {
+			const from = this.currentPage * this.perPage - this.perPage
+			const to = this.currentPage * this.perPage
+			return this.posts.slice(from, to)
 		}
 	},
 	watch: {

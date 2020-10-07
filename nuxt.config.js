@@ -35,7 +35,7 @@ export default {
 	 ** https://nuxtjs.org/guide/plugins
 	 */
 	plugins: [
-		'@/plugins/vue-smooth-scroll',
+		'@/plugins/vue-smooth-scroll.js',
 		{
 			src: '@/plugins/vue-layers.js',
 			ssr: false
@@ -86,8 +86,6 @@ export default {
 				'faSearch',
 				'faHeart',
 				'faQuoteRight',
-				'faAngleLeft',
-				'faAngleRight',
 				'faArrowRight',
 				'faArrowLeft'
 			]
