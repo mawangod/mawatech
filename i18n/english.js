@@ -1,6 +1,5 @@
 export default {
 	button: {
-		search: 'Search',
 		subscribe: 'Subscribe',
 		submitButton: 'Send',
 		moreAboutUs: 'More About Us',
@@ -36,7 +35,8 @@ export default {
 		nextPost: 'Next Post',
 		writtenBy: 'Written By',
 		leaveReply: 'Leave a Reply',
-		writeComment: 'Write Comment'
+		writeComment: 'Write Comment',
+		search: 'Search'
 	},
 	contact: {
 		title: 'Contact US',

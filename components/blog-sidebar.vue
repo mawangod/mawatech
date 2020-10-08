@@ -5,26 +5,23 @@
 				<form action="#">
 					<div class="form-group">
 						<div class="input-group mb-3">
-							<input
-								type="text"
+							<b-form-input
+								v-model="searchTerm"
+								type="search"
 								class="form-control"
-								placeholder="Search Keyword"
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Search Keyword'"
+								:placeholder="$t('blog.search')"
 							/>
 							<div class="input-group-append">
-								<button class="btns" type="button">
+								<button
+									class="btns"
+									type="button"
+									@click.prevent="$emit('search', searchTerm)"
+								>
 									<FontAwesomeIcon :icon="['fas', 'search']"> </FontAwesomeIcon>
 								</button>
 							</div>
 						</div>
 					</div>
-					<button
-						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						type="submit"
-					>
-						{{ $t('button.search') }}
-					</button>
 				</form>
 			</aside>
 
@@ -66,7 +63,6 @@
 					</div>
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						type="submit"
 					>
 						{{ $t('button.subscribe') }}
 					</button>
@@ -80,6 +76,7 @@
 export default {
 	data() {
 		return {
+			searchTerm: '',
 			categories: [
 				'project',
 				'love',

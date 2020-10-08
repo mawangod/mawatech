@@ -1,6 +1,5 @@
 export default {
 	button: {
-		search: 'Rechercher',
 		subscribe: 'Inscription',
 		submitButton: 'Envoyez',
 		moreAboutUs: 'En savoir plus',
@@ -36,7 +35,8 @@ export default {
 		nextPost: 'Post suiv',
 		writtenBy: 'Ecrit par',
 		leaveReply: 'Laisser une réponse',
-		writeComment: 'Ecrivez un commentaire'
+		writeComment: 'Ecrivez un commentaire',
+		search: 'Rechercher'
 	},
 	contact: {
 		title: 'Contactez nous',

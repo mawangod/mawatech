@@ -27,7 +27,7 @@
 							</nav>
 						</div>
 					</div>
-					<BlogSidebar />
+					<BlogSidebar @search="searchPost" />
 				</div>
 			</div>
 		</section>
@@ -36,6 +36,7 @@
 
 <script>
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
+import searchPost from '@/utilities/search-post.js'
 
 export default {
 	async asyncData({app, $content}) {
@@ -61,7 +62,8 @@ export default {
 		return {
 			currentPage: 1,
 			perPage: 4,
-			sliderBackGround
+			sliderBackGround,
+			filterTerm: ''
 		}
 	},
 	computed: {
@@ -72,12 +74,17 @@ export default {
 			return process.env.NODE_ENV === 'development'
 		},
 		totalPost() {
-			return this.posts && this.posts.length
+			return (
+				this.posts &&
+				this.posts.filter(post => searchPost(post, this.filterTerm)).length
+			)
 		},
 		displayedPosts() {
 			const from = this.currentPage * this.perPage - this.perPage
 			const to = this.currentPage * this.perPage
-			return this.posts.slice(from, to)
+			return this.posts
+				.slice(from, to)
+				.filter(post => searchPost(post, this.filterTerm))
 		}
 	},
 	watch: {
@@ -105,6 +112,9 @@ export default {
 			const maxNum = nums.reduce((p, v) => (p > v ? p : v))
 			const newNum = maxNum + 1
 			console.log(newNum)
+		},
+		searchPost(term) {
+			this.filterTerm = term
 		}
 	}
 }
