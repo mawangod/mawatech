@@ -8,7 +8,8 @@ export default {
 		write: 'Ecrire',
 		reply: 'Répondre',
 		accept: 'Accepter',
-		deny: 'Refuser'
+		deny: 'Refuser',
+		addPost: 'Ajouter un post'
 	},
 	blog: {
 		by: 'Par',

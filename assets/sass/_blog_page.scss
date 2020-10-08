@@ -671,6 +671,7 @@
 		}
 
 		.input-group {
+			z-index: 0;
 			button {
 				background: $theme-color;
 				border: 1px solid #f0e9ff;
@@ -801,8 +802,10 @@
 					transition: all 0.3s ease 0s;
 					color: #888;
 					font-size: 13px;
+					cursor: pointer;
 
-					&:hover {
+					&:hover,
+					&.active {
 						background: $theme-color;
 						color: #fff !important;
 						-webkit-text-fill-color: #fff;

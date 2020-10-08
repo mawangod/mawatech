@@ -2,10 +2,10 @@
 	<div class="col-lg-4">
 		<div class="blog_right_sidebar">
 			<aside class="single_sidebar_widget search_widget">
-				<form action="#">
+				<form>
 					<div class="form-group">
 						<div class="input-group mb-3">
-							<b-form-input
+							<input
 								v-model="searchTerm"
 								type="search"
 								class="form-control"
@@ -28,8 +28,15 @@
 			<aside class="single_sidebar_widget tag_cloud_widget">
 				<h4 class="widget_title">{{ $t('blog.popularTags') }}</h4>
 				<ul class="list">
-					<li v-for="(category, index) in categories" :key="index">
-						<a href="#">{{ $t(`blog.${category}`) }}</a>
+					<li v-for="(tag, index) in tags" :key="index">
+						<a
+							:class="{
+								active: isActive(tag)
+							}"
+							@click.prevent="$emit('tags', tag)"
+						>
+							{{ $t(`blog.${tag}`) }}
+						</a>
 					</li>
 				</ul>
 			</aside>
@@ -52,7 +59,7 @@
 			<aside class="single_sidebar_widget newsletter_widget">
 				<h4 class="widget_title">{{ $t('blog.newsletter') }}</h4>
 
-				<form action="#">
+				<form>
 					<div class="form-group">
 						<input
 							type="email"
@@ -74,10 +81,16 @@
 
 <script>
 export default {
+	props: {
+		activeTags: {
+			type: Array,
+			default: () => []
+		}
+	},
 	data() {
 		return {
 			searchTerm: '',
-			categories: [
+			tags: [
 				'project',
 				'love',
 				'technology',
@@ -87,6 +100,11 @@ export default {
 				'design'
 			],
 			instagrams: ['post_5', 'post_6', 'post_7', 'post_8', 'post_9', 'post_10']
+		}
+	},
+	methods: {
+		isActive(tag) {
+			return this.activeTags.includes(tag)
 		}
 	}
 }

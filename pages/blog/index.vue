@@ -7,7 +7,7 @@
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div class="blog_left_sidebar">
 							<b-btn v-if="devMode" class="ma-2 margin-30" @click="addPost">
-								add a new Post
+								{{ $t('button.addPost') }}
 							</b-btn>
 							<Post
 								v-for="post in displayedPosts"
@@ -18,6 +18,7 @@
 
 							<nav class="blog-pagination justify-content-center d-flex">
 								<b-pagination
+									v-show="displayedPosts.length"
 									v-model="currentPage"
 									class="pagination"
 									:total-rows="totalPost"
@@ -27,7 +28,11 @@
 							</nav>
 						</div>
 					</div>
-					<BlogSidebar @search="searchPost" />
+					<BlogSidebar
+						:active-tags="activeTags"
+						@search="searchPost"
+						@tags="addOrRemoveTag"
+					/>
 				</div>
 			</div>
 		</section>
@@ -37,6 +42,7 @@
 <script>
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
 import searchPost from '@/utilities/search-post.js'
+import filterPost from '@/utilities/filter-post.js'
 
 export default {
 	async asyncData({app, $content}) {
@@ -63,7 +69,8 @@ export default {
 			currentPage: 1,
 			perPage: 4,
 			sliderBackGround,
-			filterTerm: ''
+			filterTerm: '',
+			activeTags: []
 		}
 	},
 	computed: {
@@ -74,17 +81,12 @@ export default {
 			return process.env.NODE_ENV === 'development'
 		},
 		totalPost() {
-			return (
-				this.posts &&
-				this.posts.filter(post => searchPost(post, this.filterTerm)).length
-			)
+			return this.posts && this.filteredPosts(this.posts).length
 		},
 		displayedPosts() {
 			const from = this.currentPage * this.perPage - this.perPage
 			const to = this.currentPage * this.perPage
-			return this.posts
-				.slice(from, to)
-				.filter(post => searchPost(post, this.filterTerm))
+			return this.filteredPosts(this.posts.slice(from, to))
 		}
 	},
 	watch: {
@@ -115,6 +117,16 @@ export default {
 		},
 		searchPost(term) {
 			this.filterTerm = term
+		},
+		addOrRemoveTag(tag) {
+			this.activeTags = this.activeTags.includes(tag)
+				? this.activeTags.filter(aTag => aTag !== tag)
+				: [...this.activeTags, tag]
+		},
+		filteredPosts(posts) {
+			return posts
+				.filter(post => searchPost(post, this.filterTerm))
+				.filter(post => filterPost(post, this.activeTags))
 		}
 	}
 }
