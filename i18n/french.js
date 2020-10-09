@@ -28,7 +28,7 @@ export default {
 		healt: 'Santé',
 		yolo: 'Yolo',
 		popularTags: 'Tags populaires',
-		instagramFeeds: 'Dernières publications Instagram',
+		recentPosts: 'Posts récents',
 		newsletter: 'Newsletter',
 		enterMail: 'Entrez votre email',
 		comments: 'Commentaires',

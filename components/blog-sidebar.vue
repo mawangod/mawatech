@@ -26,7 +26,7 @@
 			</aside>
 
 			<aside class="single_sidebar_widget tag_cloud_widget">
-				<h4 class="widget_title">{{ $t('blog.popularTags') }}</h4>
+				<h4 class="widget_title">{{ $t('blog.popularTags') | capitalize }}</h4>
 				<ul class="list">
 					<li v-for="(tag, index) in tags" :key="index">
 						<a
@@ -41,19 +41,28 @@
 				</ul>
 			</aside>
 
-			<aside class="single_sidebar_widget instagram_feeds">
-				<h4 class="widget_title">{{ $t('blog.instagramFeeds') }}</h4>
-				<ul class="instagram_row flex-wrap">
-					<li v-for="(instagram, index) in instagrams" :key="index">
-						<a href="#">
-							<img
-								class="img-fluid"
-								:src="require(`@/assets/img/post/${instagram}.png`)"
-								alt=""
-							/>
-						</a>
-					</li>
-				</ul>
+			<aside class="single_sidebar_widget popular_post_widget">
+				<h4 class="widget_title">
+					{{ $t('blog.recentPosts') | capitalize }}
+				</h4>
+				<div
+					v-for="(recentPost, index) in recentPosts"
+					:key="index"
+					class="media post_item"
+				>
+					<img
+						class="img-fluid"
+						:src="require(`@/assets/img/blog/preview/${recentPost.img}.png`)"
+					/>
+					<div class="media-body">
+						<nuxt-link
+							:to="{name: 'blog-slug', params: {slug: recentPost.slug}}"
+						>
+							<h3 class="trunc">{{ recentPost.title }}</h3>
+							<p>{{ formatDate(recentPost.date) }}</p>
+						</nuxt-link>
+					</div>
+				</div>
 			</aside>
 
 			<aside class="single_sidebar_widget newsletter_widget">
@@ -80,16 +89,28 @@
 </template>
 
 <script>
+import capitalizeName from '../utilities/capitalize-name'
+
 export default {
+	filters: {
+		capitalize(name) {
+			return capitalizeName(name)
+		}
+	},
 	props: {
 		activeTags: {
 			type: Array,
 			default: () => []
+		},
+		recentPosts: {
+			type: Array,
+			required: true
 		}
 	},
 	data() {
 		return {
 			searchTerm: '',
+			options: {year: 'numeric', month: 'long', day: 'numeric'},
 			tags: [
 				'project',
 				'love',
@@ -98,14 +119,30 @@ export default {
 				'restaurant',
 				'lifeStyle',
 				'design'
-			],
-			instagrams: ['post_5', 'post_6', 'post_7', 'post_8', 'post_9', 'post_10']
+			]
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
 	},
 	methods: {
 		isActive(tag) {
 			return this.activeTags.includes(tag)
+		},
+		formatDate(date) {
+			return new Date(date).toLocaleDateString(this.locale, this.options)
 		}
 	}
 }
 </script>
+
+<style scoped>
+.trunc {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+</style>

@@ -30,6 +30,7 @@
 					</div>
 					<BlogSidebar
 						:active-tags="activeTags"
+						:recent-posts="recentPosts"
 						@search="searchPost"
 						@tags="addOrRemoveTag"
 					/>
@@ -87,6 +88,9 @@ export default {
 			const from = this.currentPage * this.perPage - this.perPage
 			const to = this.currentPage * this.perPage
 			return this.filteredPosts(this.posts.slice(from, to))
+		},
+		recentPosts() {
+			return this.posts && this.filteredPosts(this.posts).slice(0, 3)
 		}
 	},
 	watch: {
