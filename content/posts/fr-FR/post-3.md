@@ -1,7 +1,7 @@
 ---
 author: David Maw
-title: Google inks pact for new 35-storey office
-description: That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
+title: Google signe un pacte pour un nouveau bureau de 35 étages
+description: Que les étoiles de la domination les lumières de la domination divisent les années pour la quatrième fois n'ont pas d'étoiles, c'est qu'il la terre d'abord sans le ciel en place, la semence le deuxième matin en disant.
 img: single_blog_1
 date: 2019-07-31
 tags: [travel, lifeStyle]

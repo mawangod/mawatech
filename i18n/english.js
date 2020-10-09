@@ -29,6 +29,7 @@ export default {
 		yolo: 'Yolo',
 		popularTags: 'Popular tags',
 		recentPosts: 'recent Posts',
+		relatedPosts: 'related posts',
 		newsletter: 'Newsletter',
 		enterMail: 'Enter email',
 		comments: 'Comments',

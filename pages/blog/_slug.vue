@@ -30,7 +30,7 @@
 						<PostComments :comment-ids="post.comments" />
 						<PostReply />
 					</div>
-					<BlogSidebar />
+					<PostSidebar :related-posts="relatedPosts" />
 				</div>
 			</div>
 		</section>
@@ -45,12 +45,18 @@ export default {
 		const {slug} = params
 
 		const post = await $content('posts', app.i18n.locale, slug).fetch()
+
+		const relatedPosts = await $content('posts', app.i18n.locale)
+			.where({tags: {$containsAny: post.tags}, title: {$ne: post.title}})
+			.fetch()
+
 		const [prev, next] = await $content('posts', app.i18n.locale)
 			.only(['title', 'slug', 'img'])
 			.surround(slug)
 			.sortBy('date', 'desc')
 			.fetch()
-		return {post, prev, next}
+
+		return {post, prev, next, relatedPosts}
 	},
 	data() {
 		return {
@@ -71,6 +77,12 @@ export default {
 					.only(['title', 'slug', 'img'])
 					.surround(slug)
 					.sortBy('date', 'desc')
+					.fetch()
+				this.relatedPosts = await this.$content('posts', newValue)
+					.where({
+						tags: {$containsAny: this.post.tags},
+						title: {$ne: this.post.title}
+					})
 					.fetch()
 				this.next = next
 				this.prev = prev
