@@ -322,6 +322,7 @@ export default {
 					])
 					.sortBy('date', 'desc')
 					.fetch()
+
 				this.posts = this.posts.slice(0, 2)
 			}
 		}

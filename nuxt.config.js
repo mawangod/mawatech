@@ -1,8 +1,10 @@
-export default {
+// eslint-disable-next-line nuxt/no-cjs-in-config
+module.exports = {
 	/*
 	 ** Nuxt rendering mode
 	 ** See https://nuxtjs.org/api/configuration-mode
 	 */
+	telemetry: false,
 	ssr: false,
 	/*
 	 ** Nuxt target
@@ -127,5 +129,6 @@ export default {
 		vueI18n: {
 			fallbackLocale: 'en-EN'
 		}
-	}
+	},
+	serverMiddleware: ['~/api/index.js']
 }

@@ -84,6 +84,7 @@ export default {
 						title: {$ne: this.post.title}
 					})
 					.fetch()
+
 				this.next = next
 				this.prev = prev
 			}
