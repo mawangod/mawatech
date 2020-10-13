@@ -1,6 +1,6 @@
 <template>
 	<div class="comments-area">
-		<h4>{{ commentIds.length }} {{ $t('blog.comments') }}</h4>
+		<h4>{{ commentIds && commentIds.length }} {{ $t('blog.comments') }}</h4>
 		<div class="comment-list">
 			<div
 				v-for="comment in comments"

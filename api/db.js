@@ -1,20 +1,20 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-mongoose.connect('mongodb://localhost/mydb', {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useFindAndModify: false,
-	useCreateIndex: true
-})
-let db = null
+const db = {}
+db.mongoose = mongoose
 
-try {
-	db = mongoose.connection
-	db.once('open', function callback() {
+db.mongoose
+	.connect('mongodb://localhost/mydb', {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useFindAndModify: false,
+		useCreateIndex: true
+	})
+	.then(() => {
 		console.log('MongoDB Connected...')
 	})
-} catch (error) {
-	console.error.bind(console, 'connection error:')
-}
+	.catch(() => {
+		console.error('connection error:')
+	})
 
-module.exports = db
+export default db

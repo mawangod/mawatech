@@ -1,6 +1,6 @@
-const express = require('express')
-const db = require('./db')
-
+import express from 'express'
+import db from './db'
+import cases from './routes/cases'
 // Create express instnace
 const app = express()
 
@@ -9,15 +9,16 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 // Require & Import API routes
-// const users = require('./routes/users')
+
 // const articles = require('./routes/articles')
 
 // Use API Routes
-// app.use(users)
+app.use(cases)
 // app.use(articles)
 
 // Export the server middleware
-module.exports = {
+export default {
 	path: '/api',
-	handler: app
+	handler: app,
+	db
 }

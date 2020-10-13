@@ -60,10 +60,7 @@ import sliderBackGround from '@/assets/img/cover/our_cases.jpg'
 
 export default {
 	validate({params, store}) {
-		return (
-			/^\d+$/.test(params.id) &&
-			store.state.cases.some(cas => Number(cas.id) === Number(params.id))
-		)
+		return store.getters.cases.some(cas => cas._id === params.id)
 	},
 	data() {
 		return {
@@ -73,9 +70,7 @@ export default {
 	},
 	computed: {
 		cas() {
-			return this.$store.state.cases.find(
-				cas => Number(cas.id) === Number(this.id)
-			)
+			return this.$store.getters.cases.find(cas => cas._id === this.id)
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale

@@ -95,8 +95,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<Case v-for="cas in cases" :key="cas.id" v-bind="cas"> </Case>
+				<div v-if="cases && cases.length" class="row">
+					<Case
+						v-for="cas in cases"
+						:id="cas._id"
+						:key="cas.id"
+						v-bind="cas"
+					></Case>
 				</div>
 			</div>
 		</div>
@@ -300,7 +305,7 @@ export default {
 			return this.$store.state.services
 		},
 		cases() {
-			return this.$store.state.cases
+			return this.$store.getters.cases
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
@@ -326,6 +331,9 @@ export default {
 				this.posts = this.posts.slice(0, 2)
 			}
 		}
+	},
+	mounted() {
+		this.$store.dispatch('loadCases')
 	}
 }
 </script>

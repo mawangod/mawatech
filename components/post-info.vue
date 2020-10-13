@@ -11,7 +11,7 @@
 			<a href="#">
 				<FontAwesomeIcon class="fa" :icon="['fas', 'comments']">
 				</FontAwesomeIcon>
-				{{ comments.length }} {{ $t('blog.comments') }}
+				{{ comments && comments.length }} {{ $t('blog.comments') }}
 			</a>
 		</li>
 	</ul>

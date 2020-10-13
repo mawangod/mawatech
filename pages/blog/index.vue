@@ -18,7 +18,7 @@
 
 							<nav class="blog-pagination justify-content-center d-flex">
 								<b-pagination
-									v-show="displayedPosts.length"
+									v-show="displayedPosts && displayedPosts.length"
 									v-model="currentPage"
 									class="pagination"
 									:total-rows="totalPost"
@@ -82,7 +82,11 @@ export default {
 			return process.env.NODE_ENV === 'development'
 		},
 		totalPost() {
-			return this.posts && this.filteredPosts(this.posts).length
+			return (
+				this.posts &&
+				this.filteredPosts(this.posts) &&
+				this.filteredPosts(this.posts).length
+			)
 		},
 		displayedPosts() {
 			const from = this.currentPage * this.perPage - this.perPage
