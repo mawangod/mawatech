@@ -1,7 +1,7 @@
-const {Router} = require('express')
-const casesController = require('../controllers/cases-controller')
+import {Router} from 'express'
+import {getAll} from '../controllers/cases-controller'
 const router = Router()
 
-router.get('/cases', casesController.getAll)
+router.get('/cases', getAll)
 
-module.exports = router
+export default router
