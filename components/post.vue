@@ -59,10 +59,6 @@ export default {
 			type: Array,
 			required: true
 		},
-		comments: {
-			type: Array,
-			required: true
-		},
 		author: {
 			type: String,
 			required: true
@@ -82,6 +78,14 @@ export default {
 				this.selectedLocale,
 				this.options
 			)
+		},
+		comments() {
+			return this.$store.getters.getPostComments(this.slug)
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.comments.length) {
+			this.$store.dispatch('loadComments')
 		}
 	}
 }

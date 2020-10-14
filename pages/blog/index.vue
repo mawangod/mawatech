@@ -48,16 +48,7 @@ import filterPost from '@/utilities/filter-post.js'
 export default {
 	async asyncData({app, $content}) {
 		const posts = await $content('posts', app.i18n.locale)
-			.only([
-				'title',
-				'description',
-				'img',
-				'slug',
-				'author',
-				'comments',
-				'tags',
-				'date'
-			])
+			.only(['title', 'description', 'img', 'slug', 'author', 'tags', 'date'])
 			.sortBy('date', 'desc')
 			.fetch()
 
@@ -107,7 +98,6 @@ export default {
 						'img',
 						'slug',
 						'author',
-						'comments',
 						'tags',
 						'date'
 					])

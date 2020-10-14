@@ -75,6 +75,11 @@ export default {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
 		}
+	},
+	mounted() {
+		if (!this.$store.getters.cases.length) {
+			this.$store.dispatch('loadCases')
+		}
 	}
 }
 </script>

@@ -35,7 +35,9 @@ export default {
 		}
 	},
 	mounted() {
-		this.$store.dispatch('loadCases')
+		if (!this.$store.getters.cases.length) {
+			this.$store.dispatch('loadCases')
+		}
 	}
 }
 </script>

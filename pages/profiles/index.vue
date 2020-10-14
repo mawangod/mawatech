@@ -53,8 +53,8 @@
 				<div class="row">
 					<Profile
 						v-for="profile in profiles"
-						:id="profile.id"
-						:key="profile.id"
+						:id="profile._id"
+						:key="profile._id"
 						:img="profile.img"
 						:name="profile.name"
 						:job="profile.job"
@@ -85,7 +85,12 @@ export default {
 	},
 	computed: {
 		profiles() {
-			return this.$store.state.profiles
+			return this.$store.getters.profiles
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.profiles.length) {
+			this.$store.dispatch('loadProfiles')
 		}
 	}
 }

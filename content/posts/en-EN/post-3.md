@@ -5,7 +5,6 @@ description: That dominion stars lights dominion divide years for fourth have do
 img: single_blog_1
 date: 2019-07-31
 tags: [travel, lifeStyle]
-comments: [6, 7]
 ---
 
 MCSE boot camps have its supporters and its detractors. Some
