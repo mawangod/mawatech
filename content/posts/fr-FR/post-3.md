@@ -5,7 +5,6 @@ description: Que les étoiles de la domination les lumières de la domination di
 img: single_blog_1
 date: 2019-07-31
 tags: [travel, lifeStyle]
-comments: [6, 7]
 ---
 
 Les camps d'entraînement MCSE ont ses partisans et ses détracteurs. Certains

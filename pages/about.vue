@@ -36,12 +36,13 @@
 				<div class="row d-flex justify-content-center">
 					<div class="col-xl-10 col-lg-10 col-md-9">
 						<VueSlickCarousel
+							v-if="profiles && profiles.length"
 							v-bind="settingSlider"
 							class="h1-testimonial-active"
 						>
 							<div
-								v-for="(profile, index) in profiles"
-								:key="index"
+								v-for="profile in profiles"
+								:key="profile._id"
 								class="single-testimonial text-center"
 							>
 								<div class="testimonial-caption">
@@ -82,8 +83,8 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<Counter
-						v-for="(counter, index) in counters"
-						:key="index"
+						v-for="counter in counters"
+						:key="counter._id"
 						:value="counter.value"
 						:title="$t(`about.${counter.title}`)"
 						:is-active="counter.active"
@@ -109,14 +110,26 @@ export default {
 				lazyLoad: 'ondemand',
 				arrows: true,
 				dots: true
-			},
-			counters: this.$store.state.counters,
-			profiles: this.$store.state.profiles
+			}
 		}
 	},
 	computed: {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		counters() {
+			return this.$store.getters.counters
+		},
+		profiles() {
+			return this.$store.getters.profiles
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.profiles.length) {
+			this.$store.dispatch('loadProfiles')
+		}
+		if (!this.$store.getters.counters.length) {
+			this.$store.dispatch('loadCounters')
 		}
 	}
 }

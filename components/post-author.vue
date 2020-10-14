@@ -1,6 +1,6 @@
 <template>
 	<nuxt-link
-		:to="{name: 'profiles-id', params: {id: profile.id}}"
+		:to="{name: 'profiles-id', params: {id: profile._id}}"
 		class="blog-author"
 	>
 		<div class="media align-items-center">
@@ -33,9 +33,6 @@ export default {
 	},
 	data() {
 		return {
-			profile: this.$store.state.profiles.find(
-				profile => profile.name === this.author
-			),
 			options: {year: 'numeric', month: 'long', day: 'numeric'}
 		}
 	},
@@ -45,6 +42,16 @@ export default {
 		},
 		formattedDate() {
 			return new Date(this.date).toLocaleDateString(this.locale, this.options)
+		},
+		profile() {
+			return this.$store.getters.profiles.find(
+				profile => profile.name === this.author
+			)
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.profiles.length) {
+			this.$store.dispatch('loadProfiles')
 		}
 	}
 }

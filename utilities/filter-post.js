@@ -1,5 +1,5 @@
 function filterPost(post, tags) {
-	if (!post) {
+	if (!post || !tags) {
 		return false
 	}
 

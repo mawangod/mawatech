@@ -17,7 +17,8 @@
 				<div class="row">
 					<Service
 						v-for="service in services"
-						:key="service.id"
+						:id="service._id"
+						:key="service._id"
 						v-bind="service"
 					></Service>
 				</div>
@@ -37,7 +38,12 @@ export default {
 	},
 	computed: {
 		services() {
-			return this.$store.state.services
+			return this.$store.getters.services
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.services.length) {
+			this.$store.dispatch('loadServices')
 		}
 	}
 }

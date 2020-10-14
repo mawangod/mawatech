@@ -18,7 +18,7 @@
 
 							<nav class="blog-pagination justify-content-center d-flex">
 								<b-pagination
-									v-show="displayedPosts.length"
+									v-show="displayedPosts && displayedPosts.length"
 									v-model="currentPage"
 									class="pagination"
 									:total-rows="totalPost"
@@ -48,16 +48,7 @@ import filterPost from '@/utilities/filter-post.js'
 export default {
 	async asyncData({app, $content}) {
 		const posts = await $content('posts', app.i18n.locale)
-			.only([
-				'title',
-				'description',
-				'img',
-				'slug',
-				'author',
-				'comments',
-				'tags',
-				'date'
-			])
+			.only(['title', 'description', 'img', 'slug', 'author', 'tags', 'date'])
 			.sortBy('date', 'desc')
 			.fetch()
 
@@ -82,7 +73,11 @@ export default {
 			return process.env.NODE_ENV === 'development'
 		},
 		totalPost() {
-			return this.posts && this.filteredPosts(this.posts).length
+			return (
+				this.posts &&
+				this.filteredPosts(this.posts) &&
+				this.filteredPosts(this.posts).length
+			)
 		},
 		displayedPosts() {
 			const from = this.currentPage * this.perPage - this.perPage
@@ -103,7 +98,6 @@ export default {
 						'img',
 						'slug',
 						'author',
-						'comments',
 						'tags',
 						'date'
 					])

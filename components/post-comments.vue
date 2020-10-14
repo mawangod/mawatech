@@ -1,10 +1,10 @@
 <template>
 	<div class="comments-area">
-		<h4>{{ commentIds.length }} {{ $t('blog.comments') }}</h4>
+		<h4>{{ comments && comments.length }} {{ $t('blog.comments') }}</h4>
 		<div class="comment-list">
 			<div
 				v-for="comment in comments"
-				:key="comment.id"
+				:key="comment._id"
 				class="single-comment justify-content-between d-flex"
 			>
 				<div class="user justify-content-between d-flex">
@@ -35,16 +35,13 @@
 <script>
 export default {
 	props: {
-		commentIds: {
+		comments: {
 			type: Array,
 			required: true
 		}
 	},
 	data() {
 		return {
-			comments: this.$store.state.comments.filter(comment =>
-				this.commentIds.includes(comment.id)
-			),
 			options: {year: 'numeric', month: 'long', day: 'numeric'}
 		}
 	},

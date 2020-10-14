@@ -11,8 +11,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<Case v-for="cas in cases" :key="cas.id" v-bind="cas"> </Case>
+				<div v-if="cases && cases.length" class="row">
+					<Case v-for="cas in cases" :id="cas._id" :key="cas._id" v-bind="cas">
+					</Case>
 				</div>
 			</div>
 		</div>
@@ -30,7 +31,12 @@ export default {
 	},
 	computed: {
 		cases() {
-			return this.$store.state.cases
+			return this.$store.getters.cases
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.cases.length) {
+			this.$store.dispatch('loadCases')
 		}
 	}
 }

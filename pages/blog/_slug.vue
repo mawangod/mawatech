@@ -18,7 +18,7 @@
 									{{ post.title }}
 								</h2>
 								<PostInfo
-									:comments="post.comments"
+									:comments="getPostComments(post.slug)"
 									class="mt-3 mb-4"
 									:tags="post.tags"
 								/>
@@ -27,7 +27,7 @@
 						</div>
 						<PostNavbar :prev="prev" :next="next" />
 						<PostAuthor :author="post.author" :date="post.date" />
-						<PostComments :comment-ids="post.comments" />
+						<PostComments :comments="getPostComments(post.slug)" />
 						<PostReply />
 					</div>
 					<PostSidebar :related-posts="relatedPosts" />
@@ -84,9 +84,20 @@ export default {
 						title: {$ne: this.post.title}
 					})
 					.fetch()
+
 				this.next = next
 				this.prev = prev
 			}
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.comments.length) {
+			this.$store.dispatch('loadComments')
+		}
+	},
+	methods: {
+		getPostComments(post) {
+			return this.$store.getters.getPostComments(post)
 		}
 	}
 }

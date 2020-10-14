@@ -47,12 +47,7 @@ import sliderBackGround from '@/assets/img/cover/our_services.jpg'
 
 export default {
 	validate({params, store}) {
-		return (
-			/^\d+$/.test(params.id) &&
-			store.state.services.some(
-				service => Number(service.id) === Number(params.id)
-			)
-		)
+		return store.getters.services.some(service => service._id === params.id)
 	},
 	data() {
 		return {
@@ -62,12 +57,17 @@ export default {
 	},
 	computed: {
 		service() {
-			return this.$store.state.services.find(
-				service => Number(service.id) === Number(this.id)
+			return this.$store.getters.services.find(
+				service => service._id === this.id
 			)
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.services.length) {
+			this.$store.dispatch('loadServices')
 		}
 	}
 }

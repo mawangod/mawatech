@@ -46,7 +46,8 @@
 				<div class="row">
 					<Service
 						v-for="service in services"
-						:key="service.id"
+						:id="service._id"
+						:key="service._id"
 						v-bind="service"
 					></Service>
 				</div>
@@ -95,8 +96,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<Case v-for="cas in cases" :key="cas.id" v-bind="cas"> </Case>
+				<div v-if="cases && cases.length" class="row">
+					<Case
+						v-for="cas in cases"
+						:id="cas._id"
+						:key="cas._id"
+						v-bind="cas"
+					></Case>
 				</div>
 			</div>
 		</div>
@@ -108,12 +114,13 @@
 				<div class="row d-flex justify-content-center">
 					<div class="col-xl-10 col-lg-10 col-md-9">
 						<VueSlickCarousel
+							v-if="profiles && profiles.length"
 							v-bind="settingSlider"
 							class="h1-testimonial-active"
 						>
 							<div
-								v-for="(profile, index) in profiles"
-								:key="index"
+								v-for="profile in profiles"
+								:key="profile._id"
 								class="single-testimonial text-center"
 							>
 								<div class="testimonial-caption">
@@ -154,8 +161,9 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<Counter
-						v-for="(counter, index) in counters"
-						:key="index"
+						v-for="counter in counters"
+						:id="counter._id"
+						:key="counter._id"
 						:value="counter.value"
 						:title="$t(`about.${counter.title}`)"
 						:is-active="counter.active"
@@ -176,7 +184,8 @@
 				<div class="row">
 					<Profile
 						v-for="profile in profiles"
-						:key="profile.id"
+						:id="profile._id"
+						:key="profile._id"
 						v-bind="profile"
 					>
 					</Profile>
@@ -245,16 +254,7 @@ export default {
 	},
 	async asyncData({app, $content}) {
 		const posts = await $content('posts', app.i18n.locale)
-			.only([
-				'title',
-				'description',
-				'img',
-				'slug',
-				'author',
-				'comments',
-				'tags',
-				'date'
-			])
+			.only(['title', 'description', 'img', 'slug', 'author', 'tags', 'date'])
 			.sortBy('date', 'desc')
 			.fetch()
 
@@ -273,7 +273,6 @@ export default {
 				arrows: true,
 				dots: true
 			},
-			counters: this.$store.state.counters,
 			slides: [
 				{
 					title: 'slide1Title',
@@ -294,13 +293,16 @@ export default {
 	},
 	computed: {
 		profiles() {
-			return this.$store.state.profiles
+			return this.$store.getters.profiles
 		},
 		services() {
-			return this.$store.state.services
+			return this.$store.getters.services
 		},
 		cases() {
-			return this.$store.state.cases
+			return this.$store.getters.cases
+		},
+		counters() {
+			return this.$store.getters.counters
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
@@ -316,14 +318,28 @@ export default {
 						'img',
 						'slug',
 						'author',
-						'comments',
 						'tags',
 						'date'
 					])
 					.sortBy('date', 'desc')
 					.fetch()
+
 				this.posts = this.posts.slice(0, 2)
 			}
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.cases.length) {
+			this.$store.dispatch('loadCases')
+		}
+		if (!this.$store.getters.counters.length) {
+			this.$store.dispatch('loadCounters')
+		}
+		if (!this.$store.getters.services.length) {
+			this.$store.dispatch('loadServices')
+		}
+		if (!this.$store.getters.profiles.length) {
+			this.$store.dispatch('loadProfiles')
 		}
 	}
 }
