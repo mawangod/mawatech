@@ -157,5 +157,13 @@ export default {
 	},
 	disclaimer: {
 		title: 'We accept and guarantee our responsibility'
+	},
+	validation: {
+		required: 'This field is required',
+		email: 'Enter a valid email',
+		alpha: 'Only alphabetic characters are accepted',
+		max300: 'The number of characters in the field cannot exceed 300',
+		max30: 'The number of characters in the field cannot exceed 30',
+		min3: 'The number of characters in the field must be at least 3'
 	}
 }

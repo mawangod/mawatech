@@ -157,5 +157,13 @@ export default {
 	},
 	disclaimer: {
 		title: 'Nous acceptons et garantissons notre responsabilité'
+	},
+	validation: {
+		required: 'Ce champ est requis',
+		email: 'Entrez un email valid',
+		alpha: 'Seuls les caractères alphabétiques sont acceptés',
+		max300: 'le nombre de charactères du champ ne peut excéder 300',
+		max30: 'le nombre de charactères du champ ne peut excéder 30',
+		min3: 'Le nombre de charactères du champ doit au moins etre de 3'
 	}
 }

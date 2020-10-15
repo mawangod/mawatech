@@ -15,12 +15,12 @@
 						<div class="d-flex justify-content-between">
 							<div class="d-flex align-items-center">
 								<h5>
-									<a href="#">{{ comment.author }}</a>
+									<a>{{ comment.author }}</a>
 								</h5>
 								<p class="date">{{ formatDate(comment.date) }}</p>
 							</div>
 							<div class="reply-btn">
-								<a href="#" class="btn-reply text-uppercase">
+								<a class="btn-reply text-uppercase">
 									{{ $t('button.reply') }}
 								</a>
 							</div>
@@ -61,5 +61,9 @@ export default {
 <style scoped>
 .single-comment {
 	padding-bottom: 48px;
+}
+
+.btn-reply {
+	cursor: pointer;
 }
 </style>

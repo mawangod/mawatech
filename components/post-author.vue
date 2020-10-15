@@ -1,5 +1,6 @@
 <template>
 	<nuxt-link
+		v-if="profile"
 		:to="{name: 'profiles-id', params: {id: profile._id}}"
 		class="blog-author"
 	>

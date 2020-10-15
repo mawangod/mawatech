@@ -6,9 +6,13 @@
 				<div class="row">
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div class="blog_left_sidebar">
-							<b-btn v-if="devMode" class="ma-2 margin-30" @click="addPost">
+							<button
+								v-if="devMode"
+								class="btn hero-btn ma-2 margin-30"
+								@click="addPost"
+							>
 								{{ $t('button.addPost') }}
-							</b-btn>
+							</button>
 							<Post
 								v-for="post in displayedPosts"
 								id="posts"
