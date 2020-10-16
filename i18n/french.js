@@ -164,6 +164,7 @@ export default {
 		alpha: 'Seuls les caractères alphabétiques sont acceptés',
 		max300: 'le nombre de charactères du champ ne peut excéder 300',
 		max30: 'le nombre de charactères du champ ne peut excéder 30',
-		min3: 'Le nombre de charactères du champ doit au moins etre de 3'
+		min3: 'Le nombre de charactères du champ doit au moins etre de 3',
+		alpha_num: 'Seuls les caractères alphanumériques sont acceptés'
 	}
 }

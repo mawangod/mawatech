@@ -41,7 +41,7 @@
 									:placeholder="$t('contact.placeholderName')"
 								/>
 								<span v-if="errors[0]" class="input-invalid-message">
-									{{ $t(`validation.${errors[0]}`, {length: 3}) }}
+									{{ $t(`validation.${errors[0]}`) }}
 								</span>
 							</div>
 						</ValidationProvider>
@@ -121,9 +121,5 @@ export default {
 <style scoped>
 .hero-btn:hover {
 	background-color: #ff2143;
-}
-
-.input-invalid-message {
-	color: #ff2143;
 }
 </style>

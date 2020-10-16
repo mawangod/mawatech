@@ -1,6 +1,13 @@
 import {extend} from 'vee-validate'
 /* eslint-disable camelcase */
-import {required, email, alpha_spaces, min, max} from 'vee-validate/dist/rules'
+import {
+	required,
+	email,
+	alpha_spaces,
+	min,
+	max,
+	alpha_num
+} from 'vee-validate/dist/rules'
 
 extend('required', {
 	...required,
@@ -27,4 +34,9 @@ extend('min', {
 	...min,
 	params: ['length'],
 	message: 'min{length}'
+})
+
+extend('alpha_num', {
+	...alpha_num,
+	message: 'alpha_num'
 })
