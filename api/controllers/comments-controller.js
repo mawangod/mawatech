@@ -1,7 +1,7 @@
-import comments from '../models/comments'
+import Comment from '../models/Comment'
 
 const getAll = function (req, res) {
-	comments.find({}, (err, comments) => {
+	Comment.find({}, (err, comments) => {
 		if (err) {
 			return res.status(500).json({
 				message: 'Error getting comments records.'
@@ -12,4 +12,20 @@ const getAll = function (req, res) {
 	})
 }
 
-export {getAll}
+const create = function (req, res) {
+	const comment = new Comment({...req.body})
+	comment.save((error, comment) => {
+		if (error) {
+			return res.status(500).json({
+				message: 'Error saving record',
+				error
+			})
+		}
+		return res.json({
+			message: 'saved',
+			_id: comment._id
+		})
+	})
+}
+
+export {getAll, create}

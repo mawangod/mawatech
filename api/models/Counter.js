@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const counters = new mongoose.Schema(
+const Counter = new mongoose.Schema(
 	{
 		value: {type: Number, required: true},
 		title: {type: String, required: true},
@@ -9,4 +9,4 @@ const counters = new mongoose.Schema(
 	{autoCreate: true}
 )
 
-export default mongoose.model('counters', counters)
+export default mongoose.model('Counter', Counter)

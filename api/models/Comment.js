@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const comments = new mongoose.Schema(
+const Comment = new mongoose.Schema(
 	{
 		author: {type: String, required: true},
 		content: {type: String, required: true},
@@ -11,4 +11,4 @@ const comments = new mongoose.Schema(
 	{autoCreate: true}
 )
 
-export default mongoose.model('comments', comments)
+export default mongoose.model('Comment', Comment)

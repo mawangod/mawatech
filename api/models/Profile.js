@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const profiles = new mongoose.Schema(
+const Profile = new mongoose.Schema(
 	{
 		name: {type: String, required: true},
 		img: {type: String, required: true},
@@ -17,4 +17,4 @@ const profiles = new mongoose.Schema(
 	{autoCreate: true}
 )
 
-export default mongoose.model('profiles', profiles)
+export default mongoose.model('Profile', Profile)
