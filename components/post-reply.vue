@@ -1,8 +1,11 @@
 <template>
 	<div class="comment-form">
 		<h4>{{ $t('blog.leaveReply') }}</h4>
-		<ValidationObserver v-slot="{invalid}">
-			<form class="form-contact comment_form" @submit.prevent="submitComment">
+		<ValidationObserver v-slot="{invalid, reset}">
+			<form
+				class="form-contact comment_form"
+				@submit.prevent="submitComment(reset)"
+			>
 				<div class="row">
 					<div class="col-12">
 						<ValidationProvider
@@ -111,8 +114,18 @@ export default {
 		}
 	},
 	methods: {
-		submitComment() {
-			console.log(this.content)
+		async submitComment(reset) {
+			await this.$store.dispatch('createComment', {
+				author: this.author,
+				content: this.content,
+				mail: this.mail,
+				date: this.currentDate,
+				post: this.post
+			})
+			this.author = ''
+			this.content = ''
+			this.mail = ''
+			reset()
 		}
 	}
 }

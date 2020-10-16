@@ -21,10 +21,7 @@ const create = function (req, res) {
 				error
 			})
 		}
-		return res.json({
-			message: 'saved',
-			_id: comment._id
-		})
+		return res.status(200).json({...comment._doc})
 	})
 }
 

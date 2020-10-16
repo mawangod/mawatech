@@ -27,7 +27,7 @@
 						</div>
 						<PostNavbar :prev="prev" :next="next" />
 						<PostAuthor :author="post.author" :date="post.date" />
-						<PostComments :comments="getPostComments(post.slug)" />
+						<PostComments :post="post.slug" />
 						<PostReply :post="post.slug" />
 					</div>
 					<PostSidebar :related-posts="relatedPosts" />

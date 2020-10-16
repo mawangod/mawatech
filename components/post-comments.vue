@@ -35,8 +35,8 @@
 <script>
 export default {
 	props: {
-		comments: {
-			type: Array,
+		post: {
+			type: String,
 			required: true
 		}
 	},
@@ -48,6 +48,9 @@ export default {
 	computed: {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		comments() {
+			return this.$store.getters.getPostComments(this.post)
 		}
 	},
 	methods: {
@@ -65,5 +68,11 @@ export default {
 
 .btn-reply {
 	cursor: pointer;
+}
+
+.user,
+.desc,
+.comment {
+	width: 100%;
 }
 </style>
