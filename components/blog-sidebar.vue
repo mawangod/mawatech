@@ -74,35 +74,6 @@
 					</div>
 				</div>
 			</aside>
-
-			<aside class="single_sidebar_widget newsletter_widget">
-				<h4 class="widget_title">{{ $t('blog.newsletter') }}</h4>
-
-				<form>
-					<ValidationProvider
-						v-slot="{errors}"
-						name="email"
-						rules="email|min:3|max:30"
-					>
-						<div class="form-group">
-							<input
-								v-model="email"
-								type="email"
-								class="form-control"
-								:placeholder="$t('blog.enterMail')"
-							/>
-							<span v-if="errors[0]" class="input-invalid-message">
-								{{ $t(`validation.${errors[0]}`) }}
-							</span>
-						</div>
-					</ValidationProvider>
-					<button
-						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-					>
-						{{ $t('button.subscribe') }}
-					</button>
-				</form>
-			</aside>
 		</div>
 	</div>
 </template>

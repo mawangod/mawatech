@@ -1,6 +1,5 @@
 export default {
 	button: {
-		subscribe: 'Inscription',
 		submitButton: 'Envoyez',
 		moreAboutUs: 'En savoir plus',
 		ourServices: 'Nos Services',
@@ -30,8 +29,6 @@ export default {
 		popularTags: 'Tags populaires',
 		recentPosts: 'Posts récents',
 		relatedPosts: 'Posts similaires',
-		newsletter: 'Newsletter',
-		enterMail: 'Entrez votre email',
 		comments: 'Commentaires',
 		prevPost: 'Post préc',
 		nextPost: 'Post suiv',

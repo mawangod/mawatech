@@ -135,9 +135,6 @@ export default {
 			generalTabs: ['jobs', 'information', 'copyright'],
 			aboutTabs: ['cookies', 'privacy', 'disclaimer']
 		}
-	},
-	methods: {
-		addMailtoNewsletter() {}
 	}
 }
 </script>
