@@ -36,6 +36,12 @@ export const mutations = {
 	},
 	add_comment(state, comment) {
 		state.comments = [...state.comments, comment]
+	},
+	remove_comment(state, comment) {
+		const idToRemove = comment.id
+		state.comments = state.comments.filter(
+			comment => comment._id !== idToRemove
+		)
 	}
 }
 
@@ -76,6 +82,14 @@ export const actions = {
 			.post('/api/comments', comment)
 			.then(response => response.data)
 			.then(comment => context.commit('add_comment', comment))
+			.catch()
+	},
+
+	async deleteComment(context, comment) {
+		await this.$axios
+			.delete(`/api/comments/${comment._id}`)
+			.then(response => response.data)
+			.then(comment => context.commit('remove_comment', comment))
 			.catch()
 	}
 }

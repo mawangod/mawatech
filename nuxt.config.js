@@ -77,7 +77,7 @@ module.exports = {
 	fontawesome: {
 		icons: {
 			brands: ['faFacebookF', 'faTwitter', 'faLinkedinIn', 'faInstagram'],
-			regular: ['faClock', 'faAddressCard', 'faEnvelope'],
+			regular: ['faClock', 'faAddressCard', 'faEnvelope', 'faTrashAlt'],
 			solid: [
 				'faLevelUpAlt',
 				'faUser',

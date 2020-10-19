@@ -5,7 +5,7 @@
 		<Footer />
 		<transition name="fade">
 			<div v-show="stickyHeader" id="back-top" @click="scrollToTheTop">
-				<a title="Go to Top" href="#">
+				<a>
 					<FontAwesomeIcon class="fas" :icon="['fas', 'level-up-alt']">
 					</FontAwesomeIcon>
 				</a>

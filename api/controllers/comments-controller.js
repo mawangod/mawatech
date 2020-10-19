@@ -1,6 +1,6 @@
 import Comment from '../models/Comment'
 
-const getAll = function (req, res) {
+const getAll = (req, res) => {
 	Comment.find({}, (err, comments) => {
 		if (err) {
 			return res.status(500).json({
@@ -12,12 +12,12 @@ const getAll = function (req, res) {
 	})
 }
 
-const create = function (req, res) {
+const create = (req, res) => {
 	const comment = new Comment({...req.body})
 	comment.save((error, comment) => {
 		if (error) {
 			return res.status(500).json({
-				message: 'Error saving record',
+				message: 'Error saving comment',
 				error
 			})
 		}
@@ -25,4 +25,16 @@ const create = function (req, res) {
 	})
 }
 
-export {getAll, create}
+const remove = (req, res) => {
+	const id = req.params.id
+	Comment.findByIdAndDelete(id, (error, comment) => {
+		if (error) {
+			return res.status(500).json({
+				message: 'Error remove comment'
+			})
+		}
+		return res.status(200).json({id})
+	})
+}
+
+export {getAll, create, remove}

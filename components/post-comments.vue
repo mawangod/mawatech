@@ -19,10 +19,12 @@
 								</h5>
 								<p class="date">{{ formatDate(comment.date) }}</p>
 							</div>
-							<div class="reply-btn">
-								<a class="btn-reply text-uppercase">
-									{{ $t('button.reply') }}
-								</a>
+							<div v-show="devMode" @click="deleteComment(comment)">
+								<FontAwesomeIcon
+									class="far delete"
+									:icon="['far', 'trash-alt']"
+								>
+								</FontAwesomeIcon>
 							</div>
 						</div>
 					</div>
@@ -51,11 +53,17 @@ export default {
 		},
 		comments() {
 			return this.$store.getters.getPostComments(this.post)
+		},
+		devMode() {
+			return process.env.NODE_ENV === 'development'
 		}
 	},
 	methods: {
 		formatDate(date) {
 			return new Date(date).toLocaleDateString(this.locale, this.options)
+		},
+		async deleteComment(comment) {
+			await this.$store.dispatch('deleteComment', comment)
 		}
 	}
 }
@@ -74,5 +82,10 @@ export default {
 .desc,
 .comment {
 	width: 100%;
+}
+
+.delete {
+	color: #777;
+	cursor: pointer;
 }
 </style>
