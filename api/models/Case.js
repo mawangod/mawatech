@@ -1,14 +1,14 @@
 import mongoose from 'mongoose'
 
-const services = new mongoose.Schema(
+const Case = new mongoose.Schema(
 	{
-		icon: {type: Array, required: true},
-		photo1: {type: String, required: true},
-		photo2: {type: String, required: true},
 		title: {
 			'fr-FR': {type: String, required: true},
 			'en-EN': {type: String, required: true}
 		},
+		photo1: {type: String, required: true},
+		photo2: {type: String, required: true},
+		photo3: {type: String, required: true},
 		subtitle: {
 			'fr-FR': {type: String, required: true},
 			'en-EN': {type: String, required: true}
@@ -20,9 +20,13 @@ const services = new mongoose.Schema(
 		bio2: {
 			'fr-FR': {type: String, required: true},
 			'en-EN': {type: String, required: true}
+		},
+		bio3: {
+			'fr-FR': {type: String, required: true},
+			'en-EN': {type: String, required: true}
 		}
 	},
 	{autoCreate: true}
 )
 
-export default mongoose.model('services', services)
+export default mongoose.model('Case', Case)

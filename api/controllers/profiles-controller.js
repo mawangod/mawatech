@@ -1,7 +1,7 @@
-import profiles from '../models/profiles'
+import Profile from '../models/Profile'
 
 const getAll = function (req, res) {
-	profiles.find({}, (err, profiles) => {
+	Profile.find({}, (err, profiles) => {
 		if (err) {
 			return res.status(500).json({
 				message: 'Error getting profiles records.'

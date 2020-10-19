@@ -1,6 +1,5 @@
 export default {
 	button: {
-		subscribe: 'Inscription',
 		submitButton: 'Envoyez',
 		moreAboutUs: 'En savoir plus',
 		ourServices: 'Nos Services',
@@ -30,8 +29,6 @@ export default {
 		popularTags: 'Tags populaires',
 		recentPosts: 'Posts récents',
 		relatedPosts: 'Posts similaires',
-		newsletter: 'Newsletter',
-		enterMail: 'Entrez votre email',
 		comments: 'Commentaires',
 		prevPost: 'Post préc',
 		nextPost: 'Post suiv',
@@ -157,5 +154,14 @@ export default {
 	},
 	disclaimer: {
 		title: 'Nous acceptons et garantissons notre responsabilité'
+	},
+	validation: {
+		required: 'Ce champ est requis',
+		email: 'Entrez un email valid',
+		alpha: 'Seuls les caractères alphabétiques sont acceptés',
+		max300: 'le nombre de charactères du champ ne peut excéder 300',
+		max30: 'le nombre de charactères du champ ne peut excéder 30',
+		min3: 'Le nombre de charactères du champ doit au moins etre de 3',
+		alpha_num: 'Seuls les caractères alphanumériques sont acceptés'
 	}
 }

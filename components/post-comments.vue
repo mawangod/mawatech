@@ -15,14 +15,16 @@
 						<div class="d-flex justify-content-between">
 							<div class="d-flex align-items-center">
 								<h5>
-									<a href="#">{{ comment.author }}</a>
+									<a>{{ comment.author }}</a>
 								</h5>
 								<p class="date">{{ formatDate(comment.date) }}</p>
 							</div>
-							<div class="reply-btn">
-								<a href="#" class="btn-reply text-uppercase">
-									{{ $t('button.reply') }}
-								</a>
+							<div v-show="devMode" @click="deleteComment(comment)">
+								<FontAwesomeIcon
+									class="far delete"
+									:icon="['far', 'trash-alt']"
+								>
+								</FontAwesomeIcon>
 							</div>
 						</div>
 					</div>
@@ -35,8 +37,8 @@
 <script>
 export default {
 	props: {
-		comments: {
-			type: Array,
+		post: {
+			type: String,
 			required: true
 		}
 	},
@@ -48,11 +50,20 @@ export default {
 	computed: {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		comments() {
+			return this.$store.getters.getPostComments(this.post)
+		},
+		devMode() {
+			return process.env.NODE_ENV === 'development'
 		}
 	},
 	methods: {
 		formatDate(date) {
 			return new Date(date).toLocaleDateString(this.locale, this.options)
+		},
+		async deleteComment(comment) {
+			await this.$store.dispatch('deleteComment', comment)
 		}
 	}
 }
@@ -61,5 +72,20 @@ export default {
 <style scoped>
 .single-comment {
 	padding-bottom: 48px;
+}
+
+.btn-reply {
+	cursor: pointer;
+}
+
+.user,
+.desc,
+.comment {
+	width: 100%;
+}
+
+.delete {
+	color: #777;
+	cursor: pointer;
 }
 </style>

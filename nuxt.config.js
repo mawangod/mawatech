@@ -38,6 +38,7 @@ module.exports = {
 	 */
 	plugins: [
 		'@/plugins/vue-smooth-scroll.js',
+		'@/plugins/vee-validate.js',
 		{
 			src: '@/plugins/vue-layers.js',
 			ssr: false
@@ -76,7 +77,7 @@ module.exports = {
 	fontawesome: {
 		icons: {
 			brands: ['faFacebookF', 'faTwitter', 'faLinkedinIn', 'faInstagram'],
-			regular: ['faClock', 'faAddressCard', 'faEnvelope'],
+			regular: ['faClock', 'faAddressCard', 'faEnvelope', 'faTrashAlt'],
 			solid: [
 				'faLevelUpAlt',
 				'faUser',
@@ -110,7 +111,9 @@ module.exports = {
 	 ** Build configuration
 	 ** See https://nuxtjs.org/api/configuration-build/
 	 */
-	build: {},
+	build: {
+		transpile: ['vee-validate/dist/rules']
+	},
 	i18n: {
 		locales: [
 			{

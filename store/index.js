@@ -1,3 +1,5 @@
+import sortByDate from '../utilities/sort-by-date'
+
 export const state = () => ({
 	profiles: [],
 	services: [],
@@ -13,7 +15,7 @@ export const getters = {
 	counters: state => state.counters,
 	comments: state => state.comments,
 	getPostComments: state => post =>
-		state.comments.filter(comment => comment.post === post)
+		state.comments.filter(comment => comment.post === post).sort(sortByDate)
 }
 
 export const mutations = {
@@ -31,6 +33,15 @@ export const mutations = {
 	},
 	set_profiles(state, profiles) {
 		state.profiles = profiles
+	},
+	add_comment(state, comment) {
+		state.comments = [...state.comments, comment]
+	},
+	remove_comment(state, comment) {
+		const idToRemove = comment.id
+		state.comments = state.comments.filter(
+			comment => comment._id !== idToRemove
+		)
 	}
 }
 
@@ -64,5 +75,21 @@ export const actions = {
 			.get('/api/profiles')
 			.then(response => response.data)
 			.then(profiles => context.commit('set_profiles', profiles))
+	},
+
+	async createComment(context, comment) {
+		await this.$axios
+			.post('/api/comments', comment)
+			.then(response => response.data)
+			.then(comment => context.commit('add_comment', comment))
+			.catch()
+	},
+
+	async deleteComment(context, comment) {
+		await this.$axios
+			.delete(`/api/comments/${comment._id}`)
+			.then(response => response.data)
+			.then(comment => context.commit('remove_comment', comment))
+			.catch()
 	}
 }

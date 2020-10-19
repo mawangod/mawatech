@@ -1,7 +1,7 @@
-import services from '../models/services'
+import Service from '../models/Service'
 
 const getAll = function (req, res) {
-	services.find({}, (err, services) => {
+	Service.find({}, (err, services) => {
 		if (err) {
 			return res.status(500).json({
 				message: 'Error getting services records.'

@@ -1,7 +1,7 @@
-import cases from '../models/cases'
+import Case from '../models/Case'
 
 const getAll = function (req, res) {
-	cases.find({}, (err, cases) => {
+	Case.find({}, (err, cases) => {
 		if (err) {
 			return res.status(500).json({
 				message: 'Error getting cases records.'

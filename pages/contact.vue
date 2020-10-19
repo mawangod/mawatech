@@ -46,63 +46,108 @@
 						<h2 class="contact-title">{{ $t('contact.formTitle') }}</h2>
 					</div>
 					<div class="col-lg-8">
-						<form
-							id="contactForm"
-							class="form-contact contact_form"
-							novalidate="novalidate"
-						>
-							<div class="row">
-								<div class="col-12">
-									<div class="form-group">
-										<textarea
-											class="form-control w-100"
+						<ValidationObserver v-slot="{invalid}">
+							<form
+								id="contactForm"
+								class="form-contact contact_form"
+								novalidate="novalidate"
+							>
+								<div class="row">
+									<div class="col-12">
+										<ValidationProvider
+											v-slot="{errors}"
 											name="message"
-											cols="30"
-											rows="9"
-											:placeholder="$t('contact.placeholderMessage')"
-										></textarea>
+											rules="required|min:3|max:300"
+										>
+											<div class="form-group">
+												<textarea
+													v-model="messageSender"
+													class="form-control w-100"
+													name="message"
+													cols="30"
+													rows="9"
+													:placeholder="$t('contact.placeholderMessage')"
+												></textarea>
+												<span v-if="errors[0]" class="input-invalid-message">
+													{{ $t(`validation.${errors[0]}`) }}
+												</span>
+											</div>
+										</ValidationProvider>
 									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<input
-											class="form-control valid"
+									<div class="col-sm-6">
+										<ValidationProvider
+											v-slot="{errors}"
 											name="name"
-											type="text"
-											:placeholder="$t('contact.placeholderName')"
-										/>
+											rules="required|alpha_spaces|min:3|max:30"
+										>
+											<div class="form-group">
+												<input
+													v-model="nameSender"
+													class="form-control valid"
+													name="name"
+													type="text"
+													:placeholder="$t('contact.placeholderName')"
+												/>
+												<span v-if="errors[0]" class="input-invalid-message">
+													{{ $t(`validation.${errors[0]}`) }}
+												</span>
+											</div>
+										</ValidationProvider>
 									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<input
-											class="form-control valid"
+									<div class="col-sm-6">
+										<ValidationProvider
+											v-slot="{errors}"
 											name="email"
-											type="email"
-											:placeholder="$t('contact.placeholderMail')"
-										/>
+											rules="required|email|min:3|max:30"
+										>
+											<div class="form-group">
+												<input
+													v-model="emailSender"
+													class="form-control valid"
+													name="email"
+													type="email"
+													:placeholder="$t('contact.placeholderMail')"
+												/>
+												<span v-if="errors[0]" class="input-invalid-message">
+													{{ $t(`validation.${errors[0]}`) }}
+												</span>
+											</div>
+										</ValidationProvider>
+									</div>
+									<div class="col-12">
+										<ValidationProvider
+											v-slot="{errors}"
+											name="name"
+											rules="required|alpha_spaces|min:3|max:30"
+										>
+											<div class="form-group">
+												<input
+													v-model="subjectSender"
+													class="form-control"
+													name="subject"
+													type="text"
+													:placeholder="$t('contact.placeholderSubject')"
+												/>
+												<span v-if="errors[0]" class="input-invalid-message">
+													{{ $t(`validation.${errors[0]}`) }}
+												</span>
+											</div>
+										</ValidationProvider>
 									</div>
 								</div>
-								<div class="col-12">
-									<div class="form-group">
-										<input
-											class="form-control"
-											name="subject"
-											type="text"
-											:placeholder="$t('contact.placeholderSubject')"
-										/>
-									</div>
+								<div class="form-group mt-3">
+									<b-btn
+										type="submit"
+										:class="{
+											'hero-btn': !invalid
+										}"
+										:disabled="invalid"
+									>
+										{{ $t('button.submitButton') }}
+									</b-btn>
 								</div>
-							</div>
-							<div class="form-group mt-3">
-								<button
-									type="submit"
-									class="button button-contactForm boxed-btn"
-								>
-									{{ $t('button.submitButton') }}
-								</button>
-							</div>
-						</form>
+							</form>
+						</ValidationObserver>
 					</div>
 					<div class="col-lg-3 offset-lg-1">
 						<div class="media contact-info">
@@ -150,14 +195,19 @@
 import sliderBackGround from '@/assets/img/cover/contact_us.jpg'
 import ImageTitle from '@/components/image-title.vue'
 import markerPng from '@/assets/img/media/marker.png'
+import {ValidationObserver, ValidationProvider} from 'vee-validate'
 import {gsm, mail, street, town} from '../utilities/usefull-data'
 
 export default {
-	components: {ImageTitle},
+	components: {ImageTitle, ValidationObserver, ValidationProvider},
 	data() {
 		const x = 3.990595028455405
 		const y = 50.43797498955024
 		return {
+			subjectSender: '',
+			emailSender: '',
+			nameSender: '',
+			messageSender: '',
 			mail,
 			gsm,
 			markerPng,
@@ -185,5 +235,9 @@ export default {
 <style scoped>
 .map {
 	height: 400px;
+}
+
+.hero-btn:hover {
+	background-color: #ff2143;
 }
 </style>

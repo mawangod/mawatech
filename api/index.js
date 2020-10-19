@@ -13,17 +13,12 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-// Require & Import API routes
-
-// const articles = require('./routes/articles')
-
 // Use API Routes
 app.use(cases)
 app.use(counters)
 app.use(services)
 app.use(profiles)
 app.use(comments)
-// app.use(articles)
 
 // Export the server middleware
 export default {
