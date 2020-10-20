@@ -5,7 +5,8 @@ export const state = () => ({
 	services: [],
 	cases: [],
 	counters: [],
-	comments: []
+	comments: [],
+	mailSended: false
 })
 
 export const getters = {
@@ -42,6 +43,9 @@ export const mutations = {
 		state.comments = state.comments.filter(
 			comment => comment._id !== idToRemove
 		)
+	},
+	set_mailSended(state) {
+		state.mailSended = true
 	}
 }
 
@@ -90,6 +94,14 @@ export const actions = {
 			.delete(`/api/comments/${comment._id}`)
 			.then(response => response.data)
 			.then(comment => context.commit('remove_comment', comment))
+			.catch()
+	},
+
+	async sendMail(context, mail) {
+		await this.$axios
+			.post('/api/mail', mail)
+			.then(response => response.data)
+			.then(() => context.commit('set_mailSended'))
 			.catch()
 	}
 }

@@ -5,6 +5,7 @@ import counters from './routes/counters'
 import comments from './routes/comments'
 import services from './routes/services'
 import profiles from './routes/profiles'
+import mail from './routes/mail'
 
 // Create express instnace
 const app = express()
@@ -19,6 +20,7 @@ app.use(counters)
 app.use(services)
 app.use(profiles)
 app.use(comments)
+app.use(mail)
 
 // Export the server middleware
 export default {
