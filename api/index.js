@@ -1,4 +1,6 @@
 import express from 'express'
+// eslint-disable-next-line no-unused-vars
+import _ from 'dotenv/config'
 import db from './db'
 import cases from './routes/cases'
 import counters from './routes/counters'

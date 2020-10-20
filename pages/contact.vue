@@ -47,7 +47,7 @@
 					</div>
 					<div v-if="mailAlreadySended" class="col-lg-8">
 						<p>
-							Merci de nous avoir contacter, nous vous recontacterons bientot
+							{{ $t('contact.mailSended') }}
 						</p>
 					</div>
 					<div v-else class="col-lg-8">
@@ -241,9 +241,9 @@ export default {
 	methods: {
 		async sendMail(reset) {
 			await this.$store.dispatch('sendMail', {
-				author: this.nameSender,
-				content: this.messageSender,
-				mail: this.emailSender,
+				name: this.nameSender,
+				text: this.messageSender,
+				email: this.emailSender,
 				subject: this.subjectSender
 			})
 			this.nameSender = ''

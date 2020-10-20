@@ -44,7 +44,8 @@ export default {
 		placeholderName: 'Entrer votre nom',
 		placeholderMail: 'Entrer votre email',
 		placeholderSubject: 'Entrer le sujet',
-		sendUsMessage: 'Envoyez nous vos questions!'
+		sendUsMessage: 'Envoyez nous vos questions!',
+		mailSended: 'Merci de nous avoir contacté, nous vous recontacterons bientot'
 	},
 	team: {
 		title: 'Notre équipe',
