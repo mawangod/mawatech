@@ -45,12 +45,16 @@
 					<div class="col-12">
 						<h2 class="contact-title">{{ $t('contact.formTitle') }}</h2>
 					</div>
-					<div class="col-lg-8">
-						<ValidationObserver v-slot="{invalid}">
+					<div v-if="mailAlreadySended" class="col-lg-8">
+						<p>
+							{{ $t('contact.mailSended') }}
+						</p>
+					</div>
+					<div v-else class="col-lg-8">
+						<ValidationObserver v-slot="{invalid, reset}">
 							<form
-								id="contactForm"
 								class="form-contact contact_form"
-								novalidate="novalidate"
+								@submit.prevent="sendMail(reset)"
 							>
 								<div class="row">
 									<div class="col-12">
@@ -227,6 +231,26 @@ export default {
 					properties: {}
 				}
 			]
+		}
+	},
+	computed: {
+		mailAlreadySended() {
+			return this.$store.state.mailSended
+		}
+	},
+	methods: {
+		async sendMail(reset) {
+			await this.$store.dispatch('sendMail', {
+				name: this.nameSender,
+				text: this.messageSender,
+				email: this.emailSender,
+				subject: this.subjectSender
+			})
+			this.nameSender = ''
+			this.messageSender = ''
+			this.subjectSender = ''
+			this.emailSender = ''
+			reset()
 		}
 	}
 }
