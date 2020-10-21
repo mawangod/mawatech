@@ -121,7 +121,7 @@
 									<div class="col-12">
 										<ValidationProvider
 											v-slot="{errors}"
-											name="name"
+											name="subject"
 											rules="required|alpha_spaces|min:3|max:30"
 										>
 											<div class="form-group">

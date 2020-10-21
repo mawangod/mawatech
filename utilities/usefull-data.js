@@ -9,4 +9,13 @@ const linkedin = 'https://www.linkedin.com/in/mawatech-sprl-b56a851b8/'
 const facebook = 'https://www.facebook.com/mawatech.sprl.3'
 const street = 'Chaussée de beaumont 187'
 const town = 'Mons, 7000'
-export {gsm, mail, street, town, instagram, twitter, linkedin, facebook}
+const tags = [
+	'project',
+	'love',
+	'technology',
+	'travel',
+	'restaurant',
+	'lifeStyle',
+	'design'
+]
+export {gsm, mail, street, town, instagram, twitter, linkedin, facebook, tags}

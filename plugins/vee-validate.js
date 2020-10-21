@@ -6,12 +6,21 @@ import {
 	alpha_spaces,
 	min,
 	max,
-	alpha_num
+	image
 } from 'vee-validate/dist/rules'
 
 extend('required', {
 	...required,
 	message: 'required'
+})
+
+extend('image', {...image, message: 'image'})
+
+extend('length', {
+	validate: value => {
+		return value && value.length >= 2
+	},
+	message: 'length2min'
 })
 
 extend('email', {
@@ -37,6 +46,8 @@ extend('min', {
 })
 
 extend('alpha_num', {
-	...alpha_num,
+	validate: value => {
+		return /^[0-9A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ\s]*$/i.test(value)
+	},
 	message: 'alpha_num'
 })

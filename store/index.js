@@ -103,5 +103,12 @@ export const actions = {
 			.then(response => response.data)
 			.then(() => context.commit('set_mailSended'))
 			.catch()
+	},
+
+	async createPost(context, post) {
+		await this.$axios
+			.post('/api/post', post)
+			.then(response => response.data)
+			.catch()
 	}
 }

@@ -1,18 +1,18 @@
 <template>
 	<main>
-		<ImageTitle title="Blog" :url="sliderBackGround"></ImageTitle>
+		<ImageTitle :title="$t('header.blog')" :url="sliderBackGround"></ImageTitle>
 		<section class="home-blog-area section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div class="blog_left_sidebar">
-							<button
+							<nuxt-link
 								v-if="devMode"
 								class="btn hero-btn ma-2 margin-30"
-								@click="addPost"
+								to="/blog/add-post"
 							>
 								{{ $t('button.addPost') }}
-							</button>
+							</nuxt-link>
 							<Post
 								v-for="post in displayedPosts"
 								id="posts"
@@ -111,12 +111,6 @@ export default {
 		}
 	},
 	methods: {
-		addPost() {
-			const nums = this.posts.map(post => Number(post.slug.split('-')[1]))
-			const maxNum = nums.reduce((p, v) => (p > v ? p : v))
-			const newNum = maxNum + 1
-			console.log(newNum)
-		},
 		searchPost(term) {
 			this.filterTerm = term
 		},

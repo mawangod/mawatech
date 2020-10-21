@@ -35,7 +35,13 @@ export default {
 		writtenBy: 'Written By',
 		leaveReply: 'Leave a Reply',
 		writeComment: 'Write Comment',
-		search: 'Search'
+		search: 'Search',
+		author: 'Author',
+		titleFr: 'Title (French)',
+		titleEn: 'Title (English)',
+		descriptionFr: 'Description (French)',
+		descriptionEn: 'Description (English)',
+		image: 'Add a image (size 550 x 450)'
 	},
 	contact: {
 		title: 'Contact US',
@@ -163,6 +169,8 @@ export default {
 		max300: 'The number of characters in the field cannot exceed 300',
 		max30: 'The number of characters in the field cannot exceed 30',
 		min3: 'The number of characters in the field must be at least 3',
-		alpha_num: 'Only alphanumeric characters are accepted'
+		alpha_num: 'Only alphanumeric characters are accepted',
+		image: 'only jpg|svg|jpeg|png|bmp|gif|webp images are accepted',
+		length2min: 'please select at least two elements'
 	}
 }

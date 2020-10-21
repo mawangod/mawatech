@@ -81,6 +81,7 @@
 <script>
 import {ValidationProvider} from 'vee-validate'
 import capitalizeName from '../utilities/capitalize-name'
+import {tags} from '../utilities/usefull-data'
 
 export default {
 	components: {ValidationProvider},
@@ -104,15 +105,7 @@ export default {
 			searchTerm: '',
 			email: '',
 			options: {year: 'numeric', month: 'long', day: 'numeric'},
-			tags: [
-				'project',
-				'love',
-				'technology',
-				'travel',
-				'restaurant',
-				'lifeStyle',
-				'design'
-			]
+			tags
 		}
 	},
 	computed: {
