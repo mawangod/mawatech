@@ -2,7 +2,7 @@
 author: Ethan Welch
 title: 7 Habitudes de travail que vous devez adopter
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: home_blog2
+img: home_blog2.png
 date: 2020-07-20
 tags: [product, lifeStyle]
 ---

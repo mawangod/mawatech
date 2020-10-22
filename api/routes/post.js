@@ -22,9 +22,18 @@ const fileFilter = (req, file, cb) => {
 	cb(null, true)
 }
 
+const storage = multer.diskStorage({
+	destination: './assets/img/blog',
+	filename: (req, file, cb) => {
+		const uniqueSuffix = `${Date.now()}}`
+		const extention = file.mimetype.split('/')[1]
+		cb(null, `${file.fieldname}-${uniqueSuffix}.${extention}`)
+	}
+})
+
 const upload = multer({
-	dest: './assets/img/blog',
 	fileFilter,
+	storage,
 	limits: {
 		fileSize: 500000
 	}

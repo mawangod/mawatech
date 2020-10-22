@@ -2,7 +2,7 @@
 author: Barbara welch
 title: Don't forget to drink a relaxing herbal tea
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: single_blog_4
+img: single_blog_4.png
 date: 2020-01-20
 tags: [lifeStyle, inspiration]
 ---

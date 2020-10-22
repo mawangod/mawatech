@@ -2,7 +2,7 @@
 author: Barbara welch
 title: Une belle façon de prendre de belles photos
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: single_blog_2
+img: single_blog_2.png
 date: 2020-04-20
 tags: [design, technology]
 ---

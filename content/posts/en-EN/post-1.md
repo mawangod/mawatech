@@ -2,7 +2,7 @@
 author: Ethan Welch
 title: 16 Easy Ideas to Use in Everyday
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: home_blog1
+img: home_blog1.png
 date: 2020-06-17
 tags: [travel, lifeStyle]
 ---

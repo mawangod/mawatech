@@ -2,7 +2,7 @@
 author: Barbara welch
 title: Mangez des gâteaux pour soulager le stress
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: single_blog_5
+img: single_blog_5.png
 date: 2020-01-03
 tags: [lifeStyle, inspiration]
 ---

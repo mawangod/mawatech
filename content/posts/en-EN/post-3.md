@@ -2,7 +2,7 @@
 author: David Maw
 title: Google inks pact for new 35-storey office
 description: That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-img: single_blog_1
+img: single_blog_1.png
 date: 2019-07-31
 tags: [travel, lifeStyle]
 ---
