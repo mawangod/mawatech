@@ -117,8 +117,9 @@
 								<div class="col-12">
 									<ValidationProvider
 										v-slot="{errors, validate}"
+										ref="imgProvider"
 										name="image"
-										rules="image"
+										rules="required|image"
 									>
 										<div class="form-group">
 											<label class="form-control" for="image">
@@ -142,15 +143,18 @@
 									<ValidationProvider
 										v-slot="{errors, validate}"
 										name="tags"
-										rules="length:2"
+										rules="required|length:2"
 									>
 										<div class="blog_right_sidebar">
+											<input
+												v-model="postTags"
+												name="tags"
+												class="form-control hidden"
+												type="text"
+											/>
 											<aside class="single_sidebar_widget tag_cloud_widget">
 												<ul class="list">
-													<li
-														v-for="(tag, index) in availableTags"
-														:key="index"
-													>
+													<li v-for="(tag, index) in tags" :key="index">
 														<a
 															:class="{
 																active: isActive(tag)
@@ -201,41 +205,46 @@ export default {
 			author: '',
 			title: {fr: '', en: ''},
 			description: {fr: '', en: ''},
-			availableTags: tags,
-			tags: [],
+			tags,
+			postTags: [],
 			image: null
 		}
+	},
+	mounted() {
+		this.$refs.imgProvider.validateSilent(this.$refs.image.files[0])
 	},
 	methods: {
 		async createNewPost(reset) {
 			const formData = new FormData()
-			formData.append('image', this.image)
+			formData.append('file', this.image)
 			await this.$store.dispatch('createPost', {
 				image: formData,
 				author: this.author,
 				title: this.title,
 				description: this.description,
-				tags: this.tags
+				tags: this.postTags
 			})
 			this.image = null
 			this.author = ''
 			this.title = {fr: '', en: ''}
 			this.description = {fr: '', en: ''}
-			this.tags = []
+			this.postTags = []
 			reset()
 		},
-		selectImage(validate) {
-			this.image = this.$refs.image.files[0]
-			return validate(this.image)
+		async selectImage(validate) {
+			const {valid} = await validate(this.$refs.image.files[0])
+			if (valid) {
+				this.image = this.$refs.image.files[0]
+			}
 		},
 		isActive(tag) {
-			return this.tags.includes(tag)
+			return this.postTags.includes(tag)
 		},
 		toggleTag(tag, validate) {
-			this.tags = this.tags.includes(tag)
-				? this.tags.filter(tagg => tagg !== tag)
-				: [...this.tags, tag]
-			return validate(this.tags)
+			this.postTags = this.postTags.includes(tag)
+				? this.postTags.filter(postTag => postTag !== tag)
+				: [...this.postTags, tag]
+			return validate(this.postTags)
 		}
 	}
 }
