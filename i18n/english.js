@@ -171,6 +171,7 @@ export default {
 		min3: 'The number of characters in the field must be at least 3',
 		alpha_num: 'Only alphanumeric characters are accepted',
 		image: 'only jpg|svg|jpeg|png|bmp|gif|webp images are accepted',
-		length2min: 'please select at least two elements'
+		length2min: 'please select at least two elements',
+		imageSize: 'only images under 500KB are accepted'
 	}
 }

@@ -119,7 +119,7 @@
 										v-slot="{errors, validate}"
 										ref="imgProvider"
 										name="image"
-										rules="required|image"
+										rules="required|image|size:500000"
 									>
 										<div class="form-group">
 											<label class="form-control" for="image">
@@ -217,13 +217,11 @@ export default {
 		async createNewPost(reset) {
 			const formData = new FormData()
 			formData.append('file', this.image)
-			await this.$store.dispatch('createPost', {
-				image: formData,
-				author: this.author,
-				title: this.title,
-				description: this.description,
-				tags: this.postTags
-			})
+			formData.append('author', this.author)
+			formData.append('title', this.title)
+			formData.append('description', this.description)
+			formData.append('tags', this.postTags)
+			await this.$store.dispatch('createPost', formData)
 			this.image = null
 			this.author = ''
 			this.title = {fr: '', en: ''}
