@@ -25,7 +25,7 @@ const fileFilter = (req, file, cb) => {
 const storage = multer.diskStorage({
 	destination: './assets/img/blog',
 	filename: (req, file, cb) => {
-		const uniqueSuffix = `${Date.now()}}`
+		const uniqueSuffix = `${Date.now()}`
 		const extention = file.mimetype.split('/')[1]
 		cb(null, `${file.fieldname}-${uniqueSuffix}.${extention}`)
 	}

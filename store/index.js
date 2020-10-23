@@ -109,8 +109,6 @@ export const actions = {
 	},
 
 	async createPost(context, post) {
-		console.log(post)
-		console.log(post.file)
 		await this.$axios
 			.post('/api/post', post)
 			.then(response => response.data)
