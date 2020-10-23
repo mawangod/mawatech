@@ -8,7 +8,7 @@ const getAll = (req, res) => {
 			})
 		}
 
-		return res.json(comments)
+		return res.status(200).json(comments)
 	})
 }
 
