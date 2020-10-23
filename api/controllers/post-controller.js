@@ -1,13 +1,41 @@
+import fs from 'fs'
 import sharp from 'sharp'
+import Post from '../models/Post'
 
 const write = (req, res) => {
+	const image = req.file.filename
+
+	// create image preview
 	sharp(req.file.path)
 		.resize({width: 60})
-		.toFile(`./assets/img/blog/preview/${req.file.filename}`)
-		.catch(error => new Error(error))
+		.toFile(`./assets/img/blog/preview/${image}`)
+		.catch(error =>
+			res.status(500).json({
+				error
+			})
+		)
+
+	// create the posts file (fr and en)
+	const fileName = `post-${Date.now()}`
+
+	fs.writeFile(
+		`./content/posts/fr-FR/${fileName}.md`,
+		Post(req.body, 'Fr', image),
+		error => {
+			if (error) res.status(500).json({error})
+		}
+	)
+
+	fs.writeFile(
+		`./content/posts/en-EN/${fileName}.md`,
+		Post(req.body, 'En', image),
+		error => {
+			if (error) res.status(500).json({error})
+		}
+	)
 
 	return res.status(200).json({
-		msg: 'post created'
+		fileName
 	})
 }
 

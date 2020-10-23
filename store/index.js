@@ -46,9 +46,6 @@ export const mutations = {
 	},
 	set_mailSended(state) {
 		state.mailSended = true
-	},
-	set_newPost(state, post) {
-		state.newPost = post
 	}
 }
 
@@ -109,10 +106,9 @@ export const actions = {
 	},
 
 	async createPost(context, post) {
-		await this.$axios
+		return await this.$axios
 			.post('/api/post', post)
 			.then(response => response.data)
-			.then(post => context.commit('set_newPost', post))
 			.catch()
 	}
 }

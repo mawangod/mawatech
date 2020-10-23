@@ -41,6 +41,7 @@
 import backgroundUrl from '@/assets/img/cover/blog.jpg'
 
 export default {
+	name: 'Slug',
 	async asyncData({app, $content, params}) {
 		const {slug} = params
 

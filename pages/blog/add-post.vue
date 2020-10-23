@@ -196,6 +196,7 @@
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
 import {ValidationObserver, ValidationProvider} from 'vee-validate'
 import {tags} from '@/utilities/usefull-data'
+import {format} from 'date-fns'
 
 export default {
 	components: {ValidationObserver, ValidationProvider},
@@ -218,16 +219,25 @@ export default {
 			const formData = new FormData()
 			formData.append('file', this.image)
 			formData.append('author', this.author)
-			formData.append('title', this.title)
-			formData.append('description', this.description)
+			formData.append('titleFr', this.title.fr)
+			formData.append('titleEn', this.title.en)
+			formData.append('descriptionFr', this.description.fr)
+			formData.append('descriptionEn', this.description.en)
+			formData.append('date', format(new Date(), 'yyyy-MM-dd'))
 			formData.append('tags', this.postTags)
-			await this.$store.dispatch('createPost', formData)
+			const newPost = await this.$store.dispatch('createPost', formData)
 			this.image = null
 			this.author = ''
 			this.title = {fr: '', en: ''}
 			this.description = {fr: '', en: ''}
 			this.postTags = []
 			reset()
+			setTimeout(() => {
+				this.$router.push({
+					name: 'blog-slug',
+					params: {slug: newPost.fileName}
+				})
+			}, 10000)
 		},
 		async selectImage(validate) {
 			const {valid} = await validate(this.$refs.image.files[0])
