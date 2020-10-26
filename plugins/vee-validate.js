@@ -6,12 +6,18 @@ import {
 	alpha_spaces,
 	min,
 	max,
-	image
+	image,
+	size
 } from 'vee-validate/dist/rules'
 
 extend('required', {
 	...required,
 	message: 'required'
+})
+
+extend('size', {
+	...size,
+	message: 'imageSize'
 })
 
 extend('image', {...image, message: 'image'})

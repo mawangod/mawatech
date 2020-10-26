@@ -2,9 +2,9 @@
 author: Ethan Welch
 title: 7 Working habit u need to adopt
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: home_blog2
+img: home_blog2.png
 date: 2020-07-20
-tags: [product, lifeStyle]
+tags: [5f96bf67ef631f3568cf9a5b, 5f96be45ef631f3568cf9a55]
 ---
 
 MCSE boot camps have its supporters and its detractors. Some

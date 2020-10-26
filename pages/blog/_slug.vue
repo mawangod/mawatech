@@ -9,7 +9,7 @@
 							<div class="feature-img">
 								<img
 									class="img-fluid"
-									:src="require(`@/assets/img/blog/${post.img}.png`)"
+									:src="require(`@/assets/img/blog/${post.img}`)"
 									alt=""
 								/>
 							</div>
@@ -41,6 +41,7 @@
 import backgroundUrl from '@/assets/img/cover/blog.jpg'
 
 export default {
+	name: 'Slug',
 	async asyncData({app, $content, params}) {
 		const {slug} = params
 

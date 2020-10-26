@@ -2,9 +2,9 @@
 author: Ethan Welch
 title: 16 idées faciles à utiliser au quotidien
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
-img: home_blog1
+img: home_blog1.png
 date: 2020-06-17
-tags: [travel, lifeStyle]
+tags: [5f96bd39ef631f3568cf9a54, 5f96be45ef631f3568cf9a55]
 ---
 
 Les camps d'entraînement MCSE ont ses partisans et ses détracteurs. Certains

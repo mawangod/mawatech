@@ -12,7 +12,7 @@
 				>
 					<img
 						class="img-fluid"
-						:src="require(`@/assets/img/blog/preview/${post.img}.png`)"
+						:src="require(`@/assets/img/blog/preview/${post.img}`)"
 					/>
 					<div class="media-body">
 						<nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}">

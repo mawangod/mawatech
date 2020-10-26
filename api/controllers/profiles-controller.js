@@ -8,7 +8,7 @@ const getAll = function (req, res) {
 			})
 		}
 
-		return res.json(profiles)
+		return res.status(200).json(profiles)
 	})
 }
 

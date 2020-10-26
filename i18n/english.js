@@ -15,17 +15,6 @@ export default {
 		title: 'Our latest posts',
 		highlight: 'Do not hesitate to watch',
 		category: 'Category',
-		restaurant: 'Restaurant',
-		travel: 'Travel',
-		project: 'Project',
-		lifeStyle: 'Life style',
-		design: 'Design',
-		love: 'Love',
-		technology: 'Technologie',
-		product: 'Product',
-		inspiration: 'Inspiration',
-		healt: 'Healt',
-		yolo: 'Yolo',
 		popularTags: 'Popular tags',
 		recentPosts: 'recent Posts',
 		relatedPosts: 'related posts',
@@ -171,6 +160,7 @@ export default {
 		min3: 'The number of characters in the field must be at least 3',
 		alpha_num: 'Only alphanumeric characters are accepted',
 		image: 'only jpg|svg|jpeg|png|bmp|gif|webp images are accepted',
-		length2min: 'please select at least two elements'
+		length2min: 'please select at least two elements',
+		imageSize: 'only images under 500KB are accepted'
 	}
 }

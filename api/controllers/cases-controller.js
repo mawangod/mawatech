@@ -8,7 +8,7 @@ const getAll = function (req, res) {
 			})
 		}
 
-		return res.json(cases)
+		return res.status(200).json(cases)
 	})
 }
 

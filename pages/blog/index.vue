@@ -50,6 +50,7 @@ import searchPost from '@/utilities/search-post.js'
 import filterPost from '@/utilities/filter-post.js'
 
 export default {
+	name: 'Blog',
 	async asyncData({app, $content}) {
 		const posts = await $content('posts', app.i18n.locale)
 			.only(['title', 'description', 'img', 'slug', 'author', 'tags', 'date'])

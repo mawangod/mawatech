@@ -2,9 +2,9 @@
 author: David Maw
 title: Google signe un pacte pour un nouveau bureau de 35 étages
 description: Que les étoiles de la domination les lumières de la domination divisent les années pour la quatrième fois n'ont pas d'étoiles, c'est qu'il la terre d'abord sans le ciel en place, la semence le deuxième matin en disant.
-img: single_blog_1
+img: single_blog_1.png
 date: 2019-07-31
-tags: [travel, lifeStyle]
+tags: [5f96bd39ef631f3568cf9a54, 5f96be45ef631f3568cf9a55]
 ---
 
 Les camps d'entraînement MCSE ont ses partisans et ses détracteurs. Certains

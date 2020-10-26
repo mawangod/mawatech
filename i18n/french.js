@@ -15,17 +15,6 @@ export default {
 		title: 'Nos derniers posts',
 		highlight: "N'hésitez pas a regarder",
 		category: 'Catégories',
-		restaurant: 'Restaurant',
-		travel: 'Voyage',
-		project: 'Projets',
-		lifeStyle: 'Style de vie',
-		design: 'Design',
-		love: 'Love',
-		technology: 'Technologie',
-		product: 'Production',
-		inspiration: 'Inspiration',
-		healt: 'Santé',
-		yolo: 'Yolo',
 		popularTags: 'Tags populaires',
 		recentPosts: 'Posts récents',
 		relatedPosts: 'Posts similaires',
@@ -171,6 +160,7 @@ export default {
 		min3: 'Le nombre de charactères du champ doit au moins etre de 3',
 		alpha_num: 'Seuls les caractères alphanumériques sont acceptés',
 		image: 'seules les images jpg|svg|jpeg|png|bmp|gif|webp sont acceptées',
-		length2min: 'veuillez selectionnés deux éléments au minimum'
+		length2min: 'veuillez selectionnés deux éléments au minimum',
+		imageSize: 'seules les images de moins de 500KB sont acceptés'
 	}
 }

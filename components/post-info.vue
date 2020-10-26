@@ -3,8 +3,8 @@
 		<li>
 			<a href="#">
 				<FontAwesomeIcon class="fa" :icon="['fas', 'user']"> </FontAwesomeIcon>
-				<span>{{ $t(`blog.${tags[0]}`) }},</span>
-				<span>{{ $t(`blog.${tags[1]}`) }}</span>
+				<span>{{ getTitle(tags[0]) }},</span>
+				<span>{{ getTitle(tags[1]) }}</span>
 			</a>
 		</li>
 		<li>
@@ -27,6 +27,26 @@ export default {
 		comments: {
 			type: Array,
 			required: true
+		}
+	},
+	computed: {
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.tags.length) {
+			this.$store.dispatch('loadTags')
+		}
+	},
+	methods: {
+		getTitle(tagId) {
+			return (
+				this.$store.getters.tags.length &&
+				this.$store.getters.tags.find(tag => tag._id === tagId).title[
+					this.locale
+				]
+			)
 		}
 	}
 }
