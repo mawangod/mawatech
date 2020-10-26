@@ -41,11 +41,11 @@
 					<li v-for="(tag, index) in tags" :key="index">
 						<a
 							:class="{
-								active: isActive(tag)
+								active: isActive(tag._id)
 							}"
-							@click.prevent="$emit('tags', tag)"
+							@click.prevent="$emit('tags', tag._id)"
 						>
-							{{ $t(`blog.${tag}`) }}
+							{{ tag.title[locale] }}
 						</a>
 					</li>
 				</ul>
@@ -81,7 +81,6 @@
 <script>
 import {ValidationProvider} from 'vee-validate'
 import capitalizeName from '../utilities/capitalize-name'
-import {tags} from '../utilities/usefull-data'
 
 export default {
 	components: {ValidationProvider},
@@ -104,13 +103,20 @@ export default {
 		return {
 			searchTerm: '',
 			email: '',
-			options: {year: 'numeric', month: 'long', day: 'numeric'},
-			tags
+			options: {year: 'numeric', month: 'long', day: 'numeric'}
 		}
 	},
 	computed: {
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		tags() {
+			return this.$store.getters.tags
+		}
+	},
+	mounted() {
+		if (!this.$store.getters.tags.length) {
+			this.$store.dispatch('loadTags')
 		}
 	},
 	methods: {

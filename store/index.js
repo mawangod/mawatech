@@ -6,6 +6,7 @@ export const state = () => ({
 	cases: [],
 	counters: [],
 	comments: [],
+	tags: [],
 	mailSended: false
 })
 
@@ -15,6 +16,7 @@ export const getters = {
 	profiles: state => state.profiles,
 	counters: state => state.counters,
 	comments: state => state.comments,
+	tags: state => state.tags,
 	getPostComments: state => post =>
 		state.comments.filter(comment => comment.post === post).sort(sortByDate)
 }
@@ -34,6 +36,9 @@ export const mutations = {
 	},
 	set_profiles(state, profiles) {
 		state.profiles = profiles
+	},
+	set_tags(state, tags) {
+		state.tags = tags
 	},
 	add_comment(state, comment) {
 		state.comments = [...state.comments, comment]
@@ -79,6 +84,12 @@ export const actions = {
 			.get('/api/profiles')
 			.then(response => response.data)
 			.then(profiles => context.commit('set_profiles', profiles))
+	},
+	async loadTags(context) {
+		await this.$axios
+			.get('/api/tags')
+			.then(response => response.data)
+			.then(tags => context.commit('set_tags', tags))
 	},
 
 	async createComment(context, comment) {

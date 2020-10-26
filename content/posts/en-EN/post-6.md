@@ -4,7 +4,7 @@ title: Don't forget to drink a relaxing herbal tea
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: single_blog_4.png
 date: 2020-01-20
-tags: [lifeStyle, inspiration]
+tags: [5f96be45ef631f3568cf9a55, 5f96bf67ef631f3568cf9a5c]
 ---
 
 MCSE boot camps have its supporters and its detractors. Some

@@ -4,7 +4,7 @@ title: Une belle façon de prendre de belles photos
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: single_blog_2.png
 date: 2020-04-20
-tags: [design, technology]
+tags: [5f96bf11ef631f3568cf9a59, 5f96bf11ef631f3568cf9a57]
 ---
 
 Les camps d'entraînement MCSE ont ses partisans et ses détracteurs. Certains

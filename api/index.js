@@ -9,6 +9,7 @@ import services from './routes/services'
 import profiles from './routes/profiles'
 import mail from './routes/mail'
 import post from './routes/post'
+import tags from './routes/tags.js'
 
 // Create express instnace
 const app = express()
@@ -25,6 +26,7 @@ app.use(profiles)
 app.use(comments)
 app.use(mail)
 app.use(post)
+app.use(tags)
 
 // Export the server middleware
 export default {

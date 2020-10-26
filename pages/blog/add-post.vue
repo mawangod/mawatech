@@ -157,11 +157,11 @@
 													<li v-for="(tag, index) in tags" :key="index">
 														<a
 															:class="{
-																active: isActive(tag)
+																active: isActive(tag._id)
 															}"
-															@click.prevent="toggleTag(tag, validate)"
+															@click.prevent="toggleTag(tag._id, validate)"
 														>
-															{{ $t(`blog.${tag}`) }}
+															{{ tag.title[locale] }}
 														</a>
 													</li>
 												</ul>
@@ -195,7 +195,6 @@
 <script>
 import sliderBackGround from '@/assets/img/cover/blog.jpg'
 import {ValidationObserver, ValidationProvider} from 'vee-validate'
-import {tags} from '@/utilities/usefull-data'
 import {format} from 'date-fns'
 
 export default {
@@ -206,13 +205,23 @@ export default {
 			author: '',
 			title: {fr: '', en: ''},
 			description: {fr: '', en: ''},
-			tags,
 			postTags: [],
 			image: null
 		}
 	},
+	computed: {
+		tags() {
+			return this.$store.getters.tags
+		},
+		locale() {
+			return this.$i18n.locale || this.$i18n.defaultLocale
+		}
+	},
 	mounted() {
 		this.$refs.imgProvider.validateSilent(this.$refs.image.files[0])
+		if (!this.$store.getters.tags.length) {
+			this.$store.dispatch('loadTags')
+		}
 	},
 	methods: {
 		async createNewPost(reset) {

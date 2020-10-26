@@ -4,7 +4,7 @@ title: Google inks pact for new 35-storey office
 description: That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
 img: single_blog_1.png
 date: 2019-07-31
-tags: [travel, lifeStyle]
+tags: [5f96bd39ef631f3568cf9a54, 5f96be45ef631f3568cf9a55]
 ---
 
 MCSE boot camps have its supporters and its detractors. Some
