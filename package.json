@@ -37,6 +37,7 @@
     "multer": "^1.4.2",
     "node-sass": "^4.14.1",
     "nodemailer": "^6.4.14",
+    "nodemailer-express-handlebars": "^4.0.0",
     "nuxt": "^2.14.0",
     "nuxt-i18n": "^6.15.1",
     "sass-loader": "^10.0.2",
