@@ -1,5 +1,17 @@
 import nodeMailer from 'nodemailer'
+import handlebars from 'nodemailer-express-handlebars'
 import {mail} from '../../utilities/usefull-data.js'
+
+const handlebarOptions = {
+	viewEngine: {
+		extName: '.handlebars',
+		partialsDir: 'api/mail-view/partial',
+		layoutsDir: 'api/mail-view/layout',
+		defaultLayout: ''
+	},
+	viewPath: 'api/mail-view/template',
+	extName: '.handlebars'
+}
 
 const transporter = nodeMailer.createTransport({
 	service: 'gmail',
@@ -13,6 +25,8 @@ const transporter = nodeMailer.createTransport({
 	}
 })
 
+transporter.use('compile', handlebars(handlebarOptions))
+
 const send = async (req, res) => {
 	const {email, name, subject, text} = req.body
 	try {
@@ -20,7 +34,10 @@ const send = async (req, res) => {
 			from: `${name} ${email}`,
 			to: mail,
 			subject,
-			text
+			template: 'basic',
+			context: {
+				message: text
+			}
 		})
 		res.status(200).json({
 			msg: 'Mail sended'
