@@ -48,3 +48,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.cat-cap {
+	height: 200px;
+}
+</style>

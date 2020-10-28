@@ -13,7 +13,7 @@
 						{{ title[locale] | capitalize }}
 					</a>
 				</h3>
-				<span>{{ subtitle[locale] | capitalize }}</span>
+				<span>{{ subtitle[locale] }}</span>
 			</div>
 		</div>
 	</nuxt-link>
