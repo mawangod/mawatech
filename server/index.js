@@ -17,6 +17,7 @@ async function start() {
 	if (config.dev) {
 		const builder = new Builder(nuxt)
 		await builder.build()
+		process.on('unhandledRejection', error => error)
 	} else {
 		await nuxt.ready()
 	}

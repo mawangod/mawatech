@@ -129,23 +129,6 @@
 													<nuxt-link to="/blog">
 														{{ $t('header.blog') }}
 													</nuxt-link>
-													<ul class="submenu">
-														<li>
-															<nuxt-link to="/blog">
-																{{ $t('header.blog') }}
-															</nuxt-link>
-														</li>
-														<li>
-															<nuxt-link
-																:to="{
-																	name: 'blog-slug',
-																	params: {slug: 'post-1'}
-																}"
-															>
-																{{ $t('header.post') }}
-															</nuxt-link>
-														</li>
-													</ul>
 												</li>
 												<li>
 													<nuxt-link to="/contact">

@@ -14,8 +14,8 @@
 						data-projection="EPSG:4326"
 					>
 						<vl-view
-							:max-zoom="20"
-							:min-zoom="7"
+							:max-zoom="zoom"
+							:min-zoom="zoom"
 							:zoom.sync="zoom"
 							:center.sync="center"
 							:rotation.sync="rotation"
