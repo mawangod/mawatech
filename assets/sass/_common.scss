@@ -1000,3 +1000,10 @@ hr {
 .input-invalid-message {
 	color: #ff2143;
 }
+
+.btn:disabled,
+.btn.btn:disabled {
+	transition: none;
+	transform: none;
+	border: 1px solid #212529;
+}
