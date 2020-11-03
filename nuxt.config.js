@@ -90,7 +90,10 @@ module.exports = {
 				'faHeart',
 				'faQuoteRight',
 				'faArrowRight',
-				'faArrowLeft'
+				'faArrowLeft',
+				'faHandsHelping',
+				'faMedal',
+				'faCrosshairs'
 			]
 		}
 	},

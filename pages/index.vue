@@ -293,13 +293,13 @@ export default {
 	},
 	computed: {
 		profiles() {
-			return this.$store.getters.profiles
+			return this.$store.getters.profiles.slice(0, 3)
 		},
 		services() {
-			return this.$store.getters.services
+			return this.$store.getters.services.slice(0, 3)
 		},
 		cases() {
-			return this.$store.getters.cases
+			return this.$store.getters.cases.slice(0, 2)
 		},
 		counters() {
 			return this.$store.getters.counters

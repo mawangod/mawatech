@@ -68,28 +68,37 @@ export default {
 		subtitle: 'Notre Mission & Vision',
 		mission: 'Notre Mission',
 		missionPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			'Nous vous accompagnons tout au long de vos projets IT afin de trouver les solutions optimales qui répondent à vos besoins et ambitions. Que nous travaillions avec une multinationale, un organisme public ou une PME, notre objectif reste le même : mettre à profit le meilleur de notre expertise et de notre expérience pour arriver à une solution adéquate, tout en développant une réelle relation de partenariat et de confiance avec nos clients.',
 		missionPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			'Nous vous aidons à vous adapter aux transformations digitales et à augmenter votre compétitivité en mettant la technologie à votre service pour résoudre vos problèmes et simplifier votre travail. La relation de partenariat est un aspect fondamental de notre travail. Les méthodes agiles que nous utilisons favorisent également notre collaboration car elles permettent un suivi instantané du projet.',
 		vision: 'Notre Vision',
 		visionPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			"Nous visons l'excellence et aspirons à devenir la référence en matière de développement informatique, de gestion de projets et de conseils IT.  Nous misons sur nos collaborateurs pour atteindre notre objectif commun : la satisfaction totale de nos clients grâce à des services de haute qualité, car c’est grâce à leur implication que le succès de vos projets peut être garanti.",
 		visionPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			"Nous avons à cœur d’analyser ensemble, avec vous, vos besoins et de mettre tout en œuvre pour développer une solution qui réponde en tout point à ceux-ci. Et tout cela avec une force tranquille, nécessaire pour l'épanouissement de chacun et l'aboutissement de chaque projet.",
 		projects: 'Projets complétés',
 		activeClients: 'Clients actifs',
 		coffes: 'Tasses de café',
-		happyClients: 'Clients satisfaits'
+		happyClients: 'Clients satisfaits',
+		values: 'Nos Valeurs',
+		respect: 'Respect',
+		excellency: 'Excellence',
+		efficiency: 'Efficacité',
+		respectDescription:
+			"Nous respectons et sommes à l'écoute de chaque personne avec qui nous travaillons, que ce soit entre collègues ou avec nos clients et partenaires. Cela permet l'épanouissement de chacun dans un climat serein, et une meilleure efficacité. Nous veillons donc à instaurer une relation de confiance avec toutes les personnes avec qui nous travaillons.",
+		excellencyDescription:
+			"La qualité est une valeur fondamentale de notre quotidien. Elle permet de fournir les solutions IT dont vous avez besoin et de garantir la continuité de nos relations. Nous sommes convaincus qu'en créant des solutions «bug free», nous pouvons gagner énormément de temps, faire évoluer les solutions plus rapidement et ainsi, favoriser la réduction des coûts. ",
+		efficiencyDescription:
+			"« La simplicité est la réussite absolue » Frédéric Chopin. Nous nous attachons toujours à développer des solutions KISS (Keep it Simple, Stupid), efficaces. Ces solutions sont plus faciles à utiliser, plus robustes aux changements, plus évolutives et plus faciles à maintenir. Nous nous efforçons d'agir de manière réfléchie et coordonnée et ainsi éviter le «gaspillage»."
 	},
 	home: {
 		slide1Title: 'Engagé au succès',
 		slide1Highlight: 'Nous vous aidons à développer votre entreprise',
 		slide1Message:
-			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate',
+			'Nous nous engageons à vous fournir la meilleure solution possible',
 		slide2Title: 'Merveilleuses expériences',
 		slide2Highlight: 'les Succès storys avec nos clients',
-		slide2Message:
-			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate'
+		slide2Message: "Ils n'ont pas regretté de nous avoir confié leurs projets"
 	},
 	header: {
 		worktime: 'Lun - Sam: 8.00 am - 8.00 pm',

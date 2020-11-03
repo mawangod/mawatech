@@ -69,28 +69,37 @@ export default {
 		subtitle: 'Our Mission & Vision',
 		mission: 'Our Mission',
 		missionPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			'We support you throughout your IT projects in order to find the optimal solutions that meet your needs and ambitions. Whether we are working with a multinational, a public body or an SME, our objective remains the same: to use the best of our expertise and our experience to arrive at an adequate solution, while developing a real relationship of partnership and trust. with our clients.',
 		missionPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			'We help you adapt to digital transformations and increase your competitiveness by putting technology at your service to solve your problems and simplify your work. The partnership relationship is a fundamental aspect of our work. The agile methods we use also promote our collaboration because they allow instant monitoring of the project.',
 		vision: 'Our Vision',
 		visionPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			'We strive for excellence and aspire to become the benchmark in IT development, project management and IT consulting. We rely on our employees to achieve our common goal: the total satisfaction of our clients through high quality services, because it is through their involvement that the success of your projects can be guaranteed.',
 		visionPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			'We are committed to analyzing together, with you, your needs and doing everything possible to develop a solution that fully meets them. And all this with a quiet force, necessary for the development of each one and the outcome of each project.',
 		projects: 'Projetcs Completed',
 		activeClients: 'Active Clients',
 		coffes: 'Cups of Coffee',
-		happyClients: 'Happy Clients'
+		happyClients: 'Happy Clients',
+		values: 'Our Values',
+		respect: 'Respect',
+		excellency: 'Excellency',
+		efficiency: 'Efficiency',
+		respectDescription:
+			'We respect and listen to everyone with whom we work, whether between colleagues or with our clients and partners. This allows everyone to flourish in a serene climate, and better efficiency. We therefore take care to establish a relationship of trust with all the people with whom we work.',
+		excellencyDescription:
+			'Quality is a fundamental value of our daily life. It allows us to provide the IT solutions you need and to guarantee the continuity of our relationships. We are convinced that by creating "bug free" solutions, we can save a lot of time, make solutions evolve more quickly and thus, promote cost reduction.',
+		efficiencyDescription:
+			'“Simplicity is absolute success” Frédéric Chopin. We are always committed to developing effective KISS (Keep it Simple, Stupid) solutions. These solutions are easier to use, more robust to change, more scalable and easier to maintain. We strive to act in a thoughtful and coordinated manner and thus avoid "waste".'
 	},
 	home: {
 		slide1Title: 'Committed to success',
 		slide1Highlight: 'We help to grow your business',
 		slide1Message:
-			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate',
+			'We are committed to providing you with the best possible solution',
 		slide2Title: 'Wonderful experiences',
 		slide2Highlight: 'Success stories with our clients',
-		slide2Message:
-			'Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate'
+		slide2Message: 'They did not regret having entrusted us with their projects'
 	},
 	header: {
 		worktime: 'Mon - Sat: 8.00 am - 8.00 pm',

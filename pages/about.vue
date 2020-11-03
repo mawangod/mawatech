@@ -27,6 +27,57 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="about-details-cap">
+				<div class="container">
+					<div class="row">
+						<div class="offset-xl-1 col-lg-8">
+							<div class="about-details-cap">
+								<h4>{{ $t('about.values') }}</h4>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<FontAwesomeIcon
+								class="icon"
+								:icon="['fas', 'hands-helping']"
+							></FontAwesomeIcon>
+							<h3 class="value-title mb-20">{{ $t('about.respect') }}</h3>
+
+							<div class="single-defination">
+								<p>
+									{{ $t('about.respectDescription') }}
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<FontAwesomeIcon
+								class="icon"
+								:icon="['fas', 'medal']"
+							></FontAwesomeIcon>
+							<h3 class="value-title mb-20">{{ $t('about.excellency') }}</h3>
+
+							<div class="single-defination">
+								<p>
+									{{ $t('about.excellencyDescription') }}
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<FontAwesomeIcon
+								class="icon"
+								:icon="['fas', 'crosshairs']"
+							></FontAwesomeIcon>
+							<h3 class="value-title mb-20">{{ $t('about.efficiency') }}</h3>
+
+							<div class="single-defination">
+								<p>
+									{{ $t('about.efficiencyDescription') }}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div
 			class="testimonial-area testimonial-padding"
@@ -134,3 +185,17 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.icon {
+	font-size: 65px;
+	color: #eb566c;
+	margin: auto;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.value-title {
+	text-align: center;
+}
+</style>
