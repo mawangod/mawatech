@@ -11,11 +11,9 @@ db.mongoose
 		useFindAndModify: false,
 		useCreateIndex: true
 	})
-	.then(() => {
-		console.log('MongoDB Connected...')
-	})
-	.catch(() => {
-		console.error('connection error:')
+	.catch(error => {
+		const errorConnection = new Error('MongoDB connection')
+		errorConnection.code = error
 	})
 
 export default db
