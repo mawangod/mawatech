@@ -16,7 +16,7 @@
 							/>
 						</div>
 						<div class="col-md-9 mt-sm-20">
-							<p>{{ service.subtitle[locale] }}</p>
+							<h5 class="mb-20">{{ service.subtitle[locale] }}</h5>
 							<p>
 								{{ service.bio1[locale] }}
 							</p>

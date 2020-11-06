@@ -82,9 +82,6 @@ module.exports = {
 				'faLevelUpAlt',
 				'faUser',
 				'faComments',
-				'faUsersCog',
-				'faFileCode',
-				'faPoll',
 				'faMobileAlt',
 				'faSearch',
 				'faHeart',
@@ -93,7 +90,11 @@ module.exports = {
 				'faArrowLeft',
 				'faHandsHelping',
 				'faMedal',
-				'faCrosshairs'
+				'faCrosshairs',
+				'faLaptopMedical',
+				'faLaptopCode',
+				'faSuitcase',
+				'faTools'
 			]
 		}
 	},

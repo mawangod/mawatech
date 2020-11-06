@@ -51,6 +51,6 @@ export default {
 
 <style scoped>
 .cat-cap {
-	height: 200px;
+	height: 250px;
 }
 </style>
