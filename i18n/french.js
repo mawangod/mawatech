@@ -45,11 +45,11 @@ export default {
 	team: {
 		title: 'Notre équipe',
 		teamPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			'Une équipe de spécialistes expérimentés, proactifs et passionnés. Tous nos experts sont certifiés par le plus haut niveau d’accréditation des meilleurs outils digitaux du marché.',
 		teamPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			'Chaque membre de notre équipe est différent mais des valeurs communes nous réunissent : l’efficacité, le respect et l’excellence ! Envie d’en savoir plus ? Vous êtes au bon endroit.',
 		searching: 'Recherchez-vous',
-		consultant: 'Un consultant de première catégorie ?',
+		consultant: 'Un consultant de première classe ?',
 		highlight: 'Nous Vous Présentons',
 		bestTeam: 'Notre équipe de professionels'
 	},

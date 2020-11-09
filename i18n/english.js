@@ -45,9 +45,9 @@ export default {
 	team: {
 		title: 'Our Team',
 		teamPart1:
-			'Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua.Quis ipsum suspendisces gravida.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempormaecenas accumsan lacus.',
+			'A team of experienced, proactive and passionate specialists. All our experts are certified by the highest level of accreditation of the best digital tools on the market.',
 		teamPart2:
-			'Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.',
+			'Each member of our team is different, but common values ​​unite us: efficiency, respect and excellence! Want to know more ? You are in the right place.',
 		searching: 'Are you Searching',
 		consultant: 'For a First-Class Consultant?',
 
