@@ -5,7 +5,11 @@
 	>
 		<div class="single-team mb-30">
 			<div class="team-img">
-				<img :src="require(`@/assets/img/profiles/${img}.png`)" alt="" />
+				<img
+					class="profile"
+					:src="require(`@/assets/img/profiles/${img}.png`)"
+					alt=""
+				/>
 			</div>
 			<div class="team-caption">
 				<h3>
@@ -48,3 +52,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.profile {
+	max-height: 420px;
+}
+</style>
