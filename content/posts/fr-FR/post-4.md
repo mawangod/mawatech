@@ -1,5 +1,5 @@
 ---
-author: Barbara welch
+author: Hanane Agdid
 title: Une belle façon de prendre de belles photos
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: single_blog_2.png

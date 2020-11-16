@@ -1,5 +1,5 @@
 ---
-author: Ethan Welch
+author: David Maw
 title: 7 Working habit u need to adopt
 description: Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.
 img: home_blog2.png
