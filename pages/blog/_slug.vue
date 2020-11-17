@@ -6,6 +6,9 @@
 				<div class="row">
 					<div class="col-lg-8 posts-list">
 						<div class="single-post">
+							<h2 class="post-title">
+								{{ post.title }}
+							</h2>
 							<div class="feature-img">
 								<img
 									class="img-fluid"
@@ -14,9 +17,10 @@
 								/>
 							</div>
 							<div class="blog_details">
-								<h2>
-									{{ post.title }}
-								</h2>
+								<h4>
+									{{ post.description }}
+								</h4>
+
 								<PostInfo
 									:comments="getPostComments(post.slug)"
 									class="mt-3 mb-4"
@@ -30,7 +34,10 @@
 						<PostComments :post="post.slug" />
 						<PostReply :post="post.slug" />
 					</div>
-					<PostSidebar :related-posts="relatedPosts" />
+					<PostSidebar
+						v-if="relatedPosts.length"
+						:related-posts="relatedPosts"
+					/>
 				</div>
 			</div>
 		</section>
@@ -107,5 +114,9 @@ export default {
 <style scoped>
 .img-fluid {
 	width: 100%;
+}
+
+.post-title {
+	margin-bottom: 30px;
 }
 </style>

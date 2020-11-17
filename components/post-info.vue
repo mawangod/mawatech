@@ -1,14 +1,14 @@
 <template>
 	<ul class="blog-info-link">
 		<li>
-			<a href="#">
+			<a href="" @click.prevent="">
 				<FontAwesomeIcon class="fa" :icon="['fas', 'user']"> </FontAwesomeIcon>
 				<span>{{ getTitle(tags[0]) }},</span>
 				<span>{{ getTitle(tags[1]) }}</span>
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="" @click.prevent="">
 				<FontAwesomeIcon class="fa" :icon="['fas', 'comments']">
 				</FontAwesomeIcon>
 				{{ comments && comments.length }} {{ $t('blog.comments') }}

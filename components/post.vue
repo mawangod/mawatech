@@ -3,7 +3,11 @@
 		<div class="home-blog-single mb-30">
 			<div class="blog-img-cap">
 				<div class="blog-img">
-					<img :src="require(`@/assets/img/blog/${img}`)" alt="" />
+					<img
+						class="image-height"
+						:src="require(`@/assets/img/blog/${img}`)"
+						alt=""
+					/>
 					<ul>
 						<li>{{ $t('blog.by') }} {{ author }} - {{ formattedDate }}</li>
 					</ul>
