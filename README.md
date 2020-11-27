@@ -21,4 +21,4 @@ $ yarn generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-Powered by Mawangod
+Powered with love by Mawangod
