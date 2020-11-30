@@ -1,3 +1,4 @@
-const url = 'mongodb://localhost/mawatech'
+const mongodbPass = process.env.MONGODB_PASSWORD
+const url = `mongodb+srv://mawatech:${mongodbPass}@mycluster.f68qp.mongodb.net/mawatech`
 
 export {url}
