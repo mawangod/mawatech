@@ -1,5 +1,7 @@
 import sortByDate from '../utilities/sort-by-date'
 
+const base = process.client ? window.location.origin : 'http://localhost:3000'
+
 export const state = () => ({
 	profiles: [],
 	services: [],
@@ -57,44 +59,44 @@ export const mutations = {
 export const actions = {
 	async loadCases(context) {
 		await this.$axios
-			.get('/api/cases')
+			.get(`${base}/api/cases`)
 			.then(response => response.data)
 			.then(cases => context.commit('set_cases', cases))
 	},
 	async loadComments(context) {
 		await this.$axios
-			.get('/api/comments')
+			.get(`${base}/api/comments`)
 			.then(response => response.data)
 			.then(comments => context.commit('set_comments', comments))
 	},
 	async loadCounters(context) {
 		await this.$axios
-			.get('/api/counters')
+			.get(`${base}/api/counters`)
 			.then(response => response.data)
 			.then(counters => context.commit('set_counters', counters))
 	},
 	async loadServices(context) {
 		await this.$axios
-			.get('/api/services')
+			.get(`${base}/api/services`)
 			.then(response => response.data)
 			.then(services => context.commit('set_services', services))
 	},
 	async loadProfiles(context) {
 		await this.$axios
-			.get('/api/profiles')
+			.get(`${base}/api/profiles`)
 			.then(response => response.data)
 			.then(profiles => context.commit('set_profiles', profiles))
 	},
 	async loadTags(context) {
 		await this.$axios
-			.get('/api/tags')
+			.get(`${base}/api/tags`)
 			.then(response => response.data)
 			.then(tags => context.commit('set_tags', tags))
 	},
 
 	async createComment(context, comment) {
 		await this.$axios
-			.post('/api/comments', comment)
+			.post(`${base}/api/comments`, comment)
 			.then(response => response.data)
 			.then(comment => context.commit('add_comment', comment))
 			.catch()
@@ -102,7 +104,7 @@ export const actions = {
 
 	async deleteComment(context, comment) {
 		await this.$axios
-			.delete(`/api/comments/${comment._id}`)
+			.delete(`${base}/api/comments/${comment._id}`)
 			.then(response => response.data)
 			.then(comment => context.commit('remove_comment', comment))
 			.catch()
@@ -110,7 +112,7 @@ export const actions = {
 
 	async sendMail(context, mail) {
 		await this.$axios
-			.post('/api/mail', mail)
+			.post(`${base}/api/mail`, mail)
 			.then(response => response.data)
 			.then(() => context.commit('set_mailSended'))
 			.catch()
@@ -118,7 +120,7 @@ export const actions = {
 
 	async createPost(context, post) {
 		return await this.$axios
-			.post('/api/post', post)
+			.post(`${base}/api/post`, post)
 			.then(response => response.data)
 			.catch()
 	}
