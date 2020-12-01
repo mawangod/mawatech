@@ -5,7 +5,6 @@ module.exports = {
 	 ** See https://nuxtjs.org/api/configuration-mode
 	 */
 	telemetry: false,
-	ssr: false,
 	/*
 	 ** Nuxt target
 	 ** See https://nuxtjs.org/api/configuration-target
@@ -37,8 +36,14 @@ module.exports = {
 	 ** https://nuxtjs.org/guide/plugins
 	 */
 	plugins: [
-		'@/plugins/vue-smooth-scroll.js',
-		'@/plugins/vee-validate.js',
+		{
+			src: '@/plugins/vue-smooth-scroll.js',
+			ssr: false
+		},
+		{
+			src: '@/plugins/vee-validate.js',
+			ssr: false
+		},
 		{
 			src: '@/plugins/vue-layers.js',
 			ssr: false
@@ -116,7 +121,7 @@ module.exports = {
 	 ** See https://nuxtjs.org/api/configuration-build/
 	 */
 	build: {
-		transpile: ['vee-validate/dist/rules']
+		transpile: ['vee-validate/dist/rules', 'vue-countup-v2', 'countup.js']
 	},
 	i18n: {
 		locales: [

@@ -87,7 +87,7 @@ export default {
 		displayedPosts() {
 			const from = this.currentPage * this.perPage - this.perPage
 			const to = this.currentPage * this.perPage
-			return this.filteredPosts(this.posts.slice(from, to))
+			return this.posts && this.filteredPosts(this.posts.slice(from, to))
 		},
 		recentPosts() {
 			return this.posts && this.filteredPosts(this.posts).slice(0, 3)
