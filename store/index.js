@@ -77,7 +77,7 @@ export const actions = {
 	},
 	async loadServices(context) {
 		await this.$axios
-			.get('/api/services')
+			.get(`${base}/api/services`)
 			.then(response => response.data)
 			.then(services => context.commit('set_services', services))
 	},
