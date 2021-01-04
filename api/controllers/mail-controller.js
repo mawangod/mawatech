@@ -13,16 +13,22 @@ const handlebarOptions = {
 	extName: '.handlebars'
 }
 
+const auth = {
+	type: 'OAuth2',
+	clientId: process.env.CLIENTID,
+	clientSecret: process.env.CLIENTSECRET,
+	user: mail,
+	refreshToken: process.env.REFRESHTOKEN,
+	accessToken: process.env.ACCESSTOKEN,
+	expires: 1484314697598
+}
+
 const transporter = nodeMailer.createTransport({
+	host: 'smtp.gmail.com',
+	port: 465,
 	service: 'gmail',
-	secure: false,
-	auth: {
-		user: mail,
-		pass: process.env.GMAIL_PASSWORD
-	},
-	tls: {
-		rejectUnauthorized: false
-	}
+	secure: true,
+	auth
 })
 
 transporter.use('compile', handlebars(handlebarOptions))
@@ -36,7 +42,7 @@ const send = async (req, res) => {
 			subject,
 			template: 'basic',
 			context: {
-				message: text
+				message: `${email} : ${text}`
 			}
 		})
 		res.status(200).json({
