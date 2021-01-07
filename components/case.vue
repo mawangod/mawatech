@@ -4,9 +4,6 @@
 		class="col-lg-6 col-md-6 col-sm-10"
 	>
 		<div class="single-services mb-100">
-			<div class="services-img">
-				<img :src="require(`@/assets/img/cases/${photo1}.jpg`)" alt="" />
-			</div>
 			<div class="services-caption">
 				<h3>
 					<a>
@@ -14,6 +11,9 @@
 					</a>
 				</h3>
 				<span>{{ subtitle[locale] }}</span>
+			</div>
+			<div class="services-img">
+				<img :src="require(`@/assets/img/cases/${photo1}.jpg`)" alt="" />
 			</div>
 		</div>
 	</nuxt-link>
