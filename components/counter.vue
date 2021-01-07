@@ -1,13 +1,6 @@
 <template>
 	<div class="col-lg-3 col-md-6 col-sm-6">
-		<div
-			:class="[
-				'single-counter text-center',
-				{
-					active: isActive
-				}
-			]"
-		>
+		<div class="single-counter text-center">
 			<ICountUp
 				:ref="name"
 				v-observe-visibility="visibilityChanged"
@@ -41,10 +34,6 @@ export default {
 		name: {
 			type: String,
 			default: 'counter'
-		},
-		isActive: {
-			type: Boolean,
-			default: false
 		}
 	},
 	data() {

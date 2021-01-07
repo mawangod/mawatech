@@ -166,7 +166,6 @@
 						:key="counter._id"
 						:value="counter.value"
 						:title="$t(`about.${counter.title}`)"
-						:is-active="counter.active"
 					></Counter>
 				</div>
 			</div>

@@ -49,7 +49,7 @@ export default {
 		teamPart2:
 			'Each member of our team is different, but common values ​​unite us: efficiency, respect and excellence! Want to know more ? You are in the right place.',
 		searching: 'Are you Searching',
-		consultant: 'For a First-Class Consultant?',
+		consultant: 'For a competent Consultant?',
 
 		highlight: 'We Present To You',
 		bestTeam: 'Our team of professionals'
