@@ -16,7 +16,7 @@
 			height: 175px;
 			margin-bottom: 30px;
 			svg {
-				margin-bottom: 50px;
+				margin-bottom: 80px;
 				width: auto;
 				display: inline-block;
 				@media #{$md} {
@@ -27,10 +27,10 @@
 				}
 			}
 			p {
-				line-height: 1.5;
+				line-height: 1.5em;
 				padding-right: 100px;
 				margin-bottom: 50px;
-				font-size: 17px;
+				font-size: 20px;
 				color: #d3d3d4;
 				font-weight: 300;
 				@media #{$lg} {

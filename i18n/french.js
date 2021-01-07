@@ -49,7 +49,7 @@ export default {
 		teamPart2:
 			'Chaque membre de notre équipe est différent mais des valeurs communes nous réunissent : l’efficacité, le respect et l’excellence ! Envie d’en savoir plus ? Vous êtes au bon endroit.',
 		searching: 'Recherchez-vous',
-		consultant: 'Un consultant de première classe ?',
+		consultant: 'un consultant experimenté ?',
 		highlight: 'Nous Vous Présentons',
 		bestTeam: 'Notre équipe de professionels'
 	},
