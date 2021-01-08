@@ -73,8 +73,17 @@ module.exports = {
 		'@nuxtjs/pwa',
 		'bootstrap-vue/nuxt',
 		'nuxt-i18n',
-		'@nuxt/content'
+		'@nuxt/content',
+		'@nuxtjs/sitemap'
 	],
+	sitemap: {
+		hostname: 'https://mawatech.eu',
+		routes: async () => {
+			const {$content} = require('@nuxt/content')
+			const files = await $content({deep: true}).only(['path']).fetch()
+			return files.map(file => (file.path === '/index' ? '/' : file.path))
+		}
+	},
 	bootstrapVue: {
 		bootstrapCSS: false,
 		bootstrapVueCSS: false
@@ -121,7 +130,12 @@ module.exports = {
 	 ** See https://nuxtjs.org/api/configuration-build/
 	 */
 	build: {
-		transpile: ['vee-validate/dist/rules', 'vue-countup-v2', 'countup.js']
+		transpile: [
+			'vee-validate/dist/rules',
+			'vue-countup-v2',
+			'countup.js',
+			'./utilities/get-routes.js'
+		]
 	},
 	i18n: {
 		locales: [
