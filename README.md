@@ -1,6 +1,6 @@
 # mawatech
 
-My modern, professional and sophisticated consultancy website
+Mawatech is a Belgian startup that allows you to hire competent freelancers who are specialized in web development
 
 ![Site preview](assets/img/site-preview.png)
 
