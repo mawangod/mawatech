@@ -199,6 +199,11 @@ import {format} from 'date-fns'
 
 export default {
 	components: {ValidationObserver, ValidationProvider},
+	middleware({redirect}) {
+		if (process.env.NODE_ENV !== 'development') {
+			return redirect('/')
+		}
+	},
 	data() {
 		return {
 			sliderBackGround,
