@@ -78,6 +78,7 @@ module.exports = {
 	],
 	sitemap: {
 		hostname: 'https://mawatech.eu',
+		i18n: false,
 		routes: async () => {
 			const {$content} = require('@nuxt/content')
 			const files = await $content({deep: true}).only(['path']).fetch()
