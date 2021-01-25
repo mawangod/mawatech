@@ -11,8 +11,12 @@
 				</slot>
 			</b-col>
 			<b-col class="shrink d-flex justify-end" cols="12" md="3">
-				<b-btn class="ma-2" @click="accept"> {{ $t('button.accept') }} </b-btn>
-				<b-btn class="ma-2" text @click="deny"> {{ $t('button.deny') }} </b-btn>
+				<b-button class="ma-2" @click="accept">
+					{{ $t('button.accept') }}
+				</b-button>
+				<b-button class="ma-2" text @click="deny">
+					{{ $t('button.deny') }}
+				</b-button>
 			</b-col>
 		</b-row>
 	</b-alert>

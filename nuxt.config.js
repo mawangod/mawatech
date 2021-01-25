@@ -86,6 +86,7 @@ module.exports = {
 		}
 	},
 	bootstrapVue: {
+		components: ['BAlert', 'BRow', 'BCol', 'BButton', 'BPagination'],
 		bootstrapCSS: false,
 		bootstrapVueCSS: false
 	},
@@ -131,7 +132,8 @@ module.exports = {
 	 ** See https://nuxtjs.org/api/configuration-build/
 	 */
 	build: {
-		transpile: ['vee-validate/dist/rules', 'vue-countup-v2', 'countup.js']
+		transpile: ['vee-validate/dist/rules', 'vue-countup-v2', 'countup.js'],
+		babel: {compact: true}
 	},
 	i18n: {
 		locales: [
