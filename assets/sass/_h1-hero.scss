@@ -213,6 +213,9 @@
 				right: 130px;
 				left: auto;
 			}
+			@media #{$sm, $xs, $md} {
+				visibility: hidden;
+			}
 
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);

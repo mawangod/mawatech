@@ -100,48 +100,32 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end"
 								>
 									<div class="main-menu d-none d-lg-block">
-										<nav>
-											<ul id="navigation">
-												<li>
-													<nuxt-link to="/">{{ $t('header.home') }}</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/about">
-														{{ $t('header.about') }}
-													</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/services">
-														{{ $t('header.services') }}
-													</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/profiles">
-														{{ $t('header.team') }}
-													</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/cases">
-														{{ $t('header.cases') }}
-													</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/blog">
-														{{ $t('header.blog') }}
-													</nuxt-link>
-												</li>
-												<li>
-													<nuxt-link to="/contact">
-														{{ $t('header.contact') }}
-													</nuxt-link>
-												</li>
-											</ul>
-										</nav>
+										<NavBar :open="true" />
 									</div>
 								</div>
 							</div>
 							<div class="col-12">
-								<div class="mobile_menu d-block d-lg-none"></div>
+								<div class="mobile_menu d-block d-lg-none">
+									<div class="slicknav_menu">
+										<a
+											href="#"
+											role="button"
+											class="slicknav_btn"
+											@click="toggleSlicknav"
+										>
+											<span class="slicknav_icon">
+												<span class="slicknav_icon-bar"></span>
+												<span class="slicknav_icon-bar"></span>
+												<span class="slicknav_icon-bar"></span>
+											</span>
+										</a>
+										<NavBar
+											class="slicknav_nav"
+											:open="slicknavOpened"
+											@routeChange="toggleSlicknav"
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -155,6 +139,7 @@
 import capitalizeName from '../utilities/capitalize-name'
 import {facebook, linkedin, twitter, instagram} from '../utilities/usefull-data'
 import LinkedIcon from './linked-icon.vue'
+import NavBar from './header-navbar'
 
 export default {
 	name: 'Header',
@@ -163,7 +148,7 @@ export default {
 			return capitalizeName(name)
 		}
 	},
-	components: {LinkedIcon},
+	components: {LinkedIcon, NavBar},
 	props: {
 		sticky: {
 			type: Boolean,
@@ -175,7 +160,8 @@ export default {
 			facebook,
 			linkedin,
 			twitter,
-			instagram
+			instagram,
+			slicknavOpened: false
 		}
 	},
 	computed: {
@@ -195,6 +181,9 @@ export default {
 		},
 		getLocaleFormatted(locale) {
 			return locale.split('-')[0]
+		},
+		toggleSlicknav() {
+			this.slicknavOpened = !this.slicknavOpened
 		}
 	}
 }

@@ -3,8 +3,8 @@
 	.single-team {
 		.team-img {
 			overflow: hidden;
+			text-align: center;
 			& img {
-				width: 100%;
 				transform: scale(1);
 				transition: all 0.6s ease-out 0s;
 			}
