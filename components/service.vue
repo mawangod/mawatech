@@ -53,4 +53,8 @@ export default {
 .cat-cap {
 	height: 250px;
 }
+
+.col-sm-6 {
+	margin: 10px 0;
+}
 </style>

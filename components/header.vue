@@ -119,8 +119,16 @@
 												<span class="slicknav_icon-bar"></span>
 											</span>
 										</a>
-										<transition name="fade" appear>
-											<NavBar v-if="slicknavOpened" class="slicknav_nav" />
+										<transition
+											enter-active-class="slideInDown"
+											leave-active-class="slideOutUp"
+											appear
+										>
+											<NavBar
+												v-show="slicknavOpened"
+												class="slicknav_nav"
+												style="animation-duration: 0.2s"
+											/>
 										</transition>
 									</div>
 								</div>
@@ -201,15 +209,5 @@ export default {
 .far {
 	margin-right: 8px;
 	color: #e94d65;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-	transition: all 0.5s ease-out;
-}
-
-.fade-enter,
-.fade-leave-to {
-	opacity: 0;
 }
 </style>

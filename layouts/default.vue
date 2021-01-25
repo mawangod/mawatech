@@ -52,15 +52,6 @@ export default {
 	overflow: visible;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-	opacity: 0;
-}
-
 .__nuxt-error-page {
 	position: relative;
 }
