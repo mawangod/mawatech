@@ -222,6 +222,17 @@
 				font-size: 15px;
 				padding: 7px 10px;
 			}
+
+			& li {
+				& a.nuxt-link-exact-active {
+					color: #e94d65;
+				}
+				&:hover {
+					& > a {
+						color: #e94d65;
+					}
+				}
+			}
 			// Dropdown Menu button Padding None
 			.slicknav_item a {
 				padding: 0 !important;

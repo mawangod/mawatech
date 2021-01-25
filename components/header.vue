@@ -119,7 +119,7 @@
 												<span class="slicknav_icon-bar"></span>
 											</span>
 										</a>
-										<transition name="fade">
+										<transition name="fade" appear>
 											<NavBar v-if="slicknavOpened" class="slicknav_nav" />
 										</transition>
 									</div>
@@ -205,7 +205,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-	transition: opacity 0.2s;
+	transition: all 0.5s ease-out;
 }
 
 .fade-enter,
