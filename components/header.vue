@@ -100,7 +100,7 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end"
 								>
 									<div class="main-menu d-none d-lg-block">
-										<NavBar :open="true" />
+										<NavBar />
 									</div>
 								</div>
 							</div>
@@ -111,7 +111,7 @@
 											href="#"
 											role="button"
 											class="slicknav_btn"
-											@click="toggleSlicknav"
+											@click.stop.prevent="toggleSlicknav"
 										>
 											<span class="slicknav_icon">
 												<span class="slicknav_icon-bar"></span>
@@ -119,11 +119,9 @@
 												<span class="slicknav_icon-bar"></span>
 											</span>
 										</a>
-										<NavBar
-											class="slicknav_nav"
-											:open="slicknavOpened"
-											@routeChange="toggleSlicknav"
-										/>
+										<transition name="fade">
+											<NavBar v-if="slicknavOpened" class="slicknav_nav" />
+										</transition>
 									</div>
 								</div>
 							</div>
@@ -173,6 +171,16 @@ export default {
 		},
 		availableLocales() {
 			return this.$i18n.locales
+		},
+		routeName() {
+			return this.$route?.name
+		}
+	},
+	watch: {
+		routeName(newValue, oldValue) {
+			if (newValue !== oldValue && this.slicknavOpened) {
+				this.toggleSlicknav()
+			}
 		}
 	},
 	methods: {
@@ -193,5 +201,15 @@ export default {
 .far {
 	margin-right: 8px;
 	color: #e94d65;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
 }
 </style>

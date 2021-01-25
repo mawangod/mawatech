@@ -1,13 +1,7 @@
 <template>
-	<ul
-		:class="{
-			hidden: !open
-		}"
-	>
+	<ul>
 		<li>
-			<nuxt-link to="/" @click="console.log('click')">{{
-				$t('header.home')
-			}}</nuxt-link>
+			<nuxt-link to="/">{{ $t('header.home') }}</nuxt-link>
 		</li>
 		<li>
 			<nuxt-link to="/about">
@@ -44,30 +38,6 @@
 
 <script>
 export default {
-	name: 'Header',
-	props: {
-		open: {
-			type: Boolean,
-			default: false
-		}
-	},
-	computed: {
-		routeName() {
-			return this.$route?.name
-		}
-	},
-	watch: {
-		routeName(newValue, oldValue) {
-			if (newValue !== oldValue && this.open) {
-				this.$emit('routeChange')
-			}
-		}
-	}
+	name: 'Header'
 }
 </script>
-
-<style scoped>
-.hidden {
-	display: none;
-}
-</style>
