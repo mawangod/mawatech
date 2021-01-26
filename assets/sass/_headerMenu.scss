@@ -242,12 +242,15 @@
 }
 
 .switch {
-	margin-left: 35px;
 	background: inherit;
-	color: white;
+	color: #0d2d3e;
 
 	option {
-		color: white;
-		background: #0d2d3e;
+		color: #0d2d3e;
+		background: white;
+	}
+
+	&:focus {
+		outline: 0;
 	}
 }

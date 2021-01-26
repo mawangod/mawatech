@@ -174,7 +174,7 @@
 								</div>
 							</div>
 							<div class="form-group mt-3">
-								<b-btn
+								<b-button
 									type="submit"
 									:class="{
 										'hero-btn': !invalid
@@ -182,7 +182,7 @@
 									:disabled="invalid"
 								>
 									{{ $t('button.submitButton') }}
-								</b-btn>
+								</b-button>
 							</div>
 						</form>
 					</ValidationObserver>

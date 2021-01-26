@@ -33,11 +33,54 @@
 				{{ $t('header.contact') }}
 			</nuxt-link>
 		</li>
+		<li>
+			<a href="#">
+				<select
+					class="switch"
+					:value="selectedLocale"
+					@change="setLocale(availableLocales[$event.target.selectedIndex])"
+				>
+					<option
+						v-for="locale in availableLocales"
+						:key="locale.code"
+						:value="getLocaleFormatted(locale.code)"
+					>
+						{{ getLocaleFormatted(locale.code) | capitalize }}
+					</option>
+				</select>
+			</a>
+		</li>
 	</ul>
 </template>
 
 <script>
+import capitalizeName from '../utilities/capitalize-name'
+
 export default {
-	name: 'Header'
+	name: 'Header',
+	filters: {
+		capitalize(name) {
+			return capitalizeName(name)
+		}
+	},
+	computed: {
+		selectedLocale() {
+			return (
+				this.getLocaleFormatted(this.$i18n.locale) ||
+				this.getLocaleFormatted(this.$i18n.defaultLocale)
+			)
+		},
+		availableLocales() {
+			return this.$i18n.locales
+		}
+	},
+	methods: {
+		setLocale(locale) {
+			this.$i18n.setLocale(locale.code)
+		},
+		getLocaleFormatted(locale) {
+			return locale.split('-')[0]
+		}
+	}
 }
 </script>
