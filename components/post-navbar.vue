@@ -79,8 +79,7 @@ export default {
 	text-overflow: ellipsis;
 }
 
-.nav-right,
-.social-icons {
+.nav-right {
 	margin-left: auto;
 }
 </style>
