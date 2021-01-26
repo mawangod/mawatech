@@ -46,7 +46,10 @@
 import sliderBackGround from '@/assets/img/cover/our_services.jpg'
 
 export default {
-	validate({params, store}) {
+	async validate({params, store}) {
+		if (!store.getters.services.length) {
+			await store.dispatch('loadServices')
+		}
 		return store.getters.services.some(service => service._id === params.id)
 	},
 	data() {
@@ -63,11 +66,6 @@ export default {
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
-		}
-	},
-	mounted() {
-		if (!this.$store.getters.services.length) {
-			this.$store.dispatch('loadServices')
 		}
 	}
 }

@@ -59,7 +59,10 @@
 import sliderBackGround from '@/assets/img/cover/our_cases.jpg'
 
 export default {
-	validate({params, store}) {
+	async validate({params, store}) {
+		if (!store.getters.cases.length) {
+			await store.dispatch('loadCases')
+		}
 		return store.getters.cases.some(cas => cas._id === params.id)
 	},
 	data() {
@@ -74,11 +77,6 @@ export default {
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
-		}
-	},
-	mounted() {
-		if (!this.$store.getters.cases.length) {
-			this.$store.dispatch('loadCases')
 		}
 	}
 }

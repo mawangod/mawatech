@@ -30,7 +30,10 @@
 import sliderBackGround from '@/assets/img/cover/our_team.jpg'
 
 export default {
-	validate({params, store}) {
+	async validate({params, store}) {
+		if (!store.getters.profiles.length) {
+			await store.dispatch('loadProfiles')
+		}
 		return store.getters.profiles.some(profile => profile._id === params.id)
 	},
 	data() {
@@ -49,11 +52,6 @@ export default {
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
-		}
-	},
-	mounted() {
-		if (!this.$store.getters.profiles.length) {
-			this.$store.dispatch('loadProfiles')
 		}
 	}
 }
