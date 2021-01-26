@@ -348,11 +348,9 @@ export default {
 }
 </script>
 
-<style scoped>
-.slider-area {
-	margin-top: -1px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+<style>
+.slider-active .slick-next::before,
+.slider-active .slick-prev::before {
+	color: #1b4962;
 }
 </style>
