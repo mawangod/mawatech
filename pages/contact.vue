@@ -8,10 +8,12 @@
 			<div class="container">
 				<div class="d-none d-sm-block mb-5 pb-4">
 					<vl-map
+						v-if="mounted"
 						class="map"
 						:load-tiles-while-animating="true"
 						:load-tiles-while-interacting="true"
 						data-projection="EPSG:4326"
+						@mounted="onMapMounted"
 					>
 						<vl-view
 							:max-zoom="zoom"
@@ -208,6 +210,7 @@ export default {
 		const x = 3.990595028455405
 		const y = 50.43797498955024
 		return {
+			mounted: false,
 			subjectSender: '',
 			emailSender: '',
 			nameSender: '',
@@ -238,6 +241,9 @@ export default {
 			return this.$store.state.mailSended
 		}
 	},
+	mounted() {
+		this.mounted = true
+	},
 	methods: {
 		async sendMail(reset) {
 			await this.$store.dispatch('sendMail', {
@@ -251,6 +257,9 @@ export default {
 			this.subjectSender = ''
 			this.emailSender = ''
 			reset()
+		},
+		onMapMounted(vlMap) {
+			vlMap.refresh()
 		}
 	}
 }
@@ -258,7 +267,7 @@ export default {
 
 <style scoped>
 .map {
-	height: 400px;
+	height: 50vh;
 }
 
 .hero-btn:hover {
