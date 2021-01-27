@@ -86,9 +86,6 @@
 		position: relative;
 		z-index: 3;
 		.main-menu {
-			@media #{$laptop} {
-				margin-right: 30px;
-			}
 			& ul {
 				& li {
 					display: inline-block;
@@ -103,7 +100,7 @@
 						@include transition(0.3s);
 
 						text-transform: capitalize;
-						@media #{$lg} {
+						@media #{$medium_device} {
 							padding: 39px 14px;
 						}
 					}
@@ -240,5 +237,37 @@
 
 	&:focus {
 		outline: 0;
+	}
+}
+
+.links,
+.logo {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+@media #{$tab3} {
+	.logo {
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+	.links {
+		flex: 0 0 70%;
+		max-width: 70%;
+	}
+}
+
+@media #{$medium_device} {
+	.logo {
+		flex: 0 0 33%;
+		max-width: 33%;
+		padding: 0;
+	}
+	.links {
+		flex: 0 0 67%;
+		max-width: 67%;
+		padding: 0;
 	}
 }

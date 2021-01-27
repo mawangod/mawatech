@@ -69,14 +69,12 @@
 				>
 					<div class="container">
 						<div class="row align-items-center">
-							<div class="col-xl-2 col-lg-2">
-								<div class="logo">
-									<nuxt-link to="/">
-										<img src="@/assets/img/logo/mawatech-logo.png" alt="" />
-									</nuxt-link>
-								</div>
+							<div class="logo">
+								<nuxt-link to="/">
+									<img src="@/assets/img/logo/mawatech-logo.png" alt="" />
+								</nuxt-link>
 							</div>
-							<div class="col-xl-10 col-lg-10">
+							<div class="links">
 								<div
 									class="menu-wrapper d-flex align-items-center justify-content-end"
 								>
