@@ -327,6 +327,32 @@ hr {
 	border: 1px solid transparent;
 }
 
+#back-top {
+	background: $theme-color;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	right: 31px;
+	bottom: 18px;
+	position: fixed;
+	z-index: 10;
+	@media #{$xs} {
+		right: 16px;
+	}
+
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 48px;
+	border: 2px solid transparent;
+	box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+	a i {
+		display: block;
+		line-height: 50px;
+	}
+}
+
 /* Sticky */
 .sticky-bar {
 	left: 0;
