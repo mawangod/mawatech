@@ -1,9 +1,6 @@
 <template>
 	<main>
-		<div
-			class="slider-area"
-			:style="{backgroundImage: `url(${sliderBackGround})`}"
-		>
+		<div class="slider-area" :style="{backgroundImage: `url(${sliderCover})`}">
 			<VueSlickCarousel v-bind="settingSlider" class="slider-active">
 				<div
 					v-for="(slide, index) in slides"
@@ -242,7 +239,7 @@
 
 <script>
 import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
-import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
+import sliderCover from '@/assets/img/slider/cover.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import VueSlickCarousel from 'vue-slick-carousel'
@@ -268,8 +265,8 @@ export default {
 		return {
 			workBackGround,
 			testimonialBackGround,
-			sliderBackGround,
 			supportBackgroundUrl,
+			sliderCover,
 			settingSlider: {
 				lazyLoad: 'ondemand',
 				arrows: true,
