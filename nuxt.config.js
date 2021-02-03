@@ -86,7 +86,15 @@ module.exports = {
 		}
 	},
 	bootstrapVue: {
-		components: ['BAlert', 'BRow', 'BCol', 'BButton', 'BPagination'],
+		components: [
+			'BAlert',
+			'BRow',
+			'BCol',
+			'BButton',
+			'BPagination',
+			'BCarousel',
+			'BCarouselSlide'
+		],
 		bootstrapCSS: false,
 		bootstrapVueCSS: false
 	},

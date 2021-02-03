@@ -79,57 +79,14 @@
 				</div>
 			</div>
 		</div>
+
 		<div
 			class="testimonial-area testimonial-padding"
 			:style="{backgroundImage: `url(${testimonialBackGround})`}"
 		>
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="col-xl-10 col-lg-10 col-md-9">
-						<VueSlickCarousel
-							v-if="profiles && profiles.length"
-							v-bind="settingSlider"
-							class="h1-testimonial-active"
-						>
-							<div
-								v-for="profile in profiles"
-								:key="profile._id"
-								class="single-testimonial text-center"
-							>
-								<div class="testimonial-caption">
-									<div class="testimonial-top-cap">
-										<FontAwesomeIcon
-											class="quote"
-											:icon="['fas', 'quote-right']"
-										>
-										</FontAwesomeIcon>
-										<p>
-											{{ profile.slogan[locale] }}
-										</p>
-									</div>
-									<div
-										class="testimonial-founder d-flex align-items-center justify-content-center"
-									>
-										<div class="founder-img">
-											<img
-												:src="
-													require(`@/assets/img/profiles/preview/${profile.img}.png`)
-												"
-												alt=""
-											/>
-										</div>
-										<div class="founder-text">
-											<span>{{ profile.name }}</span>
-											<p>{{ profile.job }}</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</VueSlickCarousel>
-					</div>
-				</div>
-			</div>
+			<TestimonialCarousel></TestimonialCarousel>
 		</div>
+
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -146,38 +103,22 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
 import sliderBackGround from '@/assets/img/cover/about_us.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 
 export default {
-	components: {VueSlickCarousel},
 	data() {
 		return {
 			sliderBackGround,
-			testimonialBackGround,
-			settingSlider: {
-				lazyLoad: 'ondemand',
-				arrows: true,
-				dots: true
-			}
+			testimonialBackGround
 		}
 	},
 	computed: {
-		locale() {
-			return this.$i18n.locale || this.$i18n.defaultLocale
-		},
 		counters() {
 			return this.$store.getters.counters
-		},
-		profiles() {
-			return this.$store.getters.profiles
 		}
 	},
 	mounted() {
-		if (!this.$store.getters.profiles.length) {
-			this.$store.dispatch('loadProfiles')
-		}
 		if (!this.$store.getters.counters.length) {
 			this.$store.dispatch('loadCounters')
 		}

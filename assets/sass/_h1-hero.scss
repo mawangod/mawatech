@@ -53,11 +53,8 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	.hero__caption {
+	.container {
 		overflow: hidden;
-		@media #{$large1} {
-			padding-left: 100px;
-		}
 		span {
 			font-size: 18px;
 			font-family: $font_1;
@@ -68,8 +65,26 @@
 			display: inline-block;
 			position: relative;
 			padding-left: 100px;
+
+			@media #{$large1} {
+				font-size: 18px;
+				margin-bottom: 22px;
+			}
+			@media #{$lg} {
+				font-size: 17px;
+				margin-bottom: 20px;
+			}
+			@media #{$md} {
+				font-size: 16px;
+				margin-bottom: 18px;
+			}
+			@media #{$sm} {
+				font-size: 14px;
+				margin-bottom: 16px;
+			}
 			@media #{$xs} {
-				font-size: 13px;
+				font-size: 12px;
+				margin-bottom: 14px;
 			}
 			&::before {
 				position: absolute;
@@ -83,29 +98,29 @@
 			}
 		}
 		& h1 {
-			font-size: 85px;
+			font-size: 80px;
 			font-weight: 800;
 			margin-bottom: 14px;
 			color: #000;
 			font-family: $font_3;
 			line-height: 1.2;
 			@media #{$large1} {
-				font-size: 71px;
+				font-size: 61px;
 			}
 			@media #{$lg} {
-				font-size: 60px;
-				line-height: 1.2;
-			}
-			@media #{$md} {
 				font-size: 50px;
 				line-height: 1.2;
 			}
+			@media #{$md} {
+				font-size: 30px;
+				line-height: 1.2;
+			}
 			@media #{$sm} {
-				font-size: 35px;
+				font-size: 25px;
 				line-height: 1.2;
 			}
 			@media #{$xs} {
-				font-size: 29px;
+				font-size: 20px;
 				line-height: 1.2;
 			}
 		}
@@ -113,25 +128,46 @@
 			font-size: 16px;
 			color: #000;
 			font-family: $font_1;
-			margin-bottom: 39px;
-			margin-bottom: 7px;
 			margin-bottom: 50px;
 			@media #{$xs} {
-				margin-bottom: 30px;
+				margin-bottom: 7px;
 				font-size: 14px;
 				br {
 					display: none;
 				}
 			}
 			@media #{$sm} {
+				margin-bottom: 20px;
+
 				br {
 					display: none;
 				}
 			}
 			@media #{$md} {
+				margin-bottom: 30px;
 				br {
 					display: none;
 				}
+			}
+		}
+		.hero__btn a {
+			@media #{$large1} {
+				padding: 30px 38px;
+			}
+			@media #{$lg} {
+				padding: 28px 36px;
+			}
+			@media #{$md} {
+				padding: 26px 34px;
+				margin: 0;
+			}
+			@media #{$sm} {
+				padding: 24px 32px;
+				margin: 0;
+			}
+			@media #{$xs} {
+				padding: 22px 30px;
+				margin: 0;
 			}
 		}
 	}

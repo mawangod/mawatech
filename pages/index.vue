@@ -1,23 +1,38 @@
 <template>
 	<main>
-		<div
-			class="slider-area"
-			:style="{backgroundImage: `url(${sliderBackGround})`}"
+		<b-carousel
+			id="carousel"
+			v-model="slideVisible"
+			:controls="controls"
+			:indicators="indicators"
+			:interval="5000"
+			fade
+			@mouseover.native="activeControl()"
+			@mouseleave.native="unactiveControl()"
+			@sliding-start="onSlideStart"
+			@sliding-end="onSlideEnd"
 		>
-			<VueSlickCarousel v-bind="settingSlider" class="slider-active">
-				<div
-					v-for="(slide, index) in slides"
-					:key="index"
-					class="single-slider slider-height d-flex align-items-center"
+			<b-carousel-slide
+				v-for="(slide, index) in slides"
+				:key="index"
+				:img-src="slide.img"
+				class="slider-area single-slider align-items-center"
+			>
+				<transition
+					enter-active-class="slideInDown"
+					leave-active-class="slideOutUp"
+					appear
 				>
-					<div class="container">
+					<div v-if="showTransition(index)" class="container">
 						<div class="row">
 							<div class="col-xl-8 col-lg-7 col-md-8">
 								<div class="hero__caption">
 									<span>
 										{{ $t(`home.${slide.highlight}`) }}
 									</span>
-									<h1>{{ $t(`home.${slide.title}`) }}</h1>
+									<h1>
+										{{ $t(`home.${slide.title}`) }}
+									</h1>
 									<p>
 										{{ $t(`home.${slide.message}`) }}
 									</p>
@@ -30,9 +45,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</VueSlickCarousel>
-		</div>
+				</transition>
+			</b-carousel-slide>
+		</b-carousel>
 		<div class="categories-area section-padding30">
 			<div class="container">
 				<div class="row">
@@ -106,57 +121,14 @@
 				</div>
 			</div>
 		</div>
+
 		<div
 			class="testimonial-area testimonial-padding"
 			:style="{backgroundImage: `url(${testimonialBackGround})`}"
 		>
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="col-xl-10 col-lg-10 col-md-9">
-						<VueSlickCarousel
-							v-if="profiles && profiles.length"
-							v-bind="settingSlider"
-							class="h1-testimonial-active"
-						>
-							<div
-								v-for="profile in profiles"
-								:key="profile._id"
-								class="single-testimonial text-center"
-							>
-								<div class="testimonial-caption">
-									<div class="testimonial-top-cap">
-										<FontAwesomeIcon
-											class="quote"
-											:icon="['fas', 'quote-right']"
-										>
-										</FontAwesomeIcon>
-										<p>
-											{{ profile.slogan[locale] }}
-										</p>
-									</div>
-									<div
-										class="testimonial-founder d-flex align-items-center justify-content-center"
-									>
-										<div class="founder-img">
-											<img
-												:src="
-													require(`@/assets/img/profiles/preview/${profile.img}.png`)
-												"
-												alt=""
-											/>
-										</div>
-										<div class="founder-text">
-											<span>{{ profile.name }}</span>
-											<p>{{ profile.job }}</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</VueSlickCarousel>
-					</div>
-				</div>
-			</div>
+			<TestimonialCarousel></TestimonialCarousel>
 		</div>
+
 		<div class="count-down-area pb-120">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -242,14 +214,15 @@
 
 <script>
 import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
-import sliderBackGround from '@/assets/img/hero/h1_hero.jpg'
+import sliderCover1 from '@/assets/img/slider/cover1.jpg'
+import sliderCover2 from '@/assets/img/slider/cover2.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
-import VueSlickCarousel from 'vue-slick-carousel'
 import capitalizeName from '@/utilities/capitalize-name'
+import testimonialCarousel from '../components/testimonial-carousel.vue'
 
 export default {
-	components: {VueSlickCarousel},
+	components: {testimonialCarousel},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
@@ -268,27 +241,27 @@ export default {
 		return {
 			workBackGround,
 			testimonialBackGround,
-			sliderBackGround,
 			supportBackgroundUrl,
-			settingSlider: {
-				lazyLoad: 'ondemand',
-				arrows: true,
-				dots: true
-			},
+			controls: false,
+			indicators: false,
+			slideVisible: 0,
+			sliding: null,
 			slides: [
 				{
 					title: 'slide1Title',
 					highlight: 'slide1Highlight',
 					button: 'ourServices',
 					message: 'slide1Message',
-					link: '/services'
+					link: '/services',
+					img: sliderCover1
 				},
 				{
 					title: 'slide2Title',
 					highlight: 'slide2Highlight',
 					button: 'ourCases',
 					message: 'slide2Message',
-					link: '/cases'
+					link: '/cases',
+					img: sliderCover2
 				}
 			]
 		}
@@ -344,13 +317,32 @@ export default {
 		if (!this.$store.getters.profiles.length) {
 			this.$store.dispatch('loadProfiles')
 		}
+	},
+	methods: {
+		activeControl() {
+			this.controls = true
+			this.indicators = true
+		},
+		unactiveControl() {
+			this.controls = false
+			this.indicators = false
+		},
+		onSlideStart() {
+			this.sliding = true
+		},
+		onSlideEnd() {
+			this.sliding = false
+		},
+		showTransition(slide) {
+			return slide === this.slideVisible && !this.sliding
+		}
 	}
 }
 </script>
 
 <style>
-.slider-active .slick-next::before,
-.slider-active .slick-prev::before {
-	color: #1b4962;
+.carousel-caption {
+	right: 25%;
+	left: 0;
 }
 </style>
