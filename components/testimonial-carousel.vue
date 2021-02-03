@@ -6,7 +6,7 @@
 					v-if="profiles && profiles.length"
 					id="carouselP"
 					controls
-					:interval="0"
+					:interval="5000"
 					class="h1-testimonial-active"
 				>
 					<b-carousel-slide

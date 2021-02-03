@@ -2,39 +2,50 @@
 	<main>
 		<b-carousel
 			id="carousel"
+			v-model="slideVisible"
 			:controls="controls"
 			:indicators="indicators"
-			:interval="0"
+			:interval="5000"
 			fade
 			@mouseover.native="activeControl()"
 			@mouseleave.native="unactiveControl()"
+			@sliding-start="onSlideStart"
+			@sliding-end="onSlideEnd"
 		>
 			<b-carousel-slide
 				v-for="(slide, index) in slides"
 				:key="index"
 				:img-src="slide.img"
-				class="slider-area single-slider d-flex align-items-center"
+				class="slider-area single-slider align-items-center"
 			>
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-8 col-lg-7 col-md-8">
-							<div class="hero__caption">
-								<span>
-									{{ $t(`home.${slide.highlight}`) }}
-								</span>
-								<h1>{{ $t(`home.${slide.title}`) }}</h1>
-								<p>
-									{{ $t(`home.${slide.message}`) }}
-								</p>
-								<div class="hero__btn">
-									<nuxt-link :to="slide.link" class="btn hero-btn">
-										{{ $t(`button.${slide.button}`) }}
-									</nuxt-link>
+				<transition
+					enter-active-class="slideInDown"
+					leave-active-class="slideOutUp"
+					appear
+				>
+					<div v-if="showTransition(index)" class="container">
+						<div class="row">
+							<div class="col-xl-8 col-lg-7 col-md-8">
+								<div class="hero__caption">
+									<span>
+										{{ $t(`home.${slide.highlight}`) }}
+									</span>
+									<h1>
+										{{ $t(`home.${slide.title}`) }}
+									</h1>
+									<p>
+										{{ $t(`home.${slide.message}`) }}
+									</p>
+									<div class="hero__btn">
+										<nuxt-link :to="slide.link" class="btn hero-btn">
+											{{ $t(`button.${slide.button}`) }}
+										</nuxt-link>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</transition>
 			</b-carousel-slide>
 		</b-carousel>
 		<div class="categories-area section-padding30">
@@ -233,6 +244,8 @@ export default {
 			supportBackgroundUrl,
 			controls: false,
 			indicators: false,
+			slideVisible: 0,
+			sliding: null,
 			slides: [
 				{
 					title: 'slide1Title',
@@ -313,6 +326,15 @@ export default {
 		unactiveControl() {
 			this.controls = false
 			this.indicators = false
+		},
+		onSlideStart() {
+			this.sliding = true
+		},
+		onSlideEnd() {
+			this.sliding = false
+		},
+		showTransition(slide) {
+			return slide === this.slideVisible && !this.sliding
 		}
 	}
 }
