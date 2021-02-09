@@ -52,11 +52,17 @@
 	.img-fluid {
 		height: 100%;
 		max-width: unset !important;
-		width: auto !important;
 		margin-top: -1px;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+
+		@media #{$sm} {
+			width: auto !important;
+		}
+		@media #{$xs} {
+			width: auto !important;
+		}
 	}
 	.container {
 		overflow: hidden;
@@ -267,4 +273,13 @@
 
 #carousel .carousel-control-next .carousel-control-next-icon {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23092c3f' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+#carousel .carousel-indicators li {
+	background-color: #092c3f;
+}
+
+#carousel .carousel-caption {
+	text-align: left;
+	margin-left: 7%;
 }
