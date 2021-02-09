@@ -77,6 +77,7 @@ export default {
 	methods: {
 		setLocale(locale) {
 			this.$i18n.setLocale(locale.code)
+			this.$emit('toggleSlicknav')
 		},
 		getLocaleFormatted(locale) {
 			return locale.split('-')[0]

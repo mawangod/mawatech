@@ -16,7 +16,7 @@
 				v-for="(slide, index) in slides"
 				:key="index"
 				:img-src="slide.img"
-				class="slider-area single-slider align-items-center"
+				class="slider-area slider-height"
 			>
 				<transition
 					enter-active-class="slideInDown"

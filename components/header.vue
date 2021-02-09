@@ -107,6 +107,7 @@
 												v-show="slicknavOpened"
 												class="slicknav_nav"
 												style="animation-duration: 0.2s"
+												@toggleSlicknav="toggleSlicknav"
 											/>
 										</transition>
 									</div>
