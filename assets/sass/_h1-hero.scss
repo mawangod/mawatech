@@ -51,18 +51,11 @@
 .slider-area {
 	.img-fluid {
 		height: 100%;
-		max-width: unset !important;
 		margin-top: -1px;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
-
-		@media #{$sm} {
-			width: auto !important;
-		}
-		@media #{$xs} {
-			width: auto !important;
-		}
+		object-fit: cover;
 	}
 	.container {
 		overflow: hidden;
