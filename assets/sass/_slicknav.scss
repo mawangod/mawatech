@@ -1,11 +1,5 @@
-/*!
- * SlickNav Responsive Mobile Menu v1.0.10
- * (c) 2016 Josh Cope
- * licensed under MIT
- */
 .slicknav_btn {
 	display: block;
-	vertical-align: middle;
 	float: right;
 	line-height: 1.125em;
 	margin: 5px 5px 6px;
@@ -36,14 +30,6 @@
 	padding: 0;
 }
 
-.slicknav_menu .slicknav_menutxt {
-	display: none;
-	line-height: 1.188em;
-	float: left;
-	color: #fff;
-	font-weight: bold;
-}
-
 .slicknav_menu .slicknav_icon {
 	float: left;
 	width: 1.125em;
@@ -65,9 +51,7 @@
 	content: '';
 	position: absolute;
 }
-.slicknav_menu .slicknav_no-text {
-	margin: 0;
-}
+
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
 	background-color: #fff;
@@ -116,64 +100,27 @@
 .slicknav_nav li {
 	display: block;
 }
-.slicknav_nav .slicknav_arrow {
-	margin: 0 0 0 0.4em;
-	float: right;
-	font-size: 22px;
-	position: relative;
-	top: -9px;
-}
 
-.slicknav_nav .slicknav_item {
-	cursor: pointer;
-}
-.slicknav_nav .slicknav_item a {
-	display: inline;
-	padding: 0;
-	margin: 0;
-}
-
-.slicknav_nav .slicknav_row {
+.slicknav_nav a,
+.slicknav_nav select {
 	display: block;
-	margin: 2px 5px;
-}
-
-.slicknav_nav a {
-	display: block;
-	padding: 5px 10px;
-	margin: 2px 5px;
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: 400;
-	color: #000;
-	text-transform: capitalize;
+	color: #0d2d3e;
 }
 
-.slicknav_nav .slicknav_parent-link a {
-	display: inline;
-	padding: 0;
-	margin: 0;
+.slicknav_nav a {
+	padding: 5px 10px;
+	margin: 2px 5px;
 }
 
-.slicknav_brand {
-	float: left;
-	color: #fff;
-	font-size: 18px;
-	line-height: 30px;
-	padding: 7px 12px;
-	height: 44px;
+.slicknav_nav select {
+	margin: 7px 15px;
 }
 
 .slicknav_menu * {
 	box-sizing: border-box;
-}
-
-.slicknav_nav .slicknav_row:hover {
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	background: #ccc;
-	color: #fff;
 }
 
 .slicknav_nav a:hover {
@@ -182,10 +129,6 @@
 	background: #f79960 none repeat scroll 0 0;
 	border-radius: 0;
 	color: #fff;
-}
-
-.slicknav_nav .slicknav_txtnode {
-	margin-left: 15px;
 }
 
 /* ===== mobile menu slicknav ===== */
@@ -199,14 +142,6 @@
 
 .slicknav_icon-bar {
 	background: #fff !important;
-}
-
-.slicknav_nav .slicknav_row:hover,
-.slicknav_nav .slicknav_row:hover .slicknav_arrow {
-	border-radius: 0;
-	background-color: #f79960;
-	background-color: transparent;
-	color: #000;
 }
 
 .slicknav_menu .slicknav_nav a:hover {

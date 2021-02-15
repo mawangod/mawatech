@@ -46,8 +46,7 @@
     "vee-validate": "^3.4.5",
     "vue-countup-v2": "^4.0.0",
     "vue-observe-visibility": "^0.4.6",
-    "vue2-smooth-scroll": "^1.5.0",
-    "vuelayers": "^0.11.30"
+    "vue2-smooth-scroll": "^1.5.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.2",

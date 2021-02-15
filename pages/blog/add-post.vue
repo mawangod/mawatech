@@ -7,7 +7,7 @@
 		<section class="home-blog-area section-padding">
 			<div class="container">
 				<div class="row">
-					<ValidationObserver v-slot="{invalid, reset}">
+					<ValidationObserver v-slot="{invalid, reset}" tag="div">
 						<form
 							class="form-contact contact_form"
 							enctype="multipart/form-data"

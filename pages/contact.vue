@@ -7,40 +7,17 @@
 		<section class="contact-section">
 			<div class="container">
 				<div class="d-none d-sm-block mb-5 pb-4">
-					<vl-map
-						v-if="mounted"
+					<iframe
 						class="map"
-						:load-tiles-while-animating="true"
-						:load-tiles-while-interacting="true"
-						data-projection="EPSG:4326"
-						@mounted="onMapMounted"
-					>
-						<vl-view
-							:max-zoom="zoom"
-							:min-zoom="zoom"
-							:zoom.sync="zoom"
-							:center.sync="center"
-							:rotation.sync="rotation"
-						></vl-view>
-
-						<vl-layer-tile>
-							<vl-source-osm></vl-source-osm>
-						</vl-layer-tile>
-
-						<vl-layer-vector>
-							<vl-source-vector :features="features"></vl-source-vector>
-
-							<vl-style-box>
-								<vl-style-fill color="white"></vl-style-fill>
-								<vl-style-stroke color="red"></vl-style-stroke>
-								<vl-style-icon
-									:src="markerPng"
-									:anchor="[0.5, 1]"
-									:scale="0.1"
-								></vl-style-icon>
-							</vl-style-box>
-						</vl-layer-vector>
-					</vl-map>
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.1762059011603!2d3.988582715794395!3d50.437818479473584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2457afdd93da7%3A0x2249890cd00af6e6!2sChauss%C3%A9e%20de%20Beaumont%20187%2C%207030%20Mons!5e0!3m2!1sfr!2sbe!4v1613395941685!5m2!1sfr!2sbe"
+						width="600"
+						height="450"
+						frameborder="0"
+						style="border: 0"
+						allowfullscreen=""
+						aria-hidden="false"
+						tabindex="0"
+					></iframe>
 				</div>
 
 				<div class="row">
@@ -53,7 +30,7 @@
 						</p>
 					</div>
 					<div v-else class="col-lg-8">
-						<ValidationObserver v-slot="{invalid, reset}">
+						<ValidationObserver v-slot="{invalid, reset}" tag="div">
 							<form
 								class="form-contact contact_form"
 								@submit.prevent="sendMail(reset)"
@@ -200,49 +177,28 @@
 <script>
 import sliderBackGround from '@/assets/img/cover/contact_us.jpg'
 import ImageTitle from '@/components/image-title.vue'
-import markerPng from '@/assets/img/media/marker.png'
 import {ValidationObserver, ValidationProvider} from 'vee-validate'
 import {gsm, mail, street, town} from '../utilities/usefull-data'
 
 export default {
 	components: {ImageTitle, ValidationObserver, ValidationProvider},
 	data() {
-		const x = 3.990595028455405
-		const y = 50.43797498955024
 		return {
-			mounted: false,
 			subjectSender: '',
 			emailSender: '',
 			nameSender: '',
 			messageSender: '',
 			mail,
 			gsm,
-			markerPng,
 			sliderBackGround,
 			street,
-			town,
-			zoom: 14,
-			center: [x, y],
-			rotation: 0,
-			features: [
-				{
-					type: 'Feature',
-					geometry: {
-						type: 'Point',
-						coordinates: [x, y]
-					},
-					properties: {}
-				}
-			]
+			town
 		}
 	},
 	computed: {
 		mailAlreadySended() {
 			return this.$store.state.mailSended
 		}
-	},
-	mounted() {
-		this.mounted = true
 	},
 	methods: {
 		async sendMail(reset) {
@@ -257,9 +213,6 @@ export default {
 			this.subjectSender = ''
 			this.emailSender = ''
 			reset()
-		},
-		onMapMounted(vlMap) {
-			vlMap.refresh()
 		}
 	}
 }
@@ -268,6 +221,7 @@ export default {
 <style scoped>
 .map {
 	height: 50vh;
+	width: 100%;
 }
 
 .hero-btn:hover {

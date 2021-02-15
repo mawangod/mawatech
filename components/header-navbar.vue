@@ -34,21 +34,19 @@
 			</nuxt-link>
 		</li>
 		<li>
-			<a href="#">
-				<select
-					class="switch"
-					:value="selectedLocale"
-					@change="setLocale(availableLocales[$event.target.selectedIndex])"
+			<select
+				class="switch"
+				@change="setLocale(availableLocales[$event.target.selectedIndex])"
+			>
+				<option
+					v-for="locale in availableLocales"
+					:key="locale.code"
+					:value="getLocaleFormatted(locale.code)"
+					:selected="isSelected(locale.code)"
 				>
-					<option
-						v-for="locale in availableLocales"
-						:key="locale.code"
-						:value="getLocaleFormatted(locale.code)"
-					>
-						{{ getLocaleFormatted(locale.code) | capitalize }}
-					</option>
-				</select>
-			</a>
+					{{ getLocaleFormatted(locale.code) | capitalize }}
+				</option>
+			</select>
 		</li>
 	</ul>
 </template>
@@ -81,6 +79,9 @@ export default {
 		},
 		getLocaleFormatted(locale) {
 			return locale.split('-')[0]
+		},
+		isSelected(locale) {
+			return this.selectedLocale === this.getLocaleFormatted(locale)
 		}
 	}
 }

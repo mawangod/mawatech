@@ -12,7 +12,6 @@ h6 {
 	margin-top: 0;
 	font-style: normal;
 	font-weight: 500;
-	text-transform: normal;
 }
 p {
 	font-family: $font_2;
@@ -181,7 +180,7 @@ hr {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 14 px;
+	font-size: 14px;
 	border-radius: 0;
 	-moz-user-select: none;
 	font-weight: 500;
@@ -363,8 +362,8 @@ hr {
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 	box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 	z-index: 9999;
-	-webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeindown;
-	animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+	-webkit-animation: 300ms ease-in-out 0s normal none 1 fadeindown;
+	animation: 300ms ease-in-out 0s normal none 1 fadeInDown;
 	background: #fff;
 }
 
