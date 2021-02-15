@@ -8,7 +8,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<img
-								:src="require(`@/assets/img/profiles/${profile.img}.png`)"
+								:src="require(`@/assets/img/profiles/${profile.img}.jpg`)"
 								alt=""
 								class="img-fluid"
 							/>

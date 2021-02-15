@@ -2,7 +2,7 @@
 author: David Maw
 title: 7 Habitudes de travail que vous devez adopter
 description: Dans cet article, on vous donne 7 bonnes habitudes à adopter pour devenir exceptionnel au travail. Faites un essai et voyez où vous mèneront vos compétences.
-img: home_blog2.png
+img: home_blog2.jpg
 date: 2020-07-20
 tags: [5f96bf67ef631f3568cf9a5b, 5f96be45ef631f3568cf9a55]
 ---

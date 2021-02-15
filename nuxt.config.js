@@ -43,10 +43,6 @@ module.exports = {
 		{
 			src: '@/plugins/vee-validate.js',
 			ssr: false
-		},
-		{
-			src: '@/plugins/vue-layers.js',
-			ssr: false
 		}
 	],
 	/*

@@ -7,7 +7,7 @@
 			<div class="team-img">
 				<img
 					class="profile"
-					:src="require(`@/assets/img/profiles/${img}.png`)"
+					:src="require(`@/assets/img/profiles/${img}.jpg`)"
 					alt=""
 				/>
 			</div>

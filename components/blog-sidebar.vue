@@ -63,6 +63,7 @@
 					<img
 						class="img-fluid"
 						:src="require(`@/assets/img/blog/preview/${recentPost.img}`)"
+						alt=""
 					/>
 					<div class="media-body">
 						<nuxt-link

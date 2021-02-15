@@ -91,18 +91,23 @@
 					display: inline-block;
 					position: relative;
 					z-index: 1;
-					& a {
+					& a,
+					& select {
 						color: #0d2d3e;
 						font-weight: 400;
-						padding: 39px 19px;
 						display: block;
 						font-size: 16px;
 						@include transition(0.3s);
 
-						text-transform: capitalize;
 						@media #{$medium_device} {
 							padding: 39px 14px;
 						}
+					}
+					& a {
+						padding: 39px 19px;
+					}
+					& select {
+						margin: 0 19px;
 					}
 					& a.nuxt-link-exact-active {
 						color: #e94d65;
@@ -113,8 +118,10 @@
 						}
 					}
 					&:last-child {
-						a {
+						a,
+						select {
 							padding-right: 0;
+							margin-right: 0;
 						}
 					}
 				}

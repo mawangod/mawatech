@@ -1,7 +1,7 @@
 <template>
 	<div class="comment-form">
 		<h4>{{ $t('blog.leaveReply') }}</h4>
-		<ValidationObserver v-slot="{invalid, reset}">
+		<ValidationObserver v-slot="{invalid, reset}" tag="div">
 			<form
 				class="form-contact comment_form"
 				@submit.prevent="submitComment(reset)"

@@ -2,7 +2,7 @@
 author: Hanane Agdid
 title: Eating for stress relief
 description: In times of stress, should you listen to your cravings and eat sugar? Should we instead favor vegetables? Doctor Nina Cohen-Koubi, nutritionist doctor, answers us.
-img: single_blog_5.png
+img: single_blog_5.jpg
 date: 2020-01-03
 tags: [5f96be45ef631f3568cf9a55, 5f96bf67ef631f3568cf9a5c]
 ---
