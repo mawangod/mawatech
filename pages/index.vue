@@ -76,7 +76,7 @@
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-6">
 						<div class="support-location-img">
-							<img src="@/assets/img/gallery/about.png" alt="" />
+							<img src="@/assets/img/gallery/about.jpg" alt="" />
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6">

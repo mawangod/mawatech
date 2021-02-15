@@ -2,7 +2,7 @@
 author: David Maw
 title: 7 Working habit u need to adopt
 description: In this article, we give you 7 good habits to adopt to become exceptional at work. Give it a try and see where your skills take you.
-img: home_blog2.png
+img: home_blog2.jpg
 date: 2020-07-20
 tags: [5f96bf67ef631f3568cf9a5b, 5f96be45ef631f3568cf9a55]
 ---

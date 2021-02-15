@@ -1,7 +1,7 @@
 # mawatech
 
-Mawatech is a Belgian startup that allows you to hire competent freelancers who are specialized in web development
+Mawatech helps you build your website or apps without breaking the bank
 
-![Site preview](assets/img/site-preview.png)
+![Site preview](assets/img/site-preview.jpg)
 
 Powered with love by Mawangod
