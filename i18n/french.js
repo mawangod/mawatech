@@ -3,7 +3,7 @@ export default {
 		submitButton: 'Envoyez',
 		moreAboutUs: 'En savoir plus',
 		ourServices: 'Nos Services',
-		ourCases: 'Nos cas',
+		ourCases: 'Notre Portfolio',
 		write: 'Ecrire',
 		reply: 'Répondre',
 		accept: 'Accepter',
@@ -59,9 +59,9 @@ export default {
 		bestService: 'Nos Meilleurs Services'
 	},
 	cases: {
-		title: 'Nos précédents cas',
+		title: 'Notre portfolio',
 		highlight: 'Jeter un oeil à',
-		featuredCase: 'Nos Cas en Vedette'
+		featuredCase: 'Nos réalisations'
 	},
 	about: {
 		title: 'A propos de nous',
@@ -106,7 +106,7 @@ export default {
 		about: 'A propos',
 		services: 'Services',
 		team: "L'équipe",
-		cases: 'Cas',
+		cases: 'Portfolio',
 		blog: 'Blog',
 		post: 'Post',
 		contact: 'Contact'

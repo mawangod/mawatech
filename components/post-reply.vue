@@ -88,6 +88,7 @@
 
 <script>
 import {ValidationObserver, ValidationProvider} from 'vee-validate'
+import {format} from 'date-fns'
 
 export default {
 	components: {ValidationObserver, ValidationProvider},
@@ -101,16 +102,7 @@ export default {
 		return {
 			content: '',
 			author: '',
-			mail: '',
-			options: {year: 'numeric', month: 'long', day: 'numeric'}
-		}
-	},
-	computed: {
-		locale() {
-			return this.$i18n.locale || this.$i18n.defaultLocale
-		},
-		currentDate() {
-			return new Date().toLocaleDateString(this.locale, this.options)
+			mail: ''
 		}
 	},
 	methods: {
@@ -119,7 +111,7 @@ export default {
 				author: this.author,
 				content: this.content,
 				mail: this.mail,
-				date: this.currentDate,
+				date: format(new Date(), 'yyyy-MM-dd'),
 				post: this.post
 			})
 			this.author = ''

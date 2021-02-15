@@ -3,7 +3,7 @@ export default {
 		submitButton: 'Send',
 		moreAboutUs: 'More About Us',
 		ourServices: 'Our Services',
-		ourCases: 'Our cases',
+		ourCases: 'Our portfolio',
 		write: 'Write',
 		reply: 'Reply',
 		accept: 'Accept',
@@ -60,9 +60,9 @@ export default {
 		bestService: 'Our Best Services'
 	},
 	cases: {
-		title: 'Our Previous Cases',
+		title: 'Our Portfolio',
 		highlight: 'take a look at',
-		featuredCase: 'Our Featured Case'
+		featuredCase: 'Our Realizations'
 	},
 	about: {
 		title: 'About Us',
@@ -107,7 +107,7 @@ export default {
 		about: 'About',
 		services: 'Services',
 		team: 'Team',
-		cases: 'Cases',
+		cases: 'Portfolio',
 		blog: 'Blog',
 		post: 'Post',
 		contact: 'Contact'
