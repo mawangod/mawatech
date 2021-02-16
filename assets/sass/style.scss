@@ -4,7 +4,27 @@ $secondary: #fff;
 $light: #f1f1f1;
 $dark: #000;
 
-@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/functions.scss';
+@import 'bootstrap/scss/variables.scss';
+@import 'bootstrap/scss/vendor/rfs.scss';
+@import 'bootstrap/scss/mixins/deprecate.scss';
+@import 'bootstrap/scss/mixins/breakpoints.scss';
+@import 'bootstrap/scss/mixins/hover.scss';
+@import 'bootstrap/scss/mixins/image.scss';
+@import 'bootstrap/scss/mixins/text-emphasis.scss';
+@import 'bootstrap/scss/mixins/text-hide.scss';
+@import 'bootstrap/scss/mixins/text-truncate.scss';
+@import 'bootstrap/scss/mixins/transition.scss';
+@import 'bootstrap/scss/mixins/clearfix.scss';
+@import 'bootstrap/scss/mixins/grid-framework.scss';
+@import 'bootstrap/scss/mixins/grid.scss';
+@import 'bootstrap/scss/reboot.scss';
+@import 'bootstrap/scss/grid.scss';
+@import 'bootstrap/scss/carousel.scss';
+@import 'bootstrap/scss/utilities/display.scss';
+@import 'bootstrap/scss/utilities/sizing.scss';
+@import 'bootstrap/scss/utilities/flex.scss';
+@import 'bootstrap/scss/utilities/text.scss';
 
 @import './variables.scss';
 @import './mixins.scss';
