@@ -18,16 +18,25 @@
 									<ValidationProvider
 										v-slot="{errors}"
 										name="author"
-										rules="required|alpha_spaces|min:3|max:300"
+										rules="required"
 									>
 										<div class="form-group">
-											<input
+											<select
 												v-model="author"
 												class="form-control"
 												name="author"
-												type="text"
-												:placeholder="$t('blog.author')"
-											/>
+											>
+												<option value="" disabled selected>
+													{{ $t('blog.author') }}
+												</option>
+												<option
+													v-for="profile in profiles"
+													:key="profile._id"
+													:value="profile.name"
+												>
+													{{ profile.name }}
+												</option>
+											</select>
 											<span v-if="errors[0]" class="input-invalid-message">
 												{{ $t(`validation.${errors[0]}`) }}
 											</span>
@@ -220,12 +229,18 @@ export default {
 		},
 		locale() {
 			return this.$i18n.locale || this.$i18n.defaultLocale
+		},
+		profiles() {
+			return this.$store.getters.profiles
 		}
 	},
 	mounted() {
 		this.$refs.imgProvider.validateSilent(this.$refs.image.files[0])
 		if (!this.$store.getters.tags.length) {
 			this.$store.dispatch('loadTags')
+		}
+		if (!this.$store.getters.profiles.length) {
+			this.$store.dispatch('loadProfiles')
 		}
 	},
 	methods: {
@@ -275,5 +290,10 @@ export default {
 <style scoped>
 .hidden {
 	display: none;
+}
+
+.form-select {
+	height: 40px;
+	width: 100%;
 }
 </style>
