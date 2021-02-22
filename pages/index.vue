@@ -345,4 +345,8 @@ export default {
 	right: 25%;
 	left: 0;
 }
+
+.carousel-indicators {
+	z-index: 1;
+}
 </style>
