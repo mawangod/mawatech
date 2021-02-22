@@ -8,14 +8,14 @@
 			<div class="container box_1170">
 				<div class="section-top-border">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/services/${service.photo1}.png`)"
 								alt=""
 								class="img-fluid"
 							/>
 						</div>
-						<div class="col-md-9 mt-sm-20">
+						<div class="col-md-8 mt-sm-20">
 							<h5 class="mb-20">{{ service.subtitle[locale] }}</h5>
 							<p>
 								{{ service.bio1[locale] }}
@@ -25,10 +25,10 @@
 				</div>
 				<div class="section-top-border text-right">
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<p class="text-right">{{ service.bio2[locale] }}</p>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/services/${service.photo2}.png`)"
 								alt=""

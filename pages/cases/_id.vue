@@ -5,14 +5,14 @@
 			<div class="container box_1170">
 				<div class="section-top-border">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/cases/${cas.photo1}.jpg`)"
 								alt=""
 								class="img-fluid"
 							/>
 						</div>
-						<div class="col-md-9 mt-sm-20">
+						<div class="col-md-8 mt-sm-20">
 							<h4>{{ cas.subtitle[locale] }}</h4>
 							<p>
 								{{ cas.bio1[locale] }}
@@ -22,10 +22,10 @@
 				</div>
 				<div class="section-top-border text-right">
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<p class="text-right">{{ cas.bio2[locale] }}</p>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/cases/${cas.photo2}.jpg`)"
 								alt=""
@@ -36,14 +36,14 @@
 				</div>
 				<div class="section-top-border">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/cases/${cas.photo3}.jpg`)"
 								alt=""
 								class="img-fluid"
 							/>
 						</div>
-						<div class="col-md-9 mt-sm-20">
+						<div class="col-md-8 mt-sm-20">
 							<p>
 								{{ cas.bio3[locale] }}
 							</p>

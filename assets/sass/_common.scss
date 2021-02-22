@@ -608,6 +608,11 @@ hr {
 	border: 1px solid #212529;
 }
 
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
 @-webkit-keyframes slideInDown {
 	from {
 		-webkit-transform: translate3d(0, -25px, 0);
