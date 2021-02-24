@@ -166,6 +166,7 @@
 	}
 
 	.header-sticky {
+		padding: 10px;
 		&.sticky-bar {
 			background: #fff;
 			.main-menu {
@@ -197,7 +198,7 @@
 		background: transparent;
 		margin-top: 0 !important;
 		.slicknav_btn {
-			top: -28px;
+			top: -35px;
 			// mobile Menu button color
 			.slicknav_icon-bar {
 				background-color: $theme-color !important;
