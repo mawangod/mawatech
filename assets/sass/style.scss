@@ -1,9 +1,3 @@
-// All of your custom SCSS variables go first
-$primary: #7d61c8;
-$secondary: #fff;
-$light: #f1f1f1;
-$dark: #000;
-
 @import 'bootstrap/scss/functions.scss';
 @import 'bootstrap/scss/variables.scss';
 @import 'bootstrap/scss/mixins.scss';
@@ -23,22 +17,22 @@ $dark: #000;
 @import 'bootstrap/scss/utilities/spacing.scss';
 @import 'bootstrap/scss/utilities/text.scss';
 
-@import './variables.scss';
-@import './mixins.scss';
-@import './overlay.scss';
-@import './common.scss';
-@import './color.scss';
+@import 'color.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'overlay.scss';
+@import 'common.scss';
 
-@import './headerMenu.scss';
-@import './footer.scss';
-@import './h1-hero.scss';
-@import './categories.scss';
-@import './about.scss';
-@import './services_section.scss';
-@import './testimonial.scss';
-@import './count_down.scss';
-@import './team.scss';
-@import './wantTowork.scss';
-@import './blog_page.scss';
-@import './contact.scss';
-@import './slicknav.scss';
+@import 'headerMenu.scss';
+@import 'footer.scss';
+@import 'h1-hero.scss';
+@import 'categories.scss';
+@import 'about.scss';
+@import 'services_section.scss';
+@import 'testimonial.scss';
+@import 'count_down.scss';
+@import 'team.scss';
+@import 'wantTowork.scss';
+@import 'blog_page.scss';
+@import 'contact.scss';
+@import 'slicknav.scss';

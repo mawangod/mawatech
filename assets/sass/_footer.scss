@@ -1,7 +1,7 @@
 .footer-area {
-	background: #11141b;
+	background: $mblack;
 	.footer-top {
-		border-bottom: 1px solid #233148;
+		border-bottom: 1px solid $fblue;
 		.single-footer-caption {
 			.footer-logo {
 				margin-bottom: 30px;
@@ -10,7 +10,7 @@
 				.info1 {
 					line-height: 1.8;
 					margin-bottom: 35px;
-					color: #bdbdbd;
+					color: $gray-color-2;
 					@media #{$lg} {
 						padding-right: 0;
 					}
@@ -27,21 +27,21 @@
 			}
 			.footer-number {
 				h4 {
-					color: #f00;
+					color: $hred;
 					font-size: 30px;
 					font-weight: 500;
 					text-transform: capitalize;
 					span {
-						color: #fff;
+						color: $white;
 					}
 				}
 				p {
-					color: #bdbdbd;
+					color: $gray-color-2;
 				}
 			}
 			.footer-tittle {
 				& h4 {
-					color: #fff;
+					color: $white;
 					font-family: $font_2;
 					font-size: 18px;
 					margin-bottom: 38px;
@@ -50,14 +50,14 @@
 				}
 				& ul {
 					& li {
-						color: #bdbdbd;
+						color: $gray-color-2;
 						margin-bottom: 15px;
 						text-transform: capitalize;
 						& a {
-							color: #bdbdbd;
+							color: $gray-color-2;
 							font-weight: 300;
 							&:hover {
-								color: #fff;
+								color: $white;
 								padding-left: 5px;
 							}
 						}
@@ -72,19 +72,16 @@
 		padding-top: 30px;
 		.footer-copy-right {
 			& p {
-				color: #bdbdbd;
+				color: $gray-color-2;
 				font-weight: 300;
 				font-size: 16px;
 				line-height: 2;
 				margin-bottom: 12px;
 				& i {
-					color: #f00;
+					color: $hred;
 				}
 				& a {
-					color: #f00;
-					&:hover {
-						// color: #fff;
-					}
+					color: $hred;
 				}
 			}
 		}
@@ -92,7 +89,7 @@
 
 	.footer-social {
 		span {
-			color: #fff;
+			color: $white;
 			position: relative;
 			margin-right: 57px;
 
@@ -101,7 +98,7 @@
 				content: '';
 				width: 43px;
 				height: 2px;
-				background: #3b3647;
+				background: $lvelvet;
 				top: 50%;
 				transform: translateY(-50%);
 				right: -56px;
@@ -120,7 +117,7 @@
 			padding-top: 10px;
 		}
 		a {
-			color: #bdbdbd;
+			color: $gray-color-2;
 			font-size: 14px;
 			text-align: center;
 			margin-left: 16px;
@@ -128,7 +125,7 @@
 				margin-left: 0;
 			}
 			&:hover {
-				color: #fff;
+				color: $white;
 			}
 
 			svg {
@@ -142,7 +139,7 @@
 			}
 			// Hover
 			&:hover svg {
-				color: #ff2143;
+				color: $btn_bg;
 				transform: rotateY(180deg);
 				-webkit-transform: rotateY(180deg);
 				-moz-transform: rotateY(180deg);

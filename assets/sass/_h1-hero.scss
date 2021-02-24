@@ -33,7 +33,7 @@
 	background-size: cover;
 	.hero-cap {
 		& h2 {
-			color: #fff;
+			color: $white;
 			font-size: 60px;
 			font-weight: 700;
 			text-transform: capitalize;
@@ -65,7 +65,7 @@
 			font-weight: 500;
 			margin-bottom: 22px;
 			text-transform: uppercase;
-			color: #eb566c;
+			color: $red;
 			display: inline-block;
 			position: relative;
 			padding-left: 100px;
@@ -95,7 +95,7 @@
 				content: '';
 				width: 70px;
 				height: 2px;
-				background: #eb566c;
+				background: $red;
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
@@ -105,7 +105,7 @@
 			font-size: 80px;
 			font-weight: 800;
 			margin-bottom: 14px;
-			color: #092c3f;
+			color: $heading-color;
 			font-family: $font_3;
 			line-height: 1.2;
 			@media #{$large1} {
@@ -130,7 +130,7 @@
 		}
 		& p {
 			font-size: 16px;
-			color: #092c3f;
+			color: $heading-color;
 			font-family: $font_1;
 			margin-bottom: 50px;
 			@media #{$xs} {
@@ -228,24 +228,24 @@
 			height: 60px;
 			width: 60px;
 			cursor: pointer;
-			border: 1px solid #a6b4bb;
+			border: 1px solid $bgray;
 			@include transition(0.4s);
 			i {
 				font-size: 20px;
 				line-height: 60px;
-				color: #a6b4bb;
+				color: $bgray;
 				@include transition(0.3s);
 			}
 		}
 		&.slick-next {
 			left: auto;
-			border: 1px solid #1b4962;
+			border: 1px solid $cblue;
 			right: 100px;
 			@media #{$lg} {
 				right: 50px;
 			}
 			i {
-				color: #1b4962;
+				color: $cblue;
 			}
 			@media #{$laptop} {
 				right: 20px;
@@ -253,9 +253,9 @@
 		}
 	}
 	& button:hover {
-		border: 1px solid #1b4962;
+		border: 1px solid $cblue;
 		i {
-			color: #1b4962;
+			color: $cblue;
 		}
 	}
 }
@@ -269,7 +269,7 @@
 }
 
 #carousel .carousel-indicators li {
-	background-color: #092c3f;
+	background-color: $heading-color;
 }
 
 #carousel .carousel-caption {

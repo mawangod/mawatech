@@ -1,5 +1,5 @@
 .categories-area {
-	background: #f7f7f7;
+	background: $gray;
 	.single-cat {
 		border: 1px solid transparent;
 		padding: 30px 22px;
@@ -8,7 +8,7 @@
 		position: relative;
 		z-index: 1;
 		height: 100%;
-		background: #ffff;
+		background: $white;
 		@media #{$xs} {
 			padding: 30px 22px;
 		}
@@ -20,17 +20,17 @@
 			content: '';
 			width: 100%;
 			height: 0;
-			background: #ff2143;
+			background: $btn_bg;
 			@include transition(0.4s);
 
 			bottom: 0;
 			left: 0;
 			z-index: -1;
-			border: 8px solid #fff;
+			border: 8px solid $white;
 		}
 		.cat-icon {
 			svg {
-				color: #eb566c;
+				color: $red;
 				font-size: 65px;
 				margin: auto;
 				margin-bottom: 30px;
@@ -57,7 +57,7 @@
 			}
 			p {
 				margin-bottom: 36px;
-				color: #57667e;
+				color: $jgray;
 				font-size: 16px;
 				@include transition(0.2s);
 				@media #{$sm} {
@@ -65,7 +65,7 @@
 				}
 			}
 			a {
-				color: #1c165c;
+				color: $velvet;
 				font-size: 16px;
 				font-weight: 600;
 				@include transition(0.2s);
@@ -75,25 +75,24 @@
 		// Hover Effect In single
 		&:hover {
 			border: 1px solid transparent;
-			// background: #ff3d1c;
 
 			&::before {
 				height: 100%;
 			}
 			.cat-icon {
 				svg {
-					color: #fff;
+					color: $white;
 				}
 			}
 			.cat-cap {
 				h5 {
-					color: #fff;
+					color: $white;
 				}
 				p {
-					color: #fff;
+					color: $white;
 				}
 				a {
-					color: #fff;
+					color: $white;
 				}
 			}
 		}

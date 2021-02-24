@@ -163,28 +163,8 @@
 				</div>
 			</div>
 		</div>
-		<section
-			class="wantToWork-area w-padding2 section-bg"
-			:style="{backgroundImage: `url(${workBackGround})`}"
-		>
-			<div class="container">
-				<div class="row align-items-center justify-content-between">
-					<div class="col-xl-7 col-lg-9 col-md-8">
-						<div class="wantToWork-caption wantToWork-caption2">
-							<h2>
-								{{ $t('team.searching') }}<br />
-								{{ $t('team.consultant') }}
-							</h2>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-4">
-						<nuxt-link to="/about" class="btn btn-black f-right">
-							{{ $t('button.moreAboutUs') }}
-						</nuxt-link>
-					</div>
-				</div>
-			</div>
-		</section>
+
+		<WantToWork></WantToWork>
 
 		<client-only>
 			<div class="home-blog-area section-padding30">

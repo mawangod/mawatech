@@ -1,6 +1,6 @@
 // Home Page Blog
 .home-blog-area {
-	background: #f7f7f7;
+	background: $gray;
 	.home-blog-single {
 		@include transition(0.4s);
 		.blog-img-cap {
@@ -24,9 +24,9 @@
 						font-size: 14px;
 						font-family: $font_1;
 						font-weight: 300;
-						color: #011548;
+						color: $blue;
 						padding: 20px 30px 20px 84px;
-						background: #eee;
+						background: $lgray;
 						@media #{$md} {
 							padding: 20px 10px 20px 20px;
 						}
@@ -41,7 +41,7 @@
 			}
 
 			.blog-cap {
-				background: #fff;
+				background: $white;
 				padding: 30px 86px 36px 81px;
 				@media #{$lg} {
 					padding: 37px 23px 37px 45px;
@@ -56,7 +56,7 @@
 					padding: 30px 8px 31px 26px;
 				}
 				h3 {
-					color: #191d34;
+					color: $dblue;
 					font-size: 30px;
 					font-weight: 700;
 					line-height: 1.4;
@@ -76,7 +76,7 @@
 					}
 				}
 				p {
-					color: #737980;
+					color: $body-text-color;
 					font-size: 16px;
 					margin-bottom: 30px;
 					@media #{$md} {
@@ -126,7 +126,7 @@
 		font-size: 14px;
 
 		a {
-			color: #999;
+			color: $ogray;
 		}
 
 		svg,
@@ -157,18 +157,17 @@
 	.widget_title {
 		font-size: 20px;
 		margin-bottom: 40px;
-		// color: $title-color;
 
 		&::after {
 			content: '';
 			display: block;
 			padding-top: 15px;
-			border-bottom: 1px solid #f0e9ff;
+			border-bottom: 1px solid $vgray;
 		}
 	}
 
 	.single_sidebar_widget {
-		background: #fbf9ff;
+		background: $sidebar_bg;
 		padding: 30px;
 		margin-bottom: 30px;
 		.btn_1 {
@@ -179,19 +178,19 @@
 	.search_widget {
 		.form-control {
 			height: 50px;
-			border-color: #f0e9ff;
+			border-color: $vgray;
 			font-size: 13px;
-			color: #999;
+			color: $ogray;
 			padding-left: 20px;
 			border-radius: 0;
 			border-right: 0;
 
 			&::placeholder {
-				color: #999;
+				color: $ogray;
 			}
 
 			&:focus {
-				border-color: #f0e9ff;
+				border-color: $vgray;
 				outline: 0;
 				box-shadow: none;
 			}
@@ -201,17 +200,17 @@
 			z-index: 0;
 			button {
 				background: $theme-color;
-				border: 1px solid #f0e9ff;
+				border: 1px solid $vgray;
 				padding: 4px 15px;
 				border-left: 0;
 				cursor: pointer;
 
 				i {
-					color: #fff;
+					color: $white;
 				}
 				span {
 					font-size: 14px;
-					color: #999;
+					color: $ogray;
 				}
 			}
 		}
@@ -233,7 +232,7 @@
 
 				a {
 					&:hover {
-						color: $white_color;
+						color: $white;
 					}
 				}
 
@@ -257,21 +256,21 @@
 
 				a {
 					display: inline-block;
-					border: 1px solid #eee;
-					background: #fff;
+					border: 1px solid $lgray;
+					background: $white;
 					padding: 4px 20px;
 					margin-bottom: 8px;
 					margin-right: 3px;
 					transition: all 0.3s ease 0s;
-					color: #888;
+					color: $hgray;
 					font-size: 13px;
 					cursor: pointer;
 
 					&:hover,
 					&.active {
 						background: $theme-color;
-						color: #fff !important;
-						-webkit-text-fill-color: #fff;
+						color: $white !important;
+						-webkit-text-fill-color: $white;
 						text-decoration: none;
 						-webkit-transition: 0.5s;
 						transition: 0.5s;
@@ -297,8 +296,8 @@
 	width: 45px;
 	height: 45px;
 	border-radius: 0 !important;
-	color: #8a8a8a;
-	border: 1px solid #f0e9ff;
+	color: $egray;
+	border: 1px solid $vgray;
 	margin-right: 10px;
 
 	i,
@@ -314,9 +313,9 @@
 .blog-pagination .page-item.active {
 	.page-link {
 		z-index: 1;
-		background-color: #fbf9ff;
-		border-color: #f0e9ff;
-		color: #888;
+		background-color: $sidebar_bg;
+		border-color: $vgray;
+		color: $hgray;
 	}
 }
 
@@ -340,7 +339,7 @@
 		background: rgba(130, 139, 178, 0.1);
 		padding: 15px;
 		line-height: 1.733;
-		color: #888;
+		color: $hgray;
 		font-style: italic;
 		margin-top: 25px;
 		margin-bottom: 25px;
@@ -351,7 +350,7 @@
 	}
 
 	.quotes {
-		background: $white_color;
+		background: $white;
 		padding: 15px 15px 15px 20px;
 		border-left: 2px solid;
 
@@ -371,7 +370,7 @@
 
 	.navigation-top {
 		padding-top: 15px;
-		border-top: 1px solid #f0e9ff;
+		border-top: 1px solid $vgray;
 
 		p {
 			margin-bottom: 0;
@@ -417,7 +416,7 @@
 	}
 
 	.navigation-area {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid $lgray;
 		padding-bottom: 30px;
 		margin-top: 55px;
 
@@ -435,7 +434,7 @@
 
 			.thumb {
 				margin-right: 20px;
-				background: #000;
+				background: $trueblack;
 
 				img {
 					@include transition(0.3s);
@@ -470,7 +469,7 @@
 
 			.thumb {
 				margin-left: 20px;
-				background: #000;
+				background: $trueblack;
 
 				img {
 					@include transition(0.3s);
@@ -500,7 +499,7 @@
 
 .comments-area {
 	background: transparent;
-	border-top: 1px solid #eee;
+	border-top: 1px solid $lgray;
 	padding: 45px 0;
 	margin-top: 50px;
 
@@ -557,20 +556,20 @@
 
 	.date {
 		font-size: 14px;
-		color: #999;
+		color: $ogray;
 		margin-bottom: 0;
 		margin-left: 20px;
 	}
 
 	.comment {
 		margin-bottom: 10px;
-		color: #777;
+		color: $fgray;
 		font-size: 15px;
 	}
 
 	.btn-reply {
 		background-color: transparent;
-		color: #888;
+		color: $hgray;
 		padding: 5px 18px;
 		font-size: 14px;
 		display: block;
@@ -579,7 +578,7 @@
 }
 
 .comment-form {
-	border-top: 1px solid #eee;
+	border-top: 1px solid $lgray;
 	padding-top: 45px;
 	margin-top: 50px;
 	margin-bottom: 20px;
@@ -612,7 +611,7 @@
 	}
 
 	.form-control {
-		border: 1px solid #f0e9ff;
+		border: 1px solid $vgray;
 		border-radius: 5px;
 		height: 48px;
 		padding-left: 18px;
@@ -626,7 +625,7 @@
 
 		&::placeholder {
 			font-weight: 300;
-			color: #777;
+			color: $fgray;
 		}
 	}
 
@@ -639,21 +638,21 @@
 	::-webkit-input-placeholder {
 		/* Chrome/Opera/Safari */
 		font-size: 13px;
-		color: #777;
+		color: $fgray;
 	}
 
 	::-moz-placeholder {
 		font-size: 13px;
-		color: #777;
+		color: $fgray;
 	}
 
 	:-ms-input-placeholder {
 		font-size: 13px;
-		color: #777;
+		color: $fgray;
 	}
 
 	:-moz-placeholder {
 		font-size: 13px;
-		color: #777;
+		color: $fgray;
 	}
 }

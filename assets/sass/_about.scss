@@ -31,12 +31,12 @@
 			p.pera-top {
 				font-size: 20px;
 				font-weight: 500;
-				color: #fff;
+				color: $white;
 				font-family: $font_1;
 			}
 			p {
 				font-size: 15px;
-				color: #cecece;
+				color: $light;
 			}
 		}
 	}
@@ -44,5 +44,5 @@
 
 .quote {
 	font-size: 3rem;
-	color: #f04e3c;
+	color: $orange;
 }

@@ -1,5 +1,5 @@
 .team-area {
-	background: #f7f7f7;
+	background: $gray;
 	.single-team {
 		.team-img {
 			overflow: hidden;
@@ -11,9 +11,9 @@
 		}
 		.team-caption {
 			padding: 20px 20px;
-			background: #fff;
+			background: $white;
 			& span {
-				color: #ff2143;
+				color: $btn_bg;
 				font-size: 16px;
 				font-weight: 400;
 				font-family: $font_1;
@@ -29,12 +29,12 @@
 					left: -47px;
 					top: 50%;
 					transform: translateY(-50%);
-					background: #ff2143;
+					background: $btn_bg;
 				}
 			}
 			& h3 {
 				a {
-					color: #161e46;
+					color: $eblue;
 					font-weight: 700;
 					font-size: 25px;
 				}
@@ -53,7 +53,7 @@
 			font-family: $font_1;
 			font-weight: 700;
 			margin-bottom: 30px;
-			color: #000a2d;
+			color: $sblue;
 			display: inline-block;
 			position: relative;
 			padding-left: 68px;
@@ -63,14 +63,14 @@
 				content: '';
 				width: 54px;
 				height: 3px;
-				background: #eb566c;
+				background: $red;
 				left: 0;
 				top: 50%;
 				transform: translateY(-50%);
 			}
 		}
 		p {
-			color: #464d65;
+			color: $ablue;
 			font-size: 14px;
 		}
 	}

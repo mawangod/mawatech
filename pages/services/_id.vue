@@ -70,14 +70,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-.section-top-border {
-	padding: 50px 0;
-	border-top: 1px dotted #eee;
-}
-
-.mb-30 {
-	margin-bottom: 30px;
-}
-</style>

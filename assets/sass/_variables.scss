@@ -1,5 +1,3 @@
-@import 'color';
-
 // Font Family
 $font_1: 'Roboto', sans-serif; //Heading Font
 $font_2: 'Poppins', sans-serif; //Body Font , Menu
@@ -41,17 +39,8 @@ $large1: 'only screen and (min-width: 1200px) and (max-width: 1400px)';
 $large2: 'only screen and (min-width: 1400px) and (max-width: 1600px)';
 $large3: 'only screen and (min-width: 1601px) and (max-width: 1800px)';
 
-/*
-	@include transition(.4s);
-	color:$theme-color;
-*/
-
-// Elemet Page btn
-$heading_color2: #112e41;
-$white_color: #fff;
-
 .boxed-btn {
-	background: #fff;
+	background: $white;
 	color: $theme-color !important;
 	display: inline-block;
 	padding: 18px 44px;
@@ -66,7 +55,7 @@ $white_color: #fff;
 	cursor: pointer;
 	&:hover {
 		background: $theme-color;
-		color: #fff !important;
+		color: $white !important;
 		border: 1px solid $theme-color;
 	}
 	&:focus {

@@ -57,15 +57,20 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.cookie
-  z-index: 1
-  position: fixed
-  bottom: 0
-  &__link
-    color: red
-    text-decoration: underline
-    transition: all .25s
-    &:hover
-      text-decoration: none
+<style scoped>
+.cookie {
+	z-index: 1;
+	position: fixed;
+	bottom: 0;
+}
+
+.cookie__link {
+	color: red;
+	text-decoration: underline;
+	transition: all 0.25s;
+}
+
+.cookie__link:hover {
+	text-decoration: none;
+}
 </style>

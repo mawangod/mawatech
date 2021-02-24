@@ -23,12 +23,12 @@
 		box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 	}
 	.header-top {
-		background: #0d2d3e;
+		background: $bblue;
 		padding: 13px 0;
 		.header-info-left {
 			ul {
 				li {
-					color: #fff;
+					color: $white;
 					display: inline-block;
 					margin-right: 30px;
 					font-size: 12px;
@@ -40,7 +40,7 @@
 					}
 					& i {
 						margin-right: 8px;
-						color: #e94d65;
+						color: $lred;
 					}
 				}
 			}
@@ -50,7 +50,7 @@
 				li {
 					display: inline-block;
 					& a {
-						color: #fff;
+						color: $white;
 						font-size: 16px;
 						padding-left: 25px;
 						&:hover {
@@ -70,7 +70,7 @@
 					}
 					// Hover
 					&:hover svg {
-						color: #ff2143;
+						color: $btn_bg;
 						transform: rotateY(180deg);
 						-webkit-transform: rotateY(180deg);
 						-moz-transform: rotateY(180deg);
@@ -93,7 +93,7 @@
 					z-index: 1;
 					& a,
 					& select {
-						color: #0d2d3e;
+						color: $bblue;
 						font-weight: 400;
 						display: block;
 						font-size: 16px;
@@ -110,11 +110,11 @@
 						margin: 0 19px;
 					}
 					& a.nuxt-link-exact-active {
-						color: #e94d65;
+						color: $lred;
 					}
 					&:hover {
 						& > a {
-							color: #e94d65;
+							color: $lred;
 						}
 					}
 					&:last-child {
@@ -128,14 +128,13 @@
 				& ul.submenu {
 					position: absolute;
 					width: 170px;
-					background: #0d2d3e;
+					background: $bblue;
 					left: 0;
 					top: 90%;
 					visibility: hidden;
 					opacity: 0;
 					box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
 					padding: 17px 0;
-					// border-top: 5px solid $theme-color;
 					@include transition(0.3s);
 					& > li {
 						margin-left: 7px;
@@ -143,14 +142,10 @@
 						& > a {
 							padding: 6px 10px !important;
 							font-size: 15px;
-							color: #fdfdfd;
+							color: $swhite;
 							&:hover {
-								// color:$theme-color;
 								background: none;
 								padding-left: 13px !important;
-							}
-							& i {
-								// @include transition(.4s);
 							}
 						}
 					}
@@ -168,7 +163,7 @@
 	.header-sticky {
 		padding: 10px;
 		&.sticky-bar {
-			background: #fff;
+			background: $white;
 			.main-menu {
 				nav > ul {
 					& > li {
@@ -206,7 +201,6 @@
 		}
 		.slicknav_nav {
 			margin-top: 20px !important;
-			// box-shadow: 0 0 10px 3px rgba(141, 140, 140, 0.5);
 			a:hover {
 				background: transparent;
 				color: $theme-color;
@@ -218,11 +212,11 @@
 
 			& li {
 				& a.nuxt-link-exact-active {
-					color: #e94d65;
+					color: $lred;
 				}
 				&:hover {
 					& > a {
-						color: #e94d65;
+						color: $lred;
 					}
 				}
 			}
@@ -236,10 +230,10 @@
 
 .switch {
 	background: inherit;
-	color: #0d2d3e;
+	color: $bblue;
 
 	option {
-		color: #0d2d3e;
+		color: $bblue;
 		background: white;
 	}
 
