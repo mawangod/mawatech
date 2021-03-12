@@ -6,7 +6,8 @@
 					<ImageLoader
 						:url="`blog/${img}`"
 						:alt="slug"
-						img-class="image-height"
+						height="530"
+						width="730"
 					></ImageLoader>
 					<ul>
 						<li>{{ $t('blog.by') }} {{ author }} - {{ formattedDate }}</li>

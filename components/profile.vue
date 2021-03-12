@@ -9,6 +9,8 @@
 					:url="`profiles/${img}`"
 					:alt="name"
 					img-class="profile"
+					height="440"
+					width="360"
 				></ImageLoader>
 			</div>
 			<div class="team-caption">

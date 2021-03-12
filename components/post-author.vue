@@ -7,7 +7,9 @@
 		<div class="media align-items-center">
 			<img
 				:src="require(`@/assets/img/profiles/preview/${profile.img}.png`)"
-				alt=""
+				:alt="profile.name"
+				height="85"
+				width="85"
 			/>
 			<div class="media-body">
 				<h4>{{ $t('blog.writtenBy').toUpperCase() }} {{ profile.name }}</h4>

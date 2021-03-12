@@ -12,6 +12,8 @@
 			:class="imgClass"
 			:src="require(`~/assets/img/${url}.jpg`)"
 			:alt="alt"
+			:height="height"
+			:width="width"
 		/>
 	</picture>
 </template>
@@ -30,6 +32,14 @@ export default {
 		imgClass: {
 			type: String,
 			default: ''
+		},
+		height: {
+			type: String,
+			required: true
+		},
+		width: {
+			type: String,
+			required: true
 		}
 	}
 }

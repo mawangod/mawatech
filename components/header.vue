@@ -71,7 +71,12 @@
 						<div class="row align-items-center">
 							<div class="logo">
 								<nuxt-link to="/">
-									<img src="@/assets/img/logo/mawatech-logo.png" alt="" />
+									<img
+										src="@/assets/img/logo/mawatech-logo.png"
+										alt=""
+										height="60"
+										width="300"
+									/>
 								</nuxt-link>
 							</div>
 							<div class="links">

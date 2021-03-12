@@ -14,6 +14,8 @@
 						:url="`blog/preview/${post.img}`"
 						:alt="post.slug"
 						img-class="img-fluid"
+						height="45"
+						width="60"
 					></ImageLoader>
 					<div class="media-body">
 						<nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}">

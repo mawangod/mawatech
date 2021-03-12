@@ -11,6 +11,8 @@
 								:url="`profiles/${profile.img}`"
 								:alt="profile.name"
 								img-class="img-fluid"
+								height="440"
+								width="360"
 							>
 							</ImageLoader>
 						</div>

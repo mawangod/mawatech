@@ -30,7 +30,9 @@
 										:src="
 											require(`@/assets/img/profiles/preview/${profile.img}.png`)
 										"
-										alt=""
+										:alt="profile.name"
+										height="85"
+										width="85"
 									/>
 								</div>
 								<div class="founder-text">

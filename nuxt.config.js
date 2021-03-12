@@ -70,7 +70,8 @@ module.exports = {
 		'bootstrap-vue/nuxt',
 		'nuxt-i18n',
 		'@nuxt/content',
-		'@nuxtjs/sitemap'
+		'@nuxtjs/sitemap',
+		'nuxt-lazy-load'
 	],
 	sitemap: {
 		hostname: 'https://mawatech.eu',

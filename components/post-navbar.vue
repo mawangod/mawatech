@@ -12,6 +12,8 @@
 							:url="`blog/preview/${prev.img}`"
 							:alt="prev.slug"
 							img-class="img-fluid"
+							height="45"
+							width="60"
 						></ImageLoader>
 					</div>
 					<div class="arrow">
@@ -47,6 +49,8 @@
 							:url="`blog/preview/${next.img}`"
 							:alt="next.slug"
 							img-class="img-fluid"
+							height="45"
+							width="60"
 						></ImageLoader>
 					</div>
 				</NuxtLink>

@@ -13,7 +13,12 @@
 				<span>{{ subtitle[locale] }}</span>
 			</div>
 			<div class="services-img">
-				<ImageLoader :url="`cases/${photo1}`" :alt="title[locale]">
+				<ImageLoader
+					:url="`cases/${photo1}`"
+					:alt="title[locale]"
+					height="400"
+					width="550"
+				>
 				</ImageLoader>
 			</div>
 		</div>

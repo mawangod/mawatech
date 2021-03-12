@@ -10,6 +10,8 @@
 								:url="`cases/${cas.photo1}`"
 								:alt="cas.title[locale]"
 								img-class="img-fluid"
+								height="400"
+								width="550"
 							>
 							</ImageLoader>
 						</div>
@@ -31,6 +33,8 @@
 								:url="`cases/${cas.photo2}`"
 								:alt="cas.title[locale]"
 								img-class="img-fluid"
+								height="400"
+								width="550"
 							>
 							</ImageLoader>
 						</div>
@@ -43,6 +47,8 @@
 								:url="`cases/${cas.photo3}`"
 								:alt="cas.title[locale]"
 								img-class="img-fluid"
+								height="400"
+								width="550"
 							>
 							</ImageLoader>
 						</div>

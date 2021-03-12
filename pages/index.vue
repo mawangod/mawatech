@@ -15,7 +15,6 @@
 			<b-carousel-slide
 				v-for="(slide, index) in slides"
 				:key="index"
-				:img-src="slide.img"
 				class="slider-area slider-height"
 			>
 				<transition
@@ -46,6 +45,15 @@
 						</div>
 					</div>
 				</transition>
+				<template #img>
+					<ImageLoader
+						:url="slide.img"
+						:alt="$t(`home.${slide.title}`)"
+						img-class="img-fluid w-100 d-block"
+						height="918"
+						width="1920"
+					></ImageLoader>
+				</template>
 			</b-carousel-slide>
 		</b-carousel>
 		<div class="categories-area section-padding30">
@@ -76,7 +84,12 @@
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-6">
 						<div class="support-location-img">
-							<ImageLoader url="gallery/about" alt="about"></ImageLoader>
+							<ImageLoader
+								url="gallery/about"
+								alt="about"
+								height="572"
+								width="538"
+							></ImageLoader>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6">
@@ -194,8 +207,6 @@
 
 <script>
 import supportBackgroundUrl from '@/assets/img/gallery/section_bg02.jpg'
-import sliderCover1 from '@/assets/img/slider/cover1.jpg'
-import sliderCover2 from '@/assets/img/slider/cover2.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import capitalizeName from '@/utilities/capitalize-name'
@@ -231,7 +242,7 @@ export default {
 					button: 'ourServices',
 					message: 'slide1Message',
 					link: '/services',
-					img: sliderCover1
+					img: 'slider/cover1'
 				},
 				{
 					title: 'slide2Title',
@@ -239,7 +250,7 @@ export default {
 					button: 'ourCases',
 					message: 'slide2Message',
 					link: '/cases',
-					img: sliderCover2
+					img: 'slider/cover2'
 				}
 			]
 		}

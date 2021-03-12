@@ -14,6 +14,8 @@
 									:url="`blog/${post.img}`"
 									:alt="post.slug"
 									img-class="img-fluid"
+									height="530"
+									width="730"
 								></ImageLoader>
 							</div>
 							<div class="blog_details">
