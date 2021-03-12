@@ -19,6 +19,10 @@ export default {
 		icon: {
 			type: Array,
 			required: true
+		},
+		name: {
+			type: String,
+			default: ''
 		}
 	}
 }

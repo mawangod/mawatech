@@ -11,12 +11,12 @@
 				</slot>
 			</b-col>
 			<b-col class="shrink d-flex justify-end" cols="12" md="3">
-				<b-button class="ma-2" @click="accept">
+				<a class="btn hero-btn ma-2" @click="accept">
 					{{ $t('button.accept') }}
-				</b-button>
-				<b-button class="ma-2" text @click="deny">
+				</a>
+				<a class="btn hero-btn ma-2" text @click="deny">
 					{{ $t('button.deny') }}
-				</b-button>
+				</a>
 			</b-col>
 		</b-row>
 	</b-alert>
@@ -65,7 +65,7 @@ export default {
 }
 
 .cookie__link {
-	color: red;
+	color: #ce0000;
 	text-decoration: underline;
 	transition: all 0.25s;
 }
