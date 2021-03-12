@@ -60,25 +60,10 @@
 					:key="index"
 					class="media post_item"
 				>
-					<picture>
-						<source
-							type="image/webp"
-							:srcset="
-								require(`@/assets/img/blog/preview/${recentPost.img}.webp`)
-							"
-						/>
-						<source
-							type="image/jpeg"
-							:srcset="
-								require(`@/assets/img/blog/preview/${recentPost.img}.jpg`)
-							"
-						/>
-						<img
-							class="img-fluid"
-							:src="require(`@/assets/img/blog/preview/${recentPost.img}.jpg`)"
-							:alt="recentPost.title"
-						/>
-					</picture>
+					<ImageLoader
+						:url="`blog/preview/${recentPost.img}`"
+						:alt="recentPost.slug"
+					></ImageLoader>
 
 					<div class="media-body">
 						<nuxt-link
@@ -97,9 +82,10 @@
 <script>
 import {ValidationProvider} from 'vee-validate'
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 
 export default {
-	components: {ValidationProvider},
+	components: {ValidationProvider, ImageLoader},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
