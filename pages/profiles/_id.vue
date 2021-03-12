@@ -7,11 +7,12 @@
 					<h3 class="mb-30">{{ profile.job }}</h3>
 					<div class="row">
 						<div class="col-md-3">
-							<img
-								:src="require(`@/assets/img/profiles/${profile.img}.jpg`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`profiles/${profile.img}`"
+								:alt="profile.name"
+								img-class="img-fluid"
+							>
+							</ImageLoader>
 						</div>
 						<div class="col-md-9 mt-sm-20">
 							<h4>{{ profile.slogan[locale] }}</h4>

@@ -63,6 +63,7 @@
 					<ImageLoader
 						:url="`blog/preview/${recentPost.img}`"
 						:alt="recentPost.slug"
+						img-class="img-fluid"
 					></ImageLoader>
 
 					<div class="media-body">

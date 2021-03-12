@@ -13,7 +13,8 @@
 				<span>{{ subtitle[locale] }}</span>
 			</div>
 			<div class="services-img">
-				<img :src="require(`@/assets/img/cases/${photo1}.jpg`)" alt="" />
+				<ImageLoader :url="`cases/${photo1}`" :alt="title[locale]">
+				</ImageLoader>
 			</div>
 		</div>
 	</nuxt-link>
@@ -21,8 +22,12 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 
 export default {
+	components: {
+		ImageLoader
+	},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)

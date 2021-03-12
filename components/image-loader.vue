@@ -29,7 +29,7 @@ export default {
 		},
 		imgClass: {
 			type: String,
-			default: 'img-fluid'
+			default: ''
 		}
 	}
 }

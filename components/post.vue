@@ -3,11 +3,11 @@
 		<div class="home-blog-single mb-30">
 			<div class="blog-img-cap">
 				<div class="blog-img">
-					<img
-						class="image-height"
-						:src="require(`@/assets/img/blog/${img}.jpg`)"
-						alt=""
-					/>
+					<ImageLoader
+						:url="`blog/${img}`"
+						:alt="slug"
+						img-class="image-height"
+					></ImageLoader>
 					<ul>
 						<li>{{ $t('blog.by') }} {{ author }} - {{ formattedDate }}</li>
 					</ul>
@@ -29,10 +29,11 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 import PostInfo from './post-info'
 
 export default {
-	components: {PostInfo},
+	components: {PostInfo, ImageLoader},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)

@@ -9,11 +9,12 @@
 				<div class="section-top-border">
 					<div class="row">
 						<div class="col-md-4">
-							<img
-								:src="require(`@/assets/img/services/${service.photo1}.png`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`services/${service.photo1}`"
+								:alt="service.title[locale]"
+								img-class="img-fluid"
+							>
+							</ImageLoader>
 						</div>
 						<div class="col-md-8 mt-sm-20">
 							<h5 class="mb-20">{{ service.subtitle[locale] }}</h5>
@@ -29,11 +30,12 @@
 							<p class="text-right">{{ service.bio2[locale] }}</p>
 						</div>
 						<div class="col-md-4">
-							<img
-								:src="require(`@/assets/img/services/${service.photo2}.png`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`services/${service.photo2}`"
+								:alt="service.title[locale]"
+								img-class="img-fluid"
+							>
+							</ImageLoader>
 						</div>
 					</div>
 				</div>

@@ -5,11 +5,11 @@
 	>
 		<div class="single-team mb-30">
 			<div class="team-img">
-				<img
-					class="profile"
-					:src="require(`@/assets/img/profiles/${img}.jpg`)"
-					alt=""
-				/>
+				<ImageLoader
+					:url="`profiles/${img}`"
+					:alt="name"
+					img-class="profile"
+				></ImageLoader>
 			</div>
 			<div class="team-caption">
 				<h3>
@@ -25,8 +25,10 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 
 export default {
+	components: {ImageLoader},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
@@ -52,9 +54,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-.profile {
-	max-height: 420px;
-}
-</style>

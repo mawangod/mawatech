@@ -76,7 +76,7 @@
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-6">
 						<div class="support-location-img">
-							<img src="@/assets/img/gallery/about.jpg" alt="" />
+							<ImageLoader url="gallery/about" alt="about"></ImageLoader>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6">
@@ -199,10 +199,8 @@ import sliderCover2 from '@/assets/img/slider/cover2.jpg'
 import testimonialBackGround from '@/assets/img/gallery/section_bg04.jpg'
 import workBackGround from '@/assets/img/gallery/section_bg03.jpg'
 import capitalizeName from '@/utilities/capitalize-name'
-import testimonialCarousel from '../components/testimonial-carousel.vue'
 
 export default {
-	components: {testimonialCarousel},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)
