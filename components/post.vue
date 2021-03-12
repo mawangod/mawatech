@@ -5,7 +5,7 @@
 				<div class="blog-img">
 					<img
 						class="image-height"
-						:src="require(`@/assets/img/blog/${img}`)"
+						:src="require(`@/assets/img/blog/${img}.jpg`)"
 						alt=""
 					/>
 					<ul>

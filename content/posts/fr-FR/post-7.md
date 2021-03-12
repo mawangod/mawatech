@@ -2,7 +2,7 @@
 author: Hanane Agdid
 title: Manger pour soulager le stress
 description: En période de stress, faut-il écouter ses fringales et manger du sucre ? Doit-on plutôt favoriser les légumes ? Docteur Nina Cohen-Koubi, médecin nutritionniste, nous répond.
-img: single_blog_5.jpg
+img: single_blog_5
 date: 2020-01-03
 tags: [5f96be45ef631f3568cf9a55, 5f96bf67ef631f3568cf9a5c]
 ---

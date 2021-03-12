@@ -10,7 +10,7 @@
 					<div class="thumb">
 						<img
 							class="img-fluid"
-							:src="require(`@/assets/img/blog/preview/${prev.img}`)"
+							:src="require(`@/assets/img/blog/preview/${prev.img}.jpg`)"
 							alt=""
 						/>
 					</div>
@@ -45,7 +45,7 @@
 					<div class="thumb">
 						<img
 							class="img-fluid"
-							:src="require(`@/assets/img/blog/preview/${next.img}`)"
+							:src="require(`@/assets/img/blog/preview/${next.img}.jpg`)"
 							alt=""
 						/>
 					</div>

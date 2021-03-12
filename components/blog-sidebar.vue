@@ -60,11 +60,26 @@
 					:key="index"
 					class="media post_item"
 				>
-					<img
-						class="img-fluid"
-						:src="require(`@/assets/img/blog/preview/${recentPost.img}`)"
-						alt=""
-					/>
+					<picture>
+						<source
+							type="image/webp"
+							:srcset="
+								require(`@/assets/img/blog/preview/${recentPost.img}.webp`)
+							"
+						/>
+						<source
+							type="image/jpeg"
+							:srcset="
+								require(`@/assets/img/blog/preview/${recentPost.img}.jpg`)
+							"
+						/>
+						<img
+							class="img-fluid"
+							:src="require(`@/assets/img/blog/preview/${recentPost.img}.jpg`)"
+							:alt="recentPost.title"
+						/>
+					</picture>
+
 					<div class="media-body">
 						<nuxt-link
 							:to="{name: 'blog-slug', params: {slug: recentPost.slug}}"

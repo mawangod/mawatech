@@ -12,7 +12,7 @@
 							<div class="feature-img">
 								<img
 									class="img-fluid"
-									:src="require(`@/assets/img/blog/${post.img}`)"
+									:src="require(`@/assets/img/blog/${post.img}.jpg`)"
 									alt=""
 								/>
 							</div>

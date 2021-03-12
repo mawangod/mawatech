@@ -17,10 +17,10 @@ const write = (req, res) => {
 
 	// create the posts file (fr and en)
 	const fileName = `post-${Date.now()}`
-
+	const imageName = image.split('.')[0]
 	fs.writeFile(
 		`./content/posts/fr-FR/${fileName}.md`,
-		Post(req.body, 'Fr', image),
+		Post(req.body, 'Fr', imageName),
 		error => {
 			if (error) res.status(500).json({error})
 		}
@@ -28,7 +28,7 @@ const write = (req, res) => {
 
 	fs.writeFile(
 		`./content/posts/en-EN/${fileName}.md`,
-		Post(req.body, 'En', image),
+		Post(req.body, 'En', imageName),
 		error => {
 			if (error) res.status(500).json({error})
 		}

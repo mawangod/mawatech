@@ -12,7 +12,7 @@
 				>
 					<img
 						class="img-fluid"
-						:src="require(`@/assets/img/blog/preview/${post.img}`)"
+						:src="require(`@/assets/img/blog/preview/${post.img}.jpg`)"
 						alt=""
 					/>
 					<div class="media-body">
