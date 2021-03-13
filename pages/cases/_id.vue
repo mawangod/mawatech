@@ -6,11 +6,14 @@
 				<div class="section-top-border">
 					<div class="row">
 						<div class="col-md-4">
-							<img
-								:src="require(`@/assets/img/cases/${cas.photo1}.jpg`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`cases/${cas.photo1}`"
+								:alt="cas.title[locale]"
+								img-class="img-fluid"
+								height="400"
+								width="550"
+							>
+							</ImageLoader>
 						</div>
 						<div class="col-md-8 mt-sm-20">
 							<h4>{{ cas.subtitle[locale] }}</h4>
@@ -26,22 +29,28 @@
 							<p class="text-right">{{ cas.bio2[locale] }}</p>
 						</div>
 						<div class="col-md-4">
-							<img
-								:src="require(`@/assets/img/cases/${cas.photo2}.jpg`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`cases/${cas.photo2}`"
+								:alt="cas.title[locale]"
+								img-class="img-fluid"
+								height="400"
+								width="550"
+							>
+							</ImageLoader>
 						</div>
 					</div>
 				</div>
 				<div class="section-top-border">
 					<div class="row">
 						<div class="col-md-4">
-							<img
-								:src="require(`@/assets/img/cases/${cas.photo3}.jpg`)"
-								alt=""
-								class="img-fluid"
-							/>
+							<ImageLoader
+								:url="`cases/${cas.photo3}`"
+								:alt="cas.title[locale]"
+								img-class="img-fluid"
+								height="400"
+								width="550"
+							>
+							</ImageLoader>
 						</div>
 						<div class="col-md-8 mt-sm-20">
 							<p>

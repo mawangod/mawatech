@@ -10,11 +10,13 @@
 					:key="index"
 					class="media post_item"
 				>
-					<img
-						class="img-fluid"
-						:src="require(`@/assets/img/blog/preview/${post.img}`)"
-						alt=""
-					/>
+					<ImageLoader
+						:url="`blog/preview/${post.img}`"
+						:alt="post.slug"
+						img-class="img-fluid"
+						height="45"
+						width="60"
+					></ImageLoader>
 					<div class="media-body">
 						<nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}">
 							<h3 class="trunc">{{ post.title }}</h3>
@@ -29,8 +31,10 @@
 
 <script>
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 
 export default {
+	components: {ImageLoader},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)

@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 @import 'bootstrap/scss/functions.scss';
 @import 'bootstrap/scss/variables.scss';
 @import 'bootstrap/scss/mixins.scss';
@@ -16,6 +17,8 @@
 @import 'bootstrap/scss/utilities/flex.scss';
 @import 'bootstrap/scss/utilities/spacing.scss';
 @import 'bootstrap/scss/utilities/text.scss';
+
+/*! purgecss end ignore */
 
 @import 'color.scss';
 @import 'variables.scss';

@@ -19,6 +19,7 @@
 								<div class="input-group-append">
 									<button
 										class="btns"
+										aria-label="search"
 										type="button"
 										@click.prevent="$emit('search', searchTerm)"
 									>
@@ -60,11 +61,14 @@
 					:key="index"
 					class="media post_item"
 				>
-					<img
-						class="img-fluid"
-						:src="require(`@/assets/img/blog/preview/${recentPost.img}`)"
-						alt=""
-					/>
+					<ImageLoader
+						:url="`blog/preview/${recentPost.img}`"
+						:alt="recentPost.slug"
+						img-class="img-fluid"
+						height="45"
+						width="60"
+					></ImageLoader>
+
 					<div class="media-body">
 						<nuxt-link
 							:to="{name: 'blog-slug', params: {slug: recentPost.slug}}"
@@ -82,9 +86,10 @@
 <script>
 import {ValidationProvider} from 'vee-validate'
 import capitalizeName from '../utilities/capitalize-name'
+import ImageLoader from './image-loader'
 
 export default {
-	components: {ValidationProvider},
+	components: {ValidationProvider, ImageLoader},
 	filters: {
 		capitalize(name) {
 			return capitalizeName(name)

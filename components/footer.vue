@@ -14,6 +14,8 @@
 										<img
 											src="@/assets/img/logo/mawatech-logo-footer.png"
 											alt=""
+											height="30"
+											width="150"
 										/>
 									</nuxt-link>
 								</div>

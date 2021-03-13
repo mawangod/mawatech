@@ -58,7 +58,8 @@ module.exports = {
 		'@nuxtjs/eslint-module',
 		// Doc: https://github.com/nuxt-community/stylelint-module
 		'@nuxtjs/stylelint-module',
-		'@nuxtjs/fontawesome'
+		'@nuxtjs/fontawesome',
+		'nuxt-purgecss'
 	],
 	/*
 	 ** Nuxt.js modules
@@ -70,7 +71,8 @@ module.exports = {
 		'bootstrap-vue/nuxt',
 		'nuxt-i18n',
 		'@nuxt/content',
-		'@nuxtjs/sitemap'
+		'@nuxtjs/sitemap',
+		'nuxt-lazy-load'
 	],
 	sitemap: {
 		hostname: 'https://mawatech.eu',

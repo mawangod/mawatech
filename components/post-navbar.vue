@@ -8,11 +8,13 @@
 					class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
 				>
 					<div class="thumb">
-						<img
-							class="img-fluid"
-							:src="require(`@/assets/img/blog/preview/${prev.img}`)"
-							alt=""
-						/>
+						<ImageLoader
+							:url="`blog/preview/${prev.img}`"
+							:alt="prev.slug"
+							img-class="img-fluid"
+							height="45"
+							width="60"
+						></ImageLoader>
 					</div>
 					<div class="arrow">
 						<FontAwesomeIcon
@@ -43,11 +45,13 @@
 						</FontAwesomeIcon>
 					</div>
 					<div class="thumb">
-						<img
-							class="img-fluid"
-							:src="require(`@/assets/img/blog/preview/${next.img}`)"
-							alt=""
-						/>
+						<ImageLoader
+							:url="`blog/preview/${next.img}`"
+							:alt="next.slug"
+							img-class="img-fluid"
+							height="45"
+							width="60"
+						></ImageLoader>
 					</div>
 				</NuxtLink>
 				<span v-else>&nbsp;</span>
@@ -57,7 +61,10 @@
 </template>
 
 <script>
+import ImageLoader from './image-loader'
+
 export default {
+	components: {ImageLoader},
 	props: {
 		prev: {
 			type: Object,

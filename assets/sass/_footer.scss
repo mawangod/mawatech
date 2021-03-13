@@ -149,3 +149,10 @@
 		}
 	}
 }
+
+.footer-logo {
+	.nuxt-link-active {
+		height: 100%;
+		display: inline-block;
+	}
+}

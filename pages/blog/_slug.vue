@@ -10,11 +10,13 @@
 								{{ post.title }}
 							</h2>
 							<div class="feature-img">
-								<img
-									class="img-fluid"
-									:src="require(`@/assets/img/blog/${post.img}`)"
-									alt=""
-								/>
+								<ImageLoader
+									:url="`blog/${post.img}`"
+									:alt="post.slug"
+									img-class="img-fluid"
+									height="530"
+									width="730"
+								></ImageLoader>
 							</div>
 							<div class="blog_details">
 								<h4>

@@ -11,7 +11,7 @@
 						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/services/${service.photo1}.png`)"
-								alt=""
+								:alt="service.title[locale]"
 								class="img-fluid"
 							/>
 						</div>
@@ -31,7 +31,7 @@
 						<div class="col-md-4">
 							<img
 								:src="require(`@/assets/img/services/${service.photo2}.png`)"
-								alt=""
+								:alt="service.title[locale]"
 								class="img-fluid"
 							/>
 						</div>

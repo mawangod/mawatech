@@ -2,7 +2,7 @@
 author: Hanane Agdid
 title: The art and manner of taking beautiful photos
 description: Photography is an art that cannot be improvised overnight. In this article, I will give you some tips for taking very pretty photos with your smartphone.
-img: single_blog_2.jpg
+img: single_blog_2
 date: 2020-04-20
 tags: [5f96bf11ef631f3568cf9a59, 5f96bf11ef631f3568cf9a57]
 ---
