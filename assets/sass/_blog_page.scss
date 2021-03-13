@@ -271,9 +271,7 @@
 					&.active {
 						background: $theme-color;
 						color: $white !important;
-						-webkit-text-fill-color: $white;
 						text-decoration: none;
-						-webkit-transition: 0.5s;
 						transition: 0.5s;
 					}
 				}
@@ -634,26 +632,5 @@
 		padding-top: 18px;
 		border-radius: 12px;
 		height: 100% !important;
-	}
-
-	::-webkit-input-placeholder {
-		/* Chrome/Opera/Safari */
-		font-size: 13px;
-		color: $fgray;
-	}
-
-	::-moz-placeholder {
-		font-size: 13px;
-		color: $fgray;
-	}
-
-	:-ms-input-placeholder {
-		font-size: 13px;
-		color: $fgray;
-	}
-
-	:-moz-placeholder {
-		font-size: 13px;
-		color: $fgray;
 	}
 }
