@@ -112,11 +112,12 @@ export default {
 		contact: 'Contact'
 	},
 	footer: {
-		slogan: 'Mon site Web de consultance moderne, professionnel et sophistiqué',
+		slogan:
+			'Mawatech vous aide à créer votre site Web ou votre application sans vous ruiner',
 		general: 'Général',
 		about: 'A propos',
 		jobs: 'Jobs',
-		information: 'Information',
+		information: 'Additional information',
 		cookies: 'Cookies',
 		privacy: 'Confidentialité',
 		disclaimer: 'Responsabilité',

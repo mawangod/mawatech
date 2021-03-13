@@ -113,7 +113,8 @@ export default {
 		contact: 'Contact'
 	},
 	footer: {
-		slogan: 'My modern, professional and sophisticated consultancy website',
+		slogan:
+			'Mawatech helps you to build your website or application without breaking the bank',
 		general: 'General',
 		about: 'About',
 		jobs: 'Jobs',

@@ -6,6 +6,8 @@
 			:controls="controls"
 			:indicators="indicators"
 			:interval="5000"
+			img-height="918"
+			img-width="1920"
 			fade
 			@mouseover.native="activeControl()"
 			@mouseleave.native="unactiveControl()"
@@ -52,6 +54,7 @@
 						img-class="img-fluid w-100 d-block"
 						height="918"
 						width="1920"
+						data-not-lazy
 					></ImageLoader>
 				</template>
 			</b-carousel-slide>
