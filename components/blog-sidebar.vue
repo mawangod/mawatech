@@ -19,6 +19,7 @@
 								<div class="input-group-append">
 									<button
 										class="btns"
+										aria-label="search"
 										type="button"
 										@click.prevent="$emit('search', searchTerm)"
 									>

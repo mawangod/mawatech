@@ -8,6 +8,7 @@
 			<div class="container">
 				<div class="d-none d-sm-block mb-5 pb-4">
 					<iframe
+						title="location"
 						class="map"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.1762059011603!2d3.988582715794395!3d50.437818479473584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2457afdd93da7%3A0x2249890cd00af6e6!2sChauss%C3%A9e%20de%20Beaumont%20187%2C%207030%20Mons!5e0!3m2!1sfr!2sbe!4v1613395941685!5m2!1sfr!2sbe"
 						width="600"

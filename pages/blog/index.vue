@@ -15,7 +15,6 @@
 							</nuxt-link>
 							<Post
 								v-for="post in displayedPosts"
-								id="posts"
 								:key="post.slug"
 								v-bind="post"
 							></Post>
