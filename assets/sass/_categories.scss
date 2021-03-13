@@ -39,20 +39,19 @@
 		}
 		.cat-cap {
 			h5 {
-				& > a {
-					font-size: 24px;
-					font-weight: 600;
-					margin-bottom: 21px;
-					display: block;
-					@include transition(0.2s);
+				color: $velvet;
+				font-size: 24px;
+				font-weight: 600;
+				margin-bottom: 21px;
+				display: block;
+				@include transition(0.2s);
 
-					font-family: $font_3;
-					@media #{$sm} {
-						font-size: 21px;
-					}
-					@media #{$xs} {
-						font-size: 23px;
-					}
+				font-family: $font_3;
+				@media #{$sm} {
+					font-size: 21px;
+				}
+				@media #{$xs} {
+					font-size: 23px;
 				}
 			}
 			p {

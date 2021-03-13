@@ -15,7 +15,7 @@
 						<div class="d-flex justify-content-between">
 							<div class="d-flex align-items-center">
 								<h5>
-									<a>{{ comment.author }}</a>
+									{{ comment.author }}
 								</h5>
 								<p class="date">{{ formatDate(comment.date) }}</p>
 							</div>

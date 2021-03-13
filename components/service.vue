@@ -9,9 +9,7 @@
 			</div>
 			<div class="cat-cap">
 				<h5>
-					<a>
-						{{ title[locale] }}
-					</a>
+					{{ title[locale] }}
 				</h5>
 				<p>
 					{{ subtitle[locale] }}

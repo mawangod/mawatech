@@ -24,6 +24,7 @@
 										<li>
 											<LinkedIcon
 												:url="facebook"
+												aria-label="facebook"
 												icon-class="fab"
 												:icon="['fab', 'facebook-f']"
 											>
@@ -32,6 +33,7 @@
 										<li>
 											<LinkedIcon
 												:url="twitter"
+												aria-label="twitter"
 												icon-class="fab"
 												:icon="['fab', 'twitter']"
 											>
@@ -40,6 +42,7 @@
 										<li>
 											<LinkedIcon
 												:url="linkedin"
+												aria-label="linkedin"
 												icon-class="fab"
 												:icon="['fab', 'linkedin-in']"
 											>
@@ -48,6 +51,7 @@
 										<li>
 											<LinkedIcon
 												:url="instagram"
+												aria-label="instagram"
 												icon-class="fab"
 												:icon="['fab', 'instagram']"
 											>
@@ -70,7 +74,7 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="logo">
-								<nuxt-link to="/">
+								<nuxt-link to="/" aria-label="mawatech">
 									<img
 										src="@/assets/img/logo/mawatech-logo.png"
 										alt=""

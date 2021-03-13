@@ -10,7 +10,7 @@
 						<div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
 							<div class="single-footer-caption mb-50">
 								<div class="footer-logo">
-									<nuxt-link to="/">
+									<nuxt-link to="/" aria-label="mawatech">
 										<img
 											src="@/assets/img/logo/mawatech-logo-footer.png"
 											alt=""
@@ -57,7 +57,10 @@
 									<h4>{{ $t('footer.about') }}</h4>
 									<ul>
 										<li v-for="(tab, index) in aboutTabs" :key="index">
-											<nuxt-link :to="`/${tab}`">
+											<nuxt-link
+												:to="`/${tab}`"
+												:aria-label="$t(`footer.${tab}`)"
+											>
 												{{ $t(`footer.${tab}`) }}
 											</nuxt-link>
 										</li>
@@ -80,24 +83,28 @@
 							<div class="footer-social f-right">
 								<LinkedIcon
 									:url="facebook"
+									aria-label="facebook"
 									icon-class="fab"
 									:icon="['fab', 'facebook-f']"
 								>
 								</LinkedIcon>
 								<LinkedIcon
 									:url="twitter"
+									aria-label="twitter"
 									icon-class="fab"
 									:icon="['fab', 'twitter']"
 								>
 								</LinkedIcon>
 								<LinkedIcon
 									:url="linkedin"
+									aria-label="linkedin"
 									icon-class="fab"
 									:icon="['fab', 'linkedin-in']"
 								>
 								</LinkedIcon>
 								<LinkedIcon
 									:url="instagram"
+									aria-label="instagram"
 									icon-class="fab"
 									:icon="['fab', 'instagram']"
 								>

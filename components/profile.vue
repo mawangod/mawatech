@@ -15,9 +15,7 @@
 			</div>
 			<div class="team-caption">
 				<h3>
-					<a>
-						{{ name | capitalize }}
-					</a>
+					{{ name | capitalize }}
 				</h3>
 				<span>{{ job | capitalize }}</span>
 			</div>

@@ -6,9 +6,7 @@
 		<div class="single-services mb-100">
 			<div class="services-caption">
 				<h3>
-					<a>
-						{{ title[locale] | capitalize }}
-					</a>
+					{{ title[locale] | capitalize }}
 				</h3>
 				<span>{{ subtitle[locale] }}</span>
 			</div>

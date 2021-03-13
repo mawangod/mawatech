@@ -24,6 +24,13 @@ export default {
 			stickyHeader: false
 		}
 	},
+	head() {
+		return {
+			htmlAttrs: {
+				lang: this.$i18n.locale || this.$i18n.defaultLocale
+			}
+		}
+	},
 	beforeMount() {
 		window.addEventListener('scroll', this.handleScroll)
 	},
