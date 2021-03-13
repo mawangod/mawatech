@@ -91,6 +91,18 @@
 					display: inline-block;
 					position: relative;
 					z-index: 1;
+					& a {
+						padding: 30px 20px;
+						@media #{$medium_device} {
+							padding: 30px 10px;
+						}
+					}
+					& select {
+						margin: 0 20px;
+						@media #{$medium_device} {
+							margin: 0;
+						}
+					}
 					& a,
 					& select {
 						color: $bblue;
@@ -98,17 +110,8 @@
 						display: block;
 						font-size: 16px;
 						@include transition(0.3s);
+					}
 
-						@media #{$medium_device} {
-							padding: 39px 14px;
-						}
-					}
-					& a {
-						padding: 39px 19px;
-					}
-					& select {
-						margin: 0 19px;
-					}
 					& a.nuxt-link-exact-active {
 						color: $lred;
 					}

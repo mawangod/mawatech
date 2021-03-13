@@ -1,7 +1,7 @@
 <template>
 	<b-alert :show="isOpen" variant="info" class="cookie">
 		<b-row align="center">
-			<b-col class="grow">
+			<div class="grow">
 				<slot name="message">
 					{{ $t('cookies.reason') }}
 					<nuxt-link class="cookie__link" to="/privacy">
@@ -9,15 +9,15 @@
 					</nuxt-link>
 					{{ $t('cookies.accept') }}
 				</slot>
-			</b-col>
-			<b-col class="shrink d-flex justify-end" cols="12" md="3">
+			</div>
+			<div class="w-100">
 				<a class="btn hero-btn ma-2" @click="accept">
 					{{ $t('button.accept') }}
 				</a>
-				<a class="btn hero-btn ma-2" text @click="deny">
+				<a class="btn hero-btn ma-2" @click="deny">
 					{{ $t('button.deny') }}
 				</a>
-			</b-col>
+			</div>
 		</b-row>
 	</b-alert>
 </template>
