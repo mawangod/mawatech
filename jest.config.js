@@ -12,8 +12,4 @@ module.exports = {
 	collectCoverage: true,
 	collectCoverageFrom: ['<rootDir>/utilities/**/*.js'],
 	coveragePathIgnorePatterns: ['<rootDir>/utilities/usefull-data.js']
-	// collectCoverageFrom: [
-	// 	'<rootDir>/components/**/*.vue',
-	// 	'<rootDir>/pages/**/*.vue'
-	// ]
 }
