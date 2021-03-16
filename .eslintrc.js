@@ -4,6 +4,16 @@ module.exports = {
 		browser: true,
 		node: true
 	},
+	overrides: [
+		{
+			files: ['cypress/**/*.js'],
+			plugins: ['cypress'],
+			extends: ['plugin:cypress/recommended'],
+			env: {
+				'cypress/globals': true
+			}
+		}
+	],
 	parserOptions: {
 		parser: 'babel-eslint'
 	},
