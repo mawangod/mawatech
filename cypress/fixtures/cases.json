@@ -1,0 +1,28 @@
+[
+  {
+    "title": {
+      "fr-FR": "Analyse de marchés",
+      "en-EN": "Market analysis"
+    },
+    "subtitle": {
+      "fr-FR": "Avec IGeo, nous créons le géomarketing de demain !",
+      "en-EN": "With IGeo, we are creating the geomarketing of tomorrow!"
+    },
+    "bio1": {
+      "fr-FR": "iGeo, est une solution Web qui a pour but de permettre à ses clients de pouvoir réaliser une étude géomarketing en ligne sous la forme d'un rapport PDF autogénéré (à partir de coordonnées GPS) moyennent le payement. L'étude géomarketing consiste a analyser spatialement le marché du retail (supermachés, magasins de vêtemments, restaurants, etc.) et toutes les composantes susceptibles de l'influencer: potentiels clients, croissance de marché, pouvoir d'achat, structure d'âge, etc.",
+      "en-EN": " iGeo, is a Web solution which aims to allow its customers to be able to carry out an online geomarketing study in the form of a self-generated PDF report (from GPS coordinates) by means of payment. The geomarketing study consists in spatially analyzing the retail market (supermarkets, clothing stores, restaurants, etc.) and all the components likely to influence it: potential customers, market growth, purchasing power, age structure , etc"
+    },
+    "bio2": {
+      "fr-FR": "Comme le business model d'IGeo repose sur la vente d'études géomarketing, nous avons implémenter un module qui permet aux clients d'acheter, via Paypal, des crédits. Chaque simulation (ou étude), coûte un ou plusieurs crédits. Pour lancer la simulation, nous sommes invité à choisir le type de simulation et ensuite, à soit rentrer une adresse bien définie, soit à cliquer sur un endroit de la carte. Une fois que l'on a confirmé la simulation, celle-ci s'effectue automatiquement et ensuite l'étude est disponible immédiatement sous format PDF..",
+      "en-EN": "As IGEO's business model is based on the sale of geomarketing studies, we have implemented a module that allows customers to buy credits, via Paypal. Each simulation (or study) costs one or more credits. To start the simulation, we are invited to choose the type of simulation and then to either enter a well-defined address, or to click on a place on the map. Once the simulation has been confirmed, it is carried out automatically and then the study is immediately available in PDF format."
+    },
+    "bio3": {
+      "fr-FR": "IGeo est une application conséquente qui bénéficie de toutes les dernières avancées technologiques et a été programmé à l'aide de plusieurs languages de programmation, qui sont donnés à titre indicatif dans cette liste : HTML, CSS, JavaScript, jQuery, PHP, SQL. En chiffres, IGeo aura nécessité plus de 500 heures de travail, compte plus de 3000 lignes de codes et pèse environ 100 Mo sur le disque. Du côté des performances, la taille du rapport de simulation est d'environ 3 Mo et le temps de simulation avoisine les deux minutes grâce notamment à de multiples optimisations du code tant du côté serveur (PHP, SQL) que du côté client (JavaScript)  ",
+      "en-EN": "IGeo is a large application that benefits from all the latest technological advances and has been programmed using several programming languages, which are given for guidance in this list: HTML, CSS, JavaScript, jQuery, PHP, SQL. In figures, IGeo will have required more than 500 hours of work, has more than 3000 lines of code and weighs about 100 MB on the disk. On the performance side, the size of the simulation report is around 3 MB and the simulation time is around two minutes, thanks in particular to multiple code optimizations both on the server side (PHP, SQL) and on the client side (JavaScript)"
+    },
+    "_id": "5f85670207a995203474463c",
+    "photo1": "igeo1",
+    "photo2": "igeo2",
+    "photo3": "igeo3"
+  }
+]

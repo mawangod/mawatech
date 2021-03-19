@@ -5,7 +5,7 @@
 	>
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
-				<div class="col-xl-7 col-lg-9 col-md-8">
+				<div class="col-xl-9 col-lg-8 col-md-7">
 					<div class="wantToWork-caption wantToWork-caption2">
 						<h2>
 							{{ $t('team.searching') }}<br />
@@ -13,7 +13,7 @@
 						</h2>
 					</div>
 				</div>
-				<div class="col-xl-3 col-lg-3 col-md-4">
+				<div class="col-xl-3 col-lg-4 col-md-5">
 					<nuxt-link to="/about" class="btn btn-black f-right">
 						{{ $t('button.moreAboutUs') }}
 					</nuxt-link>
