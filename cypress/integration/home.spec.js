@@ -95,7 +95,7 @@ context('Home', () => {
 		)
 	})
 
-	it.only('Posts are displayed', () => {
+	it('Posts are displayed', () => {
 		cy.get('.home-blog-area > .container > :nth-child(2)')
 			.children()
 			.should('have.length', 2)
