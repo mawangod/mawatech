@@ -66,7 +66,7 @@ context('Home', () => {
 		cy.get('.blog-author').should('be.visible')
 	})
 
-	it.only('Comment a post', () => {
+	it('Comment a post', () => {
 		cy.intercept('POST', '**/comments', {fixture: 'comment.json'}).as(
 			'postComment'
 		)
