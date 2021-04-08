@@ -5426,10 +5426,10 @@ date-fns@^1.27.2:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
 
-date-fns@^2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.19.0.tgz#65193348635a28d5d916c43ec7ce6fbd145059e1"
-  integrity sha512-X3bf2iTPgCAQp9wvjOQytnf5vO5rESYRXlPIVcgSbtT5OTScPcsf9eZU+B/YIkKAtYr5WeCii58BgATrNitlWg==
+date-fns@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.20.0.tgz#df00ba9177fbea22d88010b5844ecc91e9e03ceb"
+  integrity sha512-nmA7y6aDH5+fknfJ0G77HQzUSfTPpq4ifq+c9blP9d+X9zs3kNjxC+t3pcbBMGTp262a6PJB3RVjLlxIgoMI+Q==
 
 dayjs@^1.9.3:
   version "1.10.4"
@@ -8307,11 +8307,6 @@ is-https@^2.0.2:
   resolved "https://registry.yarnpkg.com/is-https/-/is-https-2.0.2.tgz#7009d303c72580f15897d5c063d6b6bc1f838fef"
   integrity sha512-UfUCKVQH/6PQRCh5Qk9vNu4feLZiFmV/gr8DjbtJD0IrCRIDTA6E+d/AVFGPulI5tqK5W45fYbn1Nir1O99rFw==
 
-is-https@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/is-https/-/is-https-3.0.2.tgz#4d24e002e47edd3f1b07f14bc722433354ccba49"
-  integrity sha512-jFgAKhbNF7J+lTMJxbq5z9bf1V9f8rXn9mP5RSY2GUEW5M0nOiVhVC9dNra96hQDjGpNzskIzusUnXwngqmhAA==
-
 is-installed-globally@^0.3.1, is-installed-globally@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/is-installed-globally/-/is-installed-globally-0.3.2.tgz#fd3efa79ee670d1187233182d5b0a1dd00313141"
@@ -10680,10 +10675,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@^6.22.3:
-  version "6.22.3"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.22.3.tgz#5e9e5c060bedc1c480827ada014f05f1fed11c7c"
-  integrity sha512-IZ4OLOYHsF6cKB0ik7j9rFr81xFmij/HQNgepcc63dFJFU6SSHJ6uO2RkGo7v8e0ttr9QDIiTM3xJrmd5W1PVQ==
+nuxt-i18n@^6.23.0:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.23.0.tgz#4b36900779cfa22c07b48b282ca65f6c75c656e5"
+  integrity sha512-f/jVMYWdbHXFQGcoigMm5dUxg1qDz3X/ObqwaZXmaQj1zP/uHwlvMRJZFJpKywi7wMZJfJgTK3WONy0o25zw8w==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
@@ -10691,7 +10686,6 @@ nuxt-i18n@^6.22.3:
     "@intlify/vue-i18n-loader" "^1.0.0"
     cookie "^0.4.0"
     devalue "^2.0.1"
-    is-https "^3.0.0"
     js-cookie "^2.2.1"
     klona "^2.0.4"
     lodash.merge "^4.6.2"
