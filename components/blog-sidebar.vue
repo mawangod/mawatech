@@ -12,7 +12,7 @@
 							<div class="input-group mb-3">
 								<input
 									v-model="searchTerm"
-									type="search"
+									type="text"
 									class="form-control"
 									:placeholder="$t('blog.search')"
 								/>

@@ -89,7 +89,7 @@ export default {
 			return this.posts && this.filteredPosts(this.posts.slice(from, to))
 		},
 		recentPosts() {
-			return this.posts && this.filteredPosts(this.posts).slice(0, 3)
+			return this.posts && this.posts.slice(0, 3)
 		}
 	},
 	watch: {
