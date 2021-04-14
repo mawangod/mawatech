@@ -1,4 +1,4 @@
-context('Home', () => {
+context('Case', () => {
 	beforeEach(() => {
 		cy.intercept('GET', '**/cases', {fixture: 'cases.json'}).as('getCases')
 		cy.visit('/')

@@ -1,4 +1,4 @@
-context('Home', () => {
+context('Profile', () => {
 	beforeEach(() => {
 		cy.intercept('GET', '**/profiles', {fixture: 'profiles.json'}).as(
 			'getProfiles'
