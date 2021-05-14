@@ -1,4 +1,4 @@
-context('Footer', () => {
+context('Header', () => {
 	beforeEach(() => {
 		cy.visit('/')
 		cy.get('.alert .w-100 > :nth-child(1)').click()
