@@ -72,7 +72,7 @@
 					]"
 				>
 					<div class="container">
-						<div class="row align-items-center">
+						<div class="row">
 							<div class="logo">
 								<nuxt-link to="/" aria-label="mawatech">
 									<img
