@@ -1,0 +1,77 @@
+[
+  {
+    "title": {
+      "fr-FR": "Développement web",
+      "en-EN": "Web development"
+    },
+    "subtitle": {
+      "fr-FR": "Nous avons une expertise dans tous les aspects du développement web afin d'aider nos clients à atteindre leur plein potentiel. Mettez votre entreprise en ligne, faites plus de ventes et obtenez plus de prospects.",
+      "en-EN": "We have expertise in all aspects of web development to help our clients reach their full potential. Bring your business online, make more sales, and get more leads."
+    },
+    "bio1": {
+      "fr-FR": "Nous adoptons une approche globale du développement web : d'une conception Web réfléchie à un contenu qualitatif, tout en passant par un code optimisé. Nous sommes fiers d'avoir une équipe de professionnels expérimentés qui travaillent tous ensemble. Notre objectif est de développer votre site Web non seulement en améliorant son positionnement sur les moteurs de recherche, mais en offrant véritablement la meilleure expérience possible aux utilisateurs et améliorant la rétention de ces derniers. Nous testons rigoureusement tous les principaux types de périphériques, ainsi que les navigateurs et systèmes d'exploitation avant de lancer votre nouveau site Web, et de livrer le projet. Les tests sont réalisés à la fois en tant qu'utilisateur et en tant qu'administrateur, pour assurer la compatibilité et l'adaptabilité de votre site à toutes les plateformes.",
+      "en-EN": "We adopt a global approach to web development: from a thoughtful web design to qualitative content, while passing through optimized code. We pride ourselves on having a team of experienced professionals who all work together. Our goal is to grow your website not only by improving its search engine positioning, but by truly delivering the best possible user experience and improving user retention. We rigorously test all major device types, as well as browsers and operating systems before launching your new website, and delivering the project. Testing is performed both as a user and as an administrator, to ensure the compatibility and adaptability of your site to all platforms."
+    },
+    "bio2": {
+      "fr-FR": "Nous offrons une large gamme de services qui comprennent des sites de commerce électronique, des sites Web très riches en fonctionnalités, plates-formes, portails, extranets, intranets, des solutions logicielles sur mesure, applications mobiles native et hybride, applications pour tablettes, ludifications créatives, applications Facebook, un centre d'information , ou tout simplement un site qui agit comme portfolio en ligne pour exposer vos services. Nous pouvons vous aider selon la totalité de vos besoins.",
+      "en-EN": "We offer a wide range of services which include e-commerce sites, very feature rich websites, platforms, portals, extranets, intranets, bespoke software solutions, native and hybrid mobile apps, tablet apps, gamifications creatives, Facebook applications, an information center, or just a site that acts as an online portfolio to showcase your services. We can help you according to all of your needs."
+    },
+    "icon": [
+      "fas",
+      "laptop-code"
+    ],
+    "_id": "5f86d6acb587fc2a64928c86",
+    "photo1": "web-dev",
+    "photo2": "web-tech"
+  },
+  {
+    "title": {
+      "fr-FR": "Consultance en développement",
+      "en-EN": " Development consultancy"
+    },
+    "subtitle": {
+      "fr-FR": "Vous avez besoin d’experts pour venir en aide à votre/vos développeur(s), pour encadrer la programmation de votre projet, pour le finaliser ou plus simplement pour répondre à vos questions techniques ? Nous sommes là pour vous.",
+      "en-EN": " Do you need experts to help your developer (s), to supervise the programming of your project, to finalize it or more simply to answer your technical questions? We're here for you."
+    },
+    "bio1": {
+      "fr-FR": "Au fil des années, notre équipe s’est forgée une expérience technique solide et spéficique dans le développement de projets digitaux. Nous mettons cette expérience au service des entreprises pour le développement de leurs projets internes. Nous y apportons une structure et nous les menons à bien en encadrant et en collaborant au mieux avec leurs équipes tout au long de la vie du/des projet(s).  Nous vous accompagnerons de A à Z dans votre projet de développement et établirons avec vous une relation de confiance à long terme.",
+      "en-EN": "Over the years, our team has built up solid and specific technical experience in the development of digital projects. We put this experience at the service of companies for the development of their internal projects. We provide a structure and we carry them through by supervising and collaborating as best as possible with their teams throughout the life of the project (s).  We will support you from A to Z in your development project and establish a long-term relationship of trust with you."
+    },
+    "bio2": {
+      "fr-FR": "Nous nous adressons à la fois aux entreprises informatiques, et aux entreprises d'autres métiers qui ont un besoin d'aide extérieure pour mener à bien leurs projets de développement IT. Les projets que nous pouvons prendre en charge sont les projets de développement Web (SaaS, intranet/extranet), d'applications mobile (Android / iOS et terminaux industrielles) et de logiciel pour PC/Windows.",
+      "en-EN": " We address both IT companies and companies in other trades that need external help to carry out their IT development projects. The projects that we can support are web development projects (SaaS, intranet / extranet), mobile applications (Android / iOS and industrial terminals) and software for PC / Windows."
+    },
+    "icon": [
+      "fas",
+      "suitcase"
+    ],
+    "_id": "5f86d6acb587fc2a64928c87",
+    "photo1": "consultant",
+    "photo2": "plan"
+  },
+  {
+    "title": {
+      "fr-FR": "Dépannage Informatique",
+      "en-EN": " Computer troubleshooting"
+    },
+    "subtitle": {
+      "fr-FR": "Vous avez besoin d’un dépannage PC ? Votre ordinateur est en panne ? Vous avez un virus ? Plus de connexion internet ou de Wifi ? Perdu vos données ? Nous sommes la pour vous. ",
+      "en-EN": " Do you need PC troubleshooting? Your computer is down? Do you have a virus? No more internet or Wifi connection? Lost your data? We're here for you."
+    },
+    "bio1": {
+      "fr-FR": "Vous êtes un particulier ou le patron d'une petite entreprise et vous pensez avoir besoin d'aide pour un problème lié à votre matériel informatique, sans avoir à débourser des sommes astronomiques pour y parvenir.  Nous pouvons assurément faire quelque chose pour vous !!  Voici une liste de quelques cas de figure qui pourraient jusitifer l'intervention d'un technicien : votre ordinateur ne veut plus démarrer ou est de plus en plus lent, votre connexion Internet se coupe ou est très lente, des fenêtres de publicité intempestives apparaissent, vous devez installer de nouveaux périphériques, des bruits bizarres émanent de votre tour ou de votre portable, ...  Pour une de ces raisons, vous pourriez sans doute avoir besoin d'un dépannage informatique.",
+      "en-EN": " You are an individual or the boss of a small business and you think you need help with a problem related to your computer equipment, without having to pay astronomical sums to achieve it. We sure can do something for you !! Here is a list of a few scenarios that could justify the intervention of a technician: your computer no longer wants to start or is increasingly slow, your Internet connection is cut or is very slow, pop-up advertising windows appear, you have to install new peripherals, strange noises emanating from your tower or your laptop, ... For one of these reasons, you could probably need a computer repair."
+    },
+    "bio2": {
+      "fr-FR": "Cependant, vous ne voulez pas déplacer votre matériel ou vous ne voulez pas perdre du temps chez un commerçant qui risque de garder votre machine durant un tours de temps plus ou moins consécutif.  Le plus, vous craignez que la facture soit importante et dépasse le budget que vous avez à consacrer à votre informatique.  Contactez-nous, nous vous souhaitons au mieux et nous nous déplaçons à domicile pour réparer et / ou dépanner votre matériel.  Comme nous avons choisi de ne pas avoir de magasin qui augmenterait les prix de par les charges inhérentes à un bâtiment (loyer, éléctricité, Internet, chauffage, assurances, ...), nous affichons parmis les tarifs les moins chers de toute la Région. Le ce fait, notre service de dépannage à domicile vous assure la garantie du meilleur rapport qualité-prix.  Grâce à une analyse parfaite des pannes et des besoins, nos techniciens qualifiés et sympatiques vous rassurerons en vous annonçant les prix du dépannage, dès le départ de l'intervention.",
+      "en-EN": "However, you don't want to move your equipment or you don't want to waste time with a trader who might keep your machine for more or less consecutive turns.  The more, you fear that the invoice is important and exceeds the budget that you have to devote to your IT.  Contact us, we wish you the best and we come to your home to repair and / or troubleshoot your equipment.  As we have chosen not to have a store that would increase prices due to the charges inherent in a building (rent, electricity, Internet, heating, insurance, ...), we display among the cheapest prices in the whole Region. . As a result, our in-home breakdown service guarantees the best value for money.  Thanks to a perfect analysis of breakdowns and needs, our qualified and friendly technicians will reassure you by announcing the cost of repairs, from the start of the intervention."
+    },
+    "icon": [
+      "fas",
+      "laptop-medical"
+    ],
+    "_id": "5f86d6acb587fc2a64928c88",
+    "photo1": "trouble",
+    "photo2": "security"
+  }
+]

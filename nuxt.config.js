@@ -1,5 +1,6 @@
 // eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {
+	ignore: ['**/*.spec.*', '**/*.test.*', 'cypress/*'],
 	/*
 	 ** Nuxt rendering mode
 	 ** See https://nuxtjs.org/api/configuration-mode

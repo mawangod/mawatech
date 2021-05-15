@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "5f86d69bb587fc2a64928c81",
+    "value": 157,
+    "title": "coffes"
+  },
+  {
+    "_id": "5f86d69bb587fc2a64928c7f",
+    "value": 11,
+    "title": "projects"
+  },
+  {
+    "_id": "5f86d69bb587fc2a64928c80",
+    "value": 3,
+    "title": "activeClients"
+  },
+  {
+    "_id": "5f86d69bb587fc2a64928c82",
+    "value": 7,
+    "title": "happyClients"
+  }
+]
