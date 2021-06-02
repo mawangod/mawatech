@@ -59,23 +59,16 @@ context('Home', () => {
 			'have.class',
 			'active'
 		)
-		cy.get('#carouselP > .carousel-control-prev').should('be.visible').click()
-		cy.get('#carouselP___BV_inner_ > :nth-child(2)').should(
-			'have.class',
-			'active'
-		)
-		cy.get('#carouselP > .carousel-control-next').should('be.visible').click()
-		cy.get('#carouselP___BV_inner_ > :nth-child(1)').should(
-			'have.class',
-			'active'
-		)
+		cy.get('#carouselP > .carousel-control-prev').should('be.visible')
+
+		cy.get('#carouselP > .carousel-control-next').should('be.visible')
 	})
 
 	it('Profiles are displayed', () => {
 		cy.wait('@getProfiles').its('response.statusCode').should('eq', 200)
 		cy.get('.team-area > .container > :nth-child(2)')
 			.children()
-			.should('have.length', 2)
+			.should('have.length', 1)
 	})
 
 	it('Counters are displayed', () => {

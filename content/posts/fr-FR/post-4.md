@@ -1,5 +1,5 @@
 ---
-author: Hanane Agdid
+author: David Maw
 title: L'art et la manière de prendre de jolies photos
 description: La photographie est un art qui ne s’improvise pas du jour au lendemain. Dans cet article je vous donne quelques pistes pour prendre de très jolies photos avec votre smartphone.
 img: single_blog_2

@@ -1,20 +1,6 @@
 [
   {
     "slogan": {
-      "fr-FR": "Je suis jeune, il est vrai; mais aux âmes bien nées la valeur n'attend pas le nombre des années.",
-      "en-EN": "I am young, it is true; but to well-born souls the value does not await the number of years."
-    },
-    "bio": {
-      "fr-FR": "Déjà enfant, Hanane était enthousiaste et pleine d'energie, elle n'a pas changé et sa motivation booste toute l'équipe, de plus elle a un excellent contact client et parle 4 langues !! Ce qui fait d'elle une personnalité incoutournable au sein de notre société.",
-      "en-EN": "Already a child, Hanane was enthusiastic and full of energy, she has not changed and her motivation boosts the whole team, moreover she has excellent customer contact and speaks 4 languages ​​!! What makes her an essential personality within our company."
-    },
-    "_id": "5f86d6a2b587fc2a64928c84",
-    "name": "Hanane Agdid",
-    "img": "hanane",
-    "job": "Sales and Commercial Assistant"
-  },
-  {
-    "slogan": {
       "fr-FR": "\"Quelque chose de complexe n'est pas utile et tout ce qui est utile est simple.\" - M. Kalachnikov",
       "en-EN": "\"Something complex is not useful and all that is useful is simple. \"- Mr. Kalashnikov"
     },
